@@ -1,430 +1,1041 @@
-export default function ReproducibilityLandingPage() {
-  const products = [
-    {
-      name: 'ScatterBridge®',
-      desc: 'Instrument standardization and harmonization across sites.',
-    },
-    {
-      name: 'FlowCytes®',
-      desc: 'Synthetic WBC scatter mimics for gating and panel setup.',
-    },
-    {
-      name: 'SpectraComp®',
-      desc: 'Single-stain controls for spectral unmixing and conventional compensation.',
-    },
-    {
-      name: 'ViaComp®',
-      desc: 'Viability controls that bind DNA-intercalating and amine-reactive dyes.',
-    },
-    {
-      name: 'TBNK Mimic™',
-      desc: 'Biomarker-defined references for assay verification and longitudinal QC.',
-    },
-    {
-      name: 'CD34+ Stem Cell Mimic™',
-      desc: 'Part of the TruCytes™ family for stable stem cell assay verification.',
-    },
-    {
-      name: 'StimCytes™',
-      desc: 'Synthetic controls for functional cytometry workflows.',
-    },
-    {
-      name: 'QuantCytes™',
-      desc: 'Quantitative cytometry references for standardized measurements.',
-    },
-    {
-      name: 'PhenoCytes™',
-      desc: 'Controls for immunophenotyping and phenotypic analysis.',
-    },
-  ]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reproducibility — Slingshot</title>
 
-  return (
-    <div className="bg-[#F7F6F5] text-black overflow-hidden">
-      {/* HEADER BANNER */}
-      <section className="bg-[#050505] text-white min-h-screen px-8 md:px-16 lg:px-24 py-16 flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_top_left,rgba(255,106,0,0.8),transparent_40%)]" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center relative z-10 w-full max-w-[1500px] mx-auto">
-          <div>
-            <div className="uppercase tracking-[0.35em] text-sm text-[#FF6A00] mb-6 font-medium">
-              Reproducibility
-            </div>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl leading-[0.9] font-bold tracking-tight max-w-3xl">
-              A reference that doesn’t change.
-            </h1>
+    :root{
+      --white:#FFFFFF;
+      --orange:#F76A00;
+      --black:#0D0C0C;
+      --dark:#333130;
+      --off:#F7F6F5;
+      --muted:#9A9794;
+    }
 
-            <p className="text-lg md:text-xl text-white/70 mt-10 max-w-2xl leading-relaxed">
-              For two decades, the field has poured money into better lasers, more detectors, smarter unmixing. The instruments became great. The reproducibility didn’t.
-            </p>
+    body{
+      background:var(--white);
+      color:var(--black);
+      overflow-x:hidden;
+    }
 
-            <div className="flex flex-wrap gap-4 mt-12">
-              <button className="bg-[#FF6A00] hover:bg-[#ff7d26] transition-all text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide">
-                Request a Sample
-              </button>
+    h1,h2,h3,h4{
+      font-family:'Plus Jakarta Sans',sans-serif;
+      letter-spacing:-0.04em;
+    }
 
-              <button className="border border-white/20 hover:border-white/50 transition-all px-8 py-4 rounded-full text-sm font-semibold tracking-wide bg-white/5 backdrop-blur-sm">
-                Talk to Our Team
-              </button>
-            </div>
+    p,span,li,a{
+      font-family:'Geist',sans-serif;
+    }
+
+    .container{
+      width:min(1280px,92%);
+      margin:auto;
+    }
+
+    section{
+      position:relative;
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:140px 0 100px;
+      background:
+      radial-gradient(circle at top left, rgba(247,106,0,0.10), transparent 30%),
+      linear-gradient(to bottom, #fff 0%, #F7F6F5 100%);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      color:var(--orange);
+      font-size:13px;
+      margin-bottom:32px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:72px;
+      align-items:center;
+    }
+
+    .hero h1{
+      font-size:clamp(54px,8vw,108px);
+      line-height:.92;
+      font-weight:800;
+      margin-bottom:28px;
+    }
+
+    .hero h1 span{
+      color:var(--orange);
+    }
+
+    .hero p{
+      font-size:20px;
+      line-height:1.8;
+      color:var(--dark);
+      max-width:720px;
+    }
+
+    .hero-card{
+      background:white;
+      border-radius:32px;
+      padding:32px;
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:
+      0 20px 60px rgba(0,0,0,.05);
+    }
+
+    .mini-label{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    .hero-stat{
+      padding:22px 0;
+      border-top:1px solid rgba(0,0,0,.06);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .hero-stat:first-of-type{
+      border-top:none;
+    }
+
+    .hero-stat strong{
+      font-family:'Plus Jakarta Sans';
+      font-size:42px;
+      font-weight:700;
+    }
+
+    .hero-stat span{
+      color:var(--dark);
+      max-width:180px;
+      line-height:1.5;
+    }
+
+    /* STORY */
+
+    .story{
+      padding:120px 0;
+      background:var(--white);
+    }
+
+    .story-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:80px;
+    }
+
+    .sticky{
+      position:sticky;
+      top:80px;
+      height:max-content;
+    }
+
+    .sticky h2{
+      font-size:58px;
+      line-height:1;
+      margin-bottom:24px;
+    }
+
+    .sticky p{
+      color:var(--dark);
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .story-cards{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+    }
+
+    .story-card{
+      background:var(--off);
+      border-radius:32px;
+      padding:42px;
+      transition:.35s ease;
+      border:1px solid transparent;
+    }
+
+    .story-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(247,106,0,.16);
+      background:#fff;
+    }
+
+    .story-card h3{
+      font-size:34px;
+      margin-bottom:18px;
+    }
+
+    .story-card p{
+      line-height:1.9;
+      color:var(--dark);
+      font-size:17px;
+    }
+
+    /* COMPARISON */
+
+    .comparison{
+      padding:140px 0;
+      background:var(--black);
+      color:white;
+    }
+
+    .comparison-head{
+      text-align:center;
+      margin-bottom:72px;
+    }
+
+    .comparison-head h2{
+      font-size:72px;
+      line-height:1;
+      margin-bottom:22px;
+    }
+
+    .comparison-head p{
+      max-width:760px;
+      margin:auto;
+      color:#b5b2af;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .compare-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .panel{
+      border-radius:36px;
+      padding:42px;
+      min-height:760px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .real{
+      background:
+      linear-gradient(180deg,#3D2015 0%, #271D1A 100%);
+    }
+
+    .mimic{
+      background:
+      linear-gradient(180deg,#141414 0%, #1E1E1E 100%);
+      border:1px solid rgba(247,106,0,.15);
+    }
+
+    .panel-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:38px;
+    }
+
+    .panel-title h3{
+      font-size:42px;
+    }
+
+    .badge{
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .real .badge{
+      background:rgba(255,255,255,.08);
+      color:#E0B7A0;
+    }
+
+    .mimic .badge{
+      background:rgba(247,106,0,.12);
+      color:#FF9A52;
+    }
+
+    .scatter-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-bottom:36px;
+    }
+
+    .scatter{
+      aspect-ratio:1;
+      border-radius:20px;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.06);
+    }
+
+    .real .scatter{
+      background:
+      radial-gradient(circle at 35% 40%, rgba(255,150,100,.4), transparent 20%),
+      radial-gradient(circle at 60% 65%, rgba(255,90,0,.3), transparent 18%),
+      #241B18;
+    }
+
+    .mimic .scatter{
+      background:
+      radial-gradient(circle at 50% 50%, rgba(247,106,0,.5), transparent 18%),
+      #121212;
+    }
+
+    .scatter-label{
+      position:absolute;
+      left:16px;
+      top:14px;
+      font-size:12px;
+      color:#bdb8b4;
+    }
+
+    .line-chart{
+      height:180px;
+      border-radius:24px;
+      position:relative;
+      margin-bottom:36px;
+      overflow:hidden;
+    }
+
+    .real .line-chart{
+      background:#2D201C;
+    }
+
+    .mimic .line-chart{
+      background:#161616;
+    }
+
+    .line{
+      position:absolute;
+      width:100%;
+      height:100%;
+    }
+
+    .line svg{
+      width:100%;
+      height:100%;
+    }
+
+    .feature-list{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .feature{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      padding:16px 0;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    .feature:first-child{
+      border-top:none;
+    }
+
+    .icon{
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:14px;
+      flex-shrink:0;
+    }
+
+    .real .icon{
+      background:#57291F;
+      color:#FFB899;
+    }
+
+    .mimic .icon{
+      background:rgba(247,106,0,.14);
+      color:var(--orange);
+    }
+
+    .feature p{
+      color:#d5d1ce;
+      line-height:1.6;
+    }
+
+    .tagline{
+      margin-top:36px;
+      padding-top:28px;
+      border-top:1px solid rgba(255,255,255,.06);
+      font-size:22px;
+      line-height:1.4;
+      font-family:'Plus Jakarta Sans';
+      font-weight:600;
+    }
+
+    /* PRODUCT SECTION */
+
+    .products{
+      padding:140px 0;
+      background:var(--off);
+    }
+
+    .products-head{
+      margin-bottom:60px;
+    }
+
+    .products-head h2{
+      font-size:72px;
+      line-height:1;
+      max-width:780px;
+      margin-bottom:24px;
+    }
+
+    .products-head p{
+      max-width:720px;
+      font-size:18px;
+      line-height:1.8;
+      color:var(--dark);
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .product-card{
+      background:white;
+      border-radius:28px;
+      padding:34px;
+      min-height:260px;
+      border:1px solid rgba(0,0,0,.06);
+      transition:.3s ease;
+    }
+
+    .product-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 18px 40px rgba(0,0,0,.06);
+    }
+
+    .product-index{
+      font-size:14px;
+      color:var(--orange);
+      margin-bottom:20px;
+      font-family:'Geist';
+    }
+
+    .product-card h3{
+      font-size:30px;
+      margin-bottom:18px;
+    }
+
+    .product-card p{
+      color:var(--dark);
+      line-height:1.8;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:120px 0;
+      background:white;
+    }
+
+    .cta-box{
+      background:linear-gradient(135deg,#0D0C0C 0%, #1B1B1B 100%);
+      border-radius:42px;
+      padding:80px;
+      text-align:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .cta-box::before{
+      content:"";
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:radial-gradient(circle, rgba(247,106,0,.16), transparent 60%);
+      right:-100px;
+      top:-100px;
+    }
+
+    .cta-box h2{
+      font-size:72px;
+      line-height:1;
+      max-width:900px;
+      margin:auto auto 28px;
+      position:relative;
+    }
+
+    .cta-box p{
+      max-width:720px;
+      margin:auto;
+      color:#d3d0ce;
+      line-height:1.8;
+      font-size:18px;
+      position:relative;
+    }
+
+    .cta-actions{
+      margin-top:42px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      position:relative;
+    }
+
+    .btn{
+      padding:18px 30px;
+      border-radius:999px;
+      text-decoration:none;
+      font-family:'Plus Jakarta Sans';
+      font-weight:600;
+      transition:.3s ease;
+    }
+
+    .btn-primary{
+      background:var(--orange);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.14);
+      color:white;
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.06);
+    }
+
+    @media(max-width:1100px){
+
+      .hero-grid,
+      .story-grid,
+      .compare-grid,
+      .product-grid{
+        grid-template-columns:1fr;
+      }
+
+      .sticky{
+        position:relative;
+        top:auto;
+      }
+
+      .comparison-head h2,
+      .products-head h2,
+      .cta-box h2{
+        font-size:52px;
+      }
+
+      .panel{
+        min-height:auto;
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        padding-top:100px;
+      }
+
+      .hero h1{
+        font-size:64px;
+      }
+
+      .sticky h2{
+        font-size:44px;
+      }
+
+      .comparison-head h2,
+      .products-head h2,
+      .cta-box h2{
+        font-size:42px;
+      }
+
+      .cta-box{
+        padding:48px 28px;
+      }
+
+      .panel,
+      .story-card{
+        padding:28px;
+      }
+
+      .products{
+        padding-bottom:80px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div>
+          <div class="eyebrow">
+            Reproducibility • Synthetic Cell Mimics
           </div>
 
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="rounded-[32px] border border-red-500/10 bg-[#111111] p-6 relative overflow-hidden">
-                <div className="text-red-300 text-sm uppercase tracking-[0.2em] mb-8">
-                  Real Cells
-                </div>
+          <h1>
+            A reference
+            that <span>doesn't
+            change.</span>
+          </h1>
 
-                <div className="space-y-5">
-                  {[1, 2, 3, 4].map((item) => (
-                    <div
-                      key={item}
-                      className="h-24 rounded-2xl bg-gradient-to-br from-red-950/40 to-orange-950/20 border border-red-500/10 relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 opacity-60">
-                        <div className="absolute top-6 left-10 w-8 h-8 rounded-full bg-red-400 blur-sm" />
-                        <div className="absolute top-10 left-24 w-6 h-6 rounded-full bg-orange-400 blur-sm" />
-                        <div className="absolute top-14 left-40 w-10 h-10 rounded-full bg-red-300 blur-sm" />
-                        <div className="absolute top-4 left-52 w-5 h-5 rounded-full bg-red-500 blur-sm" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-[32px] border border-[#FF6A00]/20 bg-[#0D0D0D] p-6 relative overflow-hidden">
-                <div className="text-[#FF6A00] text-sm uppercase tracking-[0.2em] mb-8">
-                  Cell Mimics
-                </div>
-
-                <div className="space-y-5">
-                  {[1, 2, 3, 4].map((item) => (
-                    <div
-                      key={item}
-                      className="h-24 rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#101010] border border-[#FF6A00]/10 relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0">
-                        {[1, 2, 3, 4].map((d) => (
-                          <div
-                            key={d}
-                            className="absolute w-7 h-7 rounded-full bg-[#FF6A00] blur-sm"
-                            style={{
-                              top: `${20 + d * 10}px`,
-                              left: `${40 + d * 35}px`,
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <p>
+            The instruments became great. The reproducibility didn't.
+            Slingshot replaces biologically variable controls with engineered
+            cell mimics designed to behave like real cells — without drifting,
+            degrading, or changing across sites and time.
+          </p>
         </div>
-      </section>
 
-      {/* THE CYTOMETER ISN'T THE PROBLEM */}
-      <section className="px-8 md:px-16 lg:px-24 py-36 bg-[#F7F6F5]">
-        <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-24">
-          <div>
-            <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-              The Cytometer Isn’t The Problem
-            </div>
+        <div class="hero-card">
 
-            <h2 className="text-5xl md:text-6xl font-bold leading-[1] tracking-tight max-w-xl">
-              Better instruments didn’t solve reproducibility.
-            </h2>
+          <div class="mini-label">
+            Multi-platform validation
           </div>
 
-          <div className="space-y-10 text-lg leading-relaxed text-black/70">
-            <p>
-              The reason is as old as cytometry itself: controls, controls, controls. Inherently, every donor’s blood is different and every cell line drifts with passage, simply because of the heterogenicity of living things.
-            </p>
-
-            <p>
-              Using these shifting controls as references, across time and multiple sites, is a biological problem which cannot be solved with a hardware solution.
-            </p>
-
-            <p>
-              You can’t fix that with optics. You fix it by changing what you measure against.
-            </p>
+          <div class="hero-stat">
+            <strong>≤5%</strong>
+            <span>
+              CV across operators, instruments and days
+            </span>
           </div>
+
+          <div class="hero-stat">
+            <strong>36M</strong>
+            <span>
+              Shelf life for most products at room temperature
+            </span>
+          </div>
+
+          <div class="hero-stat">
+            <strong>3</strong>
+            <span>
+              Cytometer platforms validated across studies
+            </span>
+          </div>
+
         </div>
-      </section>
 
-      {/* THE PROBLEM YOU ALREADY KNOW */}
-      <section className="px-8 md:px-16 lg:px-24 py-32 border-t border-black/5 bg-white">
-        <div className="max-w-[1500px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
-            <div>
-              <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-                The Problem You Already Know
-              </div>
+      </div>
 
-              <h2 className="text-5xl md:text-6xl font-bold leading-[1] tracking-tight max-w-2xl">
-                If you run flow, you’ve lived this.
-              </h2>
-            </div>
+    </div>
+  </section>
 
-            <div className="space-y-10 text-lg leading-relaxed text-black/70">
-              <p>
-                How to differentiate between true biological changes in your subjects and the inevitable technical noise of the instrument and reagents over time?
-              </p>
+  <!-- STORY -->
 
-              <p>
-                It doesn’t. When the control changes more than the assay, the assay can’t tell you anything.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section class="story">
 
-      {/* WHAT IF THE REFERENCE DIDN'T MOVE */}
-      <section className="px-8 md:px-16 lg:px-24 py-36 border-t border-black/5">
-        <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-24 items-center">
-          <div>
-            <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-              What If The Reference Didn’t Move
-            </div>
+    <div class="container">
 
-            <h2 className="text-5xl md:text-6xl font-bold leading-[1] tracking-tight max-w-2xl">
-              A synthetic reference engineered to behave like a real cell.
-            </h2>
+      <div class="story-grid">
 
-            <div className="mt-12 space-y-8 text-black/70 text-lg leading-relaxed">
-              <p>
-                A polystyrene bead is a golf ball, round, dense, optical. A real cell is a tomato, soft, complex, perishable.
-              </p>
+        <div class="sticky">
 
-              <p>
-                You want something that scatters and stains like the tomato, without the mush.
-              </p>
-
-              <p>
-                That’s a cell mimic. A synthetic hydrogel particle engineered to behave like a cell on the cytometer.
-              </p>
-            </div>
-          </div>
-
-          <div className="aspect-square rounded-[40px] bg-black relative overflow-hidden border border-[#FF6A00]/20 flex items-center justify-center">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,106,0,0.25),transparent_50%)]" />
-
-            <div className="w-72 h-72 rounded-full bg-gradient-to-br from-[#FF6A00] to-orange-200 blur-[1px] opacity-90 relative shadow-[0_0_120px_rgba(255,106,0,0.5)]" />
-          </div>
-        </div>
-      </section>
-
-      {/* PROOF OF WHAT MIMICS CAN DO */}
-      <section className="px-8 md:px-16 lg:px-24 py-36 bg-white">
-        <div className="max-w-[1500px] mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-20">
-            <div>
-              <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-                Proof Of What Mimics Can Do
-              </div>
-
-              <h2 className="text-5xl md:text-6xl font-bold leading-[1] tracking-tight max-w-3xl">
-                Multi-platform validation across operators, instruments, and days.
-              </h2>
-            </div>
-
-            <p className="max-w-xl text-black/70 text-lg leading-relaxed">
-              TBNK Mimic™ ran lymphocyte subsets at ≤5% CV across operators, instruments, and days, with intra-assay precision under 3% CV.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              ['≤5%', 'Cross-platform CV'],
-              ['<3%', 'Intra-assay precision'],
-              ['36M', 'Shelf stability'],
-              ['3', 'Validated platforms'],
-            ].map(([metric, label]) => (
-              <div
-                key={metric}
-                className="rounded-[28px] border border-black/5 bg-[#FAFAFA] p-8"
-              >
-                <div className="text-5xl font-bold tracking-tight text-[#FF6A00]">
-                  {metric}
-                </div>
-
-                <div className="mt-4 text-black/60 text-sm uppercase tracking-[0.15em]">
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PRODUCT FAMILY */}
-      <section className="px-8 md:px-16 lg:px-24 py-36 border-t border-black/5">
-        <div className="max-w-[1500px] mx-auto">
-          <div className="mb-20">
-            <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-              Product Family
-            </div>
-
-            <h2 className="text-5xl md:text-6xl font-bold leading-[1] tracking-tight max-w-4xl">
-              The product family, by the job it does.
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <div
-                key={product.name}
-                className="rounded-[32px] border border-black/5 bg-white p-8 hover:border-[#FF6A00]/30 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-[#FF6A00]/10 mb-8 flex items-center justify-center">
-                  <div className="w-5 h-5 rounded-full bg-[#FF6A00]" />
-                </div>
-
-                <h3 className="text-2xl font-bold tracking-tight leading-tight">
-                  {product.name}
-                </h3>
-
-                <p className="mt-5 text-black/65 leading-relaxed text-base">
-                  {product.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TRY IT OUT */}
-      <section className="bg-[#050505] text-white px-8 md:px-16 lg:px-24 py-32 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_center,rgba(255,106,0,0.8),transparent_40%)]" />
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-            Try It Out
-          </div>
-
-          <h2 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
-            The fastest way to find out whether this changes anything for you is to run it next to whatever you’re using now.
+          <h2>
+            The cytometer
+            isn't the
+            problem.
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-14">
-            <button className="bg-[#FF6A00] hover:bg-[#ff7d26] transition-all text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide">
-              Request a Sample
-            </button>
+          <p>
+            For decades, the field optimized optics, lasers,
+            detectors and software — while relying on biological
+            references that naturally drift over time.
+          </p>
 
-            <button className="border border-white/15 hover:border-white/40 transition-all px-8 py-4 rounded-full text-sm font-semibold tracking-wide bg-white/5">
-              Talk to Our Team
-            </button>
-          </div>
         </div>
-      </section>
 
-      {/* VISUAL CONCEPT */}
-      <section className="px-8 md:px-16 lg:px-24 py-36 bg-[#0A0A0A] text-white overflow-hidden relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,106,0,0.08),transparent_60%)]" />
+        <div class="story-cards">
 
-        <div className="max-w-[1600px] mx-auto relative z-10">
-          <div className="text-center max-w-5xl mx-auto mb-24">
-            <div className="text-sm uppercase tracking-[0.25em] text-[#FF6A00] mb-6">
-              Visual Concept
-            </div>
+          <div class="story-card">
+            <h3>
+              Controls were always the bottleneck
+            </h3>
 
-            <h2 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
-              The same control.
-              <br />
-              Every site. Every instrument. Every year.
-            </h2>
+            <p>
+              Every donor’s blood is different. Every cell line changes with
+              passage. The reference itself becomes unstable — making it nearly
+              impossible to distinguish true biological change from technical noise.
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
-            <div className="rounded-[40px] bg-[#111111] border border-red-500/10 p-10">
-              <div className="text-red-300 uppercase tracking-[0.25em] text-sm mb-10">
-                Real Cells
-              </div>
+          <div class="story-card">
+            <h3>
+              Hardware couldn't solve a biology problem
+            </h3>
 
-              <div className="grid grid-cols-2 gap-4 mb-10">
-                {['Donor 1', 'Donor 2', 'Donor 3', 'Donor 4'].map((label, idx) => (
-                  <div
-                    key={label}
-                    className="rounded-[24px] h-44 bg-gradient-to-br from-red-950/40 to-orange-950/10 border border-red-500/10 relative overflow-hidden p-4"
-                  >
-                    <div className="text-xs uppercase tracking-[0.2em] text-red-200/60 mb-4">
-                      {label}
-                    </div>
-
-                    <div className="absolute inset-0 opacity-70">
-                      <div
-                        className="absolute top-12 left-10 w-10 h-10 rounded-full bg-red-400 blur-sm"
-                        style={{ transform: `translate(${idx * 5}px, ${idx * 8}px)` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-4 mb-10">
-                {['30/90-day expiration', 'Cold chain', 'Biohazard', 'Lot 47 — discontinued'].map((item) => (
-                  <div key={item} className="flex items-center gap-4 text-red-200/60 text-sm">
-                    <div className="w-6 h-6 rounded-full border border-red-400 flex items-center justify-center text-xs">
-                      ×
-                    </div>
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-white/60 text-xl leading-relaxed font-medium">
-                You cannot run the same sample twice.
-              </div>
-            </div>
-
-            <div className="rounded-[40px] bg-[#111111] border border-[#FF6A00]/20 p-10">
-              <div className="text-[#FF6A00] uppercase tracking-[0.25em] text-sm mb-10">
-                Slingshot Cell Mimics
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-10">
-                {['Site A', 'Site B', 'Site C', 'Site D'].map((label) => (
-                  <div
-                    key={label}
-                    className="rounded-[24px] h-44 bg-gradient-to-br from-[#171717] to-[#101010] border border-[#FF6A00]/10 relative overflow-hidden p-4"
-                  >
-                    <div className="text-xs uppercase tracking-[0.2em] text-[#FFB27A] mb-4">
-                      {label}
-                    </div>
-
-                    <div className="absolute inset-0 opacity-90">
-                      {[1, 2, 3, 4].map((d) => (
-                        <div
-                          key={d}
-                          className="absolute w-8 h-8 rounded-full bg-[#FF6A00] blur-sm"
-                          style={{ top: `${40 + d * 14}px`, left: `${40 + d * 35}px` }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-4 mb-10">
-                {['36-month shelf life', 'Room temperature', 'Non-biohazardous', 'Lot 47 = Lot 48 = Lot 49'].map((item) => (
-                  <div key={item} className="flex items-center gap-4 text-[#FFB27A] text-sm">
-                    <div className="w-6 h-6 rounded-full border border-[#FF6A00] flex items-center justify-center text-xs">
-                      ✓
-                    </div>
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-[#FFB27A] text-xl leading-relaxed font-medium">
-                A reference that doesn’t change.
-              </div>
-            </div>
+            <p>
+              Better instruments improved measurement precision, but not
+              standardization. If the control changes more than the assay,
+              the assay loses meaning.
+            </p>
           </div>
+
+          <div class="story-card">
+            <h3>
+              Change what you measure against
+            </h3>
+
+            <p>
+              Slingshot Cell Mimics are synthetic hydrogel particles engineered
+              to scatter and stain like real cells — while remaining
+              shelf-stable, non-biohazardous and manufactured to spec.
+            </p>
+          </div>
+
         </div>
-      </section>
+
+      </div>
+
     </div>
-  )
-}
+
+  </section>
+
+  <!-- COMPARISON -->
+
+  <section class="comparison">
+
+    <div class="container">
+
+      <div class="comparison-head">
+        <h2>
+          The same control.
+          Every site.
+          Every instrument.
+          Every year.
+        </h2>
+
+        <p>
+          Same assay. Same gating strategy. Same data structure.
+          Two entirely different outcomes depending on whether the
+          reference changes or not.
+        </p>
+      </div>
+
+      <div class="compare-grid">
+
+        <!-- REAL -->
+
+        <div class="panel real">
+
+          <div class="panel-title">
+            <h3>Real Cells</h3>
+            <div class="badge">Biological variability</div>
+          </div>
+
+          <div class="scatter-grid">
+
+            <div class="scatter">
+              <div class="scatter-label">Donor 1</div>
+            </div>
+
+            <div class="scatter">
+              <div class="scatter-label">Donor 2</div>
+            </div>
+
+            <div class="scatter">
+              <div class="scatter-label">Donor 3</div>
+            </div>
+
+            <div class="scatter">
+              <div class="scatter-label">Donor 4</div>
+            </div>
+
+          </div>
+
+          <div class="line-chart">
+            <div class="line">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polyline
+                  fill="none"
+                  stroke="#F76A00"
+                  stroke-width="2"
+                  points="
+                  0,60
+                  15,45
+                  30,75
+                  45,30
+                  60,68
+                  75,38
+                  100,58"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="feature-list">
+
+            <div class="feature">
+              <div class="icon">✕</div>
+              <p>30–90 day expiration and cold chain dependency</p>
+            </div>
+
+            <div class="feature">
+              <div class="icon">✕</div>
+              <p>Biohazardous handling and disposal requirements</p>
+            </div>
+
+            <div class="feature">
+              <div class="icon">✕</div>
+              <p>Lot-to-lot inconsistency and donor variability</p>
+            </div>
+
+            <div class="feature">
+              <div class="icon">✕</div>
+              <p>Cannot reliably reproduce the same sample twice</p>
+            </div>
+
+          </div>
+
+          <div class="tagline">
+            You cannot run the same sample twice.
+          </div>
+
+        </div>
+
+        <!-- MIMIC -->
+
+        <div class="panel mimic">
+
+          <div class="panel-title">
+            <h3>Cell Mimics</h3>
+            <div class="badge">Engineered consistency</div>
+          </div>
+
+          <div class="scatter-grid">
+
+            <div class="scatter">
+              <div class="scatter-label">Site A</div>
+            </div>
+
+            <div class="scatter">
+              <div class="scatter-label">Site B</div>
+            </div>
+
+            <div class="scatter">
+              <div class="scatter-label">Site C</div>
+            </div>
+
+            <div class="scatter">
+              <div class="scatter-label">Site D</div>
+            </div>
+
+          </div>
+
+          <div class="line-chart">
+            <div class="line">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polyline
+                  fill="none"
+                  stroke="#F76A00"
+                  stroke-width="2"
+                  points="
+                  0,52
+                  15,51
+                  30,53
+                  45,50
+                  60,51
+                  75,50
+                  100,52"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="feature-list">
+
+            <div class="feature">
+              <div class="icon">✓</div>
+              <p>36-month shelf life and room temperature shipping</p>
+            </div>
+
+            <div class="feature">
+              <div class="icon">✓</div>
+              <p>Non-biohazardous and operationally simpler</p>
+            </div>
+
+            <div class="feature">
+              <div class="icon">✓</div>
+              <p>Lot 47 = Lot 48 = Lot 49</p>
+            </div>
+
+            <div class="feature">
+              <div class="icon">✓</div>
+              <p>≤5% CV across operators, instruments and days</p>
+            </div>
+
+          </div>
+
+          <div class="tagline">
+            A reference that doesn't change.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section class="products">
+
+    <div class="container">
+
+      <div class="products-head">
+
+        <h2>
+          The product family,
+          by the job it does.
+        </h2>
+
+        <p>
+          Every product is engineered around a specific reproducibility
+          problem — from instrument harmonization to longitudinal assay QC.
+        </p>
+
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-index">01</div>
+          <h3>ScatterBridge®</h3>
+          <p>
+            Instrument standardization and harmonization across
+            sites and cytometer platforms.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-index">02</div>
+          <h3>FlowCytes®</h3>
+          <p>
+            Synthetic white blood cell scatter mimics for
+            gating and panel setup workflows.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-index">03</div>
+          <h3>SpectraComp®</h3>
+          <p>
+            Single-stain controls for spectral unmixing
+            and conventional compensation.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-index">04</div>
+          <h3>ViaComp®</h3>
+          <p>
+            Viability controls compatible with both DNA
+            intercalating and amine-reactive dyes.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-index">05</div>
+          <h3>TBNK Mimic™</h3>
+          <p>
+            Biomarker-defined references for assay
+            verification and longitudinal QC.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-index">06</div>
+          <h3>StimCytes™</h3>
+          <p>
+            Synthetic references for functional,
+            quantitative and immunophenotyping workflows.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>
+          Run it next to whatever
+          you're using now.
+        </h2>
+
+        <p>
+          The fastest way to understand whether synthetic
+          references change your workflow is to test them
+          beside your current controls.
+        </p>
+
+        <div class="cta-actions">
+
+          <a href="#" class="btn btn-primary">
+            Request a Sample
+          </a>
+
+          <a href="#" class="btn btn-secondary">
+            Talk to Our Team
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
