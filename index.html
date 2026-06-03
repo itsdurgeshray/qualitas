@@ -1,1524 +1,1009 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AltimaCRM vs B2Core: Forex CRM Comparison for Brokers in 2026</title>
-  <meta name="description" content="Comparing AltimaCRM and B2Core? See how both platforms handle lead conversion, KYC, IB management, and compliance. Find out which forex CRM fits your brokerage." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom TruCytes® Biomarker Controls — SlingshotBio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Geist:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    /* ── Reset & Tokens ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue:        #1E6BFF;
-      --blue-dim:    rgba(30,107,255,.08);
-      --blue-glow:   rgba(30,107,255,.2);
-      --navy:        #04071B;
-      --dark-blue:   #0F2C57;
-      --gray:        #595959;
-      --light-blue:  #CCEAFF;
-      --white:       #FFFFFF;
-      --surface:     #EFF2F6;
-      --bg:          #EFF2F6;
-      --bg-card:     #FFFFFF;
-      --bg-alt:      #F6F8FB;
-      --border:      rgba(4,7,27,.08);
-      --border-blue: rgba(30,107,255,.25);
-      --text:        #04071B;
-      --text-muted:  #595959;
-      --text-dim:    #3a4460;
-      --green:       #16A34A;
-      --red:         #DC2626;
-      --amber:       #D97706;
-      --radius-sm:   8px;
-      --radius-md:   14px;
-      --radius-lg:   20px;
-      --radius-xl:   28px;
-      --shadow-blue: 0 4px 24px rgba(30,107,255,.18);
-      --shadow-card: 0 2px 16px rgba(4,7,27,.07), 0 1px 3px rgba(4,7,27,.05);
+      --or:    #FF6600;
+      --od:    #D95200;
+      --dk:    #0C0C0C;
+      --dk2:   #141414;
+      --dk3:   #1C1C1C;
+      --wh:    #FFFFFF;
+      --off:   #F6F5F3;
+      --ink:   #0D0D0D;
+      --body:  #333130;
+      --dim:   #888784;
+      --rule:  #E4E3E0;
+      --rdk:   rgba(255,255,255,0.08);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--wh);
+      color: var(--body);
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* ── Utility ─────────────────────────────────────────────── */
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px;
-      background: var(--blue-dim);
-      border: 1px solid var(--border-blue);
-      border-radius: 100px;
-      font-size: 12px; font-weight: 600; letter-spacing: .06em;
-      color: var(--blue);
-      text-transform: uppercase;
+    /* ── TYPE ── */
+    .t-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600; letter-spacing: -0.035em; line-height: 1.1;
     }
-    .badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 6px rgba(30,107,255,.5); flex-shrink: 0; }
+    .t-white { color: var(--wh); }
 
-    .btn-primary {
+    /* section eyebrow */
+    .eyebrow {
+      font-size: 10.5px; font-weight: 500;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: var(--dim);
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 20px; height: 1.5px;
+      background: var(--or); border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .eyebrow-dk { color: rgba(255,255,255,0.32); }
+    .eyebrow-dk::before { background: rgba(255,102,0,0.6); }
+
+    /* ── LAYOUT ── */
+    .w { max-width: 1160px; margin: 0 auto; padding: 0 52px; }
+    @media(max-width:768px){ .w { padding: 0 24px; } }
+
+    /* ── BUTTONS ── */
+    .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px;
-      background: var(--blue);
-      color: var(--white);
-      font-size: 15px; font-weight: 600;
-      border-radius: 10px;
+      padding: 13px 26px;
+      background: var(--or); color: var(--wh);
+      border-radius: 8px; border: none; cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px; font-weight: 600; letter-spacing: -0.01em;
       text-decoration: none;
-      border: none; cursor: pointer;
-      transition: all .2s ease;
-      box-shadow: 0 4px 20px rgba(30,107,255,.4);
+      transition: background .18s, transform .18s, box-shadow .18s;
     }
-    .btn-primary:hover { background: #3a7fff; transform: translateY(-1px); box-shadow: 0 8px 30px rgba(30,107,255,.5); }
+    .btn:hover { background: var(--od); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,102,0,.28); }
 
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px;
-      background: var(--white);
-      color: var(--text-dim);
-      font-size: 15px; font-weight: 500;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      text-decoration: none; cursor: pointer;
-      transition: all .2s ease;
+    .btn-o {
+      background: transparent;
+      border: 1.5px solid var(--rule);
+      color: var(--ink);
     }
-    .btn-ghost:hover { border-color: rgba(30,107,255,.3); color: var(--blue); background: var(--white); box-shadow: 0 2px 12px rgba(30,107,255,.1); }
+    .btn-o:hover { border-color: #aaa; background: var(--off); box-shadow: none; }
 
-    section { position: relative; }
+    .btn-odk {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.7);
+    }
+    .btn-odk:hover { border-color: rgba(255,255,255,.5); color: var(--wh); box-shadow: none; }
 
-    /* ── Nav ─────────────────────────────────────────────────── */
+    /* ════════════════════════════
+       TOPBAR
+    ════════════════════════════ */
+    .topbar {
+      background: var(--dk2);
+      padding: 8px 0;
+      text-align: center;
+      font-size: 11px; font-weight: 500;
+      color: rgba(255,255,255,.35); letter-spacing: .06em;
+    }
+    .topbar a { color: var(--or); font-weight: 600; text-decoration: none; margin-left: 10px; }
+
+    /* ════════════════════════════
+       NAV
+    ════════════════════════════ */
     nav {
-      position: sticky; top: 0; z-index: 100;
-      padding: 0 24px;
-      height: 64px;
-      display: flex; align-items: center;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 400;
+      height: 56px; background: var(--dk);
+      border-bottom: 1px solid var(--rdk);
     }
-    .nav-inner {
-      max-width: 1160px; width: 100%; margin: 0 auto;
+    .nav-in {
+      height: 100%;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-mark {
-      width: 32px; height: 32px;
-      background: var(--blue);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 900; font-size: 14px; color: white;
+    .nl { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+    .nl-mark { color: var(--or); display: flex; }
+    .nl-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px; font-weight: 600; color: var(--wh); letter-spacing: -.02em;
     }
-    .nav-logo span { font-weight: 700; font-size: 17px; color: var(--navy); letter-spacing: -.02em; }
-    .nav-links { display: flex; align-items: center; gap: 6px; }
-    .nav-links a {
-      padding: 7px 14px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px; font-weight: 500;
-      border-radius: 8px;
-      transition: all .18s;
+    .nl-name sup { font-size: 9px; font-weight: 400; opacity: .4; vertical-align: super; }
+    .nr { list-style: none; display: flex; align-items: center; gap: 24px; }
+    .nr a {
+      color: rgba(255,255,255,.42); font-size: 12.5px; font-weight: 400;
+      text-decoration: none; transition: color .15s;
     }
-    .nav-links a:hover { color: var(--navy); background: var(--surface); }
+    .nr a:hover { color: var(--wh); }
+    .nr .ns {
+      padding: 7px 16px !important;
+      background: var(--or) !important; color: var(--wh) !important;
+      border-radius: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important; font-size: 13px !important;
+      transition: background .15s !important;
+    }
+    .nr .ns:hover { background: var(--od) !important; }
 
-    /* ── Hero ─────────────────────────────────────────────────── */
+    /* ════════════════════════════
+       HERO
+    ════════════════════════════ */
     .hero {
-      padding: 120px 0 100px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: var(--white);
+      background: var(--dk);
+      padding: 96px 0 104px;
     }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 80% 50% at 50% -5%, rgba(204,234,255,.7) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 30% at 10% 100%, rgba(30,107,255,.06) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 30% at 90% 100%, rgba(15,44,87,.04) 0%, transparent 60%);
-      pointer-events: none;
+    .hero-crumb {
+      font-size: 12px; font-weight: 400; color: rgba(255,255,255,.28);
+      display: flex; align-items: center; gap: 7px;
+      margin-bottom: 38px;
     }
-    .hero-bg::after {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(30,107,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(30,107,255,.035) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 20%, transparent 75%);
-    }
+    .hero-crumb a { color: inherit; text-decoration: none; }
+    .hero-crumb .cur { color: var(--or); }
 
-    .hero-vs-badge {
-      display: inline-flex; align-items: center; gap: 12px;
-      padding: 8px 16px 8px 8px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      margin-bottom: 32px;
-      box-shadow: 0 2px 12px rgba(4,7,27,.06);
-    }
-    .vs-pill {
-      padding: 4px 10px;
-      background: var(--blue-dim);
-      border: 1px solid var(--border-blue);
-      border-radius: 100px;
-      font-size: 11px; font-weight: 700;
-      color: var(--blue);
-      text-transform: uppercase; letter-spacing: .08em;
-    }
-    .hero-vs-badge span { font-size: 13px; color: var(--text-muted); font-weight: 500; }
-
-    .hero h1 {
-      font-size: clamp(36px, 5.5vw, 66px);
-      font-weight: 900;
-      letter-spacing: -.04em;
-      line-height: 1.05;
+    .hero-h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      font-size: clamp(44px, 5.6vw, 82px);
+      line-height: 1.04; letter-spacing: -.045em;
+      color: var(--wh);
+      max-width: 840px;
       margin-bottom: 24px;
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--navy);
-    }
-    .hero h1 .accent {
-      background: linear-gradient(135deg, var(--blue) 20%, var(--dark-blue));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
     .hero-sub {
-      font-size: 18px;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
-      font-weight: 400;
+      font-size: 16px; line-height: 1.72;
+      color: rgba(255,255,255,.48);
+      max-width: 560px; margin-bottom: 40px;
     }
 
-    .hero-ctas {
-      display: flex; align-items: center; justify-content: center; gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
+    /* credential pills */
+    .hero-pills {
+      display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 44px;
     }
-
-    .hero-stats {
-      display: flex; align-items: center; justify-content: center; gap: 48px;
-      flex-wrap: wrap;
-    }
-    .hero-stat { text-align: center; }
-    .hero-stat .num { font-size: 32px; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
-    .hero-stat .label { font-size: 13px; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
-    .hero-divider { width: 1px; height: 40px; background: var(--border); }
-
-    /* ── Section Header ──────────────────────────────────────── */
-    .section-header { text-align: center; margin-bottom: 60px; }
-    .section-header .badge { margin-bottom: 16px; }
-    .section-header h2 {
-      font-size: clamp(26px, 3.5vw, 42px);
-      font-weight: 600;
-      letter-spacing: -.025em;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      color: var(--navy);
-    }
-    .section-header p {
-      font-size: 17px;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    /* ── Comparison Table ────────────────────────────────────── */
-    .comparison { padding: 100px 0; background: var(--surface); }
-
-    .comp-table-wrap {
-      margin-top: 48px;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 40px rgba(4,7,27,.08);
-    }
-
-    .comp-header {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-    .comp-header-cell { padding: 28px 32px; display: flex; flex-direction: column; gap: 6px; }
-    .comp-header-cell:nth-child(2) { border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
-    .comp-header-cell.altima {
-      background: linear-gradient(160deg, rgba(204,234,255,.5), rgba(30,107,255,.06));
-      position: relative;
-    }
-    .comp-header-cell.altima::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--blue);
-    }
-    .comp-col-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
-    .comp-col-name { font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: var(--navy); }
-    .comp-col-name.blue { color: var(--blue); }
-    .comp-col-sub { font-size: 12px; color: var(--text-muted); font-weight: 400; }
-    .winner-tag {
-      display: inline-flex; align-items: center; gap: 4px;
-      margin-top: 4px; padding: 3px 8px;
-      background: rgba(22,163,74,.1);
-      border: 1px solid rgba(22,163,74,.25);
+    .pill {
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,.1);
       border-radius: 100px;
-      font-size: 11px; font-weight: 600;
-      color: var(--green);
+      font-size: 12px; font-weight: 400;
+      color: rgba(255,255,255,.4); white-space: nowrap;
+    }
+    .pill strong { color: rgba(255,255,255,.75); font-weight: 600; margin-right: 5px; }
+
+    /* ════════════════════════════
+       KEY BENEFITS — 4-up horizontal list
+    ════════════════════════════ */
+    .feat-sec { border-bottom: 1px solid var(--rule); }
+
+    .feat-list {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid var(--rule);
+    }
+    .feat-cell {
+      padding: 38px 32px;
+      border-right: 1px solid var(--rule);
+      border-top: 3px solid transparent;
+      transition: border-top-color .2s, background .2s;
+    }
+    .feat-cell:hover {
+      border-top-color: var(--or);
+      background: #FAFAF9;
+    }
+    .feat-num {
+      font-size: 11px; font-weight: 500; color: var(--or);
+      opacity: .55; letter-spacing: .04em;
+      margin-bottom: 14px;
+    }
+    .feat-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px; font-weight: 600;
+      color: var(--ink); letter-spacing: -.02em;
+      margin-bottom: 9px; line-height: 1.3;
+    }
+    .feat-desc {
+      font-size: 13.5px; line-height: 1.66; color: var(--body);
     }
 
-    .comp-section-head {
-      grid-column: 1 / -1;
-      padding: 12px 32px;
-      background: rgba(30,107,255,.04);
-      border-bottom: 1px solid var(--border);
-      font-size: 11px; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase;
-      color: var(--blue);
-    }
+    /* ════════════════════════════
+       SECTION 1 — PROCESS OVERVIEW
+       Layout: header block + 3-col step rows
+    ════════════════════════════ */
+    .proc-sec { padding: 96px 0; background: var(--wh); }
 
-    .comp-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      border-bottom: 1px solid var(--border);
-      transition: background .15s;
-      background: var(--white);
-    }
-    .comp-row:last-child { border-bottom: none; }
-    .comp-row:hover { background: var(--surface); }
-
-    .comp-cell {
-      padding: 18px 32px;
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 14px;
-    }
-    .comp-cell:nth-child(2) { border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
-    .comp-cell.altima-cell { background: rgba(204,234,255,.25); }
-    .comp-cell.altima-cell.green-hi { background: rgba(22,163,74,.06); }
-    .comp-cell .feature-name { font-weight: 500; color: var(--text-dim); }
-
-    .check  { color: var(--green); font-size: 18px; font-weight: 700; flex-shrink: 0; }
-    .cross-x { color: var(--red);   font-size: 18px; font-weight: 700; flex-shrink: 0; }
-    .partial { color: var(--amber); font-size: 18px; font-weight: 700; flex-shrink: 0; }
-    .cell-note { font-size: 12px; color: var(--text-muted); }
-
-    /* ── Platform Sections ───────────────────────────────────── */
-    .platform-section { padding: 100px 0; }
-    .platform-section.bg-white { background: var(--white); }
-    .platform-section.bg-surface { background: var(--surface); }
-
-    .platform-layout {
+    .proc-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 80px;
+      margin-bottom: 64px;
       align-items: start;
-      margin-top: 60px;
     }
-    .platform-text h2 {
-      font-size: clamp(22px, 2.8vw, 34px);
-      font-weight: 600;
-      letter-spacing: -.025em;
-      line-height: 1.2;
-      color: var(--navy);
-      margin-bottom: 16px;
+    .proc-h2 {
+      font-size: clamp(28px, 3.2vw, 44px);
+      color: var(--ink);
     }
-    .platform-text .sub-heading {
-      font-size: 15px; font-weight: 600;
-      color: var(--navy);
-      margin: 24px 0 8px;
+    .proc-intro {
+      font-size: 15.5px; line-height: 1.76; color: var(--body);
+      padding-top: 4px;
     }
-    .platform-text p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
-    .platform-text p:last-child { margin-bottom: 0; }
+    .proc-intro p + p { margin-top: 14px; }
+    .proc-highlight {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 22px;
+      padding: 10px 18px;
+      background: rgba(255,102,0,.06);
+      border: 1px solid rgba(255,102,0,.18);
+      border-radius: 8px;
+      font-size: 13px; font-weight: 600; color: var(--or);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
 
-    .capabilities-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-    }
-    .capabilities-box-header {
-      padding: 18px 24px;
-      background: rgba(30,107,255,.04);
-      border-bottom: 1px solid var(--border);
-      font-size: 13px; font-weight: 700;
-      color: var(--navy);
-    }
-    .capabilities-list { list-style: none; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px; }
-    .capabilities-list li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 14px; color: var(--text-muted); line-height: 1.5;
-    }
-    .capabilities-list li::before {
-      content: '✓';
-      color: var(--green); font-weight: 700; font-size: 13px;
-      flex-shrink: 0; margin-top: 1px;
-    }
-    .capabilities-list.neutral li::before { content: '→'; color: var(--blue); }
+    /* 3-column step rows */
+    .proc-list { border-top: 1px solid var(--rule); }
 
-    /* ── Broker Feedback ─────────────────────────────────────── */
-    .broker-feedback { padding: 100px 0; background: var(--white); }
+    .proc-row {
+      display: grid;
+      grid-template-columns: 52px 220px 1fr;
+      gap: 48px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+      transition: background .15s;
+      cursor: default;
+    }
+    .proc-row:hover { background: #FAFAF8; margin-left: -52px; padding-left: 52px; margin-right: -52px; padding-right: 52px; }
 
-    .feedback-intro { max-width: 720px; margin: 0 auto 48px; text-align: center; }
-    .feedback-intro p { font-size: 16px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
-    .feedback-intro p:last-child { margin-bottom: 0; }
+    .proc-n {
+      font-size: 12px; font-weight: 500; color: var(--or);
+      opacity: .55; padding-top: 2px; letter-spacing: .04em;
+    }
 
-    .feedback-values {
+    .proc-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px; font-weight: 600;
+      color: var(--ink); letter-spacing: -.025em;
+      line-height: 1.3;
+    }
+
+    .proc-desc {
+      font-size: 14.5px; line-height: 1.72; color: var(--body);
+    }
+
+    /* ════════════════════════════
+       SECTION 2 — PRODUCT CAPABILITIES
+       Layout: left sticky header / right scrollable list
+    ════════════════════════════ */
+    .caps-sec { padding: 96px 0; background: var(--off); }
+
+    .caps-split {
+      display: grid;
+      grid-template-columns: 1fr 1.55fr;
+      gap: 88px;
+      align-items: start;
+    }
+
+    .caps-left { position: sticky; top: 84px; }
+
+    .caps-h2 {
+      font-size: clamp(26px, 2.8vw, 40px);
+      color: var(--ink); margin-bottom: 18px;
+    }
+
+    .caps-intro {
+      font-size: 15px; line-height: 1.74;
+      color: var(--body);
+    }
+
+    /* capability items on the right */
+    .caps-list { border-top: 1px solid var(--rule); }
+
+    .cap-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--rule);
+      transition: padding-left .2s;
+    }
+    .cap-item:hover { padding-left: 12px; }
+
+    .cap-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15.5px; font-weight: 600;
+      color: var(--or);
+      letter-spacing: -.02em;
+      margin-bottom: 9px;
+    }
+
+    .cap-desc {
+      font-size: 14.5px; line-height: 1.68; color: var(--body);
+    }
+
+    /* ════════════════════════════
+       SECTION 3 — TECHNOLOGY PLATFORM
+       Layout: full-width header split + 3-col features grid
+    ════════════════════════════ */
+    .tech-sec { background: var(--dk); padding: 96px 0; }
+
+    .tech-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 60px;
+      align-items: end;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--rdk);
+    }
+
+    .tech-h2 {
+      font-size: clamp(26px, 3vw, 42px);
+      color: var(--wh); line-height: 1.1;
+    }
+
+    .tech-intro {
+      font-size: 15.5px; line-height: 1.74;
+      color: rgba(255,255,255,.42);
+    }
+
+    /* 3-column features grid */
+    .tech-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .feedback-value-card {
-      padding: 20px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      display: flex; align-items: flex-start; gap: 10px;
-    }
-    .feedback-value-card::before {
-      content: '✓';
-      color: var(--green); font-weight: 700; font-size: 14px;
-      flex-shrink: 0; margin-top: 1px;
-    }
-    .feedback-value-card span { font-size: 13px; color: var(--text-dim); line-height: 1.5; font-weight: 500; }
-
-    /* ── Pros & Cons ─────────────────────────────────────────── */
-    .pros-cons { padding: 100px 0; background: var(--surface); }
-
-    .pros-cons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; }
-
-    .verdict-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-card);
-    }
-    .verdict-card-header { padding: 24px 28px; display: flex; align-items: center; gap: 12px; }
-    .verdict-card-header .platform-name { font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
-
-    .verdict-card.altima .verdict-card-header {
-      background: linear-gradient(135deg, rgba(204,234,255,.6), rgba(30,107,255,.08));
-      border-bottom: 1px solid var(--border-blue);
-    }
-    .verdict-card.altima .verdict-card-header .platform-name { color: var(--blue); }
-    .verdict-card.b2core .verdict-card-header { background: var(--surface); border-bottom: 1px solid var(--border); }
-    .verdict-card.b2core .verdict-card-header .platform-name { color: var(--navy); }
-
-    .verdict-block { padding: 20px 28px; }
-    .verdict-block + .verdict-block { border-top: 1px solid var(--border); }
-    .verdict-block-title {
-      font-size: 11px; font-weight: 700;
-      letter-spacing: .08em; text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .verdict-block-title.strengths { color: var(--green); }
-    .verdict-block-title.limitations { color: var(--red); }
-
-    .verdict-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .verdict-list li {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 13px; color: var(--text-muted); line-height: 1.55;
-    }
-    .verdict-list.strengths  li::before { content: '✓'; color: var(--green); font-weight: 700; font-size: 12px; flex-shrink: 0; margin-top: 1px; }
-    .verdict-list.limitations li::before { content: '✗'; color: var(--red);   font-weight: 700; font-size: 12px; flex-shrink: 0; margin-top: 1px; }
-
-    /* ── Stats Banner ────────────────────────────────────────── */
-    .stats-banner { padding: 80px 0; background: var(--dark-blue); position: relative; overflow: hidden; }
-    .stats-banner::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 100% 80% at 50% 50%, rgba(30,107,255,.2), transparent);
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
-      background: rgba(255,255,255,.08);
-      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.07);
+      border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.07);
     }
-    .stat-box { padding: 40px 32px; background: var(--dark-blue); text-align: center; }
-    .stat-box .num {
-      font-size: 48px; font-weight: 900;
-      letter-spacing: -.04em;
-      background: linear-gradient(135deg, #fff 30%, var(--light-blue));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      line-height: 1; margin-bottom: 8px;
-    }
-    .stat-box .label { font-size: 14px; color: rgba(255,255,255,.6); font-weight: 500; }
 
-    /* ── Pricing ─────────────────────────────────────────────── */
-    .pricing { padding: 100px 0; background: var(--white); }
+    .tech-cell {
+      background: var(--dk2);
+      padding: 34px 30px;
+      border-top: 2px solid transparent;
+      transition: background .2s, border-top-color .2s;
+    }
+    .tech-cell:hover {
+      background: var(--dk3);
+      border-top-color: var(--or);
+    }
 
-    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; }
+    .tc-idx {
+      font-size: 11px; font-weight: 500;
+      color: rgba(255,102,0,.55);
+      letter-spacing: .08em;
+      margin-bottom: 14px;
+    }
 
-    .pricing-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px 32px;
-      box-shadow: var(--shadow-card);
-      position: relative;
+    .tc-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14.5px; font-weight: 600;
+      color: var(--wh);
+      letter-spacing: -.015em;
+      margin-bottom: 10px; line-height: 1.3;
     }
-    .pricing-card.altima {
-      border-color: var(--border-blue);
-      background: linear-gradient(160deg, rgba(204,234,255,.3), var(--white) 60%);
-    }
-    .pricing-card.altima::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-      background: var(--blue);
-    }
-    .pricing-card-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
-    .pricing-card-name { font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: var(--navy); margin-bottom: 6px; }
-    .pricing-card-name.blue { color: var(--blue); }
-    .pricing-card-tagline { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 16px; }
-    .pricing-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
-    .pricing-card p:last-of-type { margin-bottom: 28px; }
 
-    /* ── Why Switch ──────────────────────────────────────────── */
-    .why-switch { padding: 100px 0; background: var(--surface); }
+    .tc-desc {
+      font-size: 13.5px; line-height: 1.65;
+      color: rgba(255,255,255,.38);
+    }
 
-    .switch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+    /* ════════════════════════════
+       CTA / FORM
+    ════════════════════════════ */
+    .cta-sec {
+      background: var(--dk2);
+      padding: 96px 0;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .cta-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px; align-items: start;
+    }
 
-    .switch-card {
-      padding: 32px 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      position: relative; overflow: hidden;
-      transition: all .25s ease;
-      box-shadow: var(--shadow-card);
+    .cta-h2 {
+      font-size: clamp(26px, 3vw, 40px);
+      color: var(--wh); margin-bottom: 16px;
     }
-    .switch-card:hover {
-      border-color: var(--border-blue);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(30,107,255,.12), 0 2px 8px rgba(4,7,27,.06);
+    .cta-body {
+      font-size: 15.5px; line-height: 1.74;
+      color: rgba(255,255,255,.42); margin-bottom: 36px;
     }
-    .switch-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    .cta-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px; font-weight: 600; color: var(--or);
+      text-decoration: none; margin-bottom: 44px;
+      transition: gap .15s;
     }
-    .switch-icon {
-      width: 44px; height: 44px;
-      border-radius: 10px;
-      background: rgba(204,234,255,.6);
-      border: 1px solid rgba(30,107,255,.15);
+    .cta-link:hover { gap: 11px; }
+
+    .cklist { display: flex; flex-direction: column; gap: 14px; }
+    .ck {
+      display: flex; align-items: flex-start; gap: 11px;
+      font-size: 14px; line-height: 1.55;
+      color: rgba(255,255,255,.52);
+    }
+    .ck-b {
+      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+      border: 1px solid rgba(255,102,0,.3);
+      background: rgba(255,102,0,.08);
       display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-      margin-bottom: 20px;
+      margin-top: 1px;
     }
-    .switch-card h3 { font-size: 17px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 12px; color: var(--navy); }
-    .switch-card p { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
-    .switch-card p + p { margin-top: 10px; }
+    .ck-b svg { width: 9px; height: 9px; }
 
-    /* ── Choose Section ──────────────────────────────────────── */
-    .choose { padding: 100px 0; background: var(--white); }
-
-    .choose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; }
-
-    .choose-card { border-radius: var(--radius-lg); padding: 36px 32px; position: relative; overflow: hidden; }
-    .choose-card.altima {
-      background: linear-gradient(160deg, rgba(204,234,255,.5), rgba(30,107,255,.07));
-      border: 2px solid var(--border-blue);
-      box-shadow: 0 8px 40px rgba(30,107,255,.14);
+    /* Form card */
+    .fcard {
+      background: var(--wh);
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 32px 64px rgba(0,0,0,.45);
     }
-    .choose-card.altima::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--blue);
+    .fc-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 19px; font-weight: 600;
+      color: var(--ink); letter-spacing: -.03em; margin-bottom: 4px;
     }
-    .choose-card.b2core {
-      background: var(--white);
-      border: 1px solid var(--border);
-      opacity: .82;
+    .fc-sub { font-size: 13px; color: var(--dim); margin-bottom: 28px; }
+
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .frow.f1 { grid-template-columns: 1fr; }
+    .fg { display: flex; flex-direction: column; gap: 5px; }
+    .flb {
+      font-size: 10.5px; font-weight: 600; color: var(--dim);
+      letter-spacing: .09em; text-transform: uppercase;
     }
+    .flb em { color: var(--or); font-style: normal; }
 
-    .choose-card-label {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 12px;
-      border-radius: 100px;
-      font-size: 11px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase;
-      margin-bottom: 16px;
+    input[type="text"],
+    input[type="email"],
+    select {
+      background: #F2F1EF;
+      border: 1.5px solid transparent; border-radius: 8px;
+      color: var(--ink); font-family: 'Geist', sans-serif;
+      font-size: 14px; padding: 11px 14px; width: 100%;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      -webkit-appearance: none;
     }
-    .choose-card.altima .choose-card-label { background: var(--blue-dim); border: 1px solid var(--border-blue); color: var(--blue); }
-    .choose-card.b2core .choose-card-label { background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); }
-
-    .choose-card h3 { font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: var(--navy); margin-bottom: 20px; line-height: 1.3; }
-
-    .choose-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .choose-card.altima .choose-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-dim); line-height: 1.55; }
-    .choose-card.altima .choose-list li::before { content: '✓'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-    .choose-card.b2core .choose-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.55; }
-    .choose-card.b2core .choose-list li::before { content: '→'; color: var(--text-muted); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-
-    .choose-verdict {
-      margin-top: 40px;
-      padding: 28px 36px;
-      background: var(--blue);
-      border-radius: var(--radius-lg);
-      text-align: center;
+    input::placeholder { color: #B4B2AE; }
+    input:focus, select:focus {
+      border-color: var(--or);
+      box-shadow: 0 0 0 3px rgba(255,102,0,.07);
+      background: var(--wh);
     }
-    .choose-verdict p { font-size: 16px; line-height: 1.65; color: rgba(255,255,255,.85); max-width: 780px; margin: 0 auto; }
-    .choose-verdict strong { color: white; }
+    select { cursor: pointer; }
+    select option { background: white; }
 
-    /* ── Ecosystem ───────────────────────────────────────────── */
-    .ecosystem { padding: 100px 0; background: var(--surface); }
+    .fsub {
+      width: 100%; padding: 14px;
+      background: var(--or); color: var(--wh); border: none;
+      border-radius: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14.5px; font-weight: 600; cursor: pointer;
+      margin-top: 4px; letter-spacing: -.01em;
+      transition: background .18s, transform .15s, box-shadow .18s;
+    }
+    .fsub:hover { background: var(--od); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,102,0,.25); }
+    .fnote { font-size: 11px; color: var(--dim); text-align: center; margin-top: 10px; }
 
-    .ecosystem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 60px; }
+    /* ════════════════════════════
+       STICKY BAR
+    ════════════════════════════ */
+    .sbar {
+      position: sticky; bottom: 0; z-index: 200;
+      background: rgba(8,8,8,.97);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .sbar-in {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+      padding: 13px 0;
+    }
+    .sbar-txt { font-size: 13.5px; color: rgba(255,255,255,.5); }
+    .sbar-txt strong {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--or); font-weight: 600;
+    }
+    .sbar-acts { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .sx { color: rgba(255,255,255,.2); cursor: pointer; font-size: 17px; padding: 2px 6px; margin-left: 4px; line-height: 1; transition: color .15s; }
+    .sx:hover { color: rgba(255,255,255,.55); }
 
-    .ecosystem-card {
-      padding: 32px 28px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      position: relative; overflow: hidden;
-      transition: all .25s ease;
-      box-shadow: var(--shadow-card);
+    /* ════════════════════════════
+       FOOTER BAND
+    ════════════════════════════ */
+    .fband {
+      background: var(--dk); padding: 72px 0;
+      border-top: 1px solid rgba(255,255,255,.06);
     }
-    .ecosystem-card:hover { border-color: var(--border-blue); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(30,107,255,.1); }
-    .ecosystem-card::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(204,234,255,.35), transparent);
-      opacity: 0; transition: opacity .25s;
+    .fband-h {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(22px, 3.2vw, 42px);
+      font-weight: 600; line-height: 1.1;
+      letter-spacing: -.04em; color: var(--wh); margin-bottom: 8px;
     }
-    .ecosystem-card:hover::after { opacity: 1; }
+    .fband-h .ac { color: var(--or); }
+    .fband-p { font-size: 15px; color: rgba(255,255,255,.32); }
 
-    .eco-tag {
-      display: inline-block;
-      padding: 4px 10px;
-      background: var(--blue-dim);
-      border: 1px solid var(--border-blue);
-      border-radius: 100px;
-      font-size: 11px; font-weight: 700;
-      color: var(--blue); letter-spacing: .04em;
-      margin-bottom: 16px;
+    /* ════════════════════════════
+       FOOTER
+    ════════════════════════════ */
+    footer {
+      background: #080808;
+      padding: 52px 0 28px;
+      border-top: 1px solid rgba(255,255,255,.05);
     }
-    .ecosystem-card h3 { font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: var(--navy); margin-bottom: 10px; }
-    .ecosystem-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
-
-    /* ── Summary ─────────────────────────────────────────────── */
-    .summary { padding: 100px 0; background: var(--white); }
-    .summary-body { max-width: 760px; margin: 0 auto; }
-    .summary-body p { font-size: 16px; color: var(--text-muted); line-height: 1.75; margin-bottom: 16px; }
-    .summary-body p:last-child { margin-bottom: 0; }
-
-    /* ── CTA Section ─────────────────────────────────────────── */
-    .cta-section {
-      padding: 100px 0;
-      background: var(--navy);
-      text-align: center;
-      position: relative; overflow: hidden;
+    .fgrid {
+      display: grid;
+      grid-template-columns: 200px repeat(5, 1fr);
+      gap: 32px; padding-bottom: 44px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    .cta-section::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(30,107,255,.18), transparent);
-    }
-    .cta-glow {
-      position: absolute;
-      width: 600px; height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(30,107,255,.2), transparent 70%);
-      top: 50%; left: 50%; transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-    .cta-section h2 {
-      font-size: clamp(30px, 4vw, 52px);
-      font-weight: 700;
-      letter-spacing: -.03em;
-      line-height: 1.1;
-      max-width: 600px;
-      margin: 0 auto 20px;
-      color: var(--white);
-    }
-    .cta-section p { font-size: 17px; color: rgba(255,255,255,.65); max-width: 440px; margin: 0 auto 40px; }
-    .cta-section .cta-btns { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    .cta-section .btn-ghost { background: transparent; color: rgba(255,255,255,.75); border-color: rgba(255,255,255,.2); }
-    .cta-section .btn-ghost:hover { background: rgba(255,255,255,.08); color: var(--white); border-color: rgba(255,255,255,.35); box-shadow: none; }
-    .no-card-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.4); }
-
-    /* ── FAQ ─────────────────────────────────────────────────── */
-    .faq { padding: 100px 0; background: var(--surface); }
-    .faq-list {
-      max-width: 720px;
-      margin: 60px auto 0;
-      display: flex; flex-direction: column; gap: 0;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-    }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-item:last-child { border-bottom: none; }
-
-    .faq-q {
-      width: 100%; text-align: left;
-      padding: 22px 28px;
-      background: var(--white);
-      border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    .fbrand {
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 15px; font-weight: 600;
-      color: var(--navy);
-      font-family: 'Inter', sans-serif;
-      transition: background .15s;
+      color: var(--wh); margin-bottom: 7px;
+      display: flex; align-items: center; gap: 7px;
     }
-    .faq-q:hover { background: var(--surface); }
-    .faq-q.open { background: rgba(204,234,255,.3); color: var(--blue); }
-
-    .faq-icon {
-      width: 24px; height: 24px; flex-shrink: 0;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px; color: var(--text-muted);
-      transition: all .2s;
+    .fbrand .fi { color: var(--or); }
+    .ftag { font-size: 11.5px; color: rgba(255,255,255,.26); line-height: 1.5; }
+    .fcol h4 {
+      font-size: 10px; font-weight: 600; letter-spacing: .13em;
+      text-transform: uppercase; color: rgba(255,255,255,.26);
+      margin-bottom: 14px;
     }
-    .faq-q.open .faq-icon { border-color: var(--border-blue); background: var(--blue-dim); color: var(--blue); transform: rotate(45deg); }
-
-    .faq-a { overflow: hidden; max-height: 0; transition: max-height .3s ease; }
-    .faq-a.open { max-height: 500px; }
-    .faq-a-inner {
-      padding: 0 28px 24px;
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.75;
-      background: rgba(204,234,255,.15);
+    .fcol ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .fcol ul a {
+      font-size: 12.5px; color: rgba(255,255,255,.38);
+      text-decoration: none; transition: color .15s;
     }
-
-    /* ── Footer ──────────────────────────────────────────────── */
-    footer { padding: 40px 0; background: var(--surface); border-top: 1px solid var(--border); }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--text-muted); text-decoration: none; }
-    .footer-logo-mark { width: 28px; height: 28px; border-radius: 7px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 12px; color: white; }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
-    .footer-links a:hover { color: var(--navy); }
-    .footer-copy { font-size: 12px; color: var(--text-muted); }
-
-    /* ── Animations ──────────────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .fcol ul a:hover { color: var(--wh); }
+    .fbot {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 22px;
+      font-size: 11.5px; color: rgba(255,255,255,.22);
+      gap: 24px; flex-wrap: wrap;
     }
-    .animate { opacity: 0; animation: fadeUp .6s ease forwards; }
-    .delay-1 { animation-delay: .1s; }
-    .delay-2 { animation-delay: .2s; }
-    .delay-3 { animation-delay: .3s; }
-    .delay-4 { animation-delay: .4s; }
+    .fleg { display: flex; gap: 20px; }
+    .fleg a { color: rgba(255,255,255,.22); text-decoration: none; transition: color .15s; }
+    .fleg a:hover { color: rgba(255,255,255,.55); }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-    .revealed { opacity: 1; transform: none; }
-
-    /* ── Responsive ──────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .platform-layout, .pros-cons-grid, .pricing-grid, .choose-grid, .ecosystem-grid { grid-template-columns: 1fr; }
-      .switch-grid, .feedback-values { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .comp-header, .comp-row { grid-template-columns: 1fr; }
-      .comp-cell:nth-child(2) { border-left: none; border-right: none; }
-      .nav-links { display: none; }
-      .hero-stats { gap: 24px; }
-      .hero-divider { display: none; }
+    /* ════════════════════════════
+       RESPONSIVE
+    ════════════════════════════ */
+    @media(max-width:1024px){
+      .feat-list { grid-template-columns: repeat(2,1fr); }
+      .proc-header { grid-template-columns: 1fr; gap: 28px; }
+      .proc-row { grid-template-columns: 40px 1fr; }
+      .proc-desc { grid-column: 2; }
+      .caps-split { grid-template-columns: 1fr; gap: 48px; }
+      .caps-left { position: static; }
+      .tech-header { grid-template-columns: 1fr; gap: 24px; padding-bottom: 40px; }
+      .tech-grid { grid-template-columns: repeat(2,1fr); }
+      .cta-split { grid-template-columns: 1fr; gap: 48px; }
+      .fgrid { grid-template-columns: repeat(3,1fr); }
     }
-    @media (max-width: 600px) {
-      .stats-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 32px; }
+    @media(max-width:768px){
+      .feat-list { grid-template-columns: 1fr; border-left: none; }
+      .feat-cell { border-left: 3px solid transparent; border-top: none; border-right: none; }
+      .feat-cell:hover { border-left-color: var(--or); border-top: none; margin: 0; padding: 38px 24px 38px 32px; }
+      .proc-row { grid-template-columns: 1fr; gap: 12px; }
+      .proc-n { display: none; }
+      .tech-grid { grid-template-columns: 1fr; }
+      .frow { grid-template-columns: 1fr; }
+      .fgrid { grid-template-columns: repeat(2,1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- ── Nav ───────────────────────────────────────────────────── -->
+<!-- ─── TOPBAR ─── -->
+<div class="topbar">
+  Save 20% on all Cell Mimics · Use code CONTROL20 at checkout
+  <a href="#">Shop Now →</a>
+</div>
+
+<!-- ─── NAV ─── -->
 <nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-mark">A</div>
-      <span>AltimaCRM</span>
+  <div class="w nav-in">
+    <a href="#" class="nl">
+      <span class="nl-mark">
+        <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+          <circle cx="11" cy="11" r="8.25" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="11" cy="11" r="3" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="nl-name">SlingshotBio<sup>™</sup></span>
     </a>
-    <div class="nav-links">
-      <a href="#comparison">Compare</a>
-      <a href="#what-is-altima">AltimaCRM</a>
-      <a href="#pros-cons">Pros &amp; Cons</a>
-      <a href="#choose">Which to Choose</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <a href="#cta" class="btn-primary" style="padding:9px 20px;font-size:14px;">Get a Demo →</a>
+    <ul class="nr">
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Industries</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Technology</a></li>
+      <li><a href="#">Company</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#" class="ns">Shop Now</a></li>
+    </ul>
   </div>
 </nav>
 
-<!-- ── Hero ──────────────────────────────────────────────────── -->
+<!-- ─── HERO ─── -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="container">
-
-    <div class="hero-vs-badge animate delay-1">
-      <span class="vs-pill">VS</span>
-      <span>AltimaCRM vs B2Core — Forex CRM Comparison 2026</span>
+  <div class="w">
+    <div class="hero-crumb">
+      <a href="#">Products</a> <span>›</span>
+      <a href="#">TruCytes®</a> <span>›</span>
+      <span class="cur">Custom</span>
     </div>
 
-    <h1 class="animate delay-2">
-      AltimaCRM vs B2Core:<br />
-      <span class="accent">Which Forex CRM Is Right<br />for Your Brokerage in 2026?</span>
+    <h1 class="hero-h1 t-title">
+      Custom TruCytes®<br>Biomarker Controls
     </h1>
 
-    <p class="hero-sub animate delay-3">
-      Both platforms are purpose-built for financial trading operations. But they prioritise very different parts of brokerage operations. This comparison breaks down what actually matters when you're running a live brokerage.
+    <p class="hero-sub">
+      Precision-engineered cell mimics built to your exact specifications — for rare indications, novel targets, and complex multi-biomarker panels.
     </p>
 
-    <div class="hero-ctas animate delay-4">
-      <a href="#cta" class="btn-primary">Request Free Demo →</a>
-      <a href="#comparison" class="btn-ghost">See Full Comparison</a>
+    <div class="hero-pills">
+      <div class="pill"><strong>ISO 9001:2015</strong>Certified</div>
+      <div class="pill"><strong>≤10% CV</strong>Lot-to-Lot</div>
+      <div class="pill"><strong>Non-Biohazardous</strong>Materials</div>
+      <div class="pill"><strong>100+</strong>Custom Designs Completed</div>
     </div>
 
-    <div class="hero-stats animate delay-4">
-      <div class="hero-stat">
-        <div class="num">18+</div>
-        <div class="label">Years in Fintech</div>
-      </div>
-      <div class="hero-divider"></div>
-      <div class="hero-stat">
-        <div class="num">50+</div>
-        <div class="label">Brokerage Brands</div>
-      </div>
-      <div class="hero-divider"></div>
-      <div class="hero-stat">
-        <div class="num">45K+</div>
-        <div class="label">Daily Active Users</div>
-      </div>
-      <div class="hero-divider"></div>
-      <div class="hero-stat">
-        <div class="num">1.2M+</div>
-        <div class="label">Leads Managed</div>
-      </div>
-    </div>
-
+    <a href="#consultation" class="btn">
+      Request a Meeting
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M2 7h10M7.5 3L12 7l-4.5 4" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
 </section>
 
-<!-- ── Comparison Table ───────────────────────────────────────── -->
-<section class="comparison" id="comparison">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Head-to-Head Comparison</div>
-      <h2>AltimaCRM vs B2Core</h2>
-      <p>How both platforms stack up across the dimensions that actually matter when running a live brokerage.</p>
-    </div>
-
-    <div class="comp-table-wrap reveal">
-
-      <div class="comp-header">
-        <div class="comp-header-cell">
-          <span class="comp-col-label">Feature</span>
-          <span class="comp-col-name">Category</span>
-        </div>
-        <div class="comp-header-cell altima">
-          <span class="comp-col-label">Forex-Native CRM</span>
-          <span class="comp-col-name blue">AltimaCRM</span>
-          <span class="comp-col-sub">Built for brokerage growth operations</span>
-          <span class="winner-tag">✓ Recommended</span>
-        </div>
-        <div class="comp-header-cell">
-          <span class="comp-col-label">Enterprise CRM</span>
-          <span class="comp-col-name">B2Core</span>
-          <span class="comp-col-sub">B2Broker ecosystem platform</span>
-        </div>
+<!-- ─── KEY FEATURES ─── -->
+<section class="feat-sec">
+  <div class="w">
+    <div class="feat-list">
+      <div class="feat-cell">
+        <div class="feat-num">01</div>
+        <div class="feat-name">Fully Synthetic</div>
+        <div class="feat-desc">No donor sourcing. No IRB complexity. No cold-chain dependency.</div>
       </div>
-
-      <!-- Communication -->
-      <div class="comp-section-head">Communication &amp; Sales Infrastructure</div>
-
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Built-in VoIP</span></div>
-        <div class="comp-cell altima-cell green-hi"><span class="check">✓</span> <span>AltimaVoIP — native, no third-party dialer</span></div>
-        <div class="comp-cell"><span class="cross-x">✗</span> <span class="cell-note">No native VoIP</span></div>
+      <div class="feat-cell">
+        <div class="feat-num">02</div>
+        <div class="feat-name">Custom to Specification</div>
+        <div class="feat-desc">Any surface marker, particle size, rigidity, or assay format. Your exact panel.</div>
       </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Omnichannel Communication</span></div>
-        <div class="comp-cell altima-cell green-hi"><span class="check">✓</span> <span>Native (calls, SMS, email, live chat)</span></div>
-        <div class="comp-cell"><span class="cross-x">✗</span> <span class="cell-note">Requires third-party integrations</span></div>
+      <div class="feat-cell">
+        <div class="feat-num">03</div>
+        <div class="feat-name">Ambient Stable</div>
+        <div class="feat-desc">Ships and stores without cold chain. Designed for multi-site research programmes.</div>
       </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Sales Automation</span></div>
-        <div class="comp-cell altima-cell green-hi"><span class="check">✓</span> <span>Strong — core architecture</span></div>
-        <div class="comp-cell"><span class="partial">~</span> <span class="cell-note">Moderate</span></div>
+      <div class="feat-cell">
+        <div class="feat-num">04</div>
+        <div class="feat-name">Lot Identical Performance</div>
+        <div class="feat-desc">Every batch manufactured to the same specification. Run your gating templates unchanged.</div>
       </div>
-
-      <!-- Trading Platforms -->
-      <div class="comp-section-head">Trading Platform Integrations</div>
-
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Supported Platforms</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>MT4, MT5, cTrader, Sirix</span></div>
-        <div class="comp-cell"><span class="partial">~</span> <span class="cell-note">MT4, MT5, crypto exchanges</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">KYC / AML Automation</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>AI-powered, multi-provider</span></div>
-        <div class="comp-cell"><span class="check">✓</span> <span>Available</span></div>
-      </div>
-
-      <!-- IB & Partner -->
-      <div class="comp-section-head">IB &amp; Partner Management</div>
-
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">IB Management</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>Multi-tier + Partner Portal self-service</span></div>
-        <div class="comp-cell"><span class="partial">~</span> <span class="cell-note">Multi-level referral structures</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">PSP Integrations</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>100+</span></div>
-        <div class="comp-cell"><span class="check">✓</span> <span class="cell-note">Large ecosystem</span></div>
-      </div>
-
-      <!-- Operations -->
-      <div class="comp-section-head">Operations &amp; Compliance</div>
-
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Multi-Brand Support</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>Yes</span></div>
-        <div class="comp-cell"><span class="check">✓</span> <span>Yes</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Multi-Jurisdiction Reporting</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>Yes</span></div>
-        <div class="comp-cell"><span class="check">✓</span> <span>Yes</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Compliance Focus</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>UAE, EU, AU, South Africa-regulated forex</span></div>
-        <div class="comp-cell"><span class="partial">~</span> <span class="cell-note">Enterprise, crypto, multi-asset</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">GDPR / PCI DSS</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>Yes</span></div>
-        <div class="comp-cell"><span class="check">✓</span> <span>Yes</span></div>
-      </div>
-
-      <!-- Specialised -->
-      <div class="comp-section-head">Specialised Capabilities</div>
-
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Prop Trading CRM</span></div>
-        <div class="comp-cell altima-cell green-hi"><span class="check">✓</span> <span>Dedicated AltimaProp</span></div>
-        <div class="comp-cell"><span class="cross-x">✗</span> <span class="cell-note">Limited</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Crypto / Wallet Infrastructure</span></div>
-        <div class="comp-cell altima-cell"><span class="partial">~</span> <span class="cell-note">Limited</span></div>
-        <div class="comp-cell"><span class="check">✓</span> <span>Strong — multi-currency wallets</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Setup Complexity</span></div>
-        <div class="comp-cell altima-cell green-hi"><span class="check">✓</span> <span>Accessible for growth-stage teams</span></div>
-        <div class="comp-cell"><span class="cross-x">✗</span> <span class="cell-note">Higher — dedicated tech team needed</span></div>
-      </div>
-      <div class="comp-row">
-        <div class="comp-cell"><span class="feature-name">Years in Market</span></div>
-        <div class="comp-cell altima-cell"><span class="check">✓</span> <span>18+</span></div>
-        <div class="comp-cell"><span class="partial">~</span> <span class="cell-note">12+</span></div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── What is B2Core ─────────────────────────────────────────── -->
-<section class="platform-section bg-white" id="what-is-b2core">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">About B2Core</div>
-      <h2>What is B2Core?</h2>
-      <p>Understanding the platform before comparing it.</p>
-    </div>
 
-    <div class="platform-layout reveal">
-      <div class="platform-text">
-        <p>B2Core is the flagship CRM and back-office platform from B2Broker. First launched in 2014, it has grown into an enterprise-grade product covering CRM, client cabinet, payment processing, IB management, and multi-currency wallets. It supports MT4, MT5, and crypto trading environments, and connects with a wide range of liquidity and payment providers.</p>
-        <p>B2Core's primary draw is ecosystem consolidation. Brokerages already operating within the B2Broker infrastructure stack often choose B2Core because it reduces integration complexity across payments, liquidity, and back-office management.</p>
-        <div class="sub-heading">Who B2Core Is Built For</div>
-        <p>Enterprise-scale brokerages, multi-asset and crypto-focused firms, and operations already embedded in the B2Broker ecosystem. It requires dedicated technical capacity to get the most out of its customisation depth.</p>
+<!-- ═══════════════════════════════════════════════
+     SECTION 1 — PROCESS OVERVIEW
+     Layout: 2-col header · 3-col numbered step rows
+═══════════════════════════════════════════════ -->
+<section class="proc-sec">
+  <div class="w">
+
+    <div class="proc-header">
+      <div>
+        <div class="eyebrow">Process Overview</div>
+        <h2 class="t-title proc-h2">Designing and Building<br>Your Custom TruCyte®</h2>
       </div>
       <div>
-        <div class="capabilities-box">
-          <div class="capabilities-box-header">B2Core Key Capabilities</div>
-          <ul class="capabilities-list neutral">
-            <li>Client cabinet with customisable trader interface</li>
-            <li>Multi-currency wallets supporting fiat and crypto</li>
-            <li>KYC and AML compliance workflows</li>
-            <li>Multi-level IB module with large referral structures</li>
-            <li>MT4, MT5, and crypto exchange integrations</li>
-            <li>Mobile app (iOS and Android)</li>
-            <li>Financial reporting and reconciliation tools</li>
-            <li>Transaction monitoring and security controls</li>
-          </ul>
+        <div class="proc-intro">
+          <p>Our commercial and R&amp;D teams work alongside your scientists under a structured project management framework — delivering your Custom TruCyte on time, on budget, and to a defined quality standard.</p>
+          <p>With more than 100 custom mimic designs completed, our process is proven. Expect maximum efficiency through design and build, and optimal quality at delivery.</p>
+          <div class="proc-highlight">
+            ✦ &nbsp;100+ custom mimic designs completed
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Step rows: number | step name | description -->
+    <div class="proc-list">
+
+      <div class="proc-row">
+        <span class="proc-n">01</span>
+        <div class="proc-name">Evaluation</div>
+        <div class="proc-desc">Begin with a no-cost consultation with our Business Development Executive and Field Application Scientists. We guide you through a structured design process to define the precise specifications, functionality, and performance targets for your ideal TruCyte.</div>
+      </div>
+
+      <div class="proc-row">
+        <span class="proc-n">02</span>
+        <div class="proc-name">Feasibility &amp;<br>Customization</div>
+        <div class="proc-desc">Once you commit to proceed, our R&amp;D team assesses feasibility, maps decision-gating milestones, and delivers objective data along with a complete risk assessment, cost estimate, and timeline for development. You'll enter the Scale-Up phase fully prepared.</div>
+      </div>
+
+      <div class="proc-row">
+        <span class="proc-n">03</span>
+        <div class="proc-name">Scale-Up &amp;<br>Validation</div>
+        <div class="proc-desc">Rigorous verification and validation processes establish the foundation for successful adoption. Dedicated Field Application Support ensures a smooth, confident transition to large-scale production.</div>
+      </div>
+
+      <div class="proc-row">
+        <span class="proc-n">04</span>
+        <div class="proc-name">Production</div>
+        <div class="proc-desc">Production scales as your needs grow. Lot sizes are adjusted to match demand, inventory replenishment intervals are scheduled in advance, and ongoing training and on-site support remain available throughout your deployment.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     SECTION 2 — PRODUCT CAPABILITIES
+     Layout: sticky left header · right scrollable list
+═══════════════════════════════════════════════ -->
+<section class="caps-sec">
+  <div class="w">
+    <div class="caps-split">
+
+      <!-- Left: header stays sticky while list scrolls -->
+      <div class="caps-left">
+        <div class="eyebrow">Product Capabilities</div>
+        <h2 class="t-title caps-h2">Customizable Controls for Unmatched Precision Across Assays</h2>
+        <p class="caps-intro" style="margin-top:16px;">Custom TruCytes™ Biomarker Controls deliver consistency, accuracy, and scalability tailored to your specific research workflow. Each control can be configured across a broad range of parameters.</p>
+      </div>
+
+      <!-- Right: stacked capability list -->
+      <div class="caps-list">
+
+        <div class="cap-item">
+          <div class="cap-name">Surface Biomarkers</div>
+          <div class="cap-desc">Configure single or multiple surface biomarkers for precise antigen detection and quantification.</div>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-name">Functional Assays</div>
+          <div class="cap-desc">Enable accurate measurement of potency and biological activity — critical for therapeutic development and quality control workflows.</div>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-name">Tailored Fluorescence</div>
+          <div class="cap-desc">Achieve highly stable, reproducible signal detection at intensities previously out of reach with biological samples.</div>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-name">Viability Compatibility</div>
+          <div class="cap-desc">Integrate seamlessly with DNA- and amine-based viability reagents used in standard laboratory protocols.</div>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-name">Extended Stability &amp; Shelf Life</div>
+          <div class="cap-desc">Stability is measured in years, not weeks. All Slingshot products are manufactured with non-biohazardous materials for easy storage, handling, and scalability.</div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── What is AltimaCRM ──────────────────────────────────────── -->
-<section class="platform-section bg-surface" id="what-is-altima">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">About AltimaCRM</div>
-      <h2>What is AltimaCRM?</h2>
-      <p>Purpose-built around the operational realities of running a live brokerage.</p>
-    </div>
 
-    <div class="platform-layout reveal">
-      <div class="platform-text">
-        <p>AltimaCRM is a forex-specific CRM built around one operational goal: helping brokerages convert more leads, retain more traders, and maintain full visibility across the entire business. With 18 years in fintech, over 1.2 million leads managed, and 45,000-plus daily active users across regulated brokerage environments, it operates at a level of forex-specific depth that most CRMs have not reached.</p>
-        <p>Unlike platforms adapted from generic sales software, AltimaCRM was designed specifically around how brokerage teams actually work: a sales team chasing leads, a retention team reducing churn, a compliance team handling KYC, a finance team managing deposits, and management monitoring all of it in real time. One platform, every team, all connected.</p>
-        <div class="sub-heading">Who AltimaCRM Is Built For</div>
-        <p>Growth-stage and scaling forex brokerages where conversion speed, retention automation, and compliance visibility are the core operational priorities — without needing a dedicated technical team to maintain the platform.</p>
-      </div>
+<!-- ═══════════════════════════════════════════════
+     SECTION 3 — TECHNOLOGY PLATFORM
+     Layout: 2-col split header · 3-col features grid
+═══════════════════════════════════════════════ -->
+<section class="tech-sec">
+  <div class="w">
+
+    <div class="tech-header">
       <div>
-        <div class="capabilities-box">
-          <div class="capabilities-box-header">AltimaCRM Key Capabilities</div>
-          <ul class="capabilities-list">
-            <li>Native MT4, MT5, cTrader, and Sirix integrations</li>
-            <li>AI-powered KYC and AML verification</li>
-            <li>Built-in AltimaVoIP with omnichannel communication (calls, SMS, email, live chat)</li>
-            <li>Multi-tier IB and affiliate management with automated commission payouts</li>
-            <li>Dedicated Partner Portal for IB self-service</li>
-            <li>Fully branded Trader's Room</li>
-            <li>100+ PSP integrations</li>
-            <li>Multi-brand and multi-jurisdiction reporting</li>
-            <li>GDPR and PCI DSS compliant architecture</li>
-          </ul>
-        </div>
+        <div class="eyebrow eyebrow-dk">Technology Platform</div>
+        <h2 class="t-title tech-h2">Unparalleled Customization.<br>Reliable Results. Across<br>Every Therapy Area.</h2>
+      </div>
+      <div style="padding-top:4px;">
+        <p class="tech-intro">Slingshot Biosciences' patented technology accelerates discovery and clinical workflows. Our precision-engineered TruCyte™ biomarker cell mimics replicate specific cellular phenotypes for advanced research, diagnostic, and therapeutic applications.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ── What Brokers Say About AltimaCRM ──────────────────────── -->
-<section class="broker-feedback">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Broker Feedback</div>
-      <h2>What Brokers Say About AltimaCRM</h2>
-      <p>Consistent themes from brokerage teams who use AltimaCRM day-to-day.</p>
-    </div>
+    <div class="tech-grid">
 
-    <div class="feedback-intro reveal">
-      <p>AltimaCRM is often described by brokers as a CRM built around the operational realities of running a forex brokerage. Feedback consistently highlights faster onboarding, stronger cross-team visibility, and having sales, compliance, communication, and IB workflows connected inside one platform.</p>
-      <p>Automation is a recurring theme — lead assignment, follow-ups, KYC alerts, onboarding actions, and communication workflows can all run automatically, helping teams scale operations with less manual overhead.</p>
-    </div>
-
-    <div class="feedback-values reveal">
-      <div class="feedback-value-card"><span>Native VoIP and omnichannel communication inside one platform</span></div>
-      <div class="feedback-value-card"><span>Faster onboarding workflows and cleaner operational visibility</span></div>
-      <div class="feedback-value-card"><span>Strong alignment with forex sales and retention workflows</span></div>
-      <div class="feedback-value-card"><span>AI-powered KYC integrations with providers like SumSub and ShuftiPro</span></div>
-      <div class="feedback-value-card"><span>Connected workflows across sales, compliance, IB management, and operations</span></div>
-      <div class="feedback-value-card"><span>Automation across onboarding, follow-ups, and communication workflows</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Pros & Cons ─────────────────────────────────────────────── -->
-<section class="pros-cons" id="pros-cons">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Pros &amp; Cons</div>
-      <h2>Strengths and Limitations</h2>
-      <p>An honest look at where each platform excels and where it falls short.</p>
-    </div>
-
-    <div class="pros-cons-grid reveal">
-
-      <div class="verdict-card altima">
-        <div class="verdict-card-header">
-          <div class="nav-logo-mark">A</div>
-          <span class="platform-name">AltimaCRM</span>
-        </div>
-        <div class="verdict-block">
-          <div class="verdict-block-title strengths">Strengths</div>
-          <ul class="verdict-list strengths">
-            <li>Native VoIP built into the CRM — no third-party dialer needed</li>
-            <li>Purpose-built forex sales and retention workflows</li>
-            <li>AI-powered KYC and compliance automation</li>
-            <li>Faster operational onboarding — no dedicated tech team required</li>
-            <li>Multi-jurisdiction compliance across UAE, EU, AU, and South Africa</li>
-            <li>Dedicated prop trading CRM (AltimaProp)</li>
-            <li>Full visibility across sales, compliance, and management in one platform</li>
-          </ul>
-        </div>
-        <div class="verdict-block">
-          <div class="verdict-block-title limitations">Limitations</div>
-          <ul class="verdict-list limitations">
-            <li>Primarily built for regulated forex — a crypto-heavy infrastructure may need additional tooling</li>
-            <li>Rudimentary multi-currency wallet infrastructure</li>
-          </ul>
-        </div>
+      <div class="tech-cell">
+        <div class="tc-idx">01</div>
+        <div class="tc-name">Single or Multiple Proteins</div>
+        <div class="tc-desc">Incorporate one or more rare or targeted biomarkers on a single TruCyte to replicate complex cellular phenotypes.</div>
       </div>
 
-      <div class="verdict-card b2core">
-        <div class="verdict-card-header">
-          <div style="width:32px;height:32px;border-radius:8px;background:#334155;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:white;flex-shrink:0;">B</div>
-          <span class="platform-name">B2Core</span>
-        </div>
-        <div class="verdict-block">
-          <div class="verdict-block-title strengths">Strengths</div>
-          <ul class="verdict-list strengths">
-            <li>Deep enterprise infrastructure and back-office consolidation</li>
-            <li>Strong crypto and multi-currency wallet support</li>
-            <li>Large ecosystem integrations across liquidity and payments</li>
-            <li>Very high customisation flexibility</li>
-            <li>Multi-asset operational depth, including crypto exchanges</li>
-          </ul>
-        </div>
-        <div class="verdict-block">
-          <div class="verdict-block-title limitations">Limitations</div>
-          <ul class="verdict-list limitations">
-            <li>No native VoIP — communication requires third-party integrations</li>
-            <li>Higher implementation complexity and technical dependency</li>
-            <li>Less focused on forex sales conversion and retention workflows</li>
-            <li>Heavier setup — typically requires a dedicated technical team</li>
-            <li>Pricing and complexity make it harder to justify for growth-stage brokerages</li>
-          </ul>
-        </div>
+      <div class="tech-cell">
+        <div class="tc-idx">02</div>
+        <div class="tc-name">Distinct Populations</div>
+        <div class="tc-desc">Model heterogeneous cell environments by defining distinct populations within a single sample.</div>
+      </div>
+
+      <div class="tech-cell">
+        <div class="tc-idx">03</div>
+        <div class="tc-name">Variable Expression Levels</div>
+        <div class="tc-desc">Fine-tune biomarker expression to reflect high, low, or intermediate intensities — enabling more accurate and nuanced assay development.</div>
+      </div>
+
+      <div class="tech-cell">
+        <div class="tc-idx">04</div>
+        <div class="tc-name">Surface &amp; Intracellular Biomarkers</div>
+        <div class="tc-desc">Include both surface and intracellular markers to mimic dynamic cellular pathways with greater biological fidelity.</div>
+      </div>
+
+      <div class="tech-cell">
+        <div class="tc-idx">05</div>
+        <div class="tc-name">Rare or Novel Proteins</div>
+        <div class="tc-desc">Access non-commercial proteins through our expertise in isolation and incorporation, ensuring even the most niche biomarkers are within reach.</div>
+      </div>
+
+      <div class="tech-cell">
+        <div class="tc-idx">06</div>
+        <div class="tc-name">Size and Morphology Control</div>
+        <div class="tc-desc">Select TruCyte dimensions and morphology to match specific cell types — lymphocytes, monocytes, granulocytes, and more.</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── Stats Banner ───────────────────────────────────────────── -->
-<section class="stats-banner">
-  <div class="container">
-    <div class="stats-grid reveal">
-      <div class="stat-box">
-        <div class="num">18+</div>
-        <div class="label">Years in fintech</div>
-      </div>
-      <div class="stat-box">
-        <div class="num">50+</div>
-        <div class="label">Brokerage brands served</div>
-      </div>
-      <div class="stat-box">
-        <div class="num">45K+</div>
-        <div class="label">Daily active users</div>
-      </div>
-      <div class="stat-box">
-        <div class="num">1.2M+</div>
-        <div class="label">Leads managed</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ── Pricing ────────────────────────────────────────────────── -->
-<section class="pricing" id="pricing">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Pricing</div>
-      <h2>AltimaCRM vs B2Core: Pricing</h2>
-      <p>Neither platform publishes fixed pricing tiers publicly — both are customised based on brokerage structure, size, and integrations.</p>
-    </div>
+<!-- ─── CTA + FORM ─── -->
+<section class="cta-sec" id="consultation">
+  <div class="w">
+    <div class="cta-split">
 
-    <div class="pricing-grid reveal">
-
-      <div class="pricing-card altima">
-        <div class="pricing-card-label">AltimaCRM Pricing</div>
-        <div class="pricing-card-name blue">AltimaCRM</div>
-        <div class="pricing-card-tagline">Flexible across growth stages</div>
-        <p>AltimaCRM pricing is designed to scale alongside your brokerage. The real cost consideration goes far beyond the subscription itself. Implementation complexity, ongoing maintenance, disconnected tools, and operational inefficiencies all impact long-term cost.</p>
-        <p>For many brokerages, consolidating communication, KYC, and workflow management into one platform reduces enough manual overhead to offset a significant portion of the investment.</p>
-        <a href="#cta" class="btn-primary" style="font-size:14px;padding:11px 22px;">Request a Quote →</a>
-      </div>
-
-      <div class="pricing-card b2core">
-        <div class="pricing-card-label">B2Core Pricing</div>
-        <div class="pricing-card-name">B2Core</div>
-        <div class="pricing-card-tagline">Enterprise and mid-sized brokerages</div>
-        <p>Based on industry feedback, B2Core is generally positioned for mid-size and enterprise brokerages with larger infrastructure budgets and in-house technical capacity.</p>
-        <p>For earlier-stage brokerages, the implementation scope and operational overhead may feel heavier unless the business already operates within the broader B2Broker ecosystem or requires deeper multi-asset infrastructure from the start.</p>
-        <a href="#cta" class="btn-ghost" style="font-size:14px;padding:11px 22px;">Talk to Sales</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Why Brokers Switch ──────────────────────────────────────── -->
-<section class="why-switch" id="why-switch">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Why Brokers Switch</div>
-      <h2>Why Brokers Switch from B2Core to AltimaCRM</h2>
-      <p>The switch usually happens when the brokerage's main challenge shifts from infrastructure setup to conversion speed, retention, and operational visibility.</p>
-    </div>
-
-    <div class="switch-grid reveal">
-
-      <div class="switch-card">
-        <div class="switch-icon">📞</div>
-        <h3>The Lead Conversion Gap</h3>
-        <p>Sales teams handling high outbound call volumes lose momentum when the dialer sits outside the CRM. Agents constantly move between platforms to call, log activity, and manage follow-ups. Response times slow down, visibility drops, and lead leakage increases over time.</p>
-        <p>AltimaCRM keeps VoIP, communication history, follow-ups, and client activity inside one connected workflow, so sales teams move faster without juggling multiple systems.</p>
-      </div>
-
-      <div class="switch-card">
-        <div class="switch-icon">🛡️</div>
-        <h3>Sales and Compliance in One System</h3>
-        <p>In regulated brokerages, onboarding, KYC, payment activity, and communication history are tightly connected. When those workflows live across separate systems, audit preparation becomes slower and operational coordination becomes increasingly manual.</p>
-        <p>AltimaCRM keeps KYC, AML workflows, payment records, and communication activity inside the same platform, so compliance teams work from a connected audit trail instead of piecing data together manually.</p>
-      </div>
-
-      <div class="switch-card">
-        <div class="switch-icon">📊</div>
-        <h3>Real-Time Brokerage Visibility</h3>
-        <p>As brokerages scale, operational reporting often becomes fragmented. Sales performance, onboarding status, IB activity, and compliance reporting all sit in different dashboards managed by different teams.</p>
-        <p>AltimaCRM gives leadership a centralised view across sales, retention, compliance, finance, and IB management — making it easier to track brokerage performance in real time without disconnected reports.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Choose Section ─────────────────────────────────────────── -->
-<section class="choose" id="choose">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Decision Guide</div>
-      <h2>Which One Should You Choose?</h2>
-      <p>Both platforms are built for financial trading operations, but they are optimised for different operational priorities. The right choice depends on what your brokerage is actually trying to solve.</p>
-    </div>
-
-    <div class="choose-grid reveal">
-
-      <div class="choose-card altima">
-        <div class="choose-card-label">Choose AltimaCRM if…</div>
-        <h3>Your priority is growth, conversion, and operational speed</h3>
-        <ul class="choose-list">
-          <li>Your sales team handles high outbound lead volumes and needs communication, onboarding, and client activity connected inside one system</li>
-          <li>You want faster lead conversion without managing a separate dialer or communication tool</li>
-          <li>Compliance processes need to run without a large dedicated technical team</li>
-          <li>You want visibility across sales, retention, compliance, IB management, and operations without relying on multiple disconnected tools</li>
-          <li>You are scaling quickly and need infrastructure built around brokerage growth, not generic CRM workflows</li>
-        </ul>
-      </div>
-
-      <div class="choose-card b2core">
-        <div class="choose-card-label">Choose B2Core if…</div>
-        <h3>Your priority is enterprise infrastructure and multi-asset depth</h3>
-        <ul class="choose-list">
-          <li>You operate a large multi-asset or crypto-focused brokerage where wallet infrastructure consolidation is a priority</li>
-          <li>Your business already runs within the broader B2Broker ecosystem</li>
-          <li>You require deeper customisation across multiple products and asset classes</li>
-          <li>You have internal technical capacity to manage implementation, integrations, and ongoing platform customisation at scale</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="choose-verdict reveal">
-      <p>For most growth-stage forex brokerages in 2026, <strong>AltimaCRM is the stronger operational fit.</strong> The platform is built around the day-to-day realities of brokerage growth, where lead conversion, retention, onboarding, compliance, and IB management all need to operate inside one connected workflow. Its 18-year track record across 50+ brokerage brands reflects the depth of that operational focus.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── Ecosystem ───────────────────────────────────────────────── -->
-<section class="ecosystem" id="ecosystem">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">The AltimaCRM Ecosystem</div>
-      <h2>Beyond CRM: A Complete Brokerage Operating System</h2>
-      <p>AltimaCRM is one of the few platforms in the forex space with a dedicated ecosystem built around the full brokerage lifecycle — from first lead and onboarding to retention, IB management, and funded trader payouts.</p>
-    </div>
-
-    <div class="ecosystem-grid reveal">
-
-      <div class="ecosystem-card">
-        <span class="eco-tag">Prop Trading</span>
-        <h3>AltimaProp</h3>
-        <p>A dedicated CRM for prop trading firms covering the full trader lifecycle — from challenge setup and real-time risk controls to performance tracking and automated payouts. Built specifically for prop operations, not adapted from a retail brokerage model.</p>
-      </div>
-
-      <div class="ecosystem-card">
-        <span class="eco-tag">Partner Network</span>
-        <h3>Partner Portal</h3>
-        <p>A dedicated IB portal with real-time visibility into commissions, referral structures, and payout history. Reduces back-office dependency as IB networks scale and removes much of the manual reconciliation work.</p>
-      </div>
-
-      <div class="ecosystem-card">
-        <span class="eco-tag">Client Experience</span>
-        <h3>Trader's Room</h3>
-        <p>A fully branded client portal where traders manage accounts, complete KYC, and handle deposits and withdrawals. Every interaction syncs directly back into the CRM in real time.</p>
-      </div>
-
-      <div class="ecosystem-card">
-        <span class="eco-tag">Communication</span>
-        <h3>AltimaVoIP</h3>
-        <p>Native VoIP built directly into the CRM. Agents call, log conversations, and manage follow-ups from one system — improving response speed, follow-up consistency, and sales visibility with no third-party dialer needed.</p>
-      </div>
-
-    </div>
-
-    <p class="reveal" style="text-align:center;margin-top:40px;font-size:15px;color:var(--text-muted);max-width:640px;margin-left:auto;margin-right:auto;">Taken together, the AltimaCRM ecosystem means a brokerage can run its entire operation inside one connected platform rather than stitching together separate tools for each function.</p>
-
-  </div>
-</section>
-
-<!-- ── Summary ────────────────────────────────────────────────── -->
-<section class="summary" id="summary">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Summary</div>
-      <h2>AltimaCRM vs B2Core: The Verdict</h2>
-    </div>
-    <div class="summary-body reveal">
-      <p>Both platforms are established players in the forex and fintech infrastructure space, but they are built around different operational priorities. B2Core is a strong fit for enterprise-scale and multi-asset brokerages that prioritise wallet infrastructure, ecosystem consolidation, and deeper customisation across complex trading environments.</p>
-      <p>AltimaCRM is the stronger fit for growth-stage and scaling forex brokerages where conversion speed, retention visibility, onboarding efficiency, and compliance workflows directly affect growth. Its 18-year track record, native AltimaVoIP, AI-driven KYC infrastructure, and connected workflows across sales, retention, compliance, finance, and IB management make it a more operationally aligned platform for modern brokerage teams.</p>
-      <p>AltimaCRM stands out because it connects the full brokerage lifecycle inside one system — from first lead and onboarding to funded trader management and IB payouts. The result is a brokerage operation where sales teams move faster, compliance teams work with cleaner audit visibility, and leadership has a real-time view of the business without relying on disconnected systems.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA ────────────────────────────────────────────────────── -->
-<section class="cta-section" id="cta">
-  <div class="cta-glow"></div>
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="badge reveal" style="margin:0 auto 24px;">Book a Demo</div>
-    <h2 class="reveal">See AltimaCRM in Action</h2>
-    <p class="reveal">A personalised demo for your brokerage — not generic slides. A live walkthrough of your actual use case and how AltimaCRM fits your operation.</p>
-    <div class="cta-btns reveal">
-      <a href="#" class="btn-primary" style="font-size:16px;padding:15px 32px;">Request Free Demo →</a>
-      <a href="#" class="btn-ghost" style="font-size:16px;padding:15px 32px;">Talk to Sales</a>
-    </div>
-    <p class="no-card-note reveal">No commitment required · Setup in days, not months · Full onboarding support</p>
-  </div>
-</section>
-
-<!-- ── FAQ ────────────────────────────────────────────────────── -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">FAQ</div>
-      <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to know about AltimaCRM vs B2Core before making a decision.</p>
-    </div>
-
-    <div class="faq-list reveal">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          What is the main difference between AltimaCRM and B2Core?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            The biggest differences come down to operational focus. AltimaCRM is built around brokerage growth workflows such as lead conversion, retention, onboarding, and compliance visibility. Native VoIP, omnichannel communication, AI-powered KYC, and sales automation all operate inside one connected platform. B2Core is more focused on infrastructure consolidation, wallet systems, and multi-asset operations — commonly used by brokerages prioritising back-office infrastructure and crypto connectivity alongside forex operations.
+      <div>
+        <div class="eyebrow eyebrow-dk" style="margin-bottom:20px;">Schedule a Consultation</div>
+        <h2 class="t-title cta-h2">Schedule Your Expert<br>Consultation Today</h2>
+        <p class="cta-body">Discover how Custom TruCytes™ can advance your research with unmatched precision and reliability. Our Field Application Scientists are ready to guide you from first specification to final production.</p>
+        <a href="#" class="cta-link">Book a Consultation →</a>
+        <div class="cklist">
+          <div class="ck">
+            <div class="ck-b"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#FF6600" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            No-cost initial consultation with a Field Application Scientist
+          </div>
+          <div class="ck">
+            <div class="ck-b"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#FF6600" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Structured feasibility assessment with full risk and cost estimate
+          </div>
+          <div class="ck">
+            <div class="ck-b"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#FF6600" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Certificate of Analysis provided before any production commitment
+          </div>
+          <div class="ck">
+            <div class="ck-b"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#FF6600" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            ISO 13485 supply chain documentation available on request
+          </div>
+          <div class="ck">
+            <div class="ck-b"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#FF6600" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Dedicated account support for the life of your research programme
           </div>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          How much does B2Core cost?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            B2Core does not publicly publish fixed pricing tiers. Pricing is customised based on brokerage size, integrations, operational scope, and implementation requirements. Based on industry feedback, the platform is generally positioned toward mid-size and enterprise brokerages with larger infrastructure budgets and internal technical capacity. For exact pricing, brokerages need to contact B2Broker directly.
+      <div class="fcard" id="fw">
+        <div class="fc-title">Request a Consultation</div>
+        <div class="fc-sub">A specialist will respond within 2 business days.</div>
+        <form id="cf" novalidate>
+          <div class="frow">
+            <div class="fg"><label class="flb">First Name <em>*</em></label><input type="text" placeholder="Jane" required/></div>
+            <div class="fg"><label class="flb">Last Name <em>*</em></label><input type="text" placeholder="Smith" required/></div>
           </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          What are the best alternatives to B2Core?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            AltimaCRM is one of the most commonly evaluated alternatives to B2Core for regulated forex brokerages, typically preferred by teams that prioritise lead conversion, retention workflows, onboarding speed, and compliance visibility inside one connected platform. Other alternatives include Syntellicore, FXBO, SkaleCRM, and FYNXT. AltimaCRM stands out for brokerages looking for native VoIP, AI-powered KYC, omnichannel communication, and connected workflows across sales, retention, compliance, and IB management.
+          <div class="frow f1">
+            <div class="fg"><label class="flb">Institutional Email <em>*</em></label><input type="email" placeholder="jsmith@university.edu" required/></div>
           </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Can AltimaCRM replace B2Core for a regulated forex broker?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Yes, for many regulated forex brokerages, AltimaCRM can replace the core operational workflows handled through B2Core. The platform covers CRM operations, onboarding, KYC, IB management, communication workflows, and compliance visibility inside one system. AltimaCRM integrates natively with MT4, MT5, cTrader, and Sirix. B2Core still holds an advantage in areas like multi-currency wallet infrastructure and broader crypto exchange connectivity, which matters more for brokerages operating heavily across crypto and multi-asset environments.
+          <div class="frow f1">
+            <div class="fg"><label class="flb">Institution / Company <em>*</em></label><input type="text" placeholder="University of..." required/></div>
           </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Does B2Core include built-in VoIP?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            No. B2Core does not include native VoIP. Communication tools can be integrated through third-party providers, but there is no built-in calling solution. AltimaCRM includes AltimaVoIP natively, so sales teams can call, log, and follow up inside the same platform they already use for lead and client management.
+          <div class="frow f1">
+            <div class="fg">
+              <label class="flb">Primary Application</label>
+              <select>
+                <option value="" disabled selected>Select your workflow</option>
+                <option>Immunophenotyping</option>
+                <option>CAR-T / Cell Therapy</option>
+                <option>Spectral Unmixing &amp; Compensation</option>
+                <option>Instrument QC &amp; Standardisation</option>
+                <option>Rare Biomarker Detection</option>
+                <option>Viability Assays</option>
+                <option>Other</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Which CRM is better for sales-heavy forex brokerages?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            AltimaCRM is the stronger choice for sales-heavy brokerages. Lead scoring, automated follow-up workflows, VoIP-integrated calling, and behavioural retention triggers are all built in and connected to the same system your compliance and management teams use. Brokerages that fully deploy these workflows report conversion improvements of 20–30%. B2Core handles client management well, but was not designed around sales conversion as its primary use case.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Does AltimaCRM integrate with MT4, MT5, and cTrader like B2Core does?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Yes. AltimaCRM integrates natively with MT4, MT5, cTrader, and Sirix. Account events, deposits, withdrawals, and trading activity sync directly into the CRM in real time. B2Core integrates with MT4 and MT5 and adds crypto exchange integrations. AltimaCRM's addition of cTrader and Sirix makes it the broader choice for regulated forex brokerages running those platforms.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Can AltimaCRM support prop trading firms?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            Yes. AltimaCRM offers AltimaProp, a dedicated CRM built specifically for prop trading firms. It covers challenge workflows, real-time risk controls, automated payouts, and trader performance tracking. The infrastructure is purpose-built for prop operations rather than adapted from a retail brokerage CRM.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Is B2Core a good option for smaller or startup brokerages?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            B2Core is generally positioned for mid-size and enterprise brokerages with larger infrastructure budgets and in-house technical capacity. Earlier-stage brokerages often find the implementation scope and operational overhead heavier unless they already operate within the broader B2Broker ecosystem. Smaller and growth-stage brokerages typically find AltimaCRM faster to deploy and easier to manage operationally.
-          </div>
-        </div>
+          <button type="submit" class="fsub">Book a Consultation →</button>
+          <div class="fnote">Reply within 2 business days · No commitment required</div>
+        </form>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
+<!-- ─── STICKY BAR ─── -->
+<div class="sbar" id="sb">
+  <div class="w sbar-in">
+    <div class="sbar-txt">Ready to eliminate variability? <strong>Your first consultation is free.</strong></div>
+    <div class="sbar-acts">
+      <a href="#consultation" class="btn btn-odk" style="font-size:13px;padding:8px 18px;">Configure Own Kit</a>
+      <a href="#consultation" class="btn" style="font-size:13px;padding:8px 20px;">Request Free Consultation</a>
+      <span class="sx" id="sc">✕</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER BAND ─── -->
+<div class="fband">
+  <div class="w">
+    <div class="fband-h">Not Plastic. Not a Person. Not an Animal.<br><span class="ac">Cell Mimics.</span> This is the future of biomarker controls.</div>
+    <p class="fband-p" style="margin-top:14px;">The New Gold Standard of Flow Cytometry Controls.</p>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <a href="#" class="footer-logo">
-        <div class="footer-logo-mark">A</div>
-        AltimaCRM
-      </a>
-      <div class="footer-links">
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">Integrations</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+  <div class="w">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand"><span class="fi"><svg width="16" height="16" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.25" stroke="currentColor" stroke-width="1.7"/><circle cx="11" cy="11" r="3" fill="currentColor"/></svg></span>SlingshotBio™</div>
+        <div class="ftag">The New Gold Standard<br>of Flow Cytometry Controls.</div>
       </div>
-      <p class="footer-copy">© 2025 AltimaCRM. All rights reserved.</p>
+      <div class="fcol"><h4>Popular Products</h4><ul><li><a href="#">SpectraComp®</a></li><li><a href="#">ScatterBridge®</a></li><li><a href="#">ViaComp®</a></li><li><a href="#">FlowCytes® Unmixed</a></li><li><a href="#">TBNK™ Mimic</a></li></ul></div>
+      <div class="fcol"><h4>Products by Brand</h4><ul><li><a href="#">StimCytes™</a></li><li><a href="#">SpectraComp®</a></li><li><a href="#">ViaComp®</a></li><li><a href="#">QuantCytes™</a></li><li><a href="#">PhenoCytes™</a></li></ul></div>
+      <div class="fcol"><h4>Learning Resources</h4><ul><li><a href="#">Blog</a></li><li><a href="#">Case Studies</a></li><li><a href="#">Webinars</a></li><li><a href="#">Videos</a></li><li><a href="#">Press Releases</a></li></ul></div>
+      <div class="fcol"><h4>Technical Resources</h4><ul><li><a href="#">Posters</a></li><li><a href="#">Certificate of Analysis</a></li><li><a href="#">Technical Data Sheets</a></li><li><a href="#">Application Notes</a></li><li><a href="#">ISO 9001 Certificate</a></li></ul></div>
+      <div class="fcol"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Leadership</a></li><li><a href="#">News &amp; Events</a></li><li><a href="#">Worldwide Distributors</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 SlingshotBio. All rights reserved.</span>
+      <div class="fleg"><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a><a href="#">Shipping &amp; Return Policy</a></div>
     </div>
   </div>
 </footer>
 
 <script>
-  /* ── FAQ accordion ──────────────────────────────────────────── */
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const answer = item.querySelector('.faq-a');
-    const isOpen = btn.classList.contains('open');
-
-    document.querySelectorAll('.faq-q.open').forEach(b => {
-      b.classList.remove('open');
-      b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
-    });
-
-    if (!isOpen) {
-      btn.classList.add('open');
-      answer.classList.add('open');
-    }
-  }
-
-  /* ── Scroll reveal ───────────────────────────────────────────── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('revealed'), 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  /* ── Staggered grid reveals ──────────────────────────────────── */
-  const gridObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const children = entry.target.querySelectorAll(
-          '.switch-card, .ecosystem-card, .feedback-value-card, .stat-box, .verdict-card, .pricing-card, .choose-card'
-        );
-        children.forEach((child, i) => {
-          setTimeout(() => {
-            child.style.opacity = '1';
-            child.style.transform = 'translateY(0)';
-          }, i * 80);
-        });
-        gridObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.05 });
-
-  document.querySelectorAll(
-    '.switch-grid, .ecosystem-grid, .feedback-values, .stats-grid, .pros-cons-grid, .pricing-grid, .choose-grid'
-  ).forEach(grid => {
-    grid.querySelectorAll(
-      '.switch-card, .ecosystem-card, .feedback-value-card, .stat-box, .verdict-card, .pricing-card, .choose-card'
-    ).forEach(child => {
-      child.style.opacity = '0';
-      child.style.transform = 'translateY(20px)';
-      child.style.transition = 'opacity .5s ease, transform .5s ease';
-    });
-    gridObserver.observe(grid);
+  document.getElementById('sc').addEventListener('click', function(){
+    const b = document.getElementById('sb');
+    b.style.transition = 'opacity .3s, transform .3s';
+    b.style.opacity = '0'; b.style.transform = 'translateY(100%)';
+    setTimeout(() => b.style.display = 'none', 320);
   });
 
-  /* ── Nav shadow on scroll ────────────────────────────────────── */
-  const navEl = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    navEl.style.boxShadow = window.scrollY > 100 ? '0 4px 32px rgba(0,0,0,.08)' : 'none';
-  }, { passive: true });
+  document.querySelectorAll('a[href="#consultation"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('consultation').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  document.getElementById('cf').addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('.fsub');
+    btn.disabled = true; btn.textContent = 'Submitting…';
+    setTimeout(() => {
+      document.getElementById('fw').innerHTML = `
+        <div style="text-align:center;padding:56px 24px;">
+          <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,102,0,.1);border:1px solid rgba(255,102,0,.22);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:20px;color:#FF6600;">✓</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:600;color:#0D0D0D;letter-spacing:-.03em;margin-bottom:10px;">Request received</div>
+          <p style="font-family:'Geist',sans-serif;font-size:14px;color:#888784;line-height:1.65;max-width:300px;margin:0 auto;">A Field Application Scientist will be in touch within 2 business days.</p>
+        </div>`;
+    }, 900);
+  });
 </script>
 
 </body>
