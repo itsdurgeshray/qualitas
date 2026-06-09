@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Book Your AltimaCRM Demo</title>
-  <meta name="description" content="Your demo request is confirmed. Pick a time directly from our calendar and see how AltimaCRM turns brokerage operations into a growth engine." />
+  <title>Contact AltimaCRM | Forex CRM Support, Sales &amp; Partnerships</title>
+  <meta name="description" content="Get in touch with the AltimaCRM team for sales enquiries, technical support, or partnership discussions. Serving forex brokerages in UAE, Europe, South Africa and beyond." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -12,31 +12,34 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue:        #3395FF;
-      --blue-dim:    rgba(51,149,255,.08);
-      --blue-mid:    #5aaeff;
-      --blue-glow:   rgba(51,149,255,.3);
-      --navy:        #04071B;
-      --white:       #FFFFFF;
-      --surface:     #F0F3F8;
-      --surface-2:   #E8EDF5;
-      --border:      rgba(4,7,27,.08);
-      --border-blue: rgba(51,149,255,.25);
-      --text:        #04071B;
-      --text-muted:  #606070;
-      --text-dim:    #3a4460;
-      --green:       #16A34A;
-      --green-dim:   rgba(22,163,74,.1);
-      --green-border:rgba(22,163,74,.2);
-      --amber:       #D97706;
-      --purple:      #7C3AED;
-      --radius-sm:   8px;
-      --radius-md:   14px;
-      --radius-lg:   20px;
-      --radius-xl:   28px;
-      --shadow-sm:   0 1px 4px rgba(4,7,27,.05), 0 2px 12px rgba(4,7,27,.05);
-      --shadow-md:   0 4px 24px rgba(4,7,27,.08), 0 1px 4px rgba(4,7,27,.04);
-      --shadow-lg:   0 12px 48px rgba(4,7,27,.1), 0 2px 8px rgba(4,7,27,.05);
+      --blue:         #3395FF;
+      --blue-dim:     rgba(51,149,255,.08);
+      --blue-mid:     #5aaeff;
+      --blue-glow:    rgba(51,149,255,.3);
+      --navy:         #04071B;
+      --white:        #FFFFFF;
+      --surface:      #F0F3F8;
+      --surface-2:    #E8EDF5;
+      --border:       rgba(4,7,27,.08);
+      --border-blue:  rgba(51,149,255,.25);
+      --text:         #04071B;
+      --text-muted:   #606070;
+      --text-dim:     #3a4460;
+      --green:        #16A34A;
+      --green-dim:    rgba(22,163,74,.09);
+      --green-border: rgba(22,163,74,.2);
+      --amber:        #D97706;
+      --amber-dim:    rgba(217,119,6,.09);
+      --purple:       #7C3AED;
+      --purple-dim:   rgba(124,58,237,.09);
+      --purple-border:rgba(124,58,237,.2);
+      --radius-sm:    8px;
+      --radius-md:    14px;
+      --radius-lg:    20px;
+      --radius-xl:    28px;
+      --shadow-sm:    0 1px 4px rgba(4,7,27,.05), 0 2px 10px rgba(4,7,27,.04);
+      --shadow-md:    0 4px 24px rgba(4,7,27,.08), 0 1px 4px rgba(4,7,27,.04);
+      --shadow-lg:    0 12px 48px rgba(4,7,27,.1), 0 2px 8px rgba(4,7,27,.05);
     }
 
     html { scroll-behavior: smooth; }
@@ -49,38 +52,18 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Animations ─────────────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(.6); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    @keyframes checkDraw {
-      from { stroke-dashoffset: 36; }
-      to   { stroke-dashoffset: 0; }
-    }
-    @keyframes ringPulse {
-      0%   { transform: scale(1);   opacity: .45; }
-      70%  { transform: scale(1.9); opacity: 0;   }
-      100% { transform: scale(1.9); opacity: 0;   }
-    }
-    @keyframes dot-pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
-    @keyframes shimmer {
-      0%   { background-position: -400px 0; }
-      100% { background-position:  400px 0; }
-    }
+    /* ── Animations ───────────────────────────────────────── */
+    @keyframes fadeUp   { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+    @keyframes dot-pulse{ 0%,100%{opacity:1} 50%{opacity:.2} }
 
-    .animate { opacity: 0; animation: fadeUp .6s ease forwards; }
-    .d1{animation-delay:.08s} .d2{animation-delay:.18s} .d3{animation-delay:.28s}
-    .d4{animation-delay:.38s} .d5{animation-delay:.50s} .d6{animation-delay:.62s}
+    .animate  { opacity:0; animation: fadeUp .6s ease forwards; }
+    .d1{animation-delay:.06s} .d2{animation-delay:.15s} .d3{animation-delay:.25s}
+    .d4{animation-delay:.35s} .d5{animation-delay:.46s} .d6{animation-delay:.58s}
 
     .reveal { opacity:0; transform:translateY(16px); transition:opacity .55s ease,transform .55s ease; }
     .revealed { opacity:1; transform:none; }
 
-    /* ── Utility ────────────────────────────────────────────── */
+    /* ── Utility ──────────────────────────────────────────── */
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
     .badge {
@@ -92,35 +75,26 @@
     }
     .badge::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--blue); flex-shrink:0; }
 
-    .badge-green {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 14px;
-      background: var(--green-dim); border: 1px solid var(--green-border);
-      border-radius: 100px; font-size: 12px; font-weight: 600;
-      letter-spacing: .06em; color: var(--green); text-transform: uppercase;
-    }
-    .badge-green::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green); flex-shrink:0; animation: dot-pulse 1.8s infinite; }
-
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 13px 28px; background: var(--blue); color: #fff;
       font-size: 15px; font-weight: 600; border-radius: 10px;
       text-decoration: none; border: none; cursor: pointer;
       font-family: 'Inter', sans-serif; transition: all .2s;
-      box-shadow: 0 4px 24px rgba(51,149,255,.45);
+      box-shadow: 0 4px 24px rgba(51,149,255,.4);
     }
-    .btn-primary:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 34px rgba(51,149,255,.55); }
+    .btn-primary:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 32px rgba(51,149,255,.52); }
 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px; background: var(--white); color: var(--text-dim);
-      font-size: 15px; font-weight: 500; border-radius: 10px;
+      padding: 11px 22px; background: var(--white); color: var(--text-dim);
+      font-size: 14px; font-weight: 500; border-radius: 10px;
       border: 1px solid var(--border); text-decoration: none;
       cursor: pointer; font-family: 'Inter', sans-serif; transition: all .2s;
     }
-    .btn-ghost:hover { border-color: var(--border-blue); color: var(--blue); box-shadow: 0 2px 16px rgba(51,149,255,.1); }
+    .btn-ghost:hover { border-color: var(--border-blue); color: var(--blue); box-shadow: 0 2px 12px rgba(51,149,255,.1); }
 
-    /* ── Nav ───────────────────────────────────────────────── */
+    /* ── Nav ──────────────────────────────────────────────── */
     nav {
       position: sticky; top: 0; z-index: 100;
       padding: 0 24px; height: 64px;
@@ -138,7 +112,7 @@
     .nav-logo-mark {
       width: 32px; height: 32px; background: var(--blue); border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 900; font-size: 14px; color: white; flex-shrink: 0;
+      font-weight: 900; font-size: 14px; color: white;
     }
     .nav-logo span { font-weight: 700; font-size: 17px; color: var(--navy); letter-spacing: -.02em; }
     .nav-links { display: flex; align-items: center; gap: 6px; }
@@ -149,104 +123,149 @@
     }
     .nav-links a:hover { color: var(--navy); background: var(--surface); }
 
-    /* ── CONFIRMATION HERO ─────────────────────────────────── */
-    .hero-confirm {
+    /* ── Breadcrumb ───────────────────────────────────────── */
+    .breadcrumb { padding: 10px 24px; background: var(--surface); border-bottom: 1px solid var(--border); }
+    .breadcrumb-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--text-muted);
+    }
+    .breadcrumb-inner a { color: var(--text-muted); text-decoration: none; transition: color .15s; }
+    .breadcrumb-inner a:hover { color: var(--blue); }
+    .breadcrumb-sep  { opacity: .4; }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ──────────────────────────────────────────────────────
+       HERO SECTION
+    ────────────────────────────────────────────────────── */
+    .hero {
       padding: 72px 0 80px;
       background: var(--white);
-      text-align: center;
       overflow: hidden;
       position: relative;
     }
-    .hero-confirm::before {
+    .hero::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 60% 60% at 50% -10%, rgba(51,149,255,.1) 0%, transparent 65%),
-        radial-gradient(ellipse 30% 40% at 10% 90%, rgba(51,149,255,.04) 0%, transparent 60%),
-        radial-gradient(ellipse 30% 40% at 90% 90%, rgba(51,149,255,.04) 0%, transparent 60%);
+        radial-gradient(ellipse 50% 70% at 100% 0%,   rgba(51,149,255,.1)  0%, transparent 60%),
+        radial-gradient(ellipse 30% 40% at 0%   100%, rgba(51,149,255,.04) 0%, transparent 55%);
       pointer-events: none;
     }
-
-    /* Dot grid background pattern */
-    .hero-confirm::after {
+    .hero::after {
       content: '';
       position: absolute; inset: 0;
-      background-image: radial-gradient(circle, rgba(51,149,255,.07) 1px, transparent 1px);
-      background-size: 32px 32px;
-      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 40%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 40%, transparent 100%);
+      background-image: radial-gradient(circle, rgba(51,149,255,.055) 1px, transparent 1px);
+      background-size: 30px 30px;
+      mask-image: radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 70% 50%, black 30%, transparent 80%);
       pointer-events: none;
     }
 
-    .hero-confirm-inner { position: relative; z-index: 1; }
-
-    /* Check icon */
-    .confirm-icon-wrap {
-      display: inline-flex; align-items: center; justify-content: center;
-      margin-bottom: 28px; position: relative;
-    }
-    .confirm-ring {
-      position: absolute;
-      width: 80px; height: 80px; border-radius: 50%;
-      border: 2px solid rgba(22,163,74,.4);
-      animation: ringPulse 2.2s ease-out infinite;
-    }
-    .confirm-ring-2 {
-      animation-delay: 1.1s;
-    }
-    .confirm-circle {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: linear-gradient(145deg, #e8faf0 0%, #d1f5e0 100%);
-      border: 1.5px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 20px rgba(22,163,74,.2), 0 0 0 6px rgba(22,163,74,.06);
-      animation: scaleIn .5s cubic-bezier(.175,.885,.32,1.275) .1s both;
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 56px;
+      align-items: center;
       position: relative; z-index: 1;
     }
-    .confirm-circle svg {
-      width: 32px; height: 32px; color: var(--green);
-      stroke-dasharray: 36;
-      stroke-dashoffset: 36;
-      animation: checkDraw .45s ease .5s forwards;
-    }
 
-    .hero-confirm h1 {
-      font-size: clamp(28px, 4vw, 52px);
+    .hero-text {}
+    .hero-text .badge { margin-bottom: 20px; }
+    .hero-text h1 {
+      font-size: clamp(28px, 3.8vw, 50px);
       font-weight: 800; letter-spacing: -.04em; line-height: 1.08;
-      color: var(--navy); margin-bottom: 16px;
+      color: var(--navy); margin-bottom: 18px;
     }
-    .hero-confirm-sub {
-      font-size: 17px; color: var(--text-muted); line-height: 1.7;
-      max-width: 460px; margin: 0 auto 36px;
+    .hero-text p {
+      font-size: 16px; color: var(--text-muted); line-height: 1.75;
+      max-width: 440px; margin-bottom: 32px;
     }
 
-    /* Confirmation tag row */
-    .confirm-tags {
-      display: flex; align-items: center; justify-content: center;
-      gap: 10px; flex-wrap: wrap; margin-bottom: 0;
-    }
-    .ctag {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 14px;
+    /* Region pills */
+    .region-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+    .rpill {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px;
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 100px; font-size: 13px; font-weight: 500; color: var(--text-dim);
+      border-radius: 100px;
+      font-size: 12px; font-weight: 500; color: var(--text-dim);
     }
-    .ctag svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; }
+    .rpill svg { width: 12px; height: 12px; color: var(--blue); flex-shrink: 0; }
 
-    /* ── MAIN LAYOUT — calendar + expect ───────────────────── */
-    .main-section {
-      padding: 0 0 80px;
+    /* ── Contact type cards (hero right) ──────────────────── */
+    .contact-type-cards { display: flex; flex-direction: column; gap: 12px; }
+
+    .ctc {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 22px 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      text-decoration: none; color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: all .22s;
+      cursor: pointer;
+      position: relative; overflow: hidden;
+    }
+    .ctc::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      border-radius: 3px 0 0 3px;
+      opacity: 0; transition: opacity .2s;
+    }
+    .ctc:hover { transform: translateX(4px); box-shadow: var(--shadow-md); border-color: transparent; }
+
+    .ctc.demo:hover   { border-color: var(--border-blue); box-shadow: 0 6px 32px rgba(51,149,255,.13); }
+    .ctc.sales:hover  { border-color: var(--green-border); box-shadow: 0 6px 32px rgba(22,163,74,.1); }
+    .ctc.support:hover{ border-color: var(--purple-border); box-shadow: 0 6px 32px rgba(124,58,237,.1); }
+
+    .ctc-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid transparent;
+    }
+    .ctc-icon svg { width: 20px; height: 20px; }
+
+    .ctc.demo    .ctc-icon { background: var(--blue-dim);   border-color: rgba(51,149,255,.2); }
+    .ctc.demo    .ctc-icon svg { color: var(--blue); }
+    .ctc.sales   .ctc-icon { background: var(--green-dim);  border-color: var(--green-border); }
+    .ctc.sales   .ctc-icon svg { color: var(--green); }
+    .ctc.support .ctc-icon { background: var(--purple-dim); border-color: var(--purple-border); }
+    .ctc.support .ctc-icon svg { color: var(--purple); }
+
+    .ctc-body { flex: 1; }
+    .ctc-title {
+      font-size: 15px; font-weight: 700; letter-spacing: -.012em;
+      color: var(--navy); margin-bottom: 4px;
+    }
+    .ctc-desc  { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+    .ctc-link  {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 13px; font-weight: 600; margin-top: 10px;
+      text-decoration: none; transition: gap .15s;
+    }
+    .ctc.demo    .ctc-link { color: var(--blue); }
+    .ctc.sales   .ctc-link { color: var(--green); }
+    .ctc.support .ctc-link { color: var(--purple); }
+    .ctc:hover .ctc-link   { gap: 7px; }
+    .ctc-link svg { width: 13px; height: 13px; }
+
+    /* ──────────────────────────────────────────────────────
+       FORM + CONTACT INFO
+    ────────────────────────────────────────────────────── */
+    .contact-section {
+      padding: 0 0 88px;
       background: var(--white);
     }
-    .main-grid {
+    .contact-grid {
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: 1.3fr 1fr;
       gap: 32px;
       align-items: start;
     }
 
-    /* Calendar card */
-    .calendar-card {
+    /* ── Form card ─────────────────────────────────────── */
+    .form-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
@@ -254,244 +273,263 @@
       box-shadow: var(--shadow-lg);
       position: relative;
     }
-    .calendar-card::before {
+    .form-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--blue-mid));
+      background: linear-gradient(90deg, var(--blue) 0%, var(--blue-mid) 100%);
     }
-
-    .cal-header {
-      padding: 24px 28px 20px;
+    .form-head {
+      padding: 28px 32px 24px;
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
     }
-    .cal-header-text {}
-    .cal-header-label {
-      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--blue); margin-bottom: 4px;
+    .form-head-text {}
+    .form-head-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
     }
-    .cal-header-title {
-      font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: var(--navy);
+    .form-head-title {
+      font-size: 20px; font-weight: 700; letter-spacing: -.022em; color: var(--navy);
     }
-    .cal-header-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
-    .cal-header-icon {
-      width: 44px; height: 44px; border-radius: 12px;
+    .form-head-sub { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+    .form-head-icon {
+      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
       background: var(--blue-dim); border: 1px solid var(--border-blue);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .cal-header-icon svg { width: 22px; height: 22px; color: var(--blue); }
-
-    /* Calendar embed zone */
-    .cal-embed-zone {
-      padding: 0;
-      min-height: 520px;
-      background: var(--surface);
-      display: flex; align-items: stretch;
-    }
-
-    /* Mock calendar UI (replace with real embed) */
-    .cal-mock {
-      width: 100%; display: flex; flex-direction: column;
-    }
-    .cal-mock-nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 28px; background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-    .cal-month { font-size: 15px; font-weight: 700; color: var(--navy); }
-    .cal-nav-btns { display: flex; gap: 6px; }
-    .cal-nav-btn {
-      width: 30px; height: 30px; border-radius: 8px;
-      border: 1px solid var(--border); background: var(--white);
       display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all .15s;
     }
-    .cal-nav-btn:hover { border-color: var(--border-blue); background: var(--blue-dim); }
-    .cal-nav-btn svg { width: 14px; height: 14px; color: var(--text-muted); }
+    .form-head-icon svg { width: 22px; height: 22px; color: var(--blue); }
 
-    .cal-days-header {
-      display: grid; grid-template-columns: repeat(7,1fr);
-      padding: 12px 20px 6px;
-      background: var(--white); border-bottom: 1px solid var(--border);
-    }
-    .cal-day-name {
-      text-align: center; font-size: 11px; font-weight: 600;
-      color: var(--text-muted); letter-spacing: .06em; text-transform: uppercase;
-    }
-    .cal-grid {
-      display: grid; grid-template-columns: repeat(7,1fr);
-      gap: 4px; padding: 16px 20px;
-      background: var(--white);
-    }
-    .cal-cell {
-      aspect-ratio: 1; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 500; color: var(--text-muted);
-      cursor: pointer; transition: all .15s;
-    }
-    .cal-cell:hover { background: var(--surface); color: var(--navy); }
-    .cal-cell.available { color: var(--navy); background: var(--surface); }
-    .cal-cell.available:hover { background: var(--blue-dim); color: var(--blue); border: 1px solid var(--border-blue); }
-    .cal-cell.selected { background: var(--blue); color: white; box-shadow: 0 4px 12px rgba(51,149,255,.4); }
-    .cal-cell.today { color: var(--blue); font-weight: 700; border: 1.5px solid var(--border-blue); }
-    .cal-cell.disabled { color: rgba(4,7,27,.18); cursor: default; }
-    .cal-cell.empty { cursor: default; }
+    .form-body { padding: 28px 32px 32px; }
 
-    .cal-time-header {
-      padding: 16px 28px 10px;
-      border-top: 1px solid var(--border);
-      background: var(--white);
-      font-size: 12px; font-weight: 700; letter-spacing: .08em;
-      text-transform: uppercase; color: var(--text-muted);
-    }
-    .cal-slots {
-      display: grid; grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px; padding: 0 20px 20px; background: var(--white);
-    }
-    .cal-slot {
-      padding: 9px 8px; border-radius: 8px; text-align: center;
-      border: 1px solid var(--border); background: var(--surface);
-      font-size: 12px; font-weight: 600; color: var(--text-dim);
-      cursor: pointer; transition: all .15s;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .cal-slot:hover { border-color: var(--border-blue); background: var(--blue-dim); color: var(--blue); }
-    .cal-slot.selected { background: var(--blue); color: white; border-color: var(--blue); box-shadow: 0 4px 12px rgba(51,149,255,.4); }
+    .frow      { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .frow.full { grid-template-columns: 1fr; }
+    .fgroup    { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+    .fgroup:last-child { margin-bottom: 0; }
 
-    .cal-footer {
-      padding: 16px 28px;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between;
+    .flabel {
+      font-size: 11px; font-weight: 600; color: var(--text-dim);
+      letter-spacing: .03em; text-transform: uppercase;
     }
-    .cal-footer-note {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 12px; color: var(--text-muted);
+
+    .finput, .fselect, .ftextarea {
+      padding: 10px 14px; border: 1px solid var(--border);
+      border-radius: 9px; font-size: 14px; color: var(--text);
+      font-family: 'Inter', sans-serif; background: var(--white);
+      transition: border-color .15s, box-shadow .15s; outline: none; width: 100%;
     }
-    .cal-footer-note svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; }
+    .finput:focus, .fselect:focus, .ftextarea:focus {
+      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(51,149,255,.11);
+    }
+    .finput::placeholder, .ftextarea::placeholder { color: rgba(96,96,112,.45); }
+    .fselect {
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23606070' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 13px center; padding-right: 36px;
+    }
+    .ftextarea { resize: vertical; min-height: 110px; }
 
-    /* Right column */
-    .right-col { display: flex; flex-direction: column; gap: 20px; }
+    .fsubmit {
+      width: 100%; padding: 14px; background: var(--blue); color: white;
+      border: none; cursor: pointer; border-radius: 10px;
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
+      transition: all .2s; box-shadow: 0 4px 22px rgba(51,149,255,.42); margin-top: 6px;
+    }
+    .fsubmit:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 30px rgba(51,149,255,.52); }
+    .form-privacy {
+      text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 11px;
+    }
 
-    /* What to Expect section */
-    .expect-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
+    /* ── Right info column ──────────────────────────────── */
+    .info-col { display: flex; flex-direction: column; gap: 16px; }
+
+    /* Contact channels card */
+    .info-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); overflow: hidden;
       box-shadow: var(--shadow-md);
     }
-    .expect-head {
-      padding: 24px 28px 20px;
+    .info-card-head {
+      padding: 20px 24px 16px;
       border-bottom: 1px solid var(--border);
     }
-    .expect-head-label {
-      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--text-muted); margin-bottom: 6px;
+    .info-card-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
     }
-    .expect-head-title {
-      font-size: 20px; font-weight: 600; letter-spacing: -.022em;
-      color: var(--navy); line-height: 1.25;
+    .info-card-title {
+      font-size: 17px; font-weight: 700; letter-spacing: -.018em; color: var(--navy);
     }
 
-    .expect-items { padding: 8px 0; }
-    .expect-item {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 18px 28px;
+    .contact-channels { padding: 6px 0; }
+    .channel {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 24px;
       border-bottom: 1px solid var(--border);
       transition: background .15s;
     }
-    .expect-item:last-child { border-bottom: none; }
-    .expect-item:hover { background: var(--surface); }
-
-    .expect-icon {
-      width: 42px; height: 42px; flex-shrink: 0;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
+    .channel:last-child { border-bottom: none; }
+    .channel:hover { background: var(--surface); }
+    .channel-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
       border: 1px solid var(--border);
     }
-    .expect-icon svg { width: 20px; height: 20px; }
+    .channel-icon svg { width: 17px; height: 17px; }
+    .channel.ch-sales   .channel-icon { background: var(--blue-dim);   border-color: rgba(51,149,255,.18); }
+    .channel.ch-sales   .channel-icon svg { color: var(--blue); }
+    .channel.ch-support .channel-icon { background: var(--green-dim);  border-color: var(--green-border); }
+    .channel.ch-support .channel-icon svg { color: var(--green); }
+    .channel.ch-general .channel-icon { background: var(--amber-dim);  border-color: rgba(217,119,6,.2); }
+    .channel.ch-general .channel-icon svg { color: var(--amber); }
+    .channel.ch-address .channel-icon { background: var(--surface);    border-color: var(--border); }
+    .channel.ch-address .channel-icon svg { color: var(--text-muted); }
+    .channel-body {}
+    .channel-type  { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 2px; }
+    .channel-value { font-size: 13px; font-weight: 600; color: var(--navy); }
+    .channel-value a { color: var(--blue); text-decoration: none; transition: color .15s; }
+    .channel-value a:hover { color: var(--blue-mid); }
+    .channel-note  { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
 
-    /* each item gets a distinct soft color */
-    .expect-item:nth-child(1) .expect-icon { background: rgba(51,149,255,.08); border-color: rgba(51,149,255,.18); }
-    .expect-item:nth-child(1) .expect-icon svg { color: var(--blue); }
-    .expect-item:nth-child(2) .expect-icon { background: rgba(22,163,74,.08); border-color: rgba(22,163,74,.18); }
-    .expect-item:nth-child(2) .expect-icon svg { color: var(--green); }
-    .expect-item:nth-child(3) .expect-icon { background: rgba(124,58,237,.08); border-color: rgba(124,58,237,.18); }
-    .expect-item:nth-child(3) .expect-icon svg { color: var(--purple); }
-
-    .expect-item-body {}
-    .expect-item-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; line-height: 1.3; }
-    .expect-item-desc  { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-
-    /* Reach out callout */
-    .reachout-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 22px 24px;
-      display: flex; align-items: center; gap: 16px;
-    }
-    .reachout-icon {
-      width: 44px; height: 44px; flex-shrink: 0;
-      border-radius: 12px; background: var(--white);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .reachout-icon svg { width: 20px; height: 20px; color: var(--blue); }
-    .reachout-text {}
-    .reachout-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
-    .reachout-desc  { font-size: 13px; color: var(--text-muted); }
-
-    /* ── SOCIAL SECTION ────────────────────────────────────── */
-    .social-section {
-      padding: 72px 0 80px;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-    .social-section h2 {
-      font-size: clamp(20px, 2.5vw, 30px);
-      font-weight: 600; letter-spacing: -.025em;
-      color: var(--navy); margin-bottom: 8px;
-    }
-    .social-sub {
-      font-size: 15px; color: var(--text-muted);
-      margin-bottom: 36px; max-width: 380px; margin-left: auto; margin-right: auto;
-    }
-    .social-cards {
-      display: flex; align-items: center; justify-content: center;
-      gap: 14px; flex-wrap: wrap;
-    }
-    .social-card {
-      display: flex; align-items: center; gap: 12px;
-      padding: 16px 24px;
+    /* Socials card */
+    .social-info-card {
       background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      text-decoration: none; color: var(--text-dim);
-      font-weight: 600; font-size: 14px;
+      border-radius: var(--radius-lg); padding: 18px 24px;
       box-shadow: var(--shadow-sm);
-      transition: all .2s;
-      min-width: 160px; justify-content: center;
     }
-    .social-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--border-blue); color: var(--navy); }
-    .social-icon {
-      width: 36px; height: 36px; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
+    .social-card-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;
     }
-    .social-icon svg { width: 18px; height: 18px; }
-    .social-card.linkedin .social-icon { background: rgba(10,102,194,.1); }
-    .social-card.linkedin .social-icon svg { color: #0A66C2; }
-    .social-card.twitter .social-icon  { background: rgba(4,7,27,.06); }
-    .social-card.twitter .social-icon svg  { color: #000; }
-    .social-card.instagram .social-icon { background: rgba(225,48,108,.08); }
-    .social-card.instagram .social-icon svg { color: #E1306C; }
+    .social-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+    .soc-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px; border: 1px solid var(--border);
+      border-radius: 9px; background: var(--surface);
+      font-size: 13px; font-weight: 600; color: var(--text-dim);
+      text-decoration: none; transition: all .18s;
+    }
+    .soc-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); border-color: var(--border-blue); color: var(--navy); }
+    .soc-btn svg { width: 15px; height: 15px; }
+    .soc-btn.li svg { color: #0A66C2; }
+    .soc-btn.tw svg { color: #000; }
+    .soc-btn.ig svg { color: #E1306C; }
 
-    /* ── FOOTER ────────────────────────────────────────────── */
-    footer {
-      padding: 36px 0;
-      background: var(--white); border-top: 1px solid var(--border);
+    /* Review row */
+    .review-row-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 9px;
     }
+    .review-btns { display: flex; gap: 8px; }
+    .review-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; border: 1px solid var(--border);
+      border-radius: 8px; background: var(--white);
+      font-size: 12px; font-weight: 700; color: var(--text-dim);
+      text-decoration: none; transition: all .18s;
+      box-shadow: var(--shadow-sm);
+    }
+    .review-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); border-color: rgba(51,149,255,.2); color: var(--navy); }
+    .review-btn-icon {
+      width: 22px; height: 22px; border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0;
+    }
+    .review-btn.g2 .review-btn-icon { background: #FF492C; color: white; font-weight: 900; font-family: 'Inter',sans-serif; font-size: 10px; }
+    .review-btn.tp .review-btn-icon { background: #00B67A; }
+    .review-btn.tp .review-btn-icon svg { width: 14px; height: 14px; color: white; }
+
+    /* ──────────────────────────────────────────────────────
+       TRUST STRIP
+    ────────────────────────────────────────────────────── */
+    .trust-strip {
+      padding: 0 0 88px;
+      background: var(--white);
+    }
+    .trust-strip-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 40px;
+      display: flex; align-items: center; justify-content: space-around;
+      flex-wrap: wrap; gap: 24px;
+    }
+    .ts-stat { text-align: center; }
+    .ts-stat .val {
+      font-size: 28px; font-weight: 800; letter-spacing: -.04em;
+      color: var(--navy); line-height: 1; display: block; margin-bottom: 4px;
+    }
+    .ts-stat .val span { color: var(--blue); }
+    .ts-stat .lbl { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .ts-divider { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+
+    /* ──────────────────────────────────────────────────────
+       FAQ SECTION
+    ────────────────────────────────────────────────────── */
+    .faq-section { padding: 0 0 100px; background: var(--white); }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .faq-left h2 {
+      font-size: clamp(22px, 2.8vw, 34px);
+      font-weight: 600; letter-spacing: -.025em;
+      color: var(--navy); line-height: 1.2; margin-bottom: 12px;
+    }
+    .faq-left p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; }
+
+    .faq-list {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      width: 100%; text-align: left; padding: 20px 24px;
+      background: var(--white); border: none; cursor: pointer;
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 14px; font-weight: 600; color: var(--navy);
+      font-family: 'Inter', sans-serif; transition: background .15s; line-height: 1.45;
+    }
+    .faq-q:hover { background: var(--surface); }
+    .faq-q.open  { background: rgba(204,229,255,.2); color: var(--blue); }
+    .faq-q-num {
+      width: 24px; height: 24px; border-radius: 7px; flex-shrink: 0;
+      background: var(--surface); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace; transition: all .2s;
+    }
+    .faq-q.open .faq-q-num {
+      background: var(--blue-dim); border-color: var(--border-blue); color: var(--blue);
+    }
+    .faq-icon {
+      width: 20px; height: 20px; flex-shrink: 0; border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--text-muted); transition: all .2s; margin-left: auto;
+      align-self: center;
+    }
+    .faq-q.open .faq-icon {
+      border-color: var(--border-blue); background: var(--blue-dim);
+      color: var(--blue); transform: rotate(45deg);
+    }
+    .faq-a { overflow: hidden; max-height: 0; transition: max-height .35s ease; }
+    .faq-a.open { max-height: 320px; }
+    .faq-a-inner {
+      padding: 0 24px 20px 62px;
+      font-size: 14px; color: var(--text-muted); line-height: 1.75;
+      background: rgba(204,229,255,.1);
+    }
+    .faq-a-inner a { color: var(--blue); text-decoration: none; font-weight: 600; }
+    .faq-a-inner a:hover { text-decoration: underline; }
+
+    /* ──────────────────────────────────────────────────────
+       FOOTER
+    ────────────────────────────────────────────────────── */
+    footer { padding: 40px 0; background: var(--surface); border-top: 1px solid var(--border); }
     .footer-inner {
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 16px;
@@ -502,27 +540,25 @@
       color: var(--text-muted); text-decoration: none;
     }
     .footer-logo-mark {
-      width: 28px; height: 28px; border-radius: 7px;
-      background: var(--blue);
+      width: 28px; height: 28px; border-radius: 7px; background: var(--blue);
       display: flex; align-items: center; justify-content: center;
       font-weight: 900; font-size: 12px; color: white;
     }
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a {
-      font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s;
-    }
+    .footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: var(--navy); }
     .footer-copy { font-size: 12px; color: var(--text-muted); }
 
     /* ── Responsive ────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .main-grid { grid-template-columns: 1fr; }
-      .nav-links  { display: none; }
+    @media (max-width: 960px) {
+      .hero-layout, .contact-grid, .faq-layout { grid-template-columns: 1fr; }
+      .ts-divider { display: none; }
+      .trust-strip-inner { gap: 28px; justify-content: center; }
+      .nav-links { display: none; }
     }
     @media (max-width: 560px) {
-      .confirm-tags { gap: 6px; }
-      .cal-slots { grid-template-columns: 1fr 1fr; }
-      .social-cards { flex-direction: column; align-items: stretch; max-width: 280px; margin: 0 auto; }
+      .frow { grid-template-columns: 1fr; }
+      .social-row { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -541,211 +577,399 @@
       <a href="#">Integrations</a>
       <a href="#">Resources</a>
     </div>
-    <a href="#" class="btn-ghost" style="padding:9px 20px;font-size:14px;">Back to site</a>
+    <a href="#contact-form" class="btn-primary" style="padding:9px 20px;font-size:14px;">Get in Touch →</a>
   </div>
 </nav>
 
-<!-- ── Confirmation Hero ─────────────────────────────────────── -->
-<section class="hero-confirm">
-  <div class="container">
-    <div class="hero-confirm-inner">
+<!-- ── Breadcrumb ─────────────────────────────────────────────── -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">AltimaCRM</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Contact Us</span>
+  </div>
+</div>
 
-      <div class="confirm-icon-wrap animate d1">
-        <div class="confirm-ring"></div>
-        <div class="confirm-ring confirm-ring-2"></div>
-        <div class="confirm-circle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
+<!-- ── Hero ──────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Left: Headline -->
+      <div class="hero-text">
+        <div class="badge animate d1">Contact Us</div>
+        <h1 class="animate d2">Talk to the Team Behind AltimaCRM</h1>
+        <p class="animate d3">Whether you are evaluating AltimaCRM for your brokerage, need support on an existing deployment, or want to explore a partnership, the right person is one message away.</p>
+
+        <div class="region-pills animate d4">
+          <span class="rpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            UAE
+          </span>
+          <span class="rpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Europe
+          </span>
+          <span class="rpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            South Africa
+          </span>
+          <span class="rpill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Asia &amp; LATAM
+          </span>
         </div>
       </div>
 
-      <div class="badge-green animate d2" style="margin-bottom:20px;">Request Confirmed</div>
+      <!-- Right: Contact type quick-select cards -->
+      <div class="contact-type-cards animate d3">
 
-      <h1 class="animate d2">
-        Your request is in.<br/>Now let's find a time that works.
-      </h1>
-
-      <p class="hero-confirm-sub animate d3">
-        Pick a slot that works for you. Most demos run 30 minutes and are built around your specific brokerage setup.
-      </p>
-
-      <div class="confirm-tags animate d4">
-        <span class="ctag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          30-minute session
-        </span>
-        <span class="ctag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Your team, your setup
-        </span>
-        <span class="ctag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          No commitment required
-        </span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Main: Calendar + Expect ──────────────────────────────── -->
-<section class="main-section">
-  <div class="container">
-    <div class="main-grid">
-
-      <!-- Calendar Column -->
-      <div class="calendar-card animate d4">
-        <div class="cal-header">
-          <div class="cal-header-text">
-            <div class="cal-header-label">Pick a slot</div>
-            <div class="cal-header-title">Schedule Your Demo</div>
-            <div class="cal-header-sub">All times shown in your local timezone</div>
-          </div>
-          <div class="cal-header-icon">
+        <a href="/demo" class="ctc demo">
+          <div class="ctc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8"  y1="2" x2="8"  y2="6"/>
-              <line x1="3"  y1="10" x2="21" y2="10"/>
+              <polygon points="5 3 19 12 5 21 5 3"/>
             </svg>
           </div>
-        </div>
-
-        <div class="cal-embed-zone">
-          <!-- Replace everything inside .cal-mock with your actual calendar embed (Calendly/Cal.com) -->
-          <div class="cal-mock">
-            <div class="cal-mock-nav">
-              <span class="cal-month">June 2025</span>
-              <div class="cal-nav-btns">
-                <button class="cal-nav-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-                </button>
-                <button class="cal-nav-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                </button>
-              </div>
-            </div>
-            <div class="cal-days-header">
-              <div class="cal-day-name">Su</div>
-              <div class="cal-day-name">Mo</div>
-              <div class="cal-day-name">Tu</div>
-              <div class="cal-day-name">We</div>
-              <div class="cal-day-name">Th</div>
-              <div class="cal-day-name">Fr</div>
-              <div class="cal-day-name">Sa</div>
-            </div>
-            <div class="cal-grid" id="cal-grid">
-              <!-- JS fills this -->
-            </div>
-            <div class="cal-time-header">Available Times — Thursday, Jun 12</div>
-            <div class="cal-slots" id="cal-slots">
-              <div class="cal-slot" onclick="selectSlot(this)">09:00 AM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">09:30 AM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">10:00 AM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">11:00 AM</div>
-              <div class="cal-slot selected" onclick="selectSlot(this)">11:30 AM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">02:00 PM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">02:30 PM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">03:00 PM</div>
-              <div class="cal-slot" onclick="selectSlot(this)">04:00 PM</div>
-            </div>
-            <div class="cal-footer">
-              <div class="cal-footer-note">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                Calendar embed goes here — replace with Calendly or Cal.com
-              </div>
-              <button class="btn-primary" style="padding:10px 22px;font-size:14px;">Confirm →</button>
+          <div class="ctc-body">
+            <div class="ctc-title">Book a Demo</div>
+            <div class="ctc-desc">You want to see the platform in action before committing to a conversation.</div>
+            <div class="ctc-link">
+              Book a Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
           </div>
-        </div>
-      </div>
+        </a>
 
-      <!-- Right Column -->
-      <div class="right-col">
-
-        <!-- What to Expect -->
-        <div class="expect-card animate d5">
-          <div class="expect-head">
-            <div class="expect-head-label">Your Demo</div>
-            <div class="expect-head-title">What to Expect</div>
-          </div>
-          <div class="expect-items">
-
-            <div class="expect-item">
-              <div class="expect-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-              </div>
-              <div class="expect-item-body">
-                <div class="expect-item-title">A live walkthrough built around your brokerage setup</div>
-                <div class="expect-item-desc">Not a generic product tour. We map the demo to how your team actually operates.</div>
-              </div>
-            </div>
-
-            <div class="expect-item">
-              <div class="expect-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <div class="expect-item-body">
-                <div class="expect-item-title">How your sales, compliance, and ops teams would use it</div>
-                <div class="expect-item-desc">We walk through the platform from each team's perspective — not just one role.</div>
-              </div>
-            </div>
-
-            <div class="expect-item">
-              <div class="expect-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="12" y1="8"  x2="12" y2="12"/>
-                  <line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-              </div>
-              <div class="expect-item-body">
-                <div class="expect-item-title">Honest answers on integrations, onboarding &amp; migration</div>
-                <div class="expect-item-desc">Timelines, complexity, what requires effort — no surprises after you sign.</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Reach out fallback -->
-        <div class="reachout-card animate d6">
-          <div class="reachout-icon">
+        <a href="#contact-form" class="ctc sales" onclick="preselectTopic('sales')">
+          <div class="ctc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.9 2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 18a2 2 0 0 1 .27-1.08z"/>
             </svg>
           </div>
-          <div class="reachout-text">
-            <div class="reachout-title">Prefer we reach out?</div>
-            <div class="reachout-desc">We'll contact you within one business day.</div>
+          <div class="ctc-body">
+            <div class="ctc-title">Talk to Sales</div>
+            <div class="ctc-desc">You are evaluating AltimaCRM for your brokerage and want to speak to someone directly.</div>
+            <div class="ctc-link">
+              Contact Sales
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="#contact-form" class="ctc support" onclick="preselectTopic('support')">
+          <div class="ctc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="ctc-body">
+            <div class="ctc-title">Existing Client Support</div>
+            <div class="ctc-desc">You are already running AltimaCRM and need technical or operational help.</div>
+            <div class="ctc-link">
+              Open a Support Ticket
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact Form + Info ────────────────────────────────────── -->
+<section class="contact-section" id="contact-form">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Form card -->
+      <div class="form-card reveal">
+        <div class="form-head">
+          <div class="form-head-text">
+            <div class="form-head-label">Send a message</div>
+            <div class="form-head-title">Get in Touch</div>
+            <div class="form-head-sub">We respond to all enquiries within one business day.</div>
+          </div>
+          <div class="form-head-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
           </div>
         </div>
 
-        <!-- Mini trust row -->
-        <div class="animate d6" style="display:flex;flex-direction:column;gap:10px;">
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-
-            <div style="flex:1;min-width:140px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);">
-              <div style="font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy);line-height:1;">18+</div>
-              <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">Years in FX industry</div>
+        <div class="form-body">
+          <form onsubmit="return false;">
+            <div class="frow">
+              <div class="fgroup">
+                <label class="flabel">First Name</label>
+                <input class="finput" type="text" placeholder="James" />
+              </div>
+              <div class="fgroup">
+                <label class="flabel">Last Name</label>
+                <input class="finput" type="text" placeholder="Kowalski" />
+              </div>
             </div>
 
-            <div style="flex:1;min-width:140px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);">
-              <div style="font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy);line-height:1;">50+</div>
-              <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">Broker integrations</div>
+            <div class="frow full">
+              <div class="fgroup">
+                <label class="flabel">Work Email</label>
+                <input class="finput" type="email" placeholder="james@brokerage.com" />
+              </div>
             </div>
 
-            <div style="flex:1;min-width:140px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);">
-              <div style="font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy);line-height:1;">1.2M+</div>
-              <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">Accounts managed</div>
+            <div class="frow full">
+              <div class="fgroup">
+                <label class="flabel">Brokerage / Company Name</label>
+                <input class="finput" type="text" placeholder="Global FX Capital" />
+              </div>
+            </div>
+
+            <div class="frow full">
+              <div class="fgroup">
+                <label class="flabel">What is this about?</label>
+                <select class="fselect" id="topic-select">
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="sales">Sales Enquiry</option>
+                  <option value="demo">Book a Demo</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="support">Support</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="frow full">
+              <div class="fgroup">
+                <label class="flabel">Message</label>
+                <textarea class="ftextarea" placeholder="Tell us a bit about your brokerage and what you're looking for…"></textarea>
+              </div>
+            </div>
+
+            <button class="fsubmit" type="submit">Send Message →</button>
+            <p class="form-privacy">Your information is kept private and never shared with third parties.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right info column -->
+      <div class="info-col">
+
+        <!-- Contact channels -->
+        <div class="info-card reveal">
+          <div class="info-card-head">
+            <div class="info-card-label">Direct Contact</div>
+            <div class="info-card-title">Reach the Right Team</div>
+          </div>
+          <div class="contact-channels">
+
+            <div class="channel ch-sales">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/>
+                  <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+                </svg>
+              </div>
+              <div class="channel-body">
+                <div class="channel-type">Sales &amp; Partnerships</div>
+                <div class="channel-value"><a href="mailto:sales@altimacrm.com">sales@altimacrm.com</a></div>
+                <div class="channel-note">Respond within 1 business day</div>
+              </div>
+            </div>
+
+            <div class="channel ch-support">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197"/>
+                  <circle cx="12" cy="8" r="3"/>
+                </svg>
+              </div>
+              <div class="channel-body">
+                <div class="channel-type">Client Support</div>
+                <div class="channel-value"><a href="mailto:support@altimacrm.com">support@altimacrm.com</a></div>
+                <div class="channel-note">Prioritised by severity</div>
+              </div>
+            </div>
+
+            <div class="channel ch-general">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="channel-body">
+                <div class="channel-type">General Enquiries</div>
+                <div class="channel-value"><a href="mailto:hello@altimacrm.com">hello@altimacrm.com</a></div>
+                <div class="channel-note">Partnerships, press, other</div>
+              </div>
+            </div>
+
+            <div class="channel ch-address">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="channel-body">
+                <div class="channel-type">Office</div>
+                <div class="channel-value">Dubai, UAE · London, UK</div>
+                <div class="channel-note">Global operations team</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Socials + Reviews -->
+        <div class="social-info-card reveal">
+          <div class="social-card-label">Follow Us</div>
+          <div class="social-row">
+
+            <a href="#" class="soc-btn li">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+
+            <a href="#" class="soc-btn tw">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Twitter / X
+            </a>
+
+            <a href="#" class="soc-btn ig">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              Instagram
+            </a>
+
+          </div>
+
+          <div class="review-row-label">Leave a Review</div>
+          <div class="review-btns">
+
+            <a href="#" class="review-btn g2">
+              <div class="review-btn-icon">G2</div>
+              Review on G2
+            </a>
+
+            <a href="#" class="review-btn tp">
+              <div class="review-btn-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              Trustpilot
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Trust Strip ────────────────────────────────────────────── -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-strip-inner reveal">
+      <div class="ts-stat">
+        <span class="val">50<span>+</span></span>
+        <div class="lbl">Brokerage brands</div>
+      </div>
+      <div class="ts-divider"></div>
+      <div class="ts-stat">
+        <span class="val">1.2<span>M+</span></span>
+        <div class="lbl">Leads managed</div>
+      </div>
+      <div class="ts-divider"></div>
+      <div class="ts-stat">
+        <span class="val">45<span>K+</span></span>
+        <div class="lbl">Daily active users</div>
+      </div>
+      <div class="ts-divider"></div>
+      <div class="ts-stat">
+        <span class="val">18<span>+</span></span>
+        <div class="lbl">Years in fintech</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────────── -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-layout">
+
+      <div class="faq-left reveal">
+        <div class="badge" style="margin-bottom:14px;">FAQ</div>
+        <h2>Common Questions Before Getting in Touch</h2>
+        <p>Quick answers so you reach the right person with the right context the first time.</p>
+        <a href="#contact-form" class="btn-primary" style="margin-top:8px;">Send a Message →</a>
+      </div>
+
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-num">01</span>
+            How quickly will someone respond?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Sales and partnership enquiries are responded to within one business day. Support tickets are prioritised by severity and handled by our dedicated operations team.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-num">02</span>
+            Do you offer a free trial or demo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              We offer a live product demo tailored to your brokerage setup. This is not a generic product tour — we walk you through the platform based on your operational requirements. <a href="/demo">Book your demo here.</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-num">03</span>
+            I am based outside the UAE and Europe. Can AltimaCRM still support my brokerage?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Yes. AltimaCRM operates across multiple regions including South Africa, Asia, LATAM, and offshore jurisdictions. Reach out and our team will confirm coverage and support availability for your location.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-num">04</span>
+            We are already using another forex CRM. Is migration possible?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Migration from other platforms is something our team handles regularly. We can walk you through the process, timelines, and what it means for your operational continuity during a demo or sales call.
             </div>
           </div>
         </div>
@@ -755,51 +979,7 @@
   </div>
 </section>
 
-<!-- ── Social ────────────────────────────────────────────────── -->
-<section class="social-section">
-  <div class="container">
-    <div class="reveal">
-      <h2>Stay connected while you wait</h2>
-      <p class="social-sub">Follow AltimaCRM for product updates, forex industry insights, and platform news.</p>
-    </div>
-    <div class="social-cards reveal">
-
-      <a href="#" class="social-card linkedin">
-        <div class="social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-            <rect x="2" y="9" width="4" height="12"/>
-            <circle cx="4" cy="4" r="2"/>
-          </svg>
-        </div>
-        LinkedIn
-      </a>
-
-      <a href="#" class="social-card twitter">
-        <div class="social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </div>
-        Twitter / X
-      </a>
-
-      <a href="#" class="social-card instagram">
-        <div class="social-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-        </div>
-        Instagram
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ────────────────────────────────────────────────── -->
+<!-- ── Footer ─────────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
@@ -820,56 +1000,24 @@
 </footer>
 
 <script>
-  /* ── Calendar mock fill ─────────────────────────────────── */
-  (function buildCalendar() {
-    const grid = document.getElementById('cal-grid');
-    if (!grid) return;
-
-    // June 2025: starts Sunday (day 0), 30 days
-    const startDay = 0; // Sunday
-    const totalDays = 30;
-    const today = 9;
-    const available = [10, 11, 12, 16, 17, 18, 19, 23, 24, 25, 26];
-
-    // empty cells before first
-    for (let i = 0; i < startDay; i++) {
-      const e = document.createElement('div');
-      e.className = 'cal-cell empty';
-      grid.appendChild(e);
-    }
-
-    for (let d = 1; d <= totalDays; d++) {
-      const cell = document.createElement('div');
-      const dayOfWeek = (startDay + d - 1) % 7;
-      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-
-      if (d === today) cell.className = 'cal-cell today';
-      else if (d === 12) cell.className = 'cal-cell selected';
-      else if (available.includes(d) && !isWeekend) cell.className = 'cal-cell available';
-      else cell.className = 'cal-cell disabled';
-
-      cell.textContent = d;
-      if (cell.classList.contains('available') || cell.classList.contains('selected')) {
-        cell.onclick = () => selectDay(cell, d);
-      }
-      grid.appendChild(cell);
-    }
-  })();
-
-  function selectDay(cell, day) {
-    document.querySelectorAll('.cal-cell').forEach(c => {
-      if (c.classList.contains('selected') && c !== cell) {
-        c.className = 'cal-cell available';
-      }
+  /* ── FAQ accordion ──────────────────────────────────────── */
+  function toggleFaq(btn) {
+    const item   = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(b => {
+      b.classList.remove('open');
+      b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
     });
-    cell.className = 'cal-cell selected';
-    document.querySelector('.cal-time-header').textContent =
-      `Available Times — Thursday, Jun ${day}`;
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
   }
 
-  function selectSlot(el) {
-    document.querySelectorAll('.cal-slot').forEach(s => s.classList.remove('selected'));
-    el.classList.add('selected');
+  /* ── Pre-select topic from card click ───────────────────── */
+  function preselectTopic(value) {
+    setTimeout(() => {
+      const sel = document.getElementById('topic-select');
+      if (sel) sel.value = value;
+    }, 400);
   }
 
   /* ── Scroll reveal ──────────────────────────────────────── */
