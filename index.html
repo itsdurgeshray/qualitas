@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Risk Management System for Forex Brokers and Prop Firms — AltimaCRM RMS</title>
-  <meta name="description" content="AltimaCRM's Risk Management System connects behavioral signals, exposure data, identity patterns, and operational activity into a single intelligence layer." />
+  <title>Thank You | Book Your AltimaCRM Demo</title>
+  <meta name="description" content="Your demo request is confirmed. Pick a time directly from our calendar and see how AltimaCRM turns brokerage operations into a growth engine." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,32 +13,30 @@
 
     :root {
       --blue:        #3395FF;
-      --blue-dim:    rgba(51,149,255,.09);
+      --blue-dim:    rgba(51,149,255,.08);
       --blue-mid:    #5aaeff;
-      --blue-glow:   rgba(51,149,255,.35);
+      --blue-glow:   rgba(51,149,255,.3);
       --navy:        #04071B;
-      --navy-2:      #080d2a;
-      --dark-blue:   #0F2C57;
-      --light-blue:  #CCE5FF;
       --white:       #FFFFFF;
       --surface:     #F0F3F8;
-      --bg-card:     #FFFFFF;
+      --surface-2:   #E8EDF5;
       --border:      rgba(4,7,27,.08);
-      --border-blue: rgba(51,149,255,.28);
+      --border-blue: rgba(51,149,255,.25);
       --text:        #04071B;
       --text-muted:  #606070;
       --text-dim:    #3a4460;
       --green:       #16A34A;
-      --green-dim:   rgba(22,163,74,.12);
-      --red:         #DC2626;
+      --green-dim:   rgba(22,163,74,.1);
+      --green-border:rgba(22,163,74,.2);
       --amber:       #D97706;
       --purple:      #7C3AED;
       --radius-sm:   8px;
       --radius-md:   14px;
       --radius-lg:   20px;
       --radius-xl:   28px;
-      --shadow-card: 0 2px 20px rgba(4,7,27,.07), 0 1px 3px rgba(4,7,27,.04);
-      --shadow-blue: 0 8px 32px rgba(51,149,255,.28);
+      --shadow-sm:   0 1px 4px rgba(4,7,27,.05), 0 2px 12px rgba(4,7,27,.05);
+      --shadow-md:   0 4px 24px rgba(4,7,27,.08), 0 1px 4px rgba(4,7,27,.04);
+      --shadow-lg:   0 12px 48px rgba(4,7,27,.1), 0 2px 8px rgba(4,7,27,.05);
     }
 
     html { scroll-behavior: smooth; }
@@ -51,74 +49,78 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    /* ── Animations ─────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(.6); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes checkDraw {
+      from { stroke-dashoffset: 36; }
+      to   { stroke-dashoffset: 0; }
+    }
+    @keyframes ringPulse {
+      0%   { transform: scale(1);   opacity: .45; }
+      70%  { transform: scale(1.9); opacity: 0;   }
+      100% { transform: scale(1.9); opacity: 0;   }
+    }
+    @keyframes dot-pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position:  400px 0; }
+    }
 
-    /* ── Badge ────────────────────────────────────────────────── */
+    .animate { opacity: 0; animation: fadeUp .6s ease forwards; }
+    .d1{animation-delay:.08s} .d2{animation-delay:.18s} .d3{animation-delay:.28s}
+    .d4{animation-delay:.38s} .d5{animation-delay:.50s} .d6{animation-delay:.62s}
+
+    .reveal { opacity:0; transform:translateY(16px); transition:opacity .55s ease,transform .55s ease; }
+    .revealed { opacity:1; transform:none; }
+
+    /* ── Utility ────────────────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
     .badge {
       display: inline-flex; align-items: center; gap: 6px;
       padding: 5px 14px;
-      background: var(--blue-dim);
-      border: 1px solid var(--border-blue);
-      border-radius: 100px;
-      font-size: 12px; font-weight: 600; letter-spacing: .06em;
-      color: var(--blue); text-transform: uppercase;
+      background: var(--blue-dim); border: 1px solid var(--border-blue);
+      border-radius: 100px; font-size: 12px; font-weight: 600;
+      letter-spacing: .06em; color: var(--blue); text-transform: uppercase;
     }
-    .badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+    .badge::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--blue); flex-shrink:0; }
 
-    .badge-live {
+    .badge-green {
       display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 10px;
-      background: rgba(22,163,74,.1);
-      border: 1px solid rgba(22,163,74,.25);
-      border-radius: 100px;
-      font-size: 11px; font-weight: 600; color: var(--green);
+      padding: 5px 14px;
+      background: var(--green-dim); border: 1px solid var(--green-border);
+      border-radius: 100px; font-size: 12px; font-weight: 600;
+      letter-spacing: .06em; color: var(--green); text-transform: uppercase;
     }
-    .badge-live::before {
-      content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--green); animation: dot-pulse 2s infinite; flex-shrink: 0;
-    }
+    .badge-green::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green); flex-shrink:0; animation: dot-pulse 1.8s infinite; }
 
-    /* ── Animations ───────────────────────────────────────────── */
-    @keyframes dot-pulse    { 0%,100%{opacity:1} 50%{opacity:.2} }
-    @keyframes fadeUp       { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:none} }
-    @keyframes shimmer      { 0%{background-position:200% center} 100%{background-position:-200% center} }
-    @keyframes float        { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-    @keyframes scan-line    { 0%{transform:translateY(-100%)} 100%{transform:translateY(400%)} }
-
-    section { position: relative; }
-
-    .animate { opacity: 0; animation: fadeUp .6s ease forwards; }
-    .delay-1{animation-delay:.1s} .delay-2{animation-delay:.2s}
-    .delay-3{animation-delay:.3s} .delay-4{animation-delay:.4s}
-
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-    .revealed { opacity: 1; transform: none; }
-
-    /* ── Buttons ──────────────────────────────────────────────── */
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px;
-      background: var(--blue); color: var(--white);
-      font-size: 15px; font-weight: 600;
-      border-radius: 10px; text-decoration: none;
-      border: none; cursor: pointer; font-family: 'Inter', sans-serif;
-      transition: all .2s ease;
+      padding: 13px 28px; background: var(--blue); color: #fff;
+      font-size: 15px; font-weight: 600; border-radius: 10px;
+      text-decoration: none; border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif; transition: all .2s;
       box-shadow: 0 4px 24px rgba(51,149,255,.45);
     }
     .btn-primary:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 34px rgba(51,149,255,.55); }
 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 13px 28px;
-      background: var(--white); color: var(--text-dim);
-      font-size: 15px; font-weight: 500;
-      border-radius: 10px; border: 1px solid var(--border);
-      text-decoration: none; cursor: pointer; font-family: 'Inter', sans-serif;
-      transition: all .2s ease;
+      padding: 13px 28px; background: var(--white); color: var(--text-dim);
+      font-size: 15px; font-weight: 500; border-radius: 10px;
+      border: 1px solid var(--border); text-decoration: none;
+      cursor: pointer; font-family: 'Inter', sans-serif; transition: all .2s;
     }
-    .btn-ghost:hover { border-color: var(--border-blue); color: var(--blue); box-shadow: 0 2px 16px rgba(51,149,255,.12); }
+    .btn-ghost:hover { border-color: var(--border-blue); color: var(--blue); box-shadow: 0 2px 16px rgba(51,149,255,.1); }
 
-    /* ── Nav ──────────────────────────────────────────────────── */
+    /* ── Nav ───────────────────────────────────────────────── */
     nav {
       position: sticky; top: 0; z-index: 100;
       padding: 0 24px; height: 64px;
@@ -129,15 +131,14 @@
       transition: box-shadow .2s;
     }
     .nav-inner {
-      max-width: 1160px; width: 100%; margin: 0 auto;
+      max-width: 1100px; width: 100%; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo-mark {
-      width: 32px; height: 32px;
-      background: var(--blue); border-radius: 8px;
+      width: 32px; height: 32px; background: var(--blue); border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 900; font-size: 14px; color: white;
+      font-weight: 900; font-size: 14px; color: white; flex-shrink: 0;
     }
     .nav-logo span { font-weight: 700; font-size: 17px; color: var(--navy); letter-spacing: -.02em; }
     .nav-links { display: flex; align-items: center; gap: 6px; }
@@ -148,683 +149,386 @@
     }
     .nav-links a:hover { color: var(--navy); background: var(--surface); }
 
-    /* ── Breadcrumb ───────────────────────────────────────────── */
-    .breadcrumb { padding: 10px 24px; background: var(--surface); border-bottom: 1px solid var(--border); }
-    .breadcrumb-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: flex; align-items: center; gap: 8px;
-      font-size: 12px; color: var(--text-muted);
-    }
-    .breadcrumb-inner a { color: var(--text-muted); text-decoration: none; transition: color .15s; }
-    .breadcrumb-inner a:hover { color: var(--blue); }
-    .breadcrumb-sep { opacity: .4; }
-    .breadcrumb-current { color: var(--navy); font-weight: 600; }
-
-    /* ── Section Header ───────────────────────────────────────── */
-    .section-header { margin-bottom: 56px; }
-    .section-header.centered { text-align: center; }
-    .section-header .badge { margin-bottom: 16px; }
-    .section-header h2 {
-      font-size: clamp(24px, 3vw, 38px);
-      font-weight: 600; letter-spacing: -.025em;
-      line-height: 1.2; margin-bottom: 14px;
-      color: var(--navy);
-    }
-    .section-header h2.on-dark { color: white; }
-    .section-header p { font-size: 16px; color: var(--text-muted); max-width: 520px; line-height: 1.7; }
-    .section-header p.on-dark { color: rgba(255,255,255,.5); }
-    .section-header.centered p { margin: 0 auto; }
-
-    /* ───────────────────────────────────────────────────────────
-       HERO
-    ─────────────────────────────────────────────────────────── */
-    .hero-feature {
-      padding: 80px 0 0;
+    /* ── CONFIRMATION HERO ─────────────────────────────────── */
+    .hero-confirm {
+      padding: 72px 0 80px;
       background: var(--white);
+      text-align: center;
       overflow: hidden;
+      position: relative;
     }
-    .hero-feature::before {
+    .hero-confirm::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 60% 65% at 105% -5%, rgba(51,149,255,.18) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 50% at -5% 90%, rgba(51,149,255,.05) 0%, transparent 55%);
+        radial-gradient(ellipse 60% 60% at 50% -10%, rgba(51,149,255,.1) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 40% at 10% 90%, rgba(51,149,255,.04) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 40% at 90% 90%, rgba(51,149,255,.04) 0%, transparent 60%);
       pointer-events: none;
     }
-    .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
-    .hero-text { padding-bottom: 80px; }
 
-    .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
-    .hero-eyebrow-divider { width: 1px; height: 16px; background: var(--border); }
-    .hero-eyebrow-label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
-
-    .hero-feature h1 {
-      font-size: clamp(30px, 3.8vw, 50px);
-      font-weight: 800; letter-spacing: -.04em; line-height: 1.06;
-      color: var(--navy); margin-bottom: 18px;
-    }
-    .hero-tagline {
-      font-size: 18px; font-weight: 600;
-      color: var(--text-dim); margin-bottom: 16px; line-height: 1.45;
-      border-left: 3px solid var(--blue); padding-left: 16px;
-    }
-    .hero-body { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; max-width: 500px; }
-    .hero-ctas { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-
-    /* Intel Panel */
-    .hero-visual { align-self: end; }
-    .intel-panel {
-      background: var(--navy);
-      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-      padding: 24px 24px 0;
-      border: 1px solid rgba(255,255,255,.07); border-bottom: none;
-      box-shadow: 0 -12px 60px rgba(51,149,255,.14), inset 0 1px 0 rgba(255,255,255,.06);
-      position: relative; overflow: hidden;
-    }
-    .intel-panel::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent 5%, rgba(51,149,255,.8) 50%, transparent 95%);
-    }
-    .intel-panel-topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-    .intel-panel-title {
-      font-size: 10px; font-weight: 700; letter-spacing: .14em;
-      text-transform: uppercase; color: rgba(255,255,255,.28);
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .intel-layers { display: flex; flex-direction: column; gap: 6px; }
-    .intel-layer {
-      border-radius: 10px; background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.06); overflow: hidden; transition: background .2s;
-    }
-    .intel-layer:hover { background: rgba(255,255,255,.07); }
-    .intel-layer-row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
-    .intel-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-    .intel-dot.behavioral { background: var(--blue); box-shadow: 0 0 8px rgba(51,149,255,.9); animation: dot-pulse 2.4s infinite; }
-    .intel-dot.exposure   { background: var(--amber); box-shadow: 0 0 8px rgba(217,119,6,.9);  animation: dot-pulse 3s infinite .5s; }
-    .intel-dot.identity   { background: var(--purple); box-shadow: 0 0 8px rgba(124,58,237,.9); animation: dot-pulse 2.8s infinite 1s; }
-    .intel-dot.governance { background: var(--green);  box-shadow: 0 0 8px rgba(22,163,74,.9);  animation: dot-pulse 3.4s infinite 1.5s; }
-    .intel-layer-name { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.82); flex: 1; }
-    .intel-status-pill {
-      font-size: 9px; font-weight: 700; letter-spacing: .06em;
-      padding: 3px 8px; border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace; text-transform: uppercase;
-    }
-    .intel-status-pill.scanning   { background: rgba(51,149,255,.2);  color: rgba(51,149,255,.95); }
-    .intel-status-pill.alert      { background: rgba(217,119,6,.2);   color: rgba(217,119,6,.95); }
-    .intel-status-pill.monitoring { background: rgba(124,58,237,.2);  color: rgba(124,58,237,.95); }
-    .intel-status-pill.active     { background: rgba(22,163,74,.2);   color: rgba(22,163,74,.95); }
-    .intel-layer-chips { display: flex; flex-wrap: wrap; gap: 5px; padding: 0 14px 12px; }
-    .intel-chip {
-      font-size: 10px; padding: 2px 8px; border-radius: 4px;
-      font-family: 'JetBrains Mono', monospace;
-      background: rgba(255,255,255,.05); color: rgba(255,255,255,.38);
-      border: 1px solid rgba(255,255,255,.07);
-    }
-    .intel-panel-footer {
-      display: flex; align-items: center; justify-content: space-around;
-      padding: 18px 0 22px; border-top: 1px solid rgba(255,255,255,.05); margin-top: 14px;
-    }
-    .intel-footer-stat .val { font-size: 22px; font-weight: 800; letter-spacing: -.04em; color: white; line-height: 1; display: block; }
-    .intel-footer-stat .lbl { font-size: 10px; color: rgba(255,255,255,.32); font-weight: 500; margin-top: 3px; }
-    .intel-footer-div { width: 1px; height: 32px; background: rgba(255,255,255,.06); }
-
-    /* ───────────────────────────────────────────────────────────
-       PROBLEM SECTION — dark navy
-    ─────────────────────────────────────────────────────────── */
-    .problem { padding: 100px 0; background: var(--navy); overflow: hidden; }
-    .problem::before {
-      content: ''; position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 55% 50% at 100% 0%,   rgba(220,38,38,.08) 0%, transparent 60%),
-        radial-gradient(ellipse 45% 55% at 0%   100%, rgba(51,149,255,.06) 0%, transparent 60%);
-    }
-    .problem-intro { margin-bottom: 44px; }
-    .problem-data-line { font-size: 18px; font-weight: 700; color: rgba(255,255,255,.7); margin-bottom: 8px; letter-spacing: -.01em; }
-    .problem-data-sub  { font-size: 15px; color: rgba(255,255,255,.32); line-height: 1.65; }
-
-    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-
-    /* Rich problem cards */
-    .problem-card {
-      position: relative; overflow: hidden;
-      border-radius: var(--radius-lg);
-      background: rgba(255,255,255,.035);
-      border: 1px solid rgba(255,255,255,.08);
-      padding: 32px 28px 28px;
-      transition: all .25s;
-      cursor: default;
-    }
-    /* Subtle scan-line animation overlay */
-    .problem-card::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(220,38,38,.04) 0%, transparent 40%);
+    /* Dot grid background pattern */
+    .hero-confirm::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(51,149,255,.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 40%, transparent 100%);
       pointer-events: none;
     }
-    .problem-card:hover {
-      background: rgba(255,255,255,.06);
-      border-color: rgba(220,38,38,.22);
-      transform: translateY(-3px);
-      box-shadow: 0 16px 48px rgba(0,0,0,.35), 0 0 0 1px rgba(220,38,38,.1);
+
+    .hero-confirm-inner { position: relative; z-index: 1; }
+
+    /* Check icon */
+    .confirm-icon-wrap {
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 28px; position: relative;
     }
-    /* Large ambient background number */
-    .problem-card-num {
-      position: absolute; top: -12px; right: 16px;
-      font-size: 100px; font-weight: 900; letter-spacing: -.06em;
-      color: rgba(255,255,255,.03); line-height: 1;
-      font-family: 'Inter', sans-serif; pointer-events: none; user-select: none;
+    .confirm-ring {
+      position: absolute;
+      width: 80px; height: 80px; border-radius: 50%;
+      border: 2px solid rgba(22,163,74,.4);
+      animation: ringPulse 2.2s ease-out infinite;
     }
-    /* Icon circle */
-    .problem-icon-wrap {
-      width: 48px; height: 48px; border-radius: 14px; margin-bottom: 20px;
+    .confirm-ring-2 {
+      animation-delay: 1.1s;
+    }
+    .confirm-circle {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(145deg, #e8faf0 0%, #d1f5e0 100%);
+      border: 1.5px solid var(--green-border);
       display: flex; align-items: center; justify-content: center;
-      background: rgba(220,38,38,.12);
-      border: 1px solid rgba(220,38,38,.2);
-      box-shadow: 0 0 20px rgba(220,38,38,.15);
+      box-shadow: 0 4px 20px rgba(22,163,74,.2), 0 0 0 6px rgba(22,163,74,.06);
+      animation: scaleIn .5s cubic-bezier(.175,.885,.32,1.275) .1s both;
       position: relative; z-index: 1;
     }
-    .problem-icon-wrap svg { width: 22px; height: 22px; color: rgba(220,38,38,.85); }
-
-    .problem-role {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 3px 10px; margin-bottom: 12px;
-      background: rgba(220,38,38,.1); border: 1px solid rgba(220,38,38,.18);
-      border-radius: 100px; font-size: 11px; font-weight: 600;
-      color: rgba(220,38,38,.7); position: relative; z-index: 1;
-    }
-    .problem-card h3 {
-      font-size: 16px; font-weight: 600; letter-spacing: -.015em;
-      color: rgba(255,255,255,.9); margin-bottom: 16px; line-height: 1.4;
-      position: relative; z-index: 1;
-    }
-    .problem-card p {
-      font-size: 13px; color: rgba(255,255,255,.36); line-height: 1.7;
-      border-top: 1px solid rgba(255,255,255,.06); padding-top: 14px;
-      font-style: italic; position: relative; z-index: 1;
+    .confirm-circle svg {
+      width: 32px; height: 32px; color: var(--green);
+      stroke-dasharray: 36;
+      stroke-dashoffset: 36;
+      animation: checkDraw .45s ease .5s forwards;
     }
 
-    /* ───────────────────────────────────────────────────────────
-       RMS SYSTEM — white bg, 4 intelligence layer cards
-    ─────────────────────────────────────────────────────────── */
-    .rms-system { padding: 100px 0; background: var(--white); }
-    .rms-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: start; }
-    .rms-text h2 { font-size: clamp(24px,3vw,36px); font-weight: 600; letter-spacing: -.025em; color: var(--navy); margin-bottom: 10px; line-height: 1.2; }
-    .rms-text .sub-headline { font-size: 16px; font-weight: 500; color: var(--blue); margin-bottom: 20px; line-height: 1.5; }
-    .rms-text p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; }
-
-    .intel-layer-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-
-    /* ★ Dramatically redesigned layer cards ★ */
-    .ilc {
-      border-radius: var(--radius-lg);
-      padding: 26px 22px 22px;
-      position: relative; overflow: hidden;
-      transition: all .25s; cursor: default;
-      border: 1px solid transparent;
+    .hero-confirm h1 {
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 800; letter-spacing: -.04em; line-height: 1.08;
+      color: var(--navy); margin-bottom: 16px;
     }
-    .ilc:hover { transform: translateY(-4px); }
-
-    /* Dot-grid texture overlay */
-    .ilc::after {
-      content: ''; position: absolute; inset: 0;
-      background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
-      background-size: 20px 20px; pointer-events: none;
+    .hero-confirm-sub {
+      font-size: 17px; color: var(--text-muted); line-height: 1.7;
+      max-width: 460px; margin: 0 auto 36px;
     }
 
-    /* Each color variant */
-    .ilc.bl {
-      background: linear-gradient(145deg, #0a1535 0%, #0d1d40 60%, rgba(51,149,255,.08) 100%);
-      border-color: rgba(51,149,255,.2);
-      box-shadow: 0 4px 24px rgba(51,149,255,.12), inset 0 1px 0 rgba(51,149,255,.12);
-    }
-    .ilc.bl:hover { box-shadow: 0 16px 48px rgba(51,149,255,.22), inset 0 1px 0 rgba(51,149,255,.18); border-color: rgba(51,149,255,.35); }
-
-    .ilc.ex {
-      background: linear-gradient(145deg, #12100a 0%, #1c1505 60%, rgba(217,119,6,.08) 100%);
-      border-color: rgba(217,119,6,.18);
-      box-shadow: 0 4px 24px rgba(217,119,6,.1), inset 0 1px 0 rgba(217,119,6,.1);
-    }
-    .ilc.ex:hover { box-shadow: 0 16px 48px rgba(217,119,6,.2), inset 0 1px 0 rgba(217,119,6,.2); border-color: rgba(217,119,6,.32); }
-
-    .ilc.id {
-      background: linear-gradient(145deg, #0e0a18 0%, #160f2a 60%, rgba(124,58,237,.08) 100%);
-      border-color: rgba(124,58,237,.2);
-      box-shadow: 0 4px 24px rgba(124,58,237,.12), inset 0 1px 0 rgba(124,58,237,.1);
-    }
-    .ilc.id:hover { box-shadow: 0 16px 48px rgba(124,58,237,.22), inset 0 1px 0 rgba(124,58,237,.18); border-color: rgba(124,58,237,.35); }
-
-    .ilc.go {
-      background: linear-gradient(145deg, #050f0b 0%, #0a1910 60%, rgba(22,163,74,.08) 100%);
-      border-color: rgba(22,163,74,.18);
-      box-shadow: 0 4px 24px rgba(22,163,74,.1), inset 0 1px 0 rgba(22,163,74,.1);
-    }
-    .ilc.go:hover { box-shadow: 0 16px 48px rgba(22,163,74,.2), inset 0 1px 0 rgba(22,163,74,.18); border-color: rgba(22,163,74,.32); }
-
-    /* Large glowing SVG icon */
-    .ilc-icon-wrap {
-      width: 52px; height: 52px; border-radius: 14px;
+    /* Confirmation tag row */
+    .confirm-tags {
       display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px; position: relative; z-index: 1;
+      gap: 10px; flex-wrap: wrap; margin-bottom: 0;
     }
-    .ilc.bl .ilc-icon-wrap { background: rgba(51,149,255,.15); box-shadow: 0 0 24px rgba(51,149,255,.3); }
-    .ilc.ex .ilc-icon-wrap { background: rgba(217,119,6,.15); box-shadow: 0 0 24px rgba(217,119,6,.28); }
-    .ilc.id .ilc-icon-wrap { background: rgba(124,58,237,.15); box-shadow: 0 0 24px rgba(124,58,237,.28); }
-    .ilc.go .ilc-icon-wrap { background: rgba(22,163,74,.15); box-shadow: 0 0 24px rgba(22,163,74,.28); }
-    .ilc-icon-wrap svg { width: 26px; height: 26px; }
-    .ilc.bl .ilc-icon-wrap svg { color: rgba(51,149,255,.9); }
-    .ilc.ex .ilc-icon-wrap svg { color: rgba(217,119,6,.9); }
-    .ilc.id .ilc-icon-wrap svg { color: rgba(124,58,237,.9); }
-    .ilc.go .ilc-icon-wrap svg { color: rgba(22,163,74,.9); }
+    .ctag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 100px; font-size: 13px; font-weight: 500; color: var(--text-dim);
+    }
+    .ctag svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; }
 
-    .ilc h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; position: relative; z-index: 1; }
-    .ilc.bl h3 { color: rgba(51,149,255,.95); }
-    .ilc.ex h3 { color: rgba(217,119,6,.95); }
-    .ilc.id h3 { color: rgba(124,58,237,.95); }
-    .ilc.go h3 { color: rgba(22,163,74,.95); }
-    .ilc p { font-size: 12px; color: rgba(255,255,255,.38); line-height: 1.65; position: relative; z-index: 1; }
-
-    /* ───────────────────────────────────────────────────────────
-       WHAT RMS IDENTIFIES — surface bg
-    ─────────────────────────────────────────────────────────── */
-    .identifies { padding: 100px 0; background: var(--surface); }
-    .identifies-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 56px; }
-
-    /* Pill tab nav */
-    .tab-nav {
-      display: flex; gap: 6px; flex-wrap: wrap;
-      padding: 6px; background: var(--white);
-      border: 1px solid var(--border); border-radius: 14px;
-      margin-bottom: 20px;
+    /* ── MAIN LAYOUT — calendar + expect ───────────────────── */
+    .main-section {
+      padding: 0 0 80px;
+      background: var(--white);
     }
-    .tab-btn {
-      flex: 1; padding: 10px 12px;
-      background: transparent; border: none; cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      font-size: 12px; font-weight: 600; color: var(--text-muted);
-      border-radius: 9px; transition: all .18s; line-height: 1.3; text-align: center;
-    }
-    .tab-btn.active { background: var(--blue); color: white; box-shadow: 0 4px 12px rgba(51,149,255,.4); }
-    .tab-btn:not(.active):hover { background: var(--surface); color: var(--navy); }
-
-    .tab-pane { display: none; }
-    .tab-pane.active { display: block; }
-    .tab-pane-inner { padding: 22px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
-    .tab-pane-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
-    .signal-cloud { display: flex; flex-wrap: wrap; gap: 7px; }
-    .sig {
-      display: inline-block; padding: 5px 11px;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-      font-size: 12px; font-weight: 500; color: var(--text-dim);
-      font-family: 'JetBrains Mono', monospace; transition: all .15s; cursor: default;
-    }
-    .sig:hover { border-color: var(--border-blue); background: var(--blue-dim); color: var(--blue); }
-
-    /* Dashboard mock */
-    .dash-panel {
-      background: var(--navy); border-radius: var(--radius-xl); padding: 20px;
-      border: 1px solid rgba(255,255,255,.07);
-      box-shadow: 0 16px 56px rgba(4,7,27,.22); position: relative; overflow: hidden;
-    }
-    .dash-panel::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent 5%, rgba(51,149,255,.7) 50%, transparent 95%);
-    }
-    .dp-bar {
-      display: flex; align-items: center; gap: 7px;
-      padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .dp-dot { width: 9px; height: 9px; border-radius: 50%; }
-    .dp-dot.r{background:#FF5F57} .dp-dot.y{background:#FEBC2E} .dp-dot.g{background:#28C840}
-    .dp-tab-bar { display: flex; gap: 6px; margin-left: auto; }
-    .dp-tab { font-size: 9px; padding: 3px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
-    .dp-tab.on  { background: rgba(51,149,255,.25); color: rgba(51,149,255,.95); }
-    .dp-tab.off { background: rgba(255,255,255,.05); color: rgba(255,255,255,.28); }
-    .dp-section-label {
-      font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-      color: rgba(255,255,255,.2); font-family: 'JetBrains Mono', monospace; margin-bottom: 8px; margin-top: 14px;
-    }
-    .dp-row {
-      display: flex; align-items: center; gap: 10px; padding: 9px 12px;
-      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.05);
-      border-radius: 8px; margin-bottom: 5px; transition: background .15s;
-    }
-    .dp-row:hover { background: rgba(255,255,255,.07); }
-    .dp-indicator { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-    .dp-indicator.red   { background: var(--red);   box-shadow: 0 0 5px rgba(220,38,38,.6); }
-    .dp-indicator.amber { background: var(--amber); box-shadow: 0 0 5px rgba(217,119,6,.6); }
-    .dp-indicator.blue  { background: var(--blue);  box-shadow: 0 0 5px rgba(51,149,255,.6); }
-    .dp-indicator.green { background: var(--green); box-shadow: 0 0 5px rgba(22,163,74,.6); }
-    .dp-row-label { font-size: 11px; color: rgba(255,255,255,.52); flex: 1; font-family: 'JetBrains Mono', monospace; }
-    .dp-badge {
-      padding: 2px 7px; border-radius: 4px; font-size: 9px; font-weight: 700;
-      letter-spacing: .04em; font-family: 'JetBrains Mono', monospace; text-transform: uppercase;
-    }
-    .dp-badge.high { background: rgba(220,38,38,.2);  color: rgba(220,38,38,.9); }
-    .dp-badge.med  { background: rgba(217,119,6,.2);  color: rgba(217,119,6,.9); }
-    .dp-badge.low  { background: rgba(22,163,74,.2);  color: rgba(22,163,74,.9); }
-    .dp-badge.flag { background: rgba(51,149,255,.2); color: rgba(51,149,255,.9); }
-    .dp-badge.info { background: rgba(124,58,237,.2); color: rgba(124,58,237,.9); }
-
-    /* ───────────────────────────────────────────────────────────
-       WORKFLOW — white
-    ─────────────────────────────────────────────────────────── */
-    .workflow { padding: 100px 0; background: var(--white); }
-    .workflow-eyebrow { font-size: 15px; font-weight: 600; color: var(--text-muted); margin-bottom: 56px; text-align: center; }
-    .workflow-eyebrow strong { color: var(--navy); }
-
-    .workflow-steps {
-      display: grid; grid-template-columns: repeat(5,1fr);
-      gap: 12px; position: relative; margin-bottom: 52px;
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 32px;
+      align-items: start;
     }
 
-    /* ★ Redesigned workflow step cards ★ */
-    .wf-step {
-      display: flex; flex-direction: column; align-items: flex-start;
-      padding: 24px 20px;
+    /* Calendar card */
+    .calendar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .calendar-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-mid));
+    }
+
+    .cal-header {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .cal-header-text {}
+    .cal-header-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 4px;
+    }
+    .cal-header-title {
+      font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: var(--navy);
+    }
+    .cal-header-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    .cal-header-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--blue-dim); border: 1px solid var(--border-blue);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .cal-header-icon svg { width: 22px; height: 22px; color: var(--blue); }
+
+    /* Calendar embed zone */
+    .cal-embed-zone {
+      padding: 0;
+      min-height: 520px;
+      background: var(--surface);
+      display: flex; align-items: stretch;
+    }
+
+    /* Mock calendar UI (replace with real embed) */
+    .cal-mock {
+      width: 100%; display: flex; flex-direction: column;
+    }
+    .cal-mock-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 28px; background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .cal-month { font-size: 15px; font-weight: 700; color: var(--navy); }
+    .cal-nav-btns { display: flex; gap: 6px; }
+    .cal-nav-btn {
+      width: 30px; height: 30px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .15s;
+    }
+    .cal-nav-btn:hover { border-color: var(--border-blue); background: var(--blue-dim); }
+    .cal-nav-btn svg { width: 14px; height: 14px; color: var(--text-muted); }
+
+    .cal-days-header {
+      display: grid; grid-template-columns: repeat(7,1fr);
+      padding: 12px 20px 6px;
+      background: var(--white); border-bottom: 1px solid var(--border);
+    }
+    .cal-day-name {
+      text-align: center; font-size: 11px; font-weight: 600;
+      color: var(--text-muted); letter-spacing: .06em; text-transform: uppercase;
+    }
+    .cal-grid {
+      display: grid; grid-template-columns: repeat(7,1fr);
+      gap: 4px; padding: 16px 20px;
+      background: var(--white);
+    }
+    .cal-cell {
+      aspect-ratio: 1; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500; color: var(--text-muted);
+      cursor: pointer; transition: all .15s;
+    }
+    .cal-cell:hover { background: var(--surface); color: var(--navy); }
+    .cal-cell.available { color: var(--navy); background: var(--surface); }
+    .cal-cell.available:hover { background: var(--blue-dim); color: var(--blue); border: 1px solid var(--border-blue); }
+    .cal-cell.selected { background: var(--blue); color: white; box-shadow: 0 4px 12px rgba(51,149,255,.4); }
+    .cal-cell.today { color: var(--blue); font-weight: 700; border: 1.5px solid var(--border-blue); }
+    .cal-cell.disabled { color: rgba(4,7,27,.18); cursor: default; }
+    .cal-cell.empty { cursor: default; }
+
+    .cal-time-header {
+      padding: 16px 28px 10px;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      font-size: 12px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .cal-slots {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px; padding: 0 20px 20px; background: var(--white);
+    }
+    .cal-slot {
+      padding: 9px 8px; border-radius: 8px; text-align: center;
+      border: 1px solid var(--border); background: var(--surface);
+      font-size: 12px; font-weight: 600; color: var(--text-dim);
+      cursor: pointer; transition: all .15s;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .cal-slot:hover { border-color: var(--border-blue); background: var(--blue-dim); color: var(--blue); }
+    .cal-slot.selected { background: var(--blue); color: white; border-color: var(--blue); box-shadow: 0 4px 12px rgba(51,149,255,.4); }
+
+    .cal-footer {
+      padding: 16px 28px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .cal-footer-note {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; color: var(--text-muted);
+    }
+    .cal-footer-note svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; }
+
+    /* Right column */
+    .right-col { display: flex; flex-direction: column; gap: 20px; }
+
+    /* What to Expect section */
+    .expect-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .expect-head {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .expect-head-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 6px;
+    }
+    .expect-head-title {
+      font-size: 20px; font-weight: 600; letter-spacing: -.022em;
+      color: var(--navy); line-height: 1.25;
+    }
+
+    .expect-items { padding: 8px 0; }
+    .expect-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--border);
+      transition: background .15s;
+    }
+    .expect-item:last-child { border-bottom: none; }
+    .expect-item:hover { background: var(--surface); }
+
+    .expect-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border);
+    }
+    .expect-icon svg { width: 20px; height: 20px; }
+
+    /* each item gets a distinct soft color */
+    .expect-item:nth-child(1) .expect-icon { background: rgba(51,149,255,.08); border-color: rgba(51,149,255,.18); }
+    .expect-item:nth-child(1) .expect-icon svg { color: var(--blue); }
+    .expect-item:nth-child(2) .expect-icon { background: rgba(22,163,74,.08); border-color: rgba(22,163,74,.18); }
+    .expect-item:nth-child(2) .expect-icon svg { color: var(--green); }
+    .expect-item:nth-child(3) .expect-icon { background: rgba(124,58,237,.08); border-color: rgba(124,58,237,.18); }
+    .expect-item:nth-child(3) .expect-icon svg { color: var(--purple); }
+
+    .expect-item-body {}
+    .expect-item-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; line-height: 1.3; }
+    .expect-item-desc  { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Reach out callout */
+    .reachout-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      position: relative; overflow: hidden;
-      transition: all .22s;
+      padding: 22px 24px;
+      display: flex; align-items: center; gap: 16px;
     }
-    .wf-step:hover { border-color: var(--border-blue); background: var(--white); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(51,149,255,.1); }
-    /* Step number accent top-right */
-    .wf-step-num-bg {
-      position: absolute; top: -8px; right: 8px;
-      font-size: 68px; font-weight: 900; letter-spacing: -.06em;
-      color: rgba(51,149,255,.05); line-height: 1; pointer-events: none; user-select: none;
-    }
-    .wf-num-badge {
-      width: 32px; height: 32px; border-radius: 9px;
-      background: var(--blue); color: white;
-      font-size: 13px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 14px; flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(51,149,255,.45);
-      position: relative; z-index: 1;
-    }
-    .wf-icon { width: 36px; height: 36px; margin-bottom: 14px; color: var(--blue); opacity: .7; position: relative; z-index: 1; display: none; }
-    .wf-step h3 { font-size: 14px; font-weight: 700; letter-spacing: -.01em; color: var(--navy); margin-bottom: 8px; position: relative; z-index: 1; }
-    .wf-step p  { font-size: 12px; color: var(--text-muted); line-height: 1.6; position: relative; z-index: 1; }
-
-    /* Arrow connector between steps */
-    .wf-arrow { display: none; }
-
-    .workflow-cta {
-      display: flex; justify-content: center; gap: 12px;
-      padding-top: 40px; border-top: 1px solid var(--border);
-    }
-
-    /* ───────────────────────────────────────────────────────────
-       RULE ENGINE — dark navy
-    ─────────────────────────────────────────────────────────── */
-    .rule-engine { padding: 100px 0; background: var(--navy); overflow: hidden; }
-    .rule-engine::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(51,149,255,.09), transparent);
-    }
-    .rule-engine-desc {
-      font-size: 16px; color: rgba(255,255,255,.42); line-height: 1.8;
-      max-width: 580px; margin: 0 auto 52px; text-align: center;
-    }
-    .rule-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    /* ★ Redesigned rule panel cards ★ */
-    .rule-panel {
-      border-radius: var(--radius-lg); overflow: hidden;
-      border: 1px solid rgba(255,255,255,.08);
-      position: relative;
-    }
-    .rule-panel-head {
-      padding: 28px 28px 24px;
-      position: relative; overflow: hidden;
-    }
-    .rule-panel.broker .rule-panel-head {
-      background: linear-gradient(135deg, rgba(51,149,255,.18) 0%, rgba(51,149,255,.06) 100%);
-      border-bottom: 1px solid rgba(51,149,255,.14);
-    }
-    .rule-panel.prop .rule-panel-head {
-      background: linear-gradient(135deg, rgba(217,119,6,.16) 0%, rgba(217,119,6,.05) 100%);
-      border-bottom: 1px solid rgba(217,119,6,.12);
-    }
-    /* Background pattern in header */
-    .rule-panel-head::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 18px 18px; pointer-events: none;
-    }
-    .rule-panel-head-inner { display: flex; align-items: flex-start; gap: 14px; position: relative; z-index: 1; }
-    .rule-panel-icon {
-      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+    .reachout-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: 12px; background: var(--white);
+      border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
     }
-    .rule-panel.broker .rule-panel-icon { background: rgba(51,149,255,.2); box-shadow: 0 0 20px rgba(51,149,255,.25); }
-    .rule-panel.prop   .rule-panel-icon { background: rgba(217,119,6,.2);  box-shadow: 0 0 20px rgba(217,119,6,.22); }
-    .rule-panel-icon svg { width: 22px; height: 22px; }
-    .rule-panel.broker .rule-panel-icon svg { color: rgba(51,149,255,.95); }
-    .rule-panel.prop   .rule-panel-icon svg { color: rgba(217,119,6,.95); }
-    .rule-panel-meta {}
-    .rule-panel-name { font-size: 16px; font-weight: 700; letter-spacing: -.015em; margin-bottom: 3px; }
-    .rule-panel.broker .rule-panel-name { color: rgba(130,185,255,.95); }
-    .rule-panel.prop   .rule-panel-name { color: rgba(251,191,36,.9); }
-    .rule-panel-sub { font-size: 11px; color: rgba(255,255,255,.28); font-weight: 500; }
+    .reachout-icon svg { width: 20px; height: 20px; color: var(--blue); }
+    .reachout-text {}
+    .reachout-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+    .reachout-desc  { font-size: 13px; color: var(--text-muted); }
 
-    .rule-rows { padding: 6px 0; background: rgba(255,255,255,.02); }
-    .rule-row {
+    /* ── SOCIAL SECTION ────────────────────────────────────── */
+    .social-section {
+      padding: 72px 0 80px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .social-section h2 {
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 600; letter-spacing: -.025em;
+      color: var(--navy); margin-bottom: 8px;
+    }
+    .social-sub {
+      font-size: 15px; color: var(--text-muted);
+      margin-bottom: 36px; max-width: 380px; margin-left: auto; margin-right: auto;
+    }
+    .social-cards {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; flex-wrap: wrap;
+    }
+    .social-card {
       display: flex; align-items: center; gap: 12px;
-      padding: 14px 28px; border-bottom: 1px solid rgba(255,255,255,.04);
-      font-size: 14px; color: rgba(255,255,255,.62); transition: background .15s;
-    }
-    .rule-row:last-child { border-bottom: none; }
-    .rule-row:hover { background: rgba(255,255,255,.03); color: rgba(255,255,255,.8); }
-    .rule-row-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-    .rule-panel.broker .rule-row-dot { background: rgba(51,149,255,.5); }
-    .rule-panel.prop   .rule-row-dot { background: rgba(217,119,6,.5); }
-
-    /* ───────────────────────────────────────────────────────────
-       CONNECTED — surface
-    ─────────────────────────────────────────────────────────── */
-    .connected { padding: 100px 0; background: var(--surface); }
-    .connected-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 56px; }
-    .connected-text h2 { font-size: clamp(22px,2.8vw,34px); font-weight: 600; letter-spacing: -.025em; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
-    .connected-body { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 28px; }
-    .connected-features { display: flex; flex-direction: column; gap: 10px; }
-
-    /* ★ Redesigned connected feature items ★ */
-    .cf {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 18px 20px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-card);
-      transition: all .2s;
-    }
-    .cf:hover { border-color: var(--border-blue); box-shadow: 0 4px 20px rgba(51,149,255,.1); transform: translateX(3px); }
-    .cf-icon {
-      width: 40px; height: 40px; flex-shrink: 0;
-      border-radius: 11px; display: flex; align-items: center; justify-content: center;
-      background: var(--blue-dim); border: 1px solid var(--border-blue);
-    }
-    .cf-icon svg { width: 20px; height: 20px; color: var(--blue); }
-    .cf-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-    .cf-desc  { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-
-    /* Connected callout card */
-    .connected-callout {
-      background: var(--navy);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: var(--radius-xl);
-      padding: 36px 32px;
-      box-shadow: 0 16px 60px rgba(4,7,27,.2);
-      position: relative; overflow: hidden;
-    }
-    .connected-callout::before {
-      content: ''; position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 80% 50% at 100% 0%, rgba(51,149,255,.14), transparent),
-        radial-gradient(ellipse 60% 60% at 0% 100%, rgba(51,149,255,.06), transparent);
-      pointer-events: none;
-    }
-    .connected-callout::after {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(51,149,255,.6), transparent);
-    }
-    .cc-tag { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; position: relative; z-index: 1; }
-    .cc-title { font-size: 24px; font-weight: 700; letter-spacing: -.03em; color: white; margin-bottom: 12px; line-height: 1.2; position: relative; z-index: 1; }
-    .cc-body { font-size: 14px; color: rgba(255,255,255,.42); line-height: 1.75; margin-bottom: 24px; position: relative; z-index: 1; }
-    .cc-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; position: relative; z-index: 1; }
-    .cc-feat {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 13px; color: rgba(255,255,255,.7);
-    }
-    .cc-feat-check {
-      width: 18px; height: 18px; border-radius: 5px; flex-shrink: 0;
-      background: var(--green-dim); border: 1px solid rgba(22,163,74,.25);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .cc-feat-check svg { width: 11px; height: 11px; color: var(--green); }
-
-    /* ───────────────────────────────────────────────────────────
-       DEMO FORM
-    ─────────────────────────────────────────────────────────── */
-    .demo-section { padding: 100px 0; background: var(--white); border-top: 1px solid var(--border); }
-    .demo-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
-    .demo-left h2 { font-size: clamp(24px,3vw,38px); font-weight: 600; letter-spacing: -.025em; color: var(--navy); margin-bottom: 14px; line-height: 1.2; }
-    .demo-left p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; }
-    .demo-signals { display: flex; flex-direction: column; gap: 12px; }
-
-    /* ★ Redesigned demo signal cards ★ */
-    .demo-signal {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 18px 20px;
-      background: var(--white);
-      border: 1px solid var(--border); border-left: 3px solid var(--blue);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-card);
-      transition: all .2s;
-    }
-    .demo-signal:hover { box-shadow: 0 6px 24px rgba(51,149,255,.12); border-color: var(--border-blue); border-left-color: var(--blue); }
-    .demo-signal-icon {
-      width: 38px; height: 38px; flex-shrink: 0;
-      border-radius: 10px; background: var(--blue-dim); border: 1px solid var(--border-blue);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .demo-signal-icon svg { width: 18px; height: 18px; color: var(--blue); }
-    .demo-signal-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
-    .demo-signal-desc  { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
-
-    /* Form card */
-    .form-card {
+      padding: 16px 24px;
       background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius-xl); padding: 40px 36px;
-      box-shadow: 0 12px 48px rgba(4,7,27,.08); position: relative;
+      border-radius: var(--radius-lg);
+      text-decoration: none; color: var(--text-dim);
+      font-weight: 600; font-size: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: all .2s;
+      min-width: 160px; justify-content: center;
     }
-    .form-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--blue-mid));
-      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-    }
-    .form-card-title { font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--navy); margin-bottom: 4px; }
-    .form-card-sub   { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
-
-    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .frow.full { grid-template-columns: 1fr; }
-    .fgroup { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
-    .flabel { font-size: 11px; font-weight: 600; color: var(--text-dim); letter-spacing: .03em; text-transform: uppercase; }
-    .flabel .opt { text-transform: none; font-weight: 400; color: var(--text-muted); letter-spacing: 0; }
-    .finput, .fselect, .ftextarea {
-      padding: 10px 13px; border: 1px solid var(--border);
-      border-radius: 8px; font-size: 14px; color: var(--text);
-      font-family: 'Inter', sans-serif; background: var(--white);
-      transition: border-color .15s, box-shadow .15s; outline: none; width: 100%;
-    }
-    .finput:focus, .fselect:focus, .ftextarea:focus {
-      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(51,149,255,.12);
-    }
-    .finput::placeholder, .ftextarea::placeholder { color: rgba(89,89,89,.42); }
-    .fselect {
-      appearance: none; cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23595959' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px;
-    }
-    .ftextarea { resize: vertical; min-height: 80px; }
-    .radio-group { display: flex; gap: 8px; flex-wrap: wrap; }
-    .radio-opt {
-      display: flex; align-items: center; gap: 6px; padding: 8px 14px;
-      border: 1px solid var(--border); border-radius: 8px;
-      cursor: pointer; font-size: 13px; font-weight: 500;
-      color: var(--text-muted); transition: all .15s; user-select: none;
-    }
-    .radio-opt input[type="radio"] { display: none; }
-    .radio-opt:hover { border-color: var(--border-blue); }
-    .radio-opt.selected { border-color: var(--blue); background: var(--blue-dim); color: var(--blue); }
-    .fsubmit {
-      width: 100%; padding: 14px; background: var(--blue); color: white;
-      border: none; cursor: pointer; border-radius: 10px;
-      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
-      transition: all .2s; box-shadow: 0 4px 22px rgba(51,149,255,.45); margin-top: 6px;
-    }
-    .fsubmit:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 32px rgba(51,149,255,.55); }
-    .form-privacy { text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 12px; }
-
-    /* ───────────────────────────────────────────────────────────
-       FAQ
-    ─────────────────────────────────────────────────────────── */
-    .faq { padding: 100px 0; background: var(--surface); }
-    .faq-list { max-width: 720px; margin: 56px auto 0; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q {
-      width: 100%; text-align: left; padding: 22px 28px;
-      background: var(--white); border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      font-size: 15px; font-weight: 600; color: var(--navy);
-      font-family: 'Inter', sans-serif; transition: background .15s;
-    }
-    .faq-q:hover { background: var(--surface); }
-    .faq-q.open { background: rgba(204,229,255,.25); color: var(--blue); }
-    .faq-icon {
-      width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%;
-      border: 1px solid var(--border);
+    .social-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--border-blue); color: var(--navy); }
+    .social-icon {
+      width: 36px; height: 36px; border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 14px; color: var(--text-muted); transition: all .2s;
+      flex-shrink: 0;
     }
-    .faq-q.open .faq-icon { border-color: var(--border-blue); background: var(--blue-dim); color: var(--blue); transform: rotate(45deg); }
-    .faq-a { overflow: hidden; max-height: 0; transition: max-height .35s ease; }
-    .faq-a.open { max-height: 500px; }
-    .faq-a-inner { padding: 0 28px 24px; font-size: 14px; color: var(--text-muted); line-height: 1.75; background: rgba(204,229,255,.12); }
+    .social-icon svg { width: 18px; height: 18px; }
+    .social-card.linkedin .social-icon { background: rgba(10,102,194,.1); }
+    .social-card.linkedin .social-icon svg { color: #0A66C2; }
+    .social-card.twitter .social-icon  { background: rgba(4,7,27,.06); }
+    .social-card.twitter .social-icon svg  { color: #000; }
+    .social-card.instagram .social-icon { background: rgba(225,48,108,.08); }
+    .social-card.instagram .social-icon svg { color: #E1306C; }
 
-    /* ───────────────────────────────────────────────────────────
-       FOOTER
-    ─────────────────────────────────────────────────────────── */
-    footer { padding: 40px 0; background: var(--surface); border-top: 1px solid var(--border); }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--text-muted); text-decoration: none; }
-    .footer-logo-mark { width: 28px; height: 28px; border-radius: 7px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 12px; color: white; }
+    /* ── FOOTER ────────────────────────────────────────────── */
+    footer {
+      padding: 36px 0;
+      background: var(--white); border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 700; font-size: 15px;
+      color: var(--text-muted); text-decoration: none;
+    }
+    .footer-logo-mark {
+      width: 28px; height: 28px; border-radius: 7px;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 12px; color: white;
+    }
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
+    .footer-links a {
+      font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s;
+    }
     .footer-links a:hover { color: var(--navy); }
     .footer-copy { font-size: 12px; color: var(--text-muted); }
 
-    /* ── Responsive ────────────────────────────────────────────── */
-    @media (max-width: 960px) {
-      .hero-layout,.rms-layout,.identifies-layout,.connected-layout,.demo-layout { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
-      .problem-grid { grid-template-columns: 1fr; }
-      .intel-layer-cards { grid-template-columns: 1fr 1fr; }
-      .workflow-steps { grid-template-columns: repeat(3,1fr); gap: 10px; }
-      .rule-panels { grid-template-columns: 1fr; }
-      .frow { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .nav-links  { display: none; }
     }
-    @media (max-width: 580px) {
-      .intel-layer-cards,.workflow-steps { grid-template-columns: 1fr; }
+    @media (max-width: 560px) {
+      .confirm-tags { gap: 6px; }
+      .cal-slots { grid-template-columns: 1fr 1fr; }
+      .social-cards { flex-direction: column; align-items: stretch; max-width: 280px; margin: 0 auto; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── Nav ───────────────────────────────────────────────────── -->
+<!-- ── Nav ────────────────────────────────────────────────────── -->
 <nav id="top-nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
@@ -832,663 +536,283 @@
       <span>AltimaCRM</span>
     </a>
     <div class="nav-links">
-      <a href="#problem">The Problem</a>
-      <a href="#identifies">Capabilities</a>
-      <a href="#workflow">Workflow</a>
-      <a href="#rule-engine">Rule Engine</a>
-      <a href="#faq">FAQ</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Integrations</a>
+      <a href="#">Resources</a>
     </div>
-    <a href="#demo" class="btn-primary" style="padding:9px 20px;font-size:14px;">Book a Demo →</a>
+    <a href="#" class="btn-ghost" style="padding:9px 20px;font-size:14px;">Back to site</a>
   </div>
 </nav>
 
-<!-- ── Breadcrumb ─────────────────────────────────────────────── -->
-<div class="breadcrumb">
-  <div class="breadcrumb-inner">
-    <a href="#">AltimaCRM</a>
-    <span class="breadcrumb-sep">/</span>
-    <a href="#">Features</a>
-    <span class="breadcrumb-sep">/</span>
-    <span class="breadcrumb-current">Risk Management System</span>
-  </div>
-</div>
-
-<!-- ── Hero ──────────────────────────────────────────────────── -->
-<section class="hero-feature">
+<!-- ── Confirmation Hero ─────────────────────────────────────── -->
+<section class="hero-confirm">
   <div class="container">
-    <div class="hero-layout">
-      <div class="hero-text">
-        <div class="hero-eyebrow animate delay-1">
-          <div class="badge">RMS</div>
-          <div class="hero-eyebrow-divider"></div>
-          <span class="hero-eyebrow-label">Risk Management System</span>
-        </div>
-        <h1 class="animate delay-2">Risk Management System for Forex Brokers and Prop Firms</h1>
-        <p class="hero-tagline animate delay-3">Your data shows you what happened.<br/>RMS shows you what it means.</p>
-        <p class="hero-body animate delay-3">AltimaCRM's Risk Management System connects behavioral signals, exposure data, identity patterns, and operational activity into a single intelligence layer, so your risk team acts on facts, not guesswork.</p>
-        <div class="hero-ctas animate delay-4">
-          <a href="#demo" class="btn-primary">Book a Demo →</a>
-          <a href="#identifies" class="btn-ghost">See Capabilities</a>
-        </div>
-      </div>
+    <div class="hero-confirm-inner">
 
-      <div class="hero-visual animate delay-4">
-        <div class="intel-panel">
-          <div class="intel-panel-topbar">
-            <span class="intel-panel-title">RMS · Intelligence Layers</span>
-            <span class="badge-live">Live Monitoring</span>
-          </div>
-          <div class="intel-layers">
-            <div class="intel-layer">
-              <div class="intel-layer-row">
-                <span class="intel-dot behavioral"></span>
-                <span class="intel-layer-name">Behavioral Intelligence</span>
-                <span class="intel-status-pill scanning">Scanning</span>
-              </div>
-              <div class="intel-layer-chips">
-                <span class="intel-chip">trading-patterns</span>
-                <span class="intel-chip">abuse-signals</span>
-                <span class="intel-chip">anomalous-activity</span>
-              </div>
-            </div>
-            <div class="intel-layer">
-              <div class="intel-layer-row">
-                <span class="intel-dot exposure"></span>
-                <span class="intel-layer-name">Exposure Intelligence</span>
-                <span class="intel-status-pill alert">2 Alerts</span>
-              </div>
-              <div class="intel-layer-chips">
-                <span class="intel-chip">net-exposure</span>
-                <span class="intel-chip">drawdown</span>
-                <span class="intel-chip">margin-stress</span>
-              </div>
-            </div>
-            <div class="intel-layer">
-              <div class="intel-layer-row">
-                <span class="intel-dot identity"></span>
-                <span class="intel-layer-name">Identity Intelligence</span>
-                <span class="intel-status-pill monitoring">Monitoring</span>
-              </div>
-              <div class="intel-layer-chips">
-                <span class="intel-chip">shared-devices</span>
-                <span class="intel-chip">ip-clusters</span>
-                <span class="intel-chip">geo-anomalies</span>
-              </div>
-            </div>
-            <div class="intel-layer">
-              <div class="intel-layer-row">
-                <span class="intel-dot governance"></span>
-                <span class="intel-layer-name">Governance Intelligence</span>
-                <span class="intel-status-pill active">Active</span>
-              </div>
-              <div class="intel-layer-chips">
-                <span class="intel-chip">audit-trails</span>
-                <span class="intel-chip">enforcement</span>
-                <span class="intel-chip">policy-compliance</span>
-              </div>
-            </div>
-          </div>
-          <div class="intel-panel-footer">
-            <div class="intel-footer-stat"><span class="val">4</span><div class="lbl">Intelligence Layers</div></div>
-            <div class="intel-footer-div"></div>
-            <div class="intel-footer-stat"><span class="val">Real-time</span><div class="lbl">Signal Processing</div></div>
-            <div class="intel-footer-div"></div>
-            <div class="intel-footer-stat"><span class="val">0</span><div class="lbl">Separate Logins</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── The Problem ────────────────────────────────────────────── -->
-<section class="problem" id="problem">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge" style="background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.22);color:rgba(220,38,38,.8);">The Problem</div>
-      <h2 class="on-dark">The Biggest Risk Management Gap<br/>in Forex Brokerage Operations</h2>
-    </div>
-    <div class="problem-intro reveal">
-      <p class="problem-data-line">Most Brokers Have Data. Very Few Have Visibility.</p>
-      <p class="problem-data-sub">The information existed all along. The intelligence did not. That is the problem RMS solves.</p>
-    </div>
-    <div class="problem-grid reveal">
-
-      <div class="problem-card">
-        <div class="problem-card-num">01</div>
-        <div class="problem-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      <div class="confirm-icon-wrap animate d1">
+        <div class="confirm-ring"></div>
+        <div class="confirm-ring confirm-ring-2"></div>
+        <div class="confirm-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
           </svg>
         </div>
-        <div class="problem-role">Risk Manager</div>
-        <h3>Exposure spikes with no clear cause</h3>
-        <p>Trades are visible. The pattern behind them isn't.</p>
       </div>
 
-      <div class="problem-card">
-        <div class="problem-card-num">02</div>
-        <div class="problem-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="2"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/>
-            <path d="M6 6h4m4 0h4M6 18h4m4 0h4M12 10v4"/>
-          </svg>
-        </div>
-        <div class="problem-role">Operations / Risk</div>
-        <h3>Prop traders gaming challenges</h3>
-        <p>Individual accounts look fine. The network of accounts tells a different story.</p>
-      </div>
+      <div class="badge-green animate d2" style="margin-bottom:20px;">Request Confirmed</div>
 
-      <div class="problem-card">
-        <div class="problem-card-num">03</div>
-        <div class="problem-icon-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-        </div>
-        <div class="problem-role">Finance / Compliance</div>
-        <h3>Affiliate fraud that only shows up after payouts</h3>
-        <p>Revenue looked healthy. The referral behavior behind it didn't.</p>
+      <h1 class="animate d2">
+        Your request is in.<br/>Now let's find a time that works.
+      </h1>
+
+      <p class="hero-confirm-sub animate d3">
+        Pick a slot that works for you. Most demos run 30 minutes and are built around your specific brokerage setup.
+      </p>
+
+      <div class="confirm-tags animate d4">
+        <span class="ctag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          30-minute session
+        </span>
+        <span class="ctag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Your team, your setup
+        </span>
+        <span class="ctag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          No commitment required
+        </span>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── RMS System ─────────────────────────────────────────────── -->
-<section class="rms-system" id="system">
+<!-- ── Main: Calendar + Expect ──────────────────────────────── -->
+<section class="main-section">
   <div class="container">
-    <div class="rms-layout">
-      <div class="rms-text reveal">
-        <div class="badge" style="margin-bottom:16px;">AltimaCRM RMS</div>
-        <h2>AltimaCRM Risk Management System</h2>
-        <p class="sub-headline">Intelligence-driven risk monitoring across trading activity, accounts, groups, and broker operations.</p>
-        <p>RMS is a monitoring, investigation, and enforcement framework built for brokers and prop firms. It continuously evaluates trading behavior, account relationships, exposure patterns, and operational activity, turning raw data into actionable risk intelligence.</p>
-        <a href="#demo" class="btn-primary">Book A Demo →</a>
-      </div>
+    <div class="main-grid">
 
-      <div class="intel-layer-cards reveal">
-
-        <div class="ilc bl">
-          <div class="ilc-icon-wrap">
+      <!-- Calendar Column -->
+      <div class="calendar-card animate d4">
+        <div class="cal-header">
+          <div class="cal-header-text">
+            <div class="cal-header-label">Pick a slot</div>
+            <div class="cal-header-title">Schedule Your Demo</div>
+            <div class="cal-header-sub">All times shown in your local timezone</div>
+          </div>
+          <div class="cal-header-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8"  y1="2" x2="8"  y2="6"/>
+              <line x1="3"  y1="10" x2="21" y2="10"/>
             </svg>
           </div>
-          <h3>Behavioral Intelligence</h3>
-          <p>Trading patterns, abuse signals, anomalous activity</p>
         </div>
 
-        <div class="ilc ex">
-          <div class="ilc-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"/>
-              <line x1="12" y1="20" x2="12" y2="4"/>
-              <line x1="6"  y1="20" x2="6"  y2="14"/>
-            </svg>
-          </div>
-          <h3>Exposure Intelligence</h3>
-          <p>Net exposure, symbol concentration, drawdown, margin stress</p>
-        </div>
-
-        <div class="ilc id">
-          <div class="ilc-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Identity Intelligence</h3>
-          <p>Shared devices, IP clusters, related accounts, geographic anomalies</p>
-        </div>
-
-        <div class="ilc go">
-          <div class="ilc-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
-            </svg>
-          </div>
-          <h3>Governance Intelligence</h3>
-          <p>Approvals, enforcement actions, audit trails, policy compliance</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── What RMS Identifies ────────────────────────────────────── -->
-<section class="identifies" id="identifies">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <div class="badge">Detection Coverage</div>
-      <h2>What a Forex RMS Identifies</h2>
-      <p>Three intelligence domains — each covering signals that individual account reviews would miss entirely.</p>
-    </div>
-    <div class="identifies-layout reveal">
-      <div>
-        <div class="tab-nav" id="tab-nav">
-          <button class="tab-btn active" data-tab="trading">Trading Abuse</button>
-          <button class="tab-btn" data-tab="exposure">Exposure &amp; Capital</button>
-          <button class="tab-btn" data-tab="identity">Identity &amp; Relationship</button>
-        </div>
-        <div class="tab-pane active" id="tab-trading">
-          <div class="tab-pane-inner">
-            <div class="tab-pane-label">Trading Abuse Detection</div>
-            <div class="signal-cloud">
-              <span class="sig">All-or-nothing trading</span>
-              <span class="sig">High-frequency order bursts</span>
-              <span class="sig">Latency arbitrage</span>
-              <span class="sig">Scalping patterns</span>
-              <span class="sig">Challenge gaming</span>
-              <span class="sig">Revenge trading</span>
-              <span class="sig">Unusual profitability patterns</span>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane" id="tab-exposure">
-          <div class="tab-pane-inner">
-            <div class="tab-pane-label">Exposure &amp; Capital Risk</div>
-            <div class="signal-cloud">
-              <span class="sig">Net exposure by symbol and group</span>
-              <span class="sig">Directional exposure</span>
-              <span class="sig">Drawdown activity</span>
-              <span class="sig">Margin stress</span>
-              <span class="sig">Capital protection threshold breaches</span>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane" id="tab-identity">
-          <div class="tab-pane-inner">
-            <div class="tab-pane-label">Identity &amp; Relationship Risk</div>
-            <div class="signal-cloud">
-              <span class="sig">Shared device detection</span>
-              <span class="sig">Shared IP monitoring</span>
-              <span class="sig">Related account analysis</span>
-              <span class="sig">Account passing (prop)</span>
-              <span class="sig">Geographic anomaly detection</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dash-panel">
-        <div class="dp-bar">
-          <div class="dp-dot r"></div><div class="dp-dot y"></div><div class="dp-dot g"></div>
-          <div class="dp-tab-bar">
-            <span class="dp-tab on">Risk Monitor</span>
-            <span class="dp-tab off">Accounts</span>
-            <span class="dp-tab off">Reports</span>
-          </div>
-        </div>
-        <div class="dp-section-label">Active Signals — Live Feed</div>
-        <div class="dp-row"><div class="dp-indicator red"></div><span class="dp-row-label">ACC-4821 · Challenge Gaming</span><span class="dp-badge high">HIGH</span></div>
-        <div class="dp-row"><div class="dp-indicator red"></div><span class="dp-row-label">GRP-17 · Exposure Spike +340%</span><span class="dp-badge high">HIGH</span></div>
-        <div class="dp-row"><div class="dp-indicator amber"></div><span class="dp-row-label">IP-CLUSTER · 6 Related Accounts</span><span class="dp-badge med">MED</span></div>
-        <div class="dp-row"><div class="dp-indicator amber"></div><span class="dp-row-label">ACC-2291 · Latency Arbitrage</span><span class="dp-badge med">MED</span></div>
-        <div class="dp-row"><div class="dp-indicator blue"></div><span class="dp-row-label">IB-88 · Unusual Referral Volume</span><span class="dp-badge flag">REVIEW</span></div>
-        <div class="dp-section-label">Identity Cluster — Linked Accounts</div>
-        <div class="dp-row"><div class="dp-indicator red"></div><span class="dp-row-label">Shared Device · ACC-1104, ACC-3290</span><span class="dp-badge high">FLAG</span></div>
-        <div class="dp-row"><div class="dp-indicator amber"></div><span class="dp-row-label">Same IP Range · 4 Prop Accounts</span><span class="dp-badge info">CLUSTER</span></div>
-        <div class="dp-section-label">Enforcement Queue</div>
-        <div class="dp-row"><div class="dp-indicator green"></div><span class="dp-row-label">ACC-4821 · Trade Restriction Applied</span><span class="dp-badge low">ACTIONED</span></div>
-        <div style="height:18px;"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Workflow ────────────────────────────────────────────────── -->
-<section class="workflow" id="workflow">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <div class="badge">End-to-End Workflow</div>
-      <h2>Risk Detection Is Just the Start</h2>
-    </div>
-    <p class="workflow-eyebrow reveal"><strong>Here's What AltimaCRM RMS Does Next.</strong> From the first signal to the final audit entry — one connected workflow.</p>
-
-    <div class="workflow-steps reveal">
-
-      <div class="wf-step">
-        <div class="wf-step-num-bg">1</div>
-        <div class="wf-num-badge">1</div>
-        <h3>Detect</h3>
-        <p>Identify unusual behavior across trading, exposure, identity, and operations</p>
-      </div>
-      <div class="wf-step">
-        <div class="wf-step-num-bg">2</div>
-        <div class="wf-num-badge">2</div>
-        <h3>Investigate</h3>
-        <p>Collect evidence, view relationships, build context</p>
-      </div>
-      <div class="wf-step">
-        <div class="wf-step-num-bg">3</div>
-        <div class="wf-num-badge">3</div>
-        <h3>Review</h3>
-        <p>Enable risk teams to make informed, documented decisions</p>
-      </div>
-      <div class="wf-step">
-        <div class="wf-step-num-bg">4</div>
-        <div class="wf-num-badge">4</div>
-        <h3>Enforce</h3>
-        <p>Apply account restrictions, trading limits, or escalation actions</p>
-      </div>
-      <div class="wf-step">
-        <div class="wf-step-num-bg">5</div>
-        <div class="wf-num-badge">5</div>
-        <h3>Audit</h3>
-        <p>Full traceable record of every decision and action</p>
-      </div>
-
-    </div>
-
-    <div class="workflow-cta reveal">
-      <a href="#demo" class="btn-primary">Book a Demo →</a>
-      <a href="#rule-engine" class="btn-ghost">Explore the Rule Engine</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── Rule Engine ────────────────────────────────────────────── -->
-<section class="rule-engine" id="rule-engine">
-  <div class="container">
-    <div class="section-header centered reveal">
-      <div class="badge" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.55);">Rule Engine</div>
-      <h2 class="on-dark">Build, Test, and Deploy Risk Rules That Reflect How You Actually Operate</h2>
-    </div>
-    <p class="rule-engine-desc reveal">Every broker operates differently. A rule that works for a B-book operation may be wrong for a prop firm. RMS includes a flexible rule engine that lets you define, test, approve, and deploy controls specific to how you operate.</p>
-
-    <div class="rule-panels reveal">
-
-      <div class="rule-panel broker">
-        <div class="rule-panel-head">
-          <div class="rule-panel-head-inner">
-            <div class="rule-panel-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-              </svg>
-            </div>
-            <div class="rule-panel-meta">
-              <div class="rule-panel-name">Broker-focused Rules</div>
-              <div class="rule-panel-sub">Retail &amp; Institutional</div>
-            </div>
-          </div>
-        </div>
-        <div class="rule-rows">
-          <div class="rule-row"><span class="rule-row-dot"></span>Daily loss limits</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Maximum lot size</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Exposure thresholds</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Trade frequency limits</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Concentration controls</div>
-        </div>
-      </div>
-
-      <div class="rule-panel prop">
-        <div class="rule-panel-head">
-          <div class="rule-panel-head-inner">
-            <div class="rule-panel-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-              </svg>
-            </div>
-            <div class="rule-panel-meta">
-              <div class="rule-panel-name">Prop Firm-focused Rules</div>
-              <div class="rule-panel-sub">Challenge &amp; Funded</div>
-            </div>
-          </div>
-        </div>
-        <div class="rule-rows">
-          <div class="rule-row"><span class="rule-row-dot"></span>Challenge restrictions</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Account passing detection</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Behavioral risk signals</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Challenge gaming rules</div>
-          <div class="rule-row"><span class="rule-row-dot"></span>Unusual profitability flags</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Connected ──────────────────────────────────────────────── -->
-<section class="connected" id="connected">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="badge">Native Integration</div>
-      <h2>Risk Intelligence That's Already<br/>Connected to Your Operation</h2>
-    </div>
-    <div class="connected-layout reveal">
-
-      <div class="connected-text">
-        <p class="connected-body">RMS is not a separate tool requiring a separate login, a separate data feed, or a separate contract. It is built directly into AltimaCRM, which means your risk data, CRM data, client data, affiliate data, and trading data all talk to each other automatically.</p>
-        <div class="connected-features">
-
-          <div class="cf">
-            <div class="cf-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
-                <line x1="4" y1="22" x2="4" y2="15"/>
-              </svg>
-            </div>
-            <div class="cf-body">
-              <div class="cf-title">Risk flags surface next to the client record</div>
-              <div class="cf-desc">No switching systems. Every signal appears in context, alongside the full client profile.</div>
-            </div>
-          </div>
-
-          <div class="cf">
-            <div class="cf-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-              </svg>
-            </div>
-            <div class="cf-body">
-              <div class="cf-title">Affiliate anomalies connect directly to IB management data</div>
-              <div class="cf-desc">Referral fraud signals link back to the IB record — no manual cross-referencing required.</div>
-            </div>
-          </div>
-
-          <div class="cf">
-            <div class="cf-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/>
-                <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
-              </svg>
-            </div>
-            <div class="cf-body">
-              <div class="cf-title">Enforcement actions log against the full client history</div>
-              <div class="cf-desc">Every action is timestamped and appended to the client record for a complete audit trail.</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="connected-callout">
-        <div class="cc-tag">Built Into AltimaCRM</div>
-        <div class="cc-title">One Platform.<br/>Zero Integration Work.</div>
-        <p class="cc-body">RMS is live the moment AltimaCRM is set up. There is no separate contract, no data sync project, and no second dashboard to manage.</p>
-        <div class="cc-features">
-          <div class="cc-feat">
-            <div class="cc-feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            No separate login required
-          </div>
-          <div class="cc-feat">
-            <div class="cc-feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            No separate data feed or contract
-          </div>
-          <div class="cc-feat">
-            <div class="cc-feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Risk, CRM, and trading data connected natively
-          </div>
-          <div class="cc-feat">
-            <div class="cc-feat-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Enforcement logs against full client history
-          </div>
-        </div>
-        <a href="#demo" class="btn-primary" style="width:100%;justify-content:center;">Book a Demo →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Demo Form ──────────────────────────────────────────────── -->
-<section class="demo-section" id="demo">
-  <div class="container">
-    <div class="demo-layout">
-      <div class="demo-left reveal">
-        <div class="badge" style="margin-bottom:16px;">Book a Demo</div>
-        <h2>See Exactly Where Your Brokerage Risk Is Right Now</h2>
-        <p>Most risk managers who book a demo spot at least one gap they didn't know existed. Book a 30-minute session with our team and see RMS running against a live brokerage environment.</p>
-        <div class="demo-signals">
-
-          <div class="demo-signal">
-            <div class="demo-signal-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="5 3 19 12 5 21 5 3"/>
-              </svg>
-            </div>
-            <div>
-              <div class="demo-signal-title">Live Walkthrough</div>
-              <div class="demo-signal-desc">See RMS running against a real brokerage environment, not a demo sandbox.</div>
-            </div>
-          </div>
-
-          <div class="demo-signal">
-            <div class="demo-signal-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/>
-                <line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/>
-                <line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/>
-                <line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
-              </svg>
-            </div>
-            <div>
-              <div class="demo-signal-title">Your Use Case, Not Generic Slides</div>
-              <div class="demo-signal-desc">We configure the demo around your brokerage model — broker or prop firm.</div>
-            </div>
-          </div>
-
-          <div class="demo-signal">
-            <div class="demo-signal-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div>
-              <div class="demo-signal-title">30 Minutes. No Commitment.</div>
-              <div class="demo-signal-desc">Quick, focused, and actionable. Most teams leave with something they can act on immediately.</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="form-card reveal">
-        <div class="form-card-title">Request a Demo</div>
-        <div class="form-card-sub">Fill in your details and we'll be in touch within one business day.</div>
-        <form onsubmit="return false;">
-          <div class="frow">
-            <div class="fgroup"><label class="flabel">Full Name</label><input class="finput" type="text" placeholder="James K." /></div>
-            <div class="fgroup"><label class="flabel">Work Email</label><input class="finput" type="email" placeholder="james@brokerage.com" /></div>
-          </div>
-          <div class="frow full"><div class="fgroup"><label class="flabel">Company / Brokerage Name</label><input class="finput" type="text" placeholder="Global FX Capital" /></div></div>
-          <div class="frow full">
-            <div class="fgroup">
-              <label class="flabel">Brokerage Type</label>
-              <select class="fselect"><option value="" disabled selected>Select your type</option><option>Regulated Forex Broker</option><option>Prop Trading Firm</option><option>Both</option></select>
-            </div>
-          </div>
-          <div class="frow full">
-            <div class="fgroup">
-              <label class="flabel">How many active trading accounts do you manage?</label>
-              <select class="fselect"><option value="" disabled selected>Select a range</option><option>Under 500</option><option>500 – 2,000</option><option>2,000 – 10,000</option><option>10,000 – 50,000</option><option>50,000+</option></select>
-            </div>
-          </div>
-          <div class="frow full">
-            <div class="fgroup">
-              <label class="flabel">Biggest risk challenge right now <span class="opt">(optional)</span></label>
-              <textarea class="ftextarea" placeholder="e.g. prop challenge gaming, exposure spikes, affiliate fraud..."></textarea>
-            </div>
-          </div>
-          <div class="frow full">
-            <div class="fgroup">
-              <label class="flabel">Are you currently using a risk management system?</label>
-              <div class="radio-group" id="rms-radio">
-                <label class="radio-opt" onclick="selectRadio(this,'rms-radio')"><input type="radio" name="rms" value="yes"/> Yes</label>
-                <label class="radio-opt" onclick="selectRadio(this,'rms-radio')"><input type="radio" name="rms" value="no"/> No</label>
-                <label class="radio-opt" onclick="selectRadio(this,'rms-radio')"><input type="radio" name="rms" value="considering"/> Considering options</label>
+        <div class="cal-embed-zone">
+          <!-- Replace everything inside .cal-mock with your actual calendar embed (Calendly/Cal.com) -->
+          <div class="cal-mock">
+            <div class="cal-mock-nav">
+              <span class="cal-month">June 2025</span>
+              <div class="cal-nav-btns">
+                <button class="cal-nav-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="cal-nav-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
               </div>
             </div>
+            <div class="cal-days-header">
+              <div class="cal-day-name">Su</div>
+              <div class="cal-day-name">Mo</div>
+              <div class="cal-day-name">Tu</div>
+              <div class="cal-day-name">We</div>
+              <div class="cal-day-name">Th</div>
+              <div class="cal-day-name">Fr</div>
+              <div class="cal-day-name">Sa</div>
+            </div>
+            <div class="cal-grid" id="cal-grid">
+              <!-- JS fills this -->
+            </div>
+            <div class="cal-time-header">Available Times — Thursday, Jun 12</div>
+            <div class="cal-slots" id="cal-slots">
+              <div class="cal-slot" onclick="selectSlot(this)">09:00 AM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">09:30 AM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">10:00 AM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">11:00 AM</div>
+              <div class="cal-slot selected" onclick="selectSlot(this)">11:30 AM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">02:00 PM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">02:30 PM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">03:00 PM</div>
+              <div class="cal-slot" onclick="selectSlot(this)">04:00 PM</div>
+            </div>
+            <div class="cal-footer">
+              <div class="cal-footer-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Calendar embed goes here — replace with Calendly or Cal.com
+              </div>
+              <button class="btn-primary" style="padding:10px 22px;font-size:14px;">Confirm →</button>
+            </div>
           </div>
-          <button class="fsubmit" type="submit">Book My 30-Minute Demo →</button>
-          <p class="form-privacy">No commitment required · We respond within one business day</p>
-        </form>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-col">
+
+        <!-- What to Expect -->
+        <div class="expect-card animate d5">
+          <div class="expect-head">
+            <div class="expect-head-label">Your Demo</div>
+            <div class="expect-head-title">What to Expect</div>
+          </div>
+          <div class="expect-items">
+
+            <div class="expect-item">
+              <div class="expect-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+              <div class="expect-item-body">
+                <div class="expect-item-title">A live walkthrough built around your brokerage setup</div>
+                <div class="expect-item-desc">Not a generic product tour. We map the demo to how your team actually operates.</div>
+              </div>
+            </div>
+
+            <div class="expect-item">
+              <div class="expect-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="expect-item-body">
+                <div class="expect-item-title">How your sales, compliance, and ops teams would use it</div>
+                <div class="expect-item-desc">We walk through the platform from each team's perspective — not just one role.</div>
+              </div>
+            </div>
+
+            <div class="expect-item">
+              <div class="expect-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8"  x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+              </div>
+              <div class="expect-item-body">
+                <div class="expect-item-title">Honest answers on integrations, onboarding &amp; migration</div>
+                <div class="expect-item-desc">Timelines, complexity, what requires effort — no surprises after you sign.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Reach out fallback -->
+        <div class="reachout-card animate d6">
+          <div class="reachout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.9 2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 18a2 2 0 0 1 .27-1.08z"/>
+            </svg>
+          </div>
+          <div class="reachout-text">
+            <div class="reachout-title">Prefer we reach out?</div>
+            <div class="reachout-desc">We'll contact you within one business day.</div>
+          </div>
+        </div>
+
+        <!-- Mini trust row -->
+        <div class="animate d6" style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+
+            <div style="flex:1;min-width:140px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy);line-height:1;">18+</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">Years in FX industry</div>
+            </div>
+
+            <div style="flex:1;min-width:140px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy);line-height:1;">50+</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">Broker integrations</div>
+            </div>
+
+            <div style="flex:1;min-width:140px;padding:16px 18px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy);line-height:1;">1.2M+</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:3px;">Accounts managed</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FAQ ────────────────────────────────────────────────────── -->
-<section class="faq" id="faq">
+<!-- ── Social ────────────────────────────────────────────────── -->
+<section class="social-section">
   <div class="container">
-    <div class="section-header centered reveal">
-      <div class="badge">FAQ</div>
-      <h2>Frequently Asked Questions</h2>
-      <p>Common questions about AltimaCRM RMS from risk managers and compliance teams.</p>
+    <div class="reveal">
+      <h2>Stay connected while you wait</h2>
+      <p class="social-sub">Follow AltimaCRM for product updates, forex industry insights, and platform news.</p>
     </div>
-    <div class="faq-list reveal">
+    <div class="social-cards reveal">
 
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What is a Risk Management System for forex brokers?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">A Risk Management System (RMS) is the operational layer that sits between your trading data and your risk decisions. It monitors trading behavior, account exposure, client identity patterns, and operational activity across your brokerage, and helps your team identify, investigate, and act on emerging risks before they become costly problems. For forex brokers and prop firms, RMS is the difference between reacting to risk after the fact and managing it in real time.</div></div>
-      </div>
+      <a href="#" class="social-card linkedin">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </div>
+        LinkedIn
+      </a>
 
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How is RMS different from a standard trading monitor?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">A standard trading monitor shows you what is happening. RMS helps you understand why, and what to do about it. Most monitoring tools generate alerts and stop there. AltimaCRM RMS goes further: it connects behavioral signals, identity data, exposure patterns, and operational activity into a complete risk lifecycle — from detection through investigation, enforcement, and audit. It is not a dashboard. It is an intelligence and governance framework.</div></div>
-      </div>
+      <a href="#" class="social-card twitter">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </div>
+        Twitter / X
+      </a>
 
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Can RMS detect prop challenge abuse and account passing?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. RMS includes purpose-built detection for prop firm risks including challenge gaming, martingale sizing patterns, coordinated account activity, and account passing across linked identities. It correlates devices, IP addresses, login behavior, and trading patterns to identify relationships that individual account reviews would miss entirely.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Does RMS work for both brokers and prop firms?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. RMS is built to serve both operating models. For brokers, it covers exposure monitoring, toxic flow detection, affiliate fraud, and compliance governance. For prop firms, it adds challenge-specific rule enforcement, multi-account abuse detection, funded account drawdown monitoring, and payout risk controls. Rules and detection logic are configurable to each model.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How does the Rule Engine work?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">The Rule Engine lets your team define risk controls that reflect how your business actually operates, not a generic template. You can create, test in a sandbox environment, get approval through a structured workflow, and deploy rules to production without disrupting live operations. Rules cover everything from daily loss limits and max lot sizes to behavioral detection thresholds and challenge restrictions. Every rule change is documented and auditable.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Is RMS a separate tool or part of AltimaCRM?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">RMS is built directly into AltimaCRM. There is no separate login, no separate data feed, and no integration project required. Risk flags surface alongside client records. Enforcement actions log against the full client history. Affiliate anomalies connect directly to IB management data. Everything your risk team needs is in the same platform your sales, compliance, and operations teams already use.</div></div>
-      </div>
+      <a href="#" class="social-card instagram">
+        <div class="social-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        Instagram
+      </a>
 
     </div>
   </div>
 </section>
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
+<!-- ── Footer ────────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <a href="#" class="footer-logo"><div class="footer-logo-mark">A</div>AltimaCRM</a>
+      <a href="#" class="footer-logo">
+        <div class="footer-logo-mark">A</div>
+        AltimaCRM
+      </a>
       <div class="footer-links">
-        <a href="#">Features</a><a href="#">Pricing</a><a href="#">Integrations</a><a href="#">Privacy</a><a href="#">Terms</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Integrations</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
       <p class="footer-copy">© 2025 AltimaCRM. All rights reserved.</p>
     </div>
@@ -1496,33 +820,59 @@
 </footer>
 
 <script>
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const answer = item.querySelector('.faq-a');
-    const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-q.open').forEach(b => {
-      b.classList.remove('open');
-      b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
+  /* ── Calendar mock fill ─────────────────────────────────── */
+  (function buildCalendar() {
+    const grid = document.getElementById('cal-grid');
+    if (!grid) return;
+
+    // June 2025: starts Sunday (day 0), 30 days
+    const startDay = 0; // Sunday
+    const totalDays = 30;
+    const today = 9;
+    const available = [10, 11, 12, 16, 17, 18, 19, 23, 24, 25, 26];
+
+    // empty cells before first
+    for (let i = 0; i < startDay; i++) {
+      const e = document.createElement('div');
+      e.className = 'cal-cell empty';
+      grid.appendChild(e);
+    }
+
+    for (let d = 1; d <= totalDays; d++) {
+      const cell = document.createElement('div');
+      const dayOfWeek = (startDay + d - 1) % 7;
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+
+      if (d === today) cell.className = 'cal-cell today';
+      else if (d === 12) cell.className = 'cal-cell selected';
+      else if (available.includes(d) && !isWeekend) cell.className = 'cal-cell available';
+      else cell.className = 'cal-cell disabled';
+
+      cell.textContent = d;
+      if (cell.classList.contains('available') || cell.classList.contains('selected')) {
+        cell.onclick = () => selectDay(cell, d);
+      }
+      grid.appendChild(cell);
+    }
+  })();
+
+  function selectDay(cell, day) {
+    document.querySelectorAll('.cal-cell').forEach(c => {
+      if (c.classList.contains('selected') && c !== cell) {
+        c.className = 'cal-cell available';
+      }
     });
-    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+    cell.className = 'cal-cell selected';
+    document.querySelector('.cal-time-header').textContent =
+      `Available Times — Thursday, Jun ${day}`;
   }
 
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tabId = btn.dataset.tab;
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('tab-' + tabId).classList.add('active');
-    });
-  });
-
-  function selectRadio(label, groupId) {
-    document.querySelectorAll(`#${groupId} .radio-opt`).forEach(l => l.classList.remove('selected'));
-    label.classList.add('selected');
-    label.querySelector('input[type="radio"]').checked = true;
+  function selectSlot(el) {
+    document.querySelectorAll('.cal-slot').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
   }
 
+  /* ── Scroll reveal ──────────────────────────────────────── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -1533,9 +883,10 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  /* ── Nav shadow ─────────────────────────────────────────── */
   const nav = document.getElementById('top-nav');
   window.addEventListener('scroll', () => {
-    nav.style.boxShadow = window.scrollY > 80 ? '0 4px 24px rgba(4,7,27,.08)' : 'none';
+    nav.style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(4,7,27,.07)' : 'none';
   }, { passive: true });
 </script>
 </body>
