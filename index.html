@@ -3,1842 +3,1345 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRO — Legal SEO for High-Value Cases</title>
-  <link rel="preconnect" href="https://api.fontshare.com" />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&display=swap" rel="stylesheet" />
+  <title>Most Trusted Forex CRM in UAE | Reduce Churn by 70% — AltimaCRM</title>
+  <meta name="description" content="The best forex CRM software for brokers. Connect your sales team, retention, compliance, and finance on one platform. Book a demo today." />
+  <!-- SEO keywords woven into meta -->
+  <meta name="keywords" content="forex crm, best forex crm software for brokers, forex crm provider, forex crm solution, tools for forex broker, forex crm with mt5, forex crm mt4 mt5 ctrader, forex crm whitelabel, operations tool for brokers" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    /* ── TOKENS ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg:        #010509;
-      --bg2:       #060d15;
-      --gold:      #C7933D;
-      --gold-dim:  #7a5a24;
-      --gold-glow: rgba(199,147,61,.14);
-      --mute:      #B5BBC3;
-      --white:     #F5F5F5;
-      --border:    rgba(199,147,61,.16);
-      --border-s:  rgba(199,147,61,.07);
-      --card-bg:   rgba(255,255,255,.022);
-      --ease:      cubic-bezier(.22,1,.36,1);
+      --blue:         #3395FF;
+      --blue-dim:     rgba(51,149,255,.08);
+      --blue-mid:     #5aaeff;
+      --navy:         #04071B;
+      --white:        #FFFFFF;
+      --surface:      #F0F3F8;
+      --surface-2:    #E8EDF5;
+      --border:       rgba(4,7,27,.08);
+      --border-blue:  rgba(51,149,255,.22);
+      --text:         #04071B;
+      --text-muted:   #606070;
+      --text-dim:     #3a4460;
+      --green:        #16A34A;
+      --green-dim:    rgba(22,163,74,.09);
+      --green-border: rgba(22,163,74,.22);
+      --red:          #DC2626;
+      --amber:        #D97706;
+      --purple:       #7C3AED;
+      --radius-sm:    8px;
+      --radius-md:    14px;
+      --radius-lg:    20px;
+      --radius-xl:    28px;
+      --shadow-sm:    0 1px 4px rgba(4,7,27,.05), 0 2px 10px rgba(4,7,27,.04);
+      --shadow-md:    0 4px 24px rgba(4,7,27,.08), 0 1px 4px rgba(4,7,27,.04);
+      --shadow-lg:    0 12px 48px rgba(4,7,27,.1), 0 2px 8px rgba(4,7,27,.04);
     }
 
-    /* ── RESET ────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Font weights CAPPED at 600 throughout */
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Satoshi', sans-serif;
-      background: var(--bg);
-      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
 
-    /* ── NOISE LAYER ──────────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      background-size: 200px 200px;
-    }
-    * { position: relative; z-index: 1; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:none} }
+    @keyframes dot-pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
 
-    /* ── UTILITY ──────────────────────────────────── */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
-    .gold  { color: var(--gold); }
-    .mute  { color: var(--mute); }
+    .animate  { opacity:0; animation: fadeUp .6s ease forwards; }
+    .d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}
+    .d4{animation-delay:.38s}.d5{animation-delay:.5s}.d6{animation-delay:.62s}
 
-    .eyebrow {
+    .reveal { opacity:0; transform:translateY(14px); transition:opacity .55s ease,transform .55s ease; }
+    .revealed { opacity:1; transform:none; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Buttons ─────────────────────────────────────────── */
+    .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 10px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
-      color: var(--gold); border: 1px solid var(--border);
-      padding: 7px 16px; border-radius: 100px;
-      background: rgba(199,147,61,.05);
+      padding: 14px 30px; background: var(--blue); color: #fff;
+      font-size: 15px; font-weight: 600; border-radius: 10px;
+      text-decoration: none; border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif; transition: all .2s;
+      box-shadow: 0 4px 24px rgba(51,149,255,.4);
     }
-    .section-label {
-      font-size: 10px; font-weight: 500; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--gold-dim); margin-bottom: 14px;
-    }
-
-    .btn-gold {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--gold); color: #060c10;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 13px; font-weight: 500; letter-spacing: .03em;
-      padding: 14px 28px; border-radius: 100px; border: none; cursor: pointer;
-      transition: background .2s, box-shadow .25s, transform .25s var(--ease);
-    }
-    .btn-gold:hover { background: #d6a048; box-shadow: 0 10px 36px rgba(199,147,61,.3); transform: translateY(-2px); }
+    .btn-primary:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 34px rgba(51,149,255,.52); }
 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: var(--white);
-      font-family: 'Satoshi', sans-serif;
-      font-size: 13px; font-weight: 500;
-      padding: 14px 28px; border-radius: 100px;
-      border: 1px solid rgba(245,245,245,.2); cursor: pointer;
-      transition: border-color .2s, color .2s, transform .25s var(--ease);
+      padding: 14px 28px; background: var(--white); color: var(--text-dim);
+      font-size: 15px; font-weight: 500; border-radius: 10px;
+      border: 1px solid var(--border); text-decoration: none;
+      cursor: pointer; font-family: 'Inter', sans-serif; transition: all .2s;
     }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .btn-ghost:hover { border-color: var(--border-blue); color: var(--blue); box-shadow: 0 2px 14px rgba(51,149,255,.1); }
 
-    /* reveal animations */
-    .r  { opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease),transform .8s var(--ease); }
-    .rl { opacity:0; transform:translateX(-28px); transition:opacity .8s var(--ease),transform .8s var(--ease); }
-    .rr { opacity:0; transform:translateX(28px);  transition:opacity .8s var(--ease),transform .8s var(--ease); }
-    .r.on,.rl.on,.rr.on { opacity:1; transform:none; }
-
-    /* ── NAV ──────────────────────────────────────── */
+    /* ── Minimal landing nav ─────────────────────────────── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      padding: 22px 0;
-      transition: background .35s, border-color .35s, backdrop-filter .35s;
-      border-bottom: 1px solid transparent;
-    }
-    nav.scrolled {
-      background: rgba(1,5,9,.9);
+      position: sticky; top: 0; z-index: 100;
+      padding: 0 24px; height: 60px;
+      display: flex; align-items: center;
+      background: rgba(255,255,255,.95);
       backdrop-filter: blur(24px);
-      border-color: var(--border-s);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .2s;
     }
-    .nav-inner { display:flex; align-items:center; justify-content:space-between; }
-    .nav-logo   { font-size:20px; font-weight:500; letter-spacing:.06em; }
-    .nav-links  { display:flex; align-items:center; gap:36px; }
-    .nav-links a{ font-size:13px; font-weight:400; color:var(--mute); transition:color .2s; }
-    .nav-links a:hover { color:var(--white); }
+    .nav-inner {
+      max-width: 1120px; width: 100%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-mark {
+      width: 30px; height: 30px; background: var(--blue); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 13px; color: white;
+    }
+    .nav-logo-text { font-weight: 600; font-size: 16px; color: var(--navy); letter-spacing: -.02em; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-phone {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 500; color: var(--text-muted);
+      text-decoration: none; transition: color .15s;
+    }
+    .nav-phone:hover { color: var(--navy); }
+    .nav-phone svg { width: 14px; height: 14px; color: var(--blue); }
 
-    /* ── HERO ─────────────────────────────────────── */
+    /* ─────────────────────────────────────────────────────
+       HERO SECTION
+    ───────────────────────────────────────────────────── */
     .hero {
-      min-height: 100vh; display: flex; align-items: center;
-      padding: 130px 0 80px; overflow: hidden;
+      padding: 64px 0 0;
+      background: var(--white);
+      position: relative; overflow: hidden;
     }
-    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-    .hero-eyebrow { margin-bottom:32px; }
-    .hero-h1 {
-      font-size: clamp(48px, 5.5vw, 76px);
-      font-weight: 500; line-height: 1.02; letter-spacing: -.035em;
-      margin-bottom: 24px;
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 70% at 105% -5%, rgba(51,149,255,.11) 0%, transparent 55%),
+        radial-gradient(ellipse 35% 45% at -5% 90%, rgba(51,149,255,.05) 0%, transparent 55%);
+      pointer-events: none;
     }
-    .hero-h1 em { font-style:normal; color:var(--gold); }
-    .hero-sub {
-      font-size: 16px; font-weight: 400; color: var(--mute);
-      line-height: 1.75; max-width: 460px; margin-bottom: 44px;
-    }
-    .hero-actions { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-
-    /* hero right image */
-    .hero-img-wrap {
-      position: relative; border-radius: 2px; overflow: hidden;
-      aspect-ratio: 4/5;
-      border: 1px solid var(--border-s);
-    }
-    .hero-img-wrap img {
-      width:100%; height:100%; object-fit:cover;
-      filter: brightness(.55) saturate(.7);
-      transition: transform 8s var(--ease);
-    }
-    .hero-img-wrap:hover img { transform: scale(1.04); }
-    .hero-img-overlay {
-      position:absolute; inset:0;
-      background: linear-gradient(180deg, rgba(1,5,9,0) 30%, rgba(1,5,9,.85) 100%);
-    }
-    .hero-img-badge {
-      position:absolute; bottom:32px; left:32px; right:32px;
-      background: rgba(1,5,9,.72); backdrop-filter:blur(16px);
-      border: 1px solid var(--border); border-radius:2px;
-      padding: 20px 24px;
-      display:grid; grid-template-columns:1fr 1px 1fr 1px 1fr; gap:16px; align-items:center;
-    }
-    .hero-badge-stat { text-align:center; }
-    .hero-badge-stat .num {
-      font-size:26px; font-weight:500; color:var(--gold); letter-spacing:-.02em; line-height:1;
-    }
-    .hero-badge-stat .lbl { font-size:10px; font-weight:400; color:var(--mute); margin-top:4px; letter-spacing:.08em; text-transform:uppercase; }
-    .hero-badge-div { width:1px; height:36px; background:var(--border); }
-
-    /* social proof strip */
-    .proof-strip {
-      border-top:1px solid var(--border-s);
-      border-bottom:1px solid var(--border-s);
-      background: var(--bg2); padding:0;
-    }
-    .proof-strip-inner {
-      display:grid; grid-template-columns:repeat(5,1fr);
-    }
-    .proof-strip-item {
-      padding:36px 24px; text-align:center;
-      border-right:1px solid var(--border-s);
-      transition:background .25s;
-    }
-    .proof-strip-item:last-child { border-right:none; }
-    .proof-strip-item:hover { background:rgba(199,147,61,.03); }
-    .proof-strip-num {
-      font-size:40px; font-weight:500; color:var(--gold);
-      letter-spacing:-.025em; line-height:1;
-    }
-    .proof-strip-lbl { font-size:11px; font-weight:400; color:var(--mute); margin-top:6px; line-height:1.5; }
-
-    /* ── PROOF SECTION ────────────────────────────── */
-    #proof { padding:140px 0; }
-    .proof-header { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:end; margin-bottom:72px; }
-    .proof-header h2 {
-      font-size:clamp(36px,4vw,52px); font-weight:500;
-      line-height:1.08; letter-spacing:-.025em;
-    }
-    .proof-header p { font-size:16px; font-weight:400; color:var(--mute); line-height:1.75; }
-    .proof-img-row { display:grid; grid-template-columns:1.6fr 1fr; gap:2px; margin-bottom:2px; }
-    .proof-img-card {
-      position:relative; overflow:hidden;
-      border:1px solid var(--border-s);
-    }
-    .proof-img-card img {
-      width:100%; height:280px; object-fit:cover;
-      filter:brightness(.45) saturate(.6);
-    }
-    .proof-img-card-content {
-      position:absolute; inset:0; padding:32px;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      background:linear-gradient(160deg, transparent 30%, rgba(1,5,9,.8) 100%);
-    }
-    .proof-img-card-content .big {
-      font-size:56px; font-weight:500; color:var(--gold);
-      letter-spacing:-.03em; line-height:1;
-    }
-    .proof-img-card-content .desc {
-      font-size:13px; font-weight:400; color:var(--mute); margin-top:6px;
-    }
-    .proof-metrics-row { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-    .proof-metric {
-      padding:40px 36px;
-      background:var(--card-bg); border:1px solid var(--border-s);
-      transition:border-color .25s, background .25s;
-    }
-    .proof-metric:hover { border-color:var(--border); background:rgba(199,147,61,.025); }
-    .proof-metric .num {
-      font-size:52px; font-weight:500; color:var(--gold);
-      letter-spacing:-.03em; line-height:1; margin-bottom:10px;
-    }
-    .proof-metric .label { font-size:14px; font-weight:400; color:var(--white); margin-bottom:6px; }
-    .proof-metric .desc  { font-size:13px; font-weight:400; color:var(--mute); line-height:1.6; }
-    .proof-trend {
-      display:inline-flex; align-items:center; gap:5px;
-      font-size:11px; font-weight:500; color:#4ade80;
-      background:rgba(74,222,128,.08); padding:4px 10px;
-      border-radius:100px; margin-top:14px;
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(51,149,255,.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(ellipse 85% 85% at 75% 40%, black 20%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 85% 85% at 75% 40%, black 20%, transparent 75%);
+      pointer-events: none;
     }
 
-    /* ── CLIENT WINS ──────────────────────────────── */
-    #wins { background:var(--bg); padding:140px 0; }
-    .wins-header { margin-bottom:64px; }
-    .wins-header h2 {
-      font-size:clamp(36px,4vw,52px); font-weight:500;
-      line-height:1.08; letter-spacing:-.025em; margin-bottom:16px;
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 52px;
+      align-items: start;
+      position: relative; z-index: 1;
     }
-    .wins-header p { font-size:16px; font-weight:400; color:var(--mute); max-width:500px; }
 
-    .wins-grid { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:3px; align-items:stretch; }
+    /* Eyebrow */
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 14px;
+      background: var(--green-dim); border: 1px solid var(--green-border);
+      border-radius: 100px;
+      font-size: 12px; font-weight: 600; letter-spacing: .06em;
+      color: var(--green); text-transform: uppercase; margin-bottom: 22px;
+    }
+    .hero-eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--green); animation: dot-pulse 1.8s infinite; flex-shrink:0; }
 
-    /* Full-bleed image cards */
-    .win-card {
-      position:relative; overflow:hidden; min-height:560px;
-      display:flex; flex-direction:column; cursor:pointer;
-      transition:transform .4s var(--ease);
+    .hero-text h1 {
+      font-size: clamp(28px, 3.8vw, 48px);
+      font-weight: 600;
+      letter-spacing: -.032em;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 20px;
     }
-    .win-card:hover { transform:translateY(-8px); }
-    .win-card-bg {
-      position:absolute; inset:0; z-index:0;
-      background-size:cover; background-position:center;
-      filter:brightness(.2) saturate(.25);
-      transition:transform 9s var(--ease), filter .5s;
+    .hero-text h1 em {
+      font-style: normal;
+      color: var(--blue);
     }
-    .win-card:hover .win-card-bg { transform:scale(1.08); filter:brightness(.28) saturate(.35); }
-    .win-card-grad {
-      position:absolute; inset:0; z-index:1;
-      background:linear-gradient(180deg,
-        rgba(1,5,9,.05) 0%,
-        rgba(1,5,9,.5) 38%,
-        rgba(1,5,9,.97) 100%);
-    }
-    .win-card-shimmer {
-      position:absolute; top:0; left:0; right:0; height:2px; z-index:3;
-      background:linear-gradient(90deg,var(--gold) 0%,rgba(199,147,61,0) 70%);
-      transform:scaleX(0); transform-origin:left;
-      transition:transform .45s var(--ease);
-    }
-    .win-card:hover .win-card-shimmer { transform:scaleX(1); }
-    .win-card-inner {
-      position:relative; z-index:2; padding:28px;
-      display:flex; flex-direction:column; justify-content:space-between;
-      flex:1;
-    }
-    .win-card-top { display:flex; align-items:flex-start; justify-content:space-between; }
-    .win-area-pill {
-      font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
-      color:var(--gold); background:rgba(199,147,61,.14);
-      border:1px solid rgba(199,147,61,.3); border-radius:2px; padding:5px 12px;
-    }
-    .win-card-arrow {
-      width:34px; height:34px; border-radius:50%; border:1px solid rgba(199,147,61,.25);
-      display:flex; align-items:center; justify-content:center; color:var(--gold-dim);
-      transition:background .25s, border-color .25s, transform .3s var(--ease);
-      flex-shrink:0;
-    }
-    .win-card:hover .win-card-arrow { background:var(--gold); color:#000; border-color:var(--gold); transform:rotate(45deg); }
-    .win-card-arrow svg { width:14px; height:14px; }
-    .win-card-bottom { }
-    .win-firm-name { font-size:11px; font-weight:400; color:rgba(181,187,195,.55); text-transform:uppercase; letter-spacing:.09em; margin-bottom:6px; }
-    .win-subtext { font-size:13px; font-weight:400; color:rgba(181,187,195,.45); line-height:1.6; max-width:290px; margin-bottom:22px; }
-    .win-sep { height:1px; background:rgba(199,147,61,.2); margin-bottom:22px; }
-    .win-primary-num { font-size:80px; font-weight:500; color:var(--gold); letter-spacing:-.05em; line-height:1; }
-    .win-primary-lbl { font-size:10px; font-weight:400; color:var(--mute); text-transform:uppercase; letter-spacing:.1em; margin-top:5px; margin-bottom:20px; }
-    .win-sec-row { display:flex; gap:24px; }
-    .win-sec-item .n { font-size:20px; font-weight:500; color:var(--white); letter-spacing:-.02em; line-height:1; }
-    .win-sec-item .l { font-size:10px; font-weight:400; color:var(--mute); margin-top:3px; }
 
-    /* QUOTE strip */
-    .quote-strip { background:var(--bg); padding:100px 0; }
-    .quote-wrap { max-width:900px; margin:0 auto; text-align:center; }
-    .quote-text {
-      font-size:clamp(22px,3vw,34px); font-weight:400;
-      line-height:1.5; letter-spacing:-.01em;
-      color:var(--white); margin-bottom:32px;
+    .hero-body {
+      font-size: 16px; color: var(--text-muted); line-height: 1.75;
+      max-width: 500px; margin-bottom: 32px;
     }
-    .quote-text span { color:var(--gold); }
-    .quote-attr { display:flex; align-items:center; justify-content:center; gap:14px; }
-    .quote-avatar {
-      width:44px; height:44px; border-radius:50%;
-      background:linear-gradient(135deg,var(--gold-dim),var(--gold));
-      display:flex; align-items:center; justify-content:center;
-      font-size:14px; font-weight:500; color:#000;
-    }
-    .quote-attr-text .name  { font-size:14px; font-weight:500; }
-    .quote-attr-text .title { font-size:12px; font-weight:400; color:var(--mute); margin-top:2px; }
 
-    /* ── WHY MOST FAIL ────────────────────────────── */
-    #why-fail { background:var(--bg2); padding:140px 0; }
-    .fail-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:start; }
-    .fail-left h2 { font-size:clamp(36px,4vw,52px); font-weight:500; line-height:1.08; letter-spacing:-.025em; margin-bottom:20px; }
-    .fail-left p  { font-size:16px; font-weight:400; color:var(--mute); line-height:1.75; max-width:400px; margin-bottom:40px; }
+    .hero-ctas { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
 
-    /* split image in left col */
-    .fail-image-wrap { position:relative; border:1px solid var(--border-s); overflow:hidden; }
-    .fail-image-wrap img { width:100%; height:260px; object-fit:cover; filter:brightness(.35) saturate(.5); }
-    .fail-image-overlay {
-      position:absolute; inset:0; padding:28px;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      background:linear-gradient(160deg,transparent 20%,rgba(1,5,9,.88) 100%);
+    /* Trust bar inline */
+    .hero-trust {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
     }
-    .fail-image-kicker {
-      font-size:10px; font-weight:500; letter-spacing:.16em;
-      text-transform:uppercase; color:var(--gold); margin-bottom:8px;
+    .ht-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 12px; font-weight: 500; color: var(--text-muted);
     }
-    .fail-image-caption { font-size:15px; font-weight:400; color:var(--white); line-height:1.5; }
+    .ht-item strong { font-weight: 600; color: var(--navy); }
+    .ht-sep { color: var(--border); font-size: 14px; }
 
-    .fail-items { display:flex; flex-direction:column; gap:2px; }
-    .fail-item {
-      display:grid; grid-template-columns:48px 1fr; gap:20px; align-items:start;
-      padding:28px 28px;
-      background:var(--card-bg); border:1px solid var(--border-s);
-      transition:border-color .25s, background .25s;
+    /* ── Hero Form Card ───────────────────────────────── */
+    .hero-form-wrap { padding-bottom: 0; }
+    .hero-form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      position: relative;
     }
-    .fail-item:hover { border-color:var(--border); background:rgba(199,147,61,.025); }
-    .fail-icon {
-      width:36px; height:36px; border-radius:8px;
-      background:rgba(190,60,60,.1); border:1px solid rgba(190,60,60,.18);
-      display:flex; align-items:center; justify-content:center;
-      color:rgba(220,100,100,.7); flex-shrink:0;
+    .hero-form-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-mid));
     }
-    .fail-icon svg { width:16px; height:16px; }
-    .fail-item-key  { font-size:9px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:5px; }
-    .fail-item h4   { font-size:16px; font-weight:500; margin-bottom:6px; }
-    .fail-item p    { font-size:13px; font-weight:400; color:var(--mute); line-height:1.65; }
+    .hfc-head {
+      padding: 22px 26px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hfc-title { font-size: 16px; font-weight: 600; letter-spacing: -.018em; color: var(--navy); margin-bottom: 2px; }
+    .hfc-sub   { font-size: 13px; color: var(--text-muted); }
+    .hfc-body  { padding: 22px 26px 26px; }
 
-    /* ── FRAMEWORK ────────────────────────────────── */
-    #framework { background:var(--bg2); padding:140px 0; }
-    .fw-header { text-align:center; margin-bottom:100px; }
-    .fw-header h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; line-height:1.08; margin:14px auto 16px; max-width:620px; }
-    .fw-header p  { font-size:16px; font-weight:400; color:var(--mute); max-width:480px; margin:0 auto; }
+    .fgroup  { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+    .flabel  { font-size: 11px; font-weight: 600; color: var(--text-dim); letter-spacing: .04em; text-transform: uppercase; }
+    .finput, .fselect {
+      padding: 10px 13px; border: 1px solid var(--border);
+      border-radius: 9px; font-size: 14px; color: var(--text);
+      font-family: 'Inter', sans-serif; background: var(--white);
+      transition: border-color .15s, box-shadow .15s; outline: none; width: 100%;
+    }
+    .finput:focus, .fselect:focus {
+      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(51,149,255,.1);
+    }
+    .finput::placeholder { color: rgba(96,96,112,.42); }
+    .fselect {
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23606070' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; padding-right: 34px;
+    }
+    .finput-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-    /* Spine + steps */
-    .fw-track { position:relative; padding-top:56px; }
-    .fw-spine {
-      position:absolute; top:27px; left:12.5%; right:12.5%; height:1px; z-index:0;
-      background:linear-gradient(90deg,transparent,rgba(199,147,61,.45) 20%,rgba(199,147,61,.45) 80%,transparent);
+    .fsubmit {
+      width: 100%; padding: 14px; background: var(--blue); color: white;
+      border: none; cursor: pointer; border-radius: 10px; margin-top: 4px;
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
+      transition: all .2s; box-shadow: 0 4px 22px rgba(51,149,255,.4);
     }
-    .fw-steps { display:grid; grid-template-columns:repeat(4,1fr); }
-    .fw-step {
-      position:relative; overflow:hidden; text-align:center;
-      padding:52px 28px 56px;
-      border:1px solid var(--border-s); border-right:none;
-      transition:background .3s, border-color .3s;
-    }
-    .fw-step:last-child { border-right:1px solid var(--border-s); }
-    .fw-step:hover { background:rgba(199,147,61,.03); }
+    .fsubmit:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 10px 32px rgba(51,149,255,.52); }
+    .fform-privacy { text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 10px; }
 
-    /* Spine node dot */
-    .fw-spine-node {
-      position:absolute; top:19px; left:50%; transform:translateX(-50%); z-index:2;
-      width:18px; height:18px; border-radius:50%;
-      border:1px solid rgba(199,147,61,.35); background:var(--bg2);
-      display:flex; align-items:center; justify-content:center;
-      transition:border-color .3s, box-shadow .3s;
+    /* ─────────────────────────────────────────────────────
+       TRUST STRIP FULL
+    ───────────────────────────────────────────────────── */
+    .trust-strip-full {
+      padding: 28px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .fw-node-dot { width:7px; height:7px; border-radius:50%; background:var(--gold); }
-    .fw-step:hover .fw-spine-node { border-color:var(--gold); box-shadow:0 0 20px rgba(199,147,61,.5); }
+    .ts-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0; flex-wrap: wrap;
+    }
+    .ts-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .ts-item:last-child { border-right: none; }
+    .ts-icon { width: 20px; height: 20px; color: var(--blue); flex-shrink: 0; }
+    .ts-text { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .ts-text strong { font-weight: 600; color: var(--navy); }
 
-    /* Giant ghost number as background art */
-    .fw-ghost-num {
-      position:absolute; bottom:-16px; right:-6px; pointer-events:none; user-select:none;
-      font-size:164px; font-weight:500; color:var(--gold);
-      opacity:.04; line-height:1; letter-spacing:-.06em;
-      transition:opacity .3s;
+    /* ─────────────────────────────────────────────────────
+       ROLE CARDS — who it's built for
+    ───────────────────────────────────────────────────── */
+    .roles-section {
+      padding: 88px 0 80px;
+      background: var(--white);
     }
-    .fw-step:hover .fw-ghost-num { opacity:.09; }
+    .section-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 14px;
+    }
+    .section-h2 {
+      font-size: clamp(22px, 2.8vw, 36px);
+      font-weight: 600; letter-spacing: -.025em;
+      color: var(--navy); line-height: 1.2; margin-bottom: 12px;
+    }
+    .section-body {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75; max-width: 520px;
+    }
 
-    /* Step icon */
-    .fw-step-icon {
-      width:44px; height:44px; border-radius:12px;
-      background:rgba(199,147,61,.07); border:1px solid var(--border-s);
-      display:flex; align-items:center; justify-content:center;
-      color:var(--gold); margin:32px auto 18px;
-      transition:background .3s, border-color .3s, box-shadow .3s;
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 52px;
     }
-    .fw-step-icon svg { width:20px; height:20px; }
-    .fw-step:hover .fw-step-icon { background:rgba(199,147,61,.18); border-color:var(--border); box-shadow:0 0 24px rgba(199,147,61,.2); }
+    .role-card {
+      padding: 28px 26px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: all .22s;
+      position: relative; overflow: hidden;
+    }
+    .role-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--blue); opacity: 0; transition: opacity .22s;
+    }
+    .role-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-blue); }
+    .role-card:hover::before { opacity: 1; }
 
-    .fw-step-tag { font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:12px; display:block; }
-    .fw-step h3  { font-size:20px; font-weight:500; margin-bottom:10px; }
-    .fw-step p   { font-size:13px; font-weight:400; color:var(--mute); line-height:1.65; max-width:220px; margin:0 auto; }
+    .role-icon {
+      width: 44px; height: 44px; border-radius: 12px; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border);
+    }
+    .role-icon svg { width: 20px; height: 20px; }
+    .role-card:nth-child(1) .role-icon { background: var(--blue-dim); border-color: var(--border-blue); }
+    .role-card:nth-child(1) .role-icon svg { color: var(--blue); }
+    .role-card:nth-child(2) .role-icon { background: var(--green-dim); border-color: var(--green-border); }
+    .role-card:nth-child(2) .role-icon svg { color: var(--green); }
+    .role-card:nth-child(3) .role-icon { background: rgba(124,58,237,.08); border-color: rgba(124,58,237,.2); }
+    .role-card:nth-child(3) .role-icon svg { color: var(--purple); }
 
-    /* Bottom proof strips */
-    .fw-proof { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:3px; }
-    .fw-proof-item {
-      padding:32px 36px; background:var(--card-bg); border:1px solid var(--border-s);
-      display:flex; align-items:center; gap:20px; transition:border-color .25s, background .25s;
+    .role-label {
+      font-size: 11px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
     }
-    .fw-proof-item:hover { border-color:var(--border); background:rgba(199,147,61,.025); }
-    .fw-proof-icon {
-      width:44px; height:44px; border-radius:12px;
-      background:rgba(199,147,61,.08); border:1px solid var(--border);
-      display:flex; align-items:center; justify-content:center; color:var(--gold); flex-shrink:0;
-    }
-    .fw-proof-icon svg { width:20px; height:20px; }
-    .fw-proof-item h4 { font-size:14px; font-weight:500; margin-bottom:4px; }
-    .fw-proof-item p  { font-size:12px; font-weight:400; color:var(--mute); line-height:1.6; }
+    .role-card h3 { font-size: 16px; font-weight: 600; letter-spacing: -.015em; color: var(--navy); margin-bottom: 10px; line-height: 1.35; }
+    .role-card p  { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
-    /* ── PRACTICE AREAS ───────────────────────────── */
-    #practice { background:var(--bg2); padding:140px 0; }
-    .practice-header { margin-bottom:64px; }
-    .practice-header h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; margin-bottom:16px; }
-    .practice-header p  { font-size:16px; font-weight:400; color:var(--mute); max-width:480px; }
-    .practice-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; }
-    .practice-card {
-      padding:32px 28px 36px;
-      background:var(--card-bg); border:1px solid var(--border-s);
-      transition:border-color .3s, transform .35s var(--ease), background .3s;
-      overflow:hidden;
+    /* ─────────────────────────────────────────────────────
+       OUTCOMES — before/after + charts
+    ───────────────────────────────────────────────────── */
+    .outcomes {
+      padding: 88px 0 80px;
+      background: var(--surface);
     }
-    .practice-card:hover { border-color:var(--border); transform:translateY(-4px); background:rgba(199,147,61,.025); }
-    .practice-icon {
-      width:44px; height:44px; border-radius:10px;
-      background:rgba(199,147,61,.07); border:1px solid var(--border-s);
-      display:flex; align-items:center; justify-content:center;
-      color:var(--gold); margin-bottom:20px;
-      transition:background .3s, border-color .3s;
-    }
-    .practice-icon svg { width:20px; height:20px; }
-    .practice-card:hover .practice-icon { background:rgba(199,147,61,.18); border-color:var(--border); }
-    .practice-card h4 { font-size:15px; font-weight:500; margin-bottom:8px; }
-    .practice-card p  { font-size:13px; font-weight:400; color:var(--mute); line-height:1.65; }
 
-    /* ── MARKET DOMINATION ────────────────────────── */
-    #domination { background:var(--bg); padding:140px 0; }
-    .dom-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:start; }
-    .dom-sticky { position:sticky; top:120px; }
-    .dom-sticky h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; line-height:1.08; margin-bottom:20px; }
-    .dom-sticky p  { font-size:16px; font-weight:400; color:var(--mute); line-height:1.75; margin-bottom:40px; max-width:400px; }
-    .dom-visual {
-      border:1px solid var(--border-s); background:var(--card-bg);
-      padding:40px; text-align:center;
+    .outcome-block {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: start;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
     }
-    .dom-visual-num { font-size:88px; font-weight:500; color:var(--gold); letter-spacing:-.04em; line-height:1; }
-    .dom-visual-sub { font-size:12px; font-weight:400; color:var(--mute); margin-top:10px; letter-spacing:.08em; text-transform:uppercase; }
-    .dom-services { display:flex; flex-direction:column; gap:2px; }
-    .dom-svc {
-      display:grid; grid-template-columns:52px 1fr 32px; gap:20px; align-items:center;
-      padding:28px 28px;
-      background:var(--card-bg); border:1px solid var(--border-s);
-      transition:border-color .25s, background .25s;
-    }
-    .dom-svc:hover { border-color:var(--border); background:rgba(199,147,61,.025); }
-    .dom-svc-num { font-size:12px; font-weight:500; color:var(--gold-dim); font-variant-numeric:tabular-nums; }
-    .dom-svc h4 { font-size:16px; font-weight:500; margin-bottom:5px; }
-    .dom-svc p  { font-size:13px; font-weight:400; color:var(--mute); line-height:1.6; }
-    .dom-svc-icon { color:var(--gold-dim); opacity:0; transform:translateX(-6px); transition:opacity .25s, transform .25s var(--ease); }
-    .dom-svc:hover .dom-svc-icon { opacity:1; transform:none; }
-    .dom-svc-icon svg { width:18px; height:18px; }
+    .outcome-block:last-of-type { border-bottom: none; }
 
-    /* ── COMPARISON ───────────────────────────────── */
-    #compare { background:var(--bg2); padding:140px 0; }
-    .compare-header-section { text-align:center; margin-bottom:64px; }
-    .compare-header-section h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; margin:14px auto 16px; }
-    .compare-header-section p  { font-size:16px; font-weight:400; color:var(--mute); max-width:460px; margin:0 auto; }
-    .compare-wrap { max-width:900px; margin:0 auto; }
-    .compare-cols { display:grid; grid-template-columns:1fr 1fr 1fr; }
-    .compare-col-head {
-      padding:20px 32px;
-      border:1px solid var(--border-s);
-      display:flex; align-items:center; gap:10px;
+    .ob-left {}
+    .ob-metric {
+      display: inline-flex; align-items: baseline; gap: 4px;
+      margin-bottom: 6px;
     }
-    .compare-col-head.ours { background:rgba(199,147,61,.06); border-color:var(--border); }
-    .c-dot { width:7px; height:7px; border-radius:50%; }
-    .c-dot.them { background:rgba(181,187,195,.25); }
-    .c-dot.us   { background:var(--gold); }
-    .compare-col-head span { font-size:12px; font-weight:500; letter-spacing:.04em; }
-    .compare-col-head span.gold { color:var(--gold); }
-    .compare-table { width:100%; border-collapse:collapse; }
-    .compare-table tr:hover td { background:rgba(255,255,255,.015); }
-    .compare-table td {
-      padding:18px 32px; font-size:14px; font-weight:400;
-      border:1px solid var(--border-s);
+    .ob-num {
+      font-size: 42px; font-weight: 600; letter-spacing: -.04em;
+      color: var(--blue); line-height: 1;
     }
-    .compare-table td:nth-child(1) { color:var(--mute); font-size:13px; }
-    .compare-table td:nth-child(2) { color:rgba(181,187,195,.45); }
-    .compare-table td:nth-child(3) { background:rgba(199,147,61,.04); font-weight:500; }
-    .x { color:rgba(181,187,195,.3); }
-    .ck { color:var(--gold); }
+    .ob-sub-label {
+      font-size: 14px; font-weight: 600; color: var(--text-dim);
+      margin-bottom: 20px; letter-spacing: -.01em;
+    }
 
-    /* ── CASE STUDIES ─────────────────────────────── */
-    #cases { background:var(--bg2); padding:140px 0; }
-    .cases-header { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:end; margin-bottom:72px; }
-    .cases-header h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; line-height:1.08; }
-    .cases-header p  { font-size:16px; font-weight:400; color:var(--mute); line-height:1.75; }
-    .cases-list { display:flex; flex-direction:column; gap:3px; }
+    .before-after { display: flex; flex-direction: column; gap: 8px; }
+    .ba-row {
+      border-radius: 10px; padding: 12px 16px;
+    }
+    .ba-row.before { background: rgba(220,38,38,.05); border: 1px solid rgba(220,38,38,.12); }
+    .ba-row.after  { background: var(--green-dim);    border: 1px solid var(--green-border); }
+    .ba-label {
+      font-size: 10px; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; margin-bottom: 5px;
+    }
+    .ba-row.before .ba-label { color: rgba(220,38,38,.7); }
+    .ba-row.after  .ba-label { color: var(--green); }
+    .ba-items {
+      display: flex; flex-wrap: wrap; gap: 5px;
+    }
+    .ba-item {
+      font-size: 12px; font-weight: 500; color: var(--text-dim);
+      background: rgba(255,255,255,.7); border-radius: 5px;
+      padding: 2px 8px; font-family: 'JetBrains Mono', monospace;
+    }
+    .ba-row.before .ba-item { color: rgba(220,38,38,.7); background: rgba(220,38,38,.06); }
+    .ba-row.after  .ba-item { color: var(--green); background: rgba(22,163,74,.08); }
 
-    /* Each case: full-width editorial panel */
-    .case-panel {
-      display:grid; grid-template-columns:380px 1fr;
-      border:1px solid var(--border-s); overflow:hidden;
-      transition:border-color .3s;
-      min-height:340px;
+    /* Charts */
+    .chart-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px;
+      box-shadow: var(--shadow-md);
     }
-    .case-panel:hover { border-color:var(--border); }
+    .chart-title { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+    .chart-legend { display: flex; gap: 16px; margin-top: 14px; }
+    .cl-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); font-weight: 500; }
+    .cl-dot  { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
 
-    /* Left: image + overlay info */
-    .case-panel-img {
-      position:relative; overflow:hidden;
+    /* ─────────────────────────────────────────────────────
+       MID-PAGE CTA BANNER
+    ───────────────────────────────────────────────────── */
+    .mid-cta {
+      padding: 60px 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .case-panel-img img {
-      width:100%; height:100%; object-fit:cover;
-      filter:brightness(.28) saturate(.3);
-      transition:transform 8s var(--ease);
+    .mid-cta-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 32px; flex-wrap: wrap;
     }
-    .case-panel:hover .case-panel-img img { transform:scale(1.06); }
-    .case-panel-img-overlay {
-      position:absolute; inset:0; padding:32px;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      background:linear-gradient(160deg,transparent 0%,rgba(1,5,9,.94) 100%);
+    .mid-cta-text h2 {
+      font-size: clamp(20px, 2.6vw, 30px);
+      font-weight: 600; letter-spacing: -.025em;
+      color: var(--navy); margin-bottom: 6px; line-height: 1.25;
     }
-    .case-panel-area {
-      font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
-      color:var(--gold); background:rgba(199,147,61,.14);
-      border:1px solid rgba(199,147,61,.3); border-radius:2px;
-      padding:5px 12px; display:inline-block; margin-bottom:14px; align-self:flex-start;
-    }
-    .case-panel-title { font-size:21px; font-weight:500; line-height:1.3; margin-bottom:8px; }
-    .case-panel-sub   { font-size:13px; font-weight:400; color:var(--mute); line-height:1.6; }
+    .mid-cta-text p { font-size: 15px; color: var(--text-muted); }
+    .mid-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    /* Right: content + giant stat */
-    .case-panel-right {
-      display:grid; grid-template-columns:1fr 220px;
-      border-left:1px solid var(--border-s);
+    /* ─────────────────────────────────────────────────────
+       FEATURES GRID
+    ───────────────────────────────────────────────────── */
+    .features {
+      padding: 88px 0 80px;
+      background: var(--surface);
     }
-    .case-phases { padding:36px; display:flex; flex-direction:column; gap:20px; border-right:1px solid var(--border-s); }
-    .case-phase-key  { font-size:9px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-dim); margin-bottom:5px; }
-    .case-phase-text { font-size:13px; font-weight:400; color:var(--mute); line-height:1.65; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 52px;
+    }
+    .feat-card {
+      padding: 24px 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      transition: all .22s;
+      position: relative; overflow: hidden;
+    }
+    .feat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-blue); }
 
-    /* Stats: primary stat HUGE, secondary below */
-    .case-stats {
-      padding:36px 28px;
-      display:flex; flex-direction:column; justify-content:center; gap:20px;
-      background:rgba(199,147,61,.025);
+    /* Dot grid overlay */
+    .feat-card::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(51,149,255,.04) 1px, transparent 1px);
+      background-size: 18px 18px; pointer-events: none;
     }
-    .case-stat-primary .num {
-      font-size:72px; font-weight:500; color:var(--gold);
-      letter-spacing:-.04em; line-height:1;
-    }
-    .case-stat-primary .lbl { font-size:10px; font-weight:400; color:var(--mute); text-transform:uppercase; letter-spacing:.1em; margin-top:5px; }
-    .case-stat-divider { height:1px; background:var(--border-s); }
-    .case-stat-item .num { font-size:28px; font-weight:500; color:var(--white); letter-spacing:-.02em; line-height:1; }
-    .case-stat-item .lbl { font-size:10px; font-weight:400; color:var(--mute); margin-top:4px; }
-    .case-bar { margin-top:8px; height:2px; background:rgba(199,147,61,.12); overflow:hidden; }
-    .case-bar-fill { height:100%; background:var(--gold); width:0; transition:width 1.6s var(--ease); }
-    .case-panel.on .case-bar-fill { width:var(--fill); }
 
-    /* ── INSIGHTS ─────────────────────────────────── */
-    #insights { background:var(--bg); padding:140px 0; }
-    .insights-header { margin-bottom:64px; }
-    .insights-header h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; margin-bottom:16px; }
-    .insights-header p  { font-size:16px; font-weight:400; color:var(--mute); max-width:480px; }
+    .feat-icon {
+      width: 44px; height: 44px; border-radius: 12px; margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--blue-dim); border: 1px solid var(--border-blue);
+      position: relative; z-index: 1;
+    }
+    .feat-icon svg { width: 20px; height: 20px; color: var(--blue); }
 
-    /* Magazine grid: featured tall left + 2 stacked right, then 3-col row */
-    .insights-top { display:grid; grid-template-columns:1.4fr 1fr; gap:3px; margin-bottom:3px; }
-    .insights-bottom { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; }
+    .feat-card h3 {
+      font-size: 14px; font-weight: 600; letter-spacing: -.012em;
+      color: var(--navy); margin-bottom: 8px; line-height: 1.35;
+      position: relative; z-index: 1;
+    }
+    .feat-card p {
+      font-size: 12px; color: var(--text-muted); line-height: 1.65;
+      position: relative; z-index: 1;
+    }
+    .feat-kw {
+      display: inline-block; margin-top: 10px;
+      font-size: 10px; font-family: 'JetBrains Mono', monospace;
+      color: var(--blue); background: var(--blue-dim);
+      border: 1px solid var(--border-blue); border-radius: 4px;
+      padding: 2px 7px; position: relative; z-index: 1;
+    }
+    /* 7th card spans 2 cols to fill grid evenly */
+    .feat-card.wide {
+      grid-column: span 2;
+    }
+    .wide-inner {
+      display: flex; align-items: flex-start; gap: 20px;
+    }
 
-    /* Featured card — full image background */
-    .insight-feat {
-      position:relative; overflow:hidden; min-height:520px;
-      display:flex; flex-direction:column; justify-content:flex-end;
-      border:1px solid var(--border-s); cursor:pointer;
-      transition:border-color .3s;
+    /* ─────────────────────────────────────────────────────
+       TESTIMONIALS
+    ───────────────────────────────────────────────────── */
+    .testimonials {
+      padding: 88px 0 80px;
+      background: var(--white);
     }
-    .insight-feat:hover { border-color:var(--border); }
-    .insight-feat-bg {
-      position:absolute; inset:0; z-index:0;
-      background-size:cover; background-position:center;
-      filter:brightness(.22) saturate(.25);
-      transition:transform 9s var(--ease);
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 52px;
     }
-    .insight-feat:hover .insight-feat-bg { transform:scale(1.05); }
-    .insight-feat-overlay {
-      position:absolute; inset:0; z-index:1;
-      background:linear-gradient(180deg,transparent 15%,rgba(1,5,9,.98) 75%);
+    .testi-card {
+      padding: 30px 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      position: relative; overflow: hidden;
+      transition: all .2s;
     }
-    .insight-feat-shimmer {
-      position:absolute; top:0; left:0; right:0; height:2px; z-index:3;
-      background:linear-gradient(90deg,var(--gold),rgba(199,147,61,0));
-      transform:scaleX(0); transform-origin:left;
-      transition:transform .45s var(--ease);
+    .testi-card:hover { box-shadow: var(--shadow-md); border-color: var(--border-blue); }
+    .testi-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-mid));
     }
-    .insight-feat:hover .insight-feat-shimmer { transform:scaleX(1); }
-    .insight-feat-content { position:relative; z-index:2; padding:36px; }
-    .insight-feat-badge {
-      font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
-      color:var(--gold); background:rgba(199,147,61,.14);
-      border:1px solid rgba(199,147,61,.3); border-radius:2px;
-      padding:5px 12px; display:inline-block; margin-bottom:20px;
+    .testi-quote-mark {
+      width: 32px; height: 32px; border-radius: 8px; margin-bottom: 18px;
+      background: var(--blue-dim); border: 1px solid var(--border-blue);
+      display: flex; align-items: center; justify-content: center;
     }
-    .insight-feat h3 { font-size:26px; font-weight:500; line-height:1.3; margin-bottom:14px; }
-    .insight-feat p  { font-size:14px; font-weight:400; color:var(--mute); line-height:1.7; margin-bottom:24px; max-width:440px; }
-    .insight-feat-meta {
-      display:flex; align-items:center; gap:10px;
-      font-size:11px; font-weight:400; color:rgba(181,187,195,.45); margin-bottom:20px;
+    .testi-quote-mark svg { width: 16px; height: 16px; color: var(--blue); }
+    .testi-text {
+      font-size: 15px; color: var(--text-dim); line-height: 1.75;
+      font-style: italic; margin-bottom: 20px;
     }
-    .insight-sep { width:3px; height:3px; border-radius:50%; background:var(--gold-dim); }
+    .testi-author {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .testi-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--blue-dim); border: 1px solid var(--border-blue);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .testi-avatar svg { width: 18px; height: 18px; color: var(--blue); }
+    .testi-name  { font-size: 13px; font-weight: 600; color: var(--navy); }
+    .testi-role  { font-size: 12px; color: var(--text-muted); }
 
-    /* Right stacked pair */
-    .insights-right { display:flex; flex-direction:column; gap:3px; }
+    /* ─────────────────────────────────────────────────────
+       REPEAT CTA
+    ───────────────────────────────────────────────────── */
+    .repeat-cta {
+      padding: 80px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .repeat-cta h2 {
+      font-size: clamp(22px, 3vw, 38px);
+      font-weight: 600; letter-spacing: -.028em;
+      color: var(--navy); margin-bottom: 14px; line-height: 1.2;
+    }
+    .repeat-cta p {
+      font-size: 16px; color: var(--text-muted); line-height: 1.7;
+      max-width: 480px; margin: 0 auto 32px;
+    }
+    .repeat-cta-btns { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
-    /* Standard insight cards */
-    .insight-card {
-      background:var(--card-bg); border:1px solid var(--border-s); padding:32px;
-      transition:border-color .3s, background .3s, transform .35s var(--ease);
-      flex:1;
+    /* ─────────────────────────────────────────────────────
+       FAQ
+    ───────────────────────────────────────────────────── */
+    .faq { padding: 88px 0 80px; background: var(--white); }
+    .faq-list {
+      max-width: 760px; margin: 52px auto 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: var(--shadow-md);
     }
-    .insight-card:hover { border-color:var(--border); background:rgba(199,147,61,.025); transform:translateY(-3px); }
-    .insight-type { font-size:9px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:block; }
-    .insight-card h3 { font-size:16px; font-weight:500; line-height:1.4; margin-bottom:10px; }
-    .insight-card p  { font-size:13px; font-weight:400; color:var(--mute); line-height:1.65; }
-    .insight-link {
-      display:inline-flex; align-items:center; gap:6px;
-      font-size:12px; font-weight:500; color:var(--gold); margin-top:18px;
-      transition:gap .2s;
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      width: 100%; text-align: left; padding: 20px 24px;
+      background: var(--white); border: none; cursor: pointer;
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 14px; font-weight: 600; color: var(--navy);
+      font-family: 'Inter', sans-serif; transition: background .15s; line-height: 1.5;
     }
-    .insight-link:hover { gap:10px; }
-    .insight-link svg { width:14px; height:14px; }
+    .faq-q:hover { background: var(--surface); }
+    .faq-q.open  { background: rgba(204,229,255,.18); color: var(--blue); }
+    .faq-q-txt   { flex: 1; }
+    .faq-icon {
+      width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--text-muted); transition: all .2s;
+      margin-top: 1px;
+    }
+    .faq-q.open .faq-icon { border-color: var(--border-blue); background: var(--blue-dim); color: var(--blue); transform: rotate(45deg); }
+    .faq-a { overflow: hidden; max-height: 0; transition: max-height .35s ease; }
+    .faq-a.open { max-height: 400px; }
+    .faq-a-inner {
+      padding: 0 24px 20px 36px;
+      font-size: 14px; color: var(--text-muted); line-height: 1.75;
+      background: rgba(204,229,255,.08);
+    }
+    .faq-a-inner a { color: var(--blue); text-decoration: none; font-weight: 600; }
+    .faq-a-inner a:hover { text-decoration: underline; }
 
-    /* ── TEAM ─────────────────────────────────────── */
-    #team { background:var(--bg); padding:140px 0; }
-    .team-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-    .team-left h2 { font-size:clamp(36px,4vw,52px); font-weight:500; letter-spacing:-.025em; line-height:1.08; margin-bottom:20px; }
-    .team-left p  { font-size:16px; font-weight:400; color:var(--mute); line-height:1.75; margin-bottom:36px; max-width:420px; }
-    .team-creds { display:flex; flex-direction:column; gap:12px; margin-bottom:44px; }
-    .team-cred  { display:flex; align-items:center; gap:14px; font-size:14px; font-weight:400; color:var(--mute); }
-    .team-cred-line { flex-shrink:0; width:22px; height:1px; background:var(--gold); }
-    .team-stats { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
-    .team-stat {
-      background:rgba(199,147,61,.06); border:1px solid var(--border);
-      padding:24px 28px; text-align:center;
-    }
-    .team-stat .num { font-size:36px; font-weight:500; color:var(--gold); }
-    .team-stat .lbl { font-size:11px; font-weight:400; color:var(--mute); margin-top:4px; }
+    /* ─────────────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────────────── */
+    footer { padding: 36px 0; background: var(--surface); border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; color: var(--text-muted); text-decoration: none; }
+    .footer-logo-mark { width: 26px; height: 26px; border-radius: 7px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 11px; color: white; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--navy); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
 
-    /* team image + cards on right */
-    .team-right {}
-    .team-photo-wrap {
-      position:relative; overflow:hidden;
-      border:1px solid var(--border-s); margin-bottom:2px;
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 1000px) {
+      .hero-layout    { grid-template-columns: 1fr; }
+      .hero-body      { max-width: 100%; }
+      .features-grid  { grid-template-columns: repeat(2,1fr); }
+      .feat-card.wide { grid-column: span 2; }
     }
-    .team-photo-wrap img { width:100%; height:260px; object-fit:cover; filter:brightness(.4) saturate(.55); }
-    .team-photo-overlay {
-      position:absolute; inset:0; padding:28px;
-      display:flex; align-items:flex-end;
-      background:linear-gradient(160deg,transparent 20%,rgba(1,5,9,.85) 100%);
+    @media (max-width: 768px) {
+      .roles-grid, .testi-grid, .outcome-block { grid-template-columns: 1fr; }
+      .mid-cta-inner  { flex-direction: column; align-items: flex-start; }
+      .ts-item        { padding: 8px 16px; }
     }
-    .team-photo-caption { font-size:13px; font-weight:400; color:var(--mute); line-height:1.55; max-width:340px; }
-    .team-photo-caption span { color:var(--white); font-weight:500; }
-
-    .team-cards { display:flex; flex-direction:column; gap:2px; }
-    .team-card {
-      display:grid; grid-template-columns:60px 1fr; gap:20px; align-items:center;
-      padding:22px 28px;
-      background:var(--card-bg); border:1px solid var(--border-s);
-      transition:border-color .25s;
-    }
-    .team-card:hover { border-color:var(--border); }
-    .team-avatar {
-      width:48px; height:48px; border-radius:50%;
-      background:linear-gradient(135deg,var(--gold-dim),var(--gold));
-      display:flex; align-items:center; justify-content:center;
-      font-size:15px; font-weight:500; color:#000;
-    }
-    .team-name { font-size:15px; font-weight:500; margin-bottom:3px; }
-    .team-role { font-size:12px; font-weight:400; color:var(--gold); margin-bottom:3px; }
-    .team-exp  { font-size:12px; font-weight:400; color:var(--mute); }
-
-    /* ── CTA ──────────────────────────────────────── */
-    #cta { background:var(--bg2); padding:160px 0; }
-    .cta-glow {
-      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-      width:700px; height:340px; pointer-events:none; z-index:0;
-      background:radial-gradient(ellipse,rgba(199,147,61,.1) 0%,transparent 70%);
-    }
-    .cta-inner { max-width:860px; margin:0 auto; text-align:center; }
-    .cta-inner .eyebrow { margin-bottom:32px; }
-    .cta-inner h2 {
-      font-size:clamp(38px,5vw,68px); font-weight:500;
-      letter-spacing:-.035em; line-height:1.06; margin-bottom:20px;
-    }
-    .cta-inner p { font-size:17px; font-weight:400; color:var(--mute); line-height:1.75; max-width:540px; margin:0 auto 52px; }
-    .cta-form { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:20px; }
-    .cta-input, .cta-select {
-      background:rgba(255,255,255,.03); border:1px solid var(--border-s);
-      color:var(--white); font-family:'Satoshi',sans-serif;
-      font-size:14px; font-weight:400; padding:16px 20px; outline:none;
-      transition:border-color .25s;
-    }
-    .cta-input::placeholder { color:rgba(181,187,195,.45); }
-    .cta-input:focus, .cta-select:focus { border-color:var(--gold); }
-    .cta-select { appearance:none; background-image:none; }
-    .cta-select option { background:var(--bg); }
-    .cta-submit-row { grid-column:1/-1; }
-    .cta-submit {
-      width:100%; background:var(--gold); color:#060c10;
-      font-family:'Satoshi',sans-serif; font-size:14px; font-weight:500;
-      padding:18px; border:none; cursor:pointer; letter-spacing:.02em;
-      transition:background .2s, box-shadow .25s;
-    }
-    .cta-submit:hover { background:#d6a048; box-shadow:0 0 48px rgba(199,147,61,.3); }
-    .cta-offers { display:flex; align-items:center; justify-content:center; gap:28px; flex-wrap:wrap; }
-    .cta-offer  { display:flex; align-items:center; gap:8px; font-size:12px; font-weight:400; color:var(--mute); }
-    .cta-offer-dot { width:5px; height:5px; border-radius:50%; background:var(--gold); flex-shrink:0; }
-
-    /* ── FOOTER ───────────────────────────────────── */
-    footer { background:var(--bg2); border-top:1px solid var(--border-s); padding:80px 0 44px; }
-    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:56px; }
-    .footer-logo { font-size:18px; font-weight:500; letter-spacing:.05em; margin-bottom:14px; }
-    .footer-brand p { font-size:13px; font-weight:400; color:var(--mute); line-height:1.7; max-width:260px; }
-    .footer-col h5 {
-      font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
-      color:var(--gold-dim); margin-bottom:20px;
-    }
-    .footer-col ul { display:flex; flex-direction:column; gap:10px; }
-    .footer-col a  { font-size:13px; font-weight:400; color:var(--mute); transition:color .2s; }
-    .footer-col a:hover { color:var(--white); }
-    .footer-bottom {
-      display:flex; align-items:center; justify-content:space-between;
-      padding-top:28px; border-top:1px solid var(--border-s);
-      font-size:12px; font-weight:400; color:rgba(181,187,195,.35);
-    }
-    .footer-bottom a { color:rgba(181,187,195,.35); transition:color .2s; }
-    .footer-bottom a:hover { color:var(--mute); }
-
-    /* scrollbar */
-    ::-webkit-scrollbar { width:3px; }
-    ::-webkit-scrollbar-track { background:var(--bg); }
-    ::-webkit-scrollbar-thumb { background:var(--gold-dim); }
-
-    /* ── RESPONSIVE ───────────────────────────────── */
-    @media (max-width:1024px) {
-      .hero-grid,
-      .proof-header,
-      .fail-grid,
-      .dom-grid,
-      .team-grid,
-      .cases-header { grid-template-columns:1fr; gap:48px; }
-      .dom-sticky { position:static; }
-      .wins-grid { grid-template-columns:1fr 1fr; }
-      .practice-grid { grid-template-columns:repeat(2,1fr); }
-      .fw-grid { grid-template-columns:1fr 1fr; }
-      .fw-bottom { grid-template-columns:1fr; }
-      .insights-grid { grid-template-columns:1fr; }
-      .insights-grid .ins-col { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
-      .case-row { grid-template-columns:1fr; }
-      .case-img-col { min-height:200px; }
-      .case-content-col,
-      .case-stats-col { border-left:none; border-top:1px solid var(--border-s); }
-      .footer-top { grid-template-columns:1fr 1fr; gap:40px; }
-      .proof-img-row { grid-template-columns:1fr; }
-    }
-    @media (max-width:640px) {
-      .container { padding:0 24px; }
-      section,#proof,#wins,#why-fail,#framework,#practice,#domination,#compare,#cases,#insights,#team,#cta { padding:80px 0; }
-      .wins-grid,
-      .practice-grid,
-      .proof-metrics-row,
-      .compare-cols,
-      .fw-grid { grid-template-columns:1fr; }
-      .proof-strip-inner { grid-template-columns:1fr 1fr; }
-      .proof-strip-item:nth-child(5) { grid-column:1/-1; }
-      .cta-form { grid-template-columns:1fr; }
-      .footer-top { grid-template-columns:1fr; }
-      .hero-img-wrap { display:none; }
+    @media (max-width: 560px) {
+      .features-grid  { grid-template-columns: 1fr; }
+      .feat-card.wide { grid-column: span 1; }
+      .finput-row     { grid-template-columns: 1fr; }
+      .ts-row         { flex-direction: column; align-items: flex-start; gap: 0; }
+      .ts-item        { border-right: none; border-bottom: 1px solid var(--border); width: 100%; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────── -->
-<nav id="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <div class="nav-logo">PRO</div>
-      <ul class="nav-links">
-        <li><a href="#proof">Results</a></li>
-        <li><a href="#framework">Process</a></li>
-        <li><a href="#practice">Practice Areas</a></li>
-        <li><a href="#cases">Case Studies</a></li>
-        <li><a href="#cta">Pricing</a></li>
-      </ul>
-      <button class="btn-gold" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Book Strategy Call</button>
+<!-- ── Minimal nav (landing page — no distracting links) ───── -->
+<nav id="top-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">A</div>
+      <span class="nav-logo-text">AltimaCRM</span>
+    </a>
+    <div class="nav-right">
+      <a href="tel:+97100000000" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a2 2 0 0 1 1.72-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call us
+      </a>
+      <a href="#hero-form" class="btn-primary" style="padding:9px 20px;font-size:14px;">Book a Demo →</a>
     </div>
   </div>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────── -->
-<section class="hero" id="hero">
+<!-- ─────────────────────────────────────────────────────────
+     HERO
+───────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
   <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-eyebrow r"><span class="eyebrow">SEO for Law Firms</span></div>
-        <h1 class="hero-h1 r" style="transition-delay:.08s">
-          <em>Get High-Value</em><br>Cases From Google
+    <div class="hero-layout">
+
+      <div class="hero-text">
+        <div class="hero-eyebrow animate d1">Most Trusted Forex CRM in UAE</div>
+
+        <h1 class="animate d2">
+          Reduce Churns by upto 70% with<br />
+          <em>AltimaCRM</em>, Built for Forex
         </h1>
-        <p class="hero-sub r" style="transition-delay:.16s">
-          We engineer topical authority systems, AI search visibility, and organic growth engines that transform search traffic into high-value pipeline.
+
+        <p class="hero-body animate d3">
+          The Best Forex CRM software that connects your sales team, retention team, compliance, and finance on one platform, so nothing leaks, nobody waits, and your management team sees everything in real time.
         </p>
-        <div class="hero-actions r" style="transition-delay:.24s">
-          <button class="btn-gold" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Book Strategy Call</button>
-          <button class="btn-ghost" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">Read Case Studies</button>
+
+        <div class="hero-ctas animate d4">
+          <a href="#hero-form" class="btn-primary">Book a Demo →</a>
+          <a href="#features" class="btn-ghost">See AltimaCRM in Action</a>
+        </div>
+
+        <div class="hero-trust animate d5">
+          <div class="ht-item"><strong>50+</strong> brokerages</div>
+          <span class="ht-sep">·</span>
+          <div class="ht-item"><strong>1.2M</strong> leads managed</div>
+          <span class="ht-sep">·</span>
+          <div class="ht-item"><strong>45,000</strong> daily active users</div>
+          <span class="ht-sep">·</span>
+          <div class="ht-item"><strong>18 years</strong> in fintech</div>
         </div>
       </div>
-      <div class="hero-img-wrap rr" style="transition-delay:.12s">
-        <img
-          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80"
-          alt="Legal scales of justice"
-          loading="eager"
-        />
-        <div class="hero-img-overlay"></div>
-        <div class="hero-img-badge">
-          <div class="hero-badge-stat">
-            <div class="num">$240M+</div>
-            <div class="lbl">Revenue Generated</div>
+
+      <!-- Lead capture form -->
+      <div class="hero-form-wrap animate d3" id="hero-form">
+        <div class="hero-form-card">
+          <div class="hfc-head">
+            <div class="hfc-title">Book a Demo</div>
+            <div class="hfc-sub">See AltimaCRM in Action — 30 min, tailored to your brokerage.</div>
           </div>
-          <div class="hero-badge-div"></div>
-          <div class="hero-badge-stat">
-            <div class="num">2,400+</div>
-            <div class="lbl">Cases Signed</div>
-          </div>
-          <div class="hero-badge-div"></div>
-          <div class="hero-badge-stat">
-            <div class="num">387%</div>
-            <div class="lbl">Avg Lead Growth</div>
+          <div class="hfc-body">
+            <form onsubmit="return false;">
+              <div class="finput-row">
+                <div class="fgroup">
+                  <label class="flabel">Full Name</label>
+                  <input class="finput" type="text" placeholder="James K." />
+                </div>
+                <div class="fgroup">
+                  <label class="flabel">Brokerage Name</label>
+                  <input class="finput" type="text" placeholder="Global FX Capital" />
+                </div>
+              </div>
+
+              <div class="fgroup">
+                <label class="flabel">Work Email</label>
+                <input class="finput" type="email" placeholder="james@brokerage.com" />
+              </div>
+
+              <div class="fgroup">
+                <label class="flabel">Size of Brokerage</label>
+                <select class="fselect">
+                  <option value="" disabled selected>Select size</option>
+                  <option>Under 500 clients</option>
+                  <option>500 – 2,000 clients</option>
+                  <option>2,000 – 10,000 clients</option>
+                  <option>10,000 – 50,000 clients</option>
+                  <option>50,000+ clients</option>
+                </select>
+              </div>
+
+              <div class="fgroup">
+                <label class="flabel">Phone / WhatsApp</label>
+                <input class="finput" type="tel" placeholder="+971 50 000 0000" />
+              </div>
+
+              <button class="fsubmit" type="submit">Submit</button>
+              <p class="fform-privacy">We respond within 4 business hours · No commitment required</p>
+            </form>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── SOCIAL PROOF STRIP ────────────────────── -->
-<div class="proof-strip">
-  <div class="container" style="padding:0 48px;">
-    <div class="proof-strip-inner">
-      <div class="proof-strip-item r">
-        <div class="proof-strip-num" data-count="2400" data-suffix="+">2,400+</div>
-        <div class="proof-strip-lbl">Cases Generated</div>
+<!-- ── Trust strip ──────────────────────────────────────────── -->
+<div class="trust-strip-full">
+  <div class="container">
+    <div class="ts-row">
+      <div class="ts-item">
+        <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span class="ts-text">Trusted by <strong>50+ brokerage brands</strong></span>
       </div>
-      <div class="proof-strip-item r" style="transition-delay:.07s">
-        <div class="proof-strip-num" data-prefix="$" data-count="240" data-suffix="M+">$240M+</div>
-        <div class="proof-strip-lbl">Revenue Influenced</div>
+      <div class="ts-item">
+        <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="ts-text"><strong>1.2M leads</strong> managed</span>
       </div>
-      <div class="proof-strip-item r" style="transition-delay:.14s">
-        <div class="proof-strip-num" data-count="387" data-suffix="%">387%</div>
-        <div class="proof-strip-lbl">Avg. Lead Growth</div>
+      <div class="ts-item">
+        <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="ts-text"><strong>45,000 daily active</strong> users</span>
       </div>
-      <div class="proof-strip-item r" style="transition-delay:.21s">
-        <div class="proof-strip-num" data-count="47">47</div>
-        <div class="proof-strip-lbl">Markets Dominated</div>
-      </div>
-      <div class="proof-strip-item r" style="transition-delay:.28s">
-        <div class="proof-strip-num" data-count="94" data-suffix="%">94%</div>
-        <div class="proof-strip-lbl">Reach Page One</div>
+      <div class="ts-item">
+        <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="ts-text"><strong>18 years</strong> in fintech</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── PROOF OF PERFORMANCE ──────────────────── -->
-<section id="proof">
+<!-- ─────────────────────────────────────────────────────────
+     ROLES — who it's for
+───────────────────────────────────────────────────────── -->
+<section class="roles-section">
   <div class="container">
-    <div class="proof-header">
-      <div class="rl">
-        <div class="section-label">Proof of Performance</div>
-        <h2>Measured in cases,<br><span class="gold">not clicks</span></h2>
-      </div>
-      <p class="rr" style="transition-delay:.1s;font-size:16px;color:var(--mute);line-height:1.75;">
-        Every metric we report traces directly to attorney business outcomes — signed retainers, consultation bookings, and revenue generated. Not impressions. Not traffic. Cases.
-      </p>
+    <div class="reveal">
+      <div class="section-eyebrow">CRM Software</div>
+      <h2 class="section-h2">Built for Forex Brokerages in UAE</h2>
     </div>
+    <div class="roles-grid reveal">
 
-    <!-- Image cards row -->
-    <div class="proof-img-row">
-      <div class="proof-img-card r">
-        <img
-          src="https://images.unsplash.com/photo-1505664194779-8beaceb5903f?auto=format&fit=crop&w=1200&q=80"
-          alt="Courthouse exterior"
-        />
-        <div class="proof-img-card-content">
-          <div class="big" data-count="142">142</div>
-          <div class="desc">Signed cases attributed to organic search — single client, 18-month period</div>
+      <div class="role-card">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/><path d="M12 12v9"/><path d="M9 15l3-3 3 3"/></svg>
         </div>
+        <div class="role-label">For the CEO</div>
+        <h3>For the CEO</h3>
+        <p>Growing the book while managing churn is hard when performance data lives across three departments. AltimaCRM gives leadership one number, updated in real time.</p>
       </div>
-      <div class="proof-img-card r" style="transition-delay:.1s">
-        <img
-          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
-          alt="Attorney signing documents"
-        />
-        <div class="proof-img-card-content">
-          <div class="big">4.2×</div>
-          <div class="desc">Average ROI on SEO investment across active client portfolio</div>
+
+      <div class="role-card">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
+        <div class="role-label">For the Head of Sales</div>
+        <h3>For the Head of Sales</h3>
+        <p>Leads fall through the cracks when follow-ups are manual. AltimaCRM tracks every lead, automates every touchpoint, and keeps the full pipeline visible in one place.</p>
       </div>
-    </div>
 
-    <!-- Metrics row -->
-    <div class="proof-metrics-row">
-      <div class="proof-metric r">
-        <div class="proof-trend">↑ 142% YoY</div>
-        <div class="num" data-count="2400" data-suffix="+" style="margin-top:12px;">2,400+</div>
-        <div class="label">Cases Generated</div>
-        <div class="desc">Signed retainers across the entire client portfolio, directly attributed to organic search visibility.</div>
-      </div>
-      <div class="proof-metric r" style="transition-delay:.1s">
-        <div class="proof-trend">↑ 89% YoY</div>
-        <div class="num" data-prefix="$" data-count="240" data-suffix="M+" style="margin-top:12px;">$240M+</div>
-        <div class="label">Revenue Influenced</div>
-        <div class="desc">Total case value influenced by organic search — tracked through intake to close.</div>
-      </div>
-      <div class="proof-metric r" style="transition-delay:.2s">
-        <div class="proof-trend">↑ Consistent</div>
-        <div class="num" data-count="387" data-suffix="%" style="margin-top:12px;">387%</div>
-        <div class="label">Average Lead Growth</div>
-        <div class="desc">Consultation requests in the first 12 months of a full engagement — across all practice areas.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CLIENT WINS ────────────────────────────── -->
-<section id="wins">
-  <div class="container">
-    <div class="wins-header r">
-      <div class="section-label">Featured Client Wins</div>
-      <h2>Real firms. <span class="gold">Documented results.</span></h2>
-      <p>Every number below is verified and attributed directly to organic search — no blended metrics, no paid traffic credit.</p>
-    </div>
-    <div class="wins-grid">
-
-      <!-- Card 1 — wider featured -->
-      <div class="win-card r">
-        <div class="win-card-bg" style="background-image:url('https://images.unsplash.com/photo-1479267658415-ff274a213280?auto=format&fit=crop&w=900&q=80')"></div>
-        <div class="win-card-grad"></div>
-        <div class="win-card-shimmer"></div>
-        <div class="win-card-inner">
-          <div class="win-card-top">
-            <div class="win-area-pill">Personal Injury</div>
-            <div class="win-card-arrow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </div>
-          </div>
-          <div class="win-card-bottom">
-            <div class="win-firm-name">Dallas Trial Attorneys · Texas</div>
-            <div class="win-subtext">Page 4, $0 organic leads, losing to Morgan &amp; Morgan daily. Needed a dominance play, not a tweak.</div>
-            <div class="win-sep"></div>
-            <div class="win-primary-num">+387%</div>
-            <div class="win-primary-lbl">Organic lead growth</div>
-            <div class="win-sec-row">
-              <div class="win-sec-item"><div class="n">142</div><div class="l">Signed cases</div></div>
-              <div class="win-sec-item"><div class="n">18mo</div><div class="l">Full dominance</div></div>
-              <div class="win-sec-item"><div class="n">31</div><div class="l">Page-1 keywords</div></div>
-            </div>
-          </div>
+      <div class="role-card">
+        <div class="role-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="win-card r" style="transition-delay:.1s">
-        <div class="win-card-bg" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=700&q=80')"></div>
-        <div class="win-card-grad"></div>
-        <div class="win-card-shimmer"></div>
-        <div class="win-card-inner">
-          <div class="win-card-top">
-            <div class="win-area-pill">Criminal Defense</div>
-            <div class="win-card-arrow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </div>
-          </div>
-          <div class="win-card-bottom">
-            <div class="win-firm-name">Miami Criminal Defense Group · FL</div>
-            <div class="win-subtext">$22K/month PPC dependency. Paying $340 per click with zero organic infrastructure.</div>
-            <div class="win-sep"></div>
-            <div class="win-primary-num">+291%</div>
-            <div class="win-primary-lbl">Consultation requests</div>
-            <div class="win-sec-row">
-              <div class="win-sec-item"><div class="n">$18K</div><div class="l">Ad spend cut</div></div>
-              <div class="win-sec-item"><div class="n">4.2×</div><div class="l">SEO ROI</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="win-card r" style="transition-delay:.2s">
-        <div class="win-card-bg" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80')"></div>
-        <div class="win-card-grad"></div>
-        <div class="win-card-shimmer"></div>
-        <div class="win-card-inner">
-          <div class="win-card-top">
-            <div class="win-area-pill">Immigration</div>
-            <div class="win-card-arrow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </div>
-          </div>
-          <div class="win-card-bottom">
-            <div class="win-firm-name">New York Immigration Firm · NY</div>
-            <div class="win-subtext">Multilingual audience, fragmented intent. Generic agency had no legal search expertise.</div>
-            <div class="win-sep"></div>
-            <div class="win-primary-num">+512%</div>
-            <div class="win-primary-lbl">Organic traffic growth</div>
-            <div class="win-sec-row">
-              <div class="win-sec-item"><div class="n">3.2×</div><div class="l">Revenue growth</div></div>
-              <div class="win-sec-item"><div class="n">24mo</div><div class="l">Timeline</div></div>
-            </div>
-          </div>
-        </div>
+        <div class="role-label">For the Operations Lead</div>
+        <h3>For the Operations Lead</h3>
+        <p>Manual IB calculations, compliance gaps, audit trails scattered across inboxes, AltimaCRM replaces all of it with one connected back office.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── QUOTE STRIP ────────────────────────────── -->
-<div class="quote-strip">
+<!-- ─────────────────────────────────────────────────────────
+     BROKER OUTCOMES
+───────────────────────────────────────────────────────── -->
+<section class="outcomes" id="outcomes">
   <div class="container">
-    <div class="quote-wrap r">
-      <div class="quote-text">
-        "Within 14 months, PRO turned our website from a digital brochure into our <span>most effective business development tool</span> — surpassing our entire referral network."
-      </div>
-      <div class="quote-attr">
-        <div class="quote-avatar">MR</div>
-        <div class="quote-attr-text">
-          <div class="name">Michael R. Thornton</div>
-          <div class="title">Managing Partner — Thornton &amp; Associates, Personal Injury</div>
-        </div>
-      </div>
+    <div class="reveal" style="margin-bottom:8px;">
+      <div class="section-eyebrow">Broker outcomes</div>
+      <h2 class="section-h2">What changes when brokers switch to AltimaCRM</h2>
     </div>
-  </div>
-</div>
 
-<!-- ── WHY MOST FAIL ──────────────────────────── -->
-<section id="why-fail">
-  <div class="container">
-    <div class="fail-grid">
-      <div>
-        <div class="section-label rl">Why Most Law Firm Marketing Fails</div>
-        <h2 class="rl" style="transition-delay:.08s">The industry is broken.<br><span class="gold">Here's why.</span></h2>
-        <p class="rl" style="transition-delay:.16s">
-          Most agencies optimizing for law firms have never read a case brief. They chase rankings while your competitors are signing cases. The pattern repeats at every firm that comes to us.
-        </p>
-        <div class="fail-image-wrap rl" style="transition-delay:.24s">
-          <img
-            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
-            alt="Generic marketing vs legal-specific strategy"
-          />
-          <div class="fail-image-overlay">
-            <div class="fail-image-kicker">The Core Problem</div>
-            <div class="fail-image-caption">
-              <span>Generic SEO is a liability for law firms.</span> The strategies that work for e-commerce actively harm legal search authority.
+    <!-- Outcome 1 -->
+    <div class="outcome-block reveal">
+      <div class="ob-left">
+        <div class="ob-metric">
+          <span class="ob-num">+25%</span>
+        </div>
+        <div class="ob-sub-label">Sales conversion</div>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px;line-height:1.65;">Average improvement in lead-to-client conversion rate</p>
+        <div class="before-after">
+          <div class="ba-row before">
+            <div class="ba-label">Before</div>
+            <div class="ba-items">
+              <span class="ba-item">Manual follow-ups</span>
+              <span class="ba-item">Leads going cold</span>
+              <span class="ba-item">No pipeline visibility</span>
+            </div>
+          </div>
+          <div class="ba-row after">
+            <div class="ba-label">After</div>
+            <div class="ba-items">
+              <span class="ba-item">Automated sequences</span>
+              <span class="ba-item">Prioritised queues</span>
+              <span class="ba-item">Real-time dashboard</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="fail-items">
-        <div class="fail-item r" style="transition-delay:.1s">
-          <div class="fail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/>
-            </svg>
+      <div class="chart-card">
+        <div class="chart-title">Lead-to-client conversion rate</div>
+        <svg viewBox="0 0 420 200" width="100%" style="display:block;">
+          <!-- Grid lines -->
+          <line x1="40" y1="10" x2="40" y2="165" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="40" y1="10" x2="400" y2="10" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="40" y1="42" x2="400" y2="42" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="40" y1="75" x2="400" y2="75" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="40" y1="107" x2="400" y2="107" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="40" y1="140" x2="400" y2="140" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="40" y1="165" x2="400" y2="165" stroke="rgba(4,7,27,.08)" stroke-width="1"/>
+          <!-- Y labels -->
+          <text x="32" y="13"  text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">30%</text>
+          <text x="32" y="46"  text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">25%</text>
+          <text x="32" y="78"  text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">20%</text>
+          <text x="32" y="110" text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">15%</text>
+          <text x="32" y="143" text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">10%</text>
+          <!-- Month 1 -->
+          <rect x="60"  y="121" width="24" height="44" fill="rgba(4,7,27,.1)" rx="3"/>
+          <rect x="87"  y="109" width="24" height="56" fill="#3395FF" rx="3" opacity=".85"/>
+          <!-- Month 2 -->
+          <rect x="153" y="107" width="24" height="58" fill="rgba(4,7,27,.1)" rx="3"/>
+          <rect x="180" y="80"  width="24" height="85" fill="#3395FF" rx="3" opacity=".85"/>
+          <!-- Month 3 -->
+          <rect x="245" y="88"  width="24" height="77" fill="rgba(4,7,27,.1)" rx="3"/>
+          <rect x="272" y="52"  width="24" height="113" fill="#3395FF" rx="3" opacity=".85"/>
+          <!-- Month 4 — highlight -->
+          <rect x="335" y="109" width="24" height="56" fill="rgba(4,7,27,.1)" rx="3"/>
+          <rect x="362" y="23"  width="24" height="142" fill="#3395FF" rx="3"/>
+          <!-- Month 4 tooltip -->
+          <rect x="295" y="6" width="110" height="38" rx="6" fill="#04071B"/>
+          <text x="350" y="20" text-anchor="middle" font-size="9" fill="white" font-family="JetBrains Mono,monospace" font-weight="500">Month 4</text>
+          <rect x="302" y="25" width="8" height="8" rx="2" fill="rgba(4,7,27,.4)"/>
+          <text x="314" y="33" font-size="8" fill="rgba(255,255,255,.6)" font-family="JetBrains Mono,monospace">Without AltimaCRM: 10</text>
+          <rect x="302" y="35" width="8" height="8" rx="2" fill="#3395FF"/>
+          <!-- X labels -->
+          <text x="83"  y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Month 1</text>
+          <text x="178" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Month 2</text>
+          <text x="272" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Month 3</text>
+          <text x="365" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Month 4</text>
+        </svg>
+        <div class="chart-legend">
+          <div class="cl-item"><div class="cl-dot" style="background:rgba(4,7,27,.18)"></div>Without AltimaCRM</div>
+          <div class="cl-item"><div class="cl-dot" style="background:#3395FF"></div>With AltimaCRM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outcome 2 -->
+    <div class="outcome-block reveal">
+      <div class="ob-left">
+        <div class="ob-metric">
+          <span class="ob-num">−60%</span>
+        </div>
+        <div class="ob-sub-label">Onboarding speed</div>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px;line-height:1.65;">Reduction in client onboarding time</p>
+        <div class="before-after">
+          <div class="ba-row before">
+            <div class="ba-label">Before</div>
+            <div class="ba-items">
+              <span class="ba-item">5–7 days avg</span>
+              <span class="ba-item">Manual doc chase</span>
+              <span class="ba-item">Compliance bottleneck</span>
+            </div>
+          </div>
+          <div class="ba-row after">
+            <div class="ba-label">After</div>
+            <div class="ba-items">
+              <span class="ba-item">Under 48 hrs</span>
+              <span class="ba-item">Automated KYC</span>
+              <span class="ba-item">Audit-ready by default</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Onboarding time by stage (days)</div>
+        <svg viewBox="0 0 420 200" width="100%" style="display:block;">
+          <!-- Background rows -->
+          <rect x="100" y="10"  width="300" height="36" rx="3" fill="rgba(4,7,27,.02)"/>
+          <rect x="100" y="56"  width="300" height="36" rx="3" fill="rgba(4,7,27,.02)"/>
+          <rect x="100" y="102" width="300" height="36" rx="3" fill="rgba(4,7,27,.02)"/>
+          <rect x="100" y="148" width="300" height="36" rx="3" fill="rgba(4,7,27,.02)"/>
+          <!-- Stage labels -->
+          <text x="94" y="32"  text-anchor="end" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Doc collection</text>
+          <text x="94" y="78"  text-anchor="end" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">KYC review</text>
+          <text x="94" y="124" text-anchor="end" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Compliance sign-off</text>
+          <text x="94" y="170" text-anchor="end" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Account activation</text>
+          <!-- X axis scale: 0d to 2d = 300px wide, 150px/day -->
+          <!-- Doc collection: manual 1.5d, altima 0.4d -->
+          <rect x="100" y="14"  width="225" height="13" rx="3" fill="rgba(51,149,255,.25)"/>
+          <rect x="100" y="29"  width="60"  height="13" rx="3" fill="#3395FF"/>
+          <!-- KYC review: manual 2d, altima 0.5d -->
+          <rect x="100" y="60"  width="300" height="13" rx="3" fill="rgba(51,149,255,.25)"/>
+          <rect x="100" y="75"  width="75"  height="13" rx="3" fill="#3395FF"/>
+          <!-- KYC tooltip -->
+          <rect x="208" y="56" width="148" height="36" rx="6" fill="#04071B"/>
+          <text x="282" y="68" text-anchor="middle" font-size="8" fill="white" font-family="JetBrains Mono,monospace">KYC review</text>
+          <rect x="214" y="72" width="6" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+          <text x="224" y="79" font-size="8" fill="rgba(255,255,255,.55)" font-family="JetBrains Mono,monospace">Manual process: 2d</text>
+          <rect x="214" y="82" width="6" height="6" rx="2" fill="#3395FF"/>
+          <!-- Compliance sign-off: manual 1.2d, altima 0.3d -->
+          <rect x="100" y="106" width="180" height="13" rx="3" fill="rgba(51,149,255,.25)"/>
+          <rect x="100" y="121" width="45"  height="13" rx="3" fill="#3395FF"/>
+          <!-- Account activation: manual 0.6d, altima 0.15d -->
+          <rect x="100" y="152" width="90"  height="13" rx="3" fill="rgba(51,149,255,.25)"/>
+          <rect x="100" y="167" width="22"  height="13" rx="3" fill="#3395FF"/>
+          <!-- X axis labels -->
+          <line x1="100" y1="190" x2="400" y2="190" stroke="rgba(4,7,27,.08)" stroke-width="1"/>
+          <text x="100" y="198" text-anchor="middle" font-size="8" fill="#9090a0" font-family="JetBrains Mono,monospace">0d</text>
+          <text x="175" y="198" text-anchor="middle" font-size="8" fill="#9090a0" font-family="JetBrains Mono,monospace">0.5d</text>
+          <text x="250" y="198" text-anchor="middle" font-size="8" fill="#9090a0" font-family="JetBrains Mono,monospace">1d</text>
+          <text x="325" y="198" text-anchor="middle" font-size="8" fill="#9090a0" font-family="JetBrains Mono,monospace">1.5d</text>
+          <text x="400" y="198" text-anchor="middle" font-size="8" fill="#9090a0" font-family="JetBrains Mono,monospace">2d</text>
+        </svg>
+        <div class="chart-legend">
+          <div class="cl-item"><div class="cl-dot" style="background:rgba(51,149,255,.35)"></div>Manual process</div>
+          <div class="cl-item"><div class="cl-dot" style="background:#3395FF"></div>With AltimaCRM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outcome 3 -->
+    <div class="outcome-block reveal">
+      <div class="ob-left">
+        <div class="ob-metric">
+          <span class="ob-num">2–3×</span>
+        </div>
+        <div class="ob-sub-label">Agent productivity</div>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px;line-height:1.65;">Increase in agent output, same headcount</p>
+        <div class="before-after">
+          <div class="ba-row before">
+            <div class="ba-label">Before</div>
+            <div class="ba-items">
+              <span class="ba-item">3 tools</span>
+              <span class="ba-item">40 min lost daily</span>
+              <span class="ba-item">Reactive retention</span>
+            </div>
+          </div>
+          <div class="ba-row after">
+            <div class="ba-label">After</div>
+            <div class="ba-items">
+              <span class="ba-item">1 workspace</span>
+              <span class="ba-item">Proactive alerts</span>
+              <span class="ba-item">2–3× client capacity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Agent client capacity (clients/day)</div>
+        <svg viewBox="0 0 420 200" width="100%" style="display:block;">
+          <!-- Grid -->
+          <line x1="50" y1="10"  x2="50"  y2="165" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="50" y1="10"  x2="410" y2="10"  stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="50" y1="42"  x2="410" y2="42"  stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="50" y1="75"  x2="410" y2="75"  stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="50" y1="107" x2="410" y2="107" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="50" y1="140" x2="410" y2="140" stroke="rgba(4,7,27,.06)" stroke-width="1"/>
+          <line x1="50" y1="165" x2="410" y2="165" stroke="rgba(4,7,27,.08)" stroke-width="1"/>
+          <!-- Y labels -->
+          <text x="44" y="13"  text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">55</text>
+          <text x="44" y="46"  text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">45</text>
+          <text x="44" y="78"  text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">35</text>
+          <text x="44" y="110" text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">25</text>
+          <text x="44" y="143" text-anchor="end" font-size="9" fill="#9090a0" font-family="JetBrains Mono,monospace">15</text>
+          <!-- Without AltimaCRM — flat dashed line at ~18/day (y≈132) -->
+          <line x1="50" y1="132" x2="410" y2="132" stroke="rgba(4,7,27,.25)" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <!-- With AltimaCRM — rising line from 18 to 50 -->
+          <!-- Wk1=132, Wk2=130, Wk3=128, Wk4=125, Wk5=110, Wk6=85, Wk7=50, Wk8=20 -->
+          <polyline points="50,132 95,130 140,128 185,125 230,110 275,85 320,50 365,20"
+            fill="none" stroke="#3395FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Dots on line -->
+          <circle cx="50"  cy="132" r="3.5" fill="#3395FF"/>
+          <circle cx="95"  cy="130" r="3.5" fill="#3395FF"/>
+          <circle cx="140" cy="128" r="3.5" fill="#3395FF"/>
+          <circle cx="185" cy="125" r="3.5" fill="#3395FF"/>
+          <circle cx="230" cy="110" r="3.5" fill="#3395FF"/>
+          <circle cx="275" cy="85"  r="3.5" fill="#3395FF"/>
+          <circle cx="320" cy="50"  r="3.5" fill="#3395FF"/>
+          <circle cx="365" cy="20"  r="4.5" fill="#3395FF" stroke="white" stroke-width="2"/>
+          <!-- Wk4 tooltip -->
+          <rect x="155" y="108" width="135" height="40" rx="6" fill="#04071B"/>
+          <text x="222" y="120" text-anchor="middle" font-size="8.5" fill="white" font-family="JetBrains Mono,monospace">Wk 4</text>
+          <rect x="162" y="125" width="6" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+          <text x="172" y="132" font-size="8" fill="rgba(255,255,255,.55)" font-family="JetBrains Mono,monospace">Without AltimaCRM: 18</text>
+          <rect x="162" y="135" width="6" height="6" rx="2" fill="#3395FF"/>
+          <text x="172" y="142" font-size="8" fill="rgba(255,255,255,.55)" font-family="JetBrains Mono,monospace">With AltimaCRM: 18</text>
+          <!-- X labels -->
+          <text x="50"  y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 1</text>
+          <text x="95"  y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 2</text>
+          <text x="140" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 3</text>
+          <text x="185" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 4</text>
+          <text x="230" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 5</text>
+          <text x="275" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 6</text>
+          <text x="320" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 7</text>
+          <text x="365" y="178" text-anchor="middle" font-size="9" fill="#9090a0" font-family="Inter,sans-serif">Wk 8</text>
+        </svg>
+        <div class="chart-legend">
+          <div class="cl-item"><div class="cl-dot" style="background:rgba(4,7,27,.25);border-radius:0;height:2px;width:16px;"></div>Without AltimaCRM</div>
+          <div class="cl-item"><div class="cl-dot" style="background:#3395FF"></div>With AltimaCRM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Mid-page CTA ─────────────────────────────────────────── -->
+<section class="mid-cta">
+  <div class="container">
+    <div class="mid-cta-inner reveal">
+      <div class="mid-cta-text">
+        <h2>Your Competitors Are Already Running Leaner Operations</h2>
+        <p>See why brokers are moving to AltimaCRM</p>
+      </div>
+      <div class="mid-cta-btns">
+        <a href="#hero-form" class="btn-primary">Book a Demo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     FEATURES
+───────────────────────────────────────────────────────── -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">One platform for all brokerages needs</div>
+      <h2 class="section-h2">Forex CRM platform all brokers are switching to in 2026</h2>
+      <p class="section-body">Run sales, retention, compliance, IB management, and finance from a single system.</p>
+    </div>
+
+    <div class="features-grid reveal">
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Sales &amp; Lead Management</h3>
+        <p>Track every lead from first touch to funded account. Assign, automate follow-ups, and see your full pipeline without switching tools.</p>
+        <span class="feat-kw">forex crm · tools for forex broker</span>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Client Retention Engine</h3>
+        <p>Spot at-risk clients before they leave. Automated signals tell your retention team exactly who to call and when, no guesswork.</p>
+        <span class="feat-kw">reduce churn · forex broker crm</span>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+        </div>
+        <h3>IB &amp; Partner Portal</h3>
+        <p>Multi-level IB management with automated commission calculations, real-time reporting, and a dedicated partner portal your IBs will actually use.</p>
+        <span class="feat-kw">top forex crm with ib management · forex crm whitelabel</span>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>MT4 / MT5 / cTrader Integration</h3>
+        <p>Native integration with the platforms your traders are already on. Sync accounts, monitor activity, and manage operations without manual exports.</p>
+        <span class="feat-kw">forex crm mt4 mt5 ctrader · forex crm with mt5</span>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>KYC, AML &amp; Compliance Workflows</h3>
+        <p>Automated onboarding, document verification, and audit-ready compliance trails, so your compliance team controls the process, not the paperwork.</p>
+        <span class="feat-kw">forex crm with kyc aml automation · forex crm for regulated brokers</span>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3>Payment Gateway &amp; Back Office</h3>
+        <p>Connect your PSPs, automate deposit and withdrawal workflows, and give finance a clean back office that doesn't depend on manual reconciliation.</p>
+        <span class="feat-kw">forex crm with payment gateway · forex back office software</span>
+      </div>
+
+      <div class="feat-card wide">
+        <div class="wide-inner">
+          <div class="feat-icon" style="flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
           <div>
-            <div class="fail-item-key">Wrong Focus</div>
-            <h4>Most agencies chase rankings</h4>
-            <p>Position #1 for a keyword with no purchase intent generates zero consultations. Most agencies celebrate ranking wins that mean nothing to your revenue.</p>
+            <h3>White Label Available</h3>
+            <p>Deploy AltimaCRM under your own brand. Full white-label forex CRM with your domain, your colours, your client experience.</p>
+            <span class="feat-kw">white label forex crm · forex crm open source alternative</span>
           </div>
         </div>
-        <div class="fail-item r" style="transition-delay:.2s">
-          <div class="fail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/>
-            </svg>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="#hero-form" class="btn-primary">Book a Demo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────────────────
+     TESTIMONIALS
+───────────────────────────────────────────────────────── -->
+<section class="testimonials">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">What brokers say</div>
+      <h2 class="section-h2">Trusted by forex brokerages worldwide</h2>
+    </div>
+    <div class="testi-grid reveal">
+
+      <div class="testi-card">
+        <div class="testi-quote-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+        <p class="testi-text">"We evaluated four CRM providers. AltimaCRM was the only one that understood how a brokerage actually operates — not just how to manage contacts."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <div>
-            <div class="fail-item-key">Wrong Metrics</div>
-            <h4>Traffic doesn't pay the bills</h4>
-            <p>100,000 monthly visitors who need free legal advice will never sign a retainer. We measure consultation requests, signed cases, and revenue generated.</p>
+            <div class="testi-name">Founder, Regulated FX Brokerage</div>
+            <div class="testi-role">Europe</div>
           </div>
         </div>
-        <div class="fail-item r" style="transition-delay:.3s">
-          <div class="fail-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/>
-            </svg>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-quote-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+        <p class="testi-text">"IB management used to take our team two days every month. It's now automated. That alone was worth the switch."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <div>
-            <div class="fail-item-key">Wrong Expertise</div>
-            <h4>Generalists don't understand legal intent</h4>
-            <p>Legal search intent is uniquely complex. "Car accident lawyer near me" and "what to do after a car accident" are worlds apart. Generic agencies miss this entirely.</p>
+            <div class="testi-name">Head of Operations, FX Broker</div>
+            <div class="testi-role">Middle East</div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── FRAMEWORK ──────────────────────────────── -->
-<section id="framework">
+<!-- ── Repeat CTA ────────────────────────────────────────────── -->
+<section class="repeat-cta">
   <div class="container">
-    <div class="fw-header r">
-      <div class="section-label">The Legal Growth Framework</div>
-      <h2>Four phases. One compounding<br><span class="gold">dominance system.</span></h2>
-      <p>Most agencies give you tactics. We give you an architecture — four interconnected phases that build on each other and make your market position harder to displace each month.</p>
-    </div>
-
-    <div class="fw-track r">
-      <div class="fw-spine"></div>
-      <div class="fw-steps">
-
-        <div class="fw-step">
-          <div class="fw-spine-node"><div class="fw-node-dot"></div></div>
-          <div class="fw-ghost-num">01</div>
-          <div class="fw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <span class="fw-step-tag">Phase 01 · Visibility</span>
-          <h3>Local Dominance</h3>
-          <p>Own the local 3-pack and Google Maps. Every geo-relevant search in your market ends with your firm at the top.</p>
-        </div>
-
-        <div class="fw-step">
-          <div class="fw-spine-node"><div class="fw-node-dot"></div></div>
-          <div class="fw-ghost-num">02</div>
-          <div class="fw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
-          <span class="fw-step-tag">Phase 02 · Authority</span>
-          <h3>Topical Authority</h3>
-          <p>Become the definitive legal resource Google trusts. Content architecture that makes your site the answer to every relevant question.</p>
-        </div>
-
-        <div class="fw-step">
-          <div class="fw-spine-node"><div class="fw-node-dot"></div></div>
-          <div class="fw-ghost-num">03</div>
-          <div class="fw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
-            </svg>
-          </div>
-          <span class="fw-step-tag">Phase 03 · Conversion</span>
-          <h3>Consultation Engine</h3>
-          <p>Traffic is worthless without intake. We engineer every page to convert qualified visitors into booked consultations.</p>
-        </div>
-
-        <div class="fw-step">
-          <div class="fw-spine-node"><div class="fw-node-dot"></div></div>
-          <div class="fw-ghost-num">04</div>
-          <div class="fw-step-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="6" height="18"/><rect x="9" y="8" width="6" height="13"/><rect x="16" y="13" width="6" height="8"/>
-            </svg>
-          </div>
-          <span class="fw-step-tag">Phase 04 · Expansion</span>
-          <h3>Market Scaling</h3>
-          <p>Once a market is owned, we replicate the system into adjacent practice areas and new cities — compounding your moat.</p>
-        </div>
-
+    <div class="reveal">
+      <div class="section-eyebrow" style="text-align:center;">Book a Demo</div>
+      <h2>Your Competitors Are Already Running Leaner Operations</h2>
+      <p>See why brokers are moving to AltimaCRM</p>
+      <div class="repeat-cta-btns">
+        <a href="#hero-form" class="btn-primary">Book a Demo →</a>
+        <a href="#hero-form" class="btn-ghost">See AltimaCRM in Action</a>
       </div>
     </div>
-
-    <div class="fw-proof" style="margin-top:3px;">
-      <div class="fw-proof-item r" style="transition-delay:.06s">
-        <div class="fw-proof-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-          </svg>
-        </div>
-        <div>
-          <h4>90-Day Launch Protocol</h4>
-          <p>From audit to live growth systems in under 90 days — no waiting months for movement.</p>
-        </div>
-      </div>
-      <div class="fw-proof-item r" style="transition-delay:.14s">
-        <div class="fw-proof-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
-          </svg>
-        </div>
-        <div>
-          <h4>Case-Type Targeting</h4>
-          <p>We engineer visibility for your highest-value case types, not generic practice keywords.</p>
-        </div>
-      </div>
-      <div class="fw-proof-item r" style="transition-delay:.22s">
-        <div class="fw-proof-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/>
-          </svg>
-        </div>
-        <div>
-          <h4>Compounding Returns</h4>
-          <p>Unlike paid ads, organic authority grows monthly — your biggest ROI arrives in year two and beyond.</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ── PRACTICE AREAS ─────────────────────────── -->
-<section id="practice">
+<!-- ─────────────────────────────────────────────────────────
+     FAQ
+───────────────────────────────────────────────────────── -->
+<section class="faq" id="faq">
   <div class="container">
-    <div class="practice-header r">
-      <div class="section-label">Practice Area Expertise</div>
-      <h2>Specialized in <span class="gold">your area of law</span></h2>
-      <p>Each practice area has unique search behavior, competitive dynamics, and case economics. We know all of them.</p>
+    <div class="reveal" style="text-align:center;margin-bottom:0;">
+      <div class="section-eyebrow" style="text-align:center;">FAQs</div>
+      <h2 class="section-h2" style="text-align:center;">Common Questions Before Getting in Touch</h2>
     </div>
-    <div class="practice-grid">
-      <div class="practice-card r" style="transition-delay:.05s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3v18"/><path d="M5 8l7-5 7 5"/><path d="M6 21h12"/>
-            <path d="M7.5 11l-2.5 5h5l-2.5-5z"/><path d="M16.5 11l-2.5 5h5l-2.5-5z"/>
-          </svg>
-        </div>
-        <h4>Personal Injury</h4>
-        <p>High-value injury claims, accident types, and auto tort targeting for maximum case value.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.08s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
-        <h4>Criminal Defense</h4>
-        <p>Charge-specific content, DUI defense, and white-collar criminal targeting strategies.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.11s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </div>
-        <h4>Family Law</h4>
-        <p>Divorce, custody, and high-net-worth family matter acquisition with empathy-driven content.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.14s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2"/>
-            <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
-            <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
-          </svg>
-        </div>
-        <h4>Employment Law</h4>
-        <p>Wrongful termination, EEOC claims, and workplace discrimination lead generation.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.17s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-        </div>
-        <h4>Immigration</h4>
-        <p>Visa-specific and multilingual SEO strategies for diverse immigration caseloads.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.2s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-        </div>
-        <h4>Estate Planning</h4>
-        <p>Trust, will, and probate content that attracts high-net-worth planning clients.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.23s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="1"/>
-            <path d="M3 9h18M9 21V9"/>
-          </svg>
-        </div>
-        <h4>Business Litigation</h4>
-        <p>Commercial disputes, contract claims, and corporate counsel relationship building.</p>
-      </div>
-      <div class="practice-card r" style="transition-delay:.26s">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
-        </div>
-        <h4>Medical Malpractice</h4>
-        <p>Complex med-mal authority and high-value catastrophic case pipeline development.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ── MARKET DOMINATION ──────────────────────── -->
-<section id="domination">
-  <div class="container">
-    <div class="dom-grid">
-      <div class="dom-sticky">
-        <div class="section-label r">Market Domination System</div>
-        <h2 class="r" style="transition-delay:.08s">Five growth engines.<br><span class="gold">One compounding system.</span></h2>
-        <p class="r" style="transition-delay:.16s">
-          These aren't services — they're interconnected growth engines that feed each other. When all five run in parallel, competitors can't replicate the compound effect.
-        </p>
-        <div class="dom-visual r" style="transition-delay:.24s">
-          <div class="dom-visual-num">5</div>
-          <div class="dom-visual-sub">Growth Engines<br>Running in Parallel</div>
-        </div>
-      </div>
-      <div class="dom-services">
-        <div class="dom-svc r">
-          <div class="dom-svc-num">01</div>
-          <div>
-            <h4>Local SEO</h4>
-            <p>Google Maps dominance, local citation authority, and geo-targeted content that puts your firm in front of clients the moment they search.</p>
-          </div>
-          <div class="dom-svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <path d="M7 17L17 7M17 7H7M17 7v10"/>
-            </svg>
-          </div>
-        </div>
-        <div class="dom-svc r" style="transition-delay:.08s">
-          <div class="dom-svc-num">02</div>
-          <div>
-            <h4>Content Authority</h4>
-            <p>Practice-area content architecture that establishes topical authority, AI search visibility, and answers every question your ideal client asks.</p>
-          </div>
-          <div class="dom-svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <path d="M7 17L17 7M17 7H7M17 7v10"/>
-            </svg>
-          </div>
-        </div>
-        <div class="dom-svc r" style="transition-delay:.16s">
-          <div class="dom-svc-num">03</div>
-          <div>
-            <h4>Link Acquisition</h4>
-            <p>Legal directory placements, bar association references, and high-authority editorial links that signal trust to Google and prospective clients alike.</p>
-          </div>
-          <div class="dom-svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <path d="M7 17L17 7M17 7H7M17 7v10"/>
-            </svg>
-          </div>
-        </div>
-        <div class="dom-svc r" style="transition-delay:.24s">
-          <div class="dom-svc-num">04</div>
-          <div>
-            <h4>Conversion Optimization</h4>
-            <p>Consultation funnel design, intake optimization, and social proof systems engineered to convert every qualified visitor into a booked call.</p>
-          </div>
-          <div class="dom-svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <path d="M7 17L17 7M17 7H7M17 7v10"/>
-            </svg>
-          </div>
-        </div>
-        <div class="dom-svc r" style="transition-delay:.32s">
-          <div class="dom-svc-num">05</div>
-          <div>
-            <h4>Reputation Management</h4>
-            <p>Strategic review acquisition, profile optimization across 40+ platforms, and trust signal systems that reinforce every search touchpoint.</p>
-          </div>
-          <div class="dom-svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <path d="M7 17L17 7M17 7H7M17 7v10"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="faq-list reveal">
 
-<!-- ── COMPARISON ─────────────────────────────── -->
-<section id="compare">
-  <div class="container">
-    <div class="compare-header-section r">
-      <div class="section-label">Competitive Advantage</div>
-      <h2>The difference is <span class="gold">measurable</span></h2>
-      <p>Legal SEO requires a fundamentally different approach than general digital marketing. Here's exactly how we differ.</p>
-    </div>
-    <div class="compare-wrap">
-      <div class="compare-cols r" style="transition-delay:.1s">
-        <div class="compare-col-head"><div class="c-dot"></div><span style="color:var(--mute);">Criteria</span></div>
-        <div class="compare-col-head"><div class="c-dot them"></div><span style="color:var(--mute);">Generic SEO Agency</span></div>
-        <div class="compare-col-head ours"><div class="c-dot us"></div><span class="gold">PRO Legal SEO</span></div>
-      </div>
-      <table class="compare-table r" style="transition-delay:.2s">
-        <tbody>
-          <tr><td>Specialization</td><td><span class="x">✕</span> Generic SEO</td><td><span class="ck">✓</span> Legal-Exclusive SEO</td></tr>
-          <tr><td>Success Metric</td><td><span class="x">✕</span> Rankings &amp; Traffic</td><td><span class="ck">✓</span> Cases &amp; Revenue</td></tr>
-          <tr><td>Team Seniority</td><td><span class="x">✕</span> Junior Staff</td><td><span class="ck">✓</span> Senior Legal Strategists</td></tr>
-          <tr><td>Reporting</td><td><span class="x">✕</span> Monthly PDF Reports</td><td><span class="ck">✓</span> Real-Time Revenue Dashboard</td></tr>
-          <tr><td>Guidance</td><td><span class="x">✕</span> Account Manager Calls</td><td><span class="ck">✓</span> C-Level Strategic Counsel</td></tr>
-          <tr><td>Industry Knowledge</td><td><span class="x">✕</span> No Legal Expertise</td><td><span class="ck">✓</span> Deep Legal Intelligence</td></tr>
-          <tr><td>Approach</td><td><span class="x">✕</span> Template Playbooks</td><td><span class="ck">✓</span> Custom Market Strategy</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ── CASE STUDIES ───────────────────────────── -->
-<section id="cases">
-  <div class="container">
-    <div class="cases-header">
-      <div class="rl">
-        <div class="section-label">Client Success Stories</div>
-        <h2>Inside our <span class="gold">most significant wins</span></h2>
-      </div>
-      <p class="rr" style="transition-delay:.1s;font-size:16px;color:var(--mute);line-height:1.75;">
-        Full-transparency breakdowns — strategy, execution, and verified results. No composite figures, no blended attribution.
-      </p>
-    </div>
-    <div class="cases-list">
-
-      <!-- Case 1 -->
-      <div class="case-panel r">
-        <div class="case-panel-img">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Dallas PI Case Study" />
-          <div class="case-panel-img-overlay">
-            <div class="case-panel-area">Personal Injury · Texas</div>
-            <div class="case-panel-title">Dallas PI Firm: Unseating a Nationally Funded Competitor</div>
-            <div class="case-panel-sub">Competing against Morgan &amp; Morgan with a fraction of the budget required a precision architecture, not more spend.</div>
-          </div>
-        </div>
-        <div class="case-panel-right">
-          <div class="case-phases">
-            <div>
-              <div class="case-phase-key">Challenge</div>
-              <div class="case-phase-text">Page 4 rankings, $0 organic pipeline, dominated by national PI firms with unlimited ad budgets. Zero differentiation in a commoditized local market.</div>
-            </div>
-            <div>
-              <div class="case-phase-key">Strategy</div>
-              <div class="case-phase-text">47 accident-type landing pages, each targeting a high-intent mid-funnel keyword. Local authority signals across 200+ citations. AI-ready structured data sitewide.</div>
-            </div>
-            <div>
-              <div class="case-phase-key">Execution</div>
-              <div class="case-phase-text">Page-one for 31 target keywords in 90 days. Compounding content launched at month 3. 8 legal authority backlinks including state bar publications.</div>
-            </div>
-          </div>
-          <div class="case-stats">
-            <div class="case-stat-primary">
-              <div class="num">+387%</div>
-              <div class="lbl">Organic lead growth</div>
-              <div class="case-bar" style="margin-top:12px;"><div class="case-bar-fill" style="--fill:87%"></div></div>
-            </div>
-            <div class="case-stat-divider"></div>
-            <div class="case-stat-item">
-              <div class="num">142</div>
-              <div class="lbl">Signed cases attributed</div>
-              <div class="case-bar"><div class="case-bar-fill" style="--fill:71%"></div></div>
-            </div>
-            <div class="case-stat-item">
-              <div class="num">18mo</div>
-              <div class="lbl">Full market position</div>
-            </div>
-          </div>
-        </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">What is AltimaCRM?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">AltimaCRM is a forex CRM platform built for forex and CFD brokerages. It covers sales, client retention, IB management, compliance, KYC, payments, and back office operations, all in one connected system.</div></div>
       </div>
 
-      <!-- Case 2 -->
-      <div class="case-panel r" style="transition-delay:.15s">
-        <div class="case-panel-img">
-          <img src="https://images.unsplash.com/photo-1568607689150-17e625c1586e?auto=format&fit=crop&w=600&q=80" alt="Miami Criminal Defense" />
-          <div class="case-panel-img-overlay">
-            <div class="case-panel-area">Criminal Defense · Florida</div>
-            <div class="case-panel-title">Eliminating $18K/Month in Ad Dependency</div>
-            <div class="case-panel-sub">100% paid-traffic reliance left this firm exposed — one algorithm change away from zero leads.</div>
-          </div>
-        </div>
-        <div class="case-panel-right">
-          <div class="case-phases">
-            <div>
-              <div class="case-phase-key">Challenge</div>
-              <div class="case-phase-text">$22,000/month PPC, $340 per consultation click, zero organic infrastructure. No sustainable pipeline outside Google Ads.</div>
-            </div>
-            <div>
-              <div class="case-phase-key">Strategy</div>
-              <div class="case-phase-text">One charge-specific landing page per criminal charge type. Attorney biography authority. Systematic review acquisition across 12 platforms.</div>
-            </div>
-            <div>
-              <div class="case-phase-key">Execution</div>
-              <div class="case-phase-text">60 charge-specific pages. GBP overhaul. 340 five-star reviews in 12 months. 3 editorial backlinks from Florida Bar and local legal press.</div>
-            </div>
-          </div>
-          <div class="case-stats">
-            <div class="case-stat-primary">
-              <div class="num">+291%</div>
-              <div class="lbl">Consultation requests</div>
-              <div class="case-bar" style="margin-top:12px;"><div class="case-bar-fill" style="--fill:79%"></div></div>
-            </div>
-            <div class="case-stat-divider"></div>
-            <div class="case-stat-item">
-              <div class="num">$18K</div>
-              <div class="lbl">Monthly ad spend eliminated</div>
-              <div class="case-bar"><div class="case-bar-fill" style="--fill:100%"></div></div>
-            </div>
-            <div class="case-stat-item">
-              <div class="num">4.2×</div>
-              <div class="lbl">ROI on SEO investment</div>
-            </div>
-          </div>
-        </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Does AltimaCRM integrate with MT4, MT5, and cTrader?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. AltimaCRM has native integrations with MT4, MT5, and cTrader, allowing brokers to sync trading accounts, monitor client activity, and manage operations without manual data exports.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Is AltimaCRM available as a white-label forex CRM?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. AltimaCRM is available as a fully white-labelled forex CRM solution, deployed under your brokerage's own brand, domain, and client experience.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">How does AltimaCRM help reduce client churn?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">AltimaCRM monitors client behaviour and operational signals in real time, alerting your retention team to at-risk clients before they disengage. Brokers using AltimaCRM typically see a measurable reduction in churn within the first 60 days of active use.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Can AltimaCRM handle multi-level IB management?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. AltimaCRM includes a full IB and partner management module with automated commission calculations, multi-tier IB structures, real-time reporting, and a dedicated partner portal.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Does AltimaCRM include KYC and AML compliance tools?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. AltimaCRM includes automated KYC onboarding workflows, document verification, AML monitoring integrations, and audit-ready compliance trails, built for regulated and compliance-conscious brokers.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Is this suitable for new brokers as well as established ones?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">AltimaCRM works for both growth-stage and established brokerages. The platform scales with your operation, from a lean startup team to a multi-brand brokerage group with complex workflows.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">Where are your clients based?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">AltimaCRM serves brokerages across the UAE, Europe, and Australia, with active deployments in MENA, Asia, and international offshore brokerage jurisdictions.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">How long does it take to get started?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Onboarding timelines depend on your integration requirements, but most brokers are operationally live significantly faster than with traditional enterprise CRM deployments. We'll give you a realistic timeline on the demo call.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-txt">How do I get a demo?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Fill in the form on this page. Our team typically responds within 4 business hours and will schedule a 30-minute call tailored to your brokerage's setup and operational needs.</div></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ── INSIGHTS ───────────────────────────────── -->
-<section id="insights">
-  <div class="container">
-    <div class="insights-header r">
-      <div class="section-label">Insights &amp; Resources</div>
-      <h2>The legal SEO <span class="gold">intelligence hub</span></h2>
-      <p>Proprietary research, guides, and analysis. Read what your competitors hope you don't find.</p>
-    </div>
-
-    <!-- Top: featured + 2 stacked -->
-    <div class="insights-top">
-      <div class="insight-feat r">
-        <div class="insight-feat-bg" style="background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb5903f?auto=format&fit=crop&w=900&q=80')"></div>
-        <div class="insight-feat-overlay"></div>
-        <div class="insight-feat-shimmer"></div>
-        <div class="insight-feat-content">
-          <div class="insight-feat-badge">Featured Report — June 2025</div>
-          <h3>The 2025 State of Legal Search: AI Overviews and What It Means for Law Firm Visibility</h3>
-          <p>Google's AI Overviews are reshaping how potential clients find legal help. 42 pages of data, analysis, and an adaptation playbook built for law firms.</p>
-          <div class="insight-feat-meta">
-            <span>42 pages</span><div class="insight-sep"></div>
-            <span>Free PDF</span><div class="insight-sep"></div>
-            <span>June 2025</span>
-          </div>
-          <a href="#" class="insight-link">
-            Download Free Report
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="insights-right">
-        <div class="insight-card r" style="transition-delay:.1s">
-          <span class="insight-type">Guide</span>
-          <h3>Local SEO for Personal Injury Attorneys: The 2025 Playbook</h3>
-          <p>The exact framework we use to get PI firms into the local 3-pack within 90 days. Step-by-step, no fluff.</p>
-          <a href="#" class="insight-link">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-        </div>
-        <div class="insight-card r" style="transition-delay:.2s">
-          <span class="insight-type">Study</span>
-          <h3>Why 73% of Attorney Marketing Budgets Are Wasted</h3>
-          <p>Analysis of 200+ law firm audits. The failure patterns are predictable — and preventable.</p>
-          <a href="#" class="insight-link">Read Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom 3-col row -->
-    <div class="insights-bottom">
-      <div class="insight-card r" style="transition-delay:.08s">
-        <span class="insight-type">Guide</span>
-        <h3>The Complete Attorney Google Business Profile Guide</h3>
-        <p>GBP optimization built for law firms across every practice area — not generic business advice.</p>
-        <a href="#" class="insight-link">Read Guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-      </div>
-      <div class="insight-card r" style="transition-delay:.16s">
-        <span class="insight-type">Report</span>
-        <h3>Legal Keyword Economics: Which Practice Areas Yield the Best Organic ROI</h3>
-        <p>50,000+ legal keywords analyzed by case value, competition, and conversion probability.</p>
-        <a href="#" class="insight-link">Download <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-      </div>
-      <div class="insight-card r" style="transition-delay:.24s">
-        <span class="insight-type">Analysis</span>
-        <h3>How Google's E-E-A-T Framework Specifically Applies to Legal Websites</h3>
-        <p>What Experience, Expertise, Authoritativeness, and Trust mean when your client is a law firm.</p>
-        <a href="#" class="insight-link">Read Analysis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── TEAM ───────────────────────────────────── -->
-<section id="team">
-  <div class="container">
-    <div class="team-grid">
-      <div>
-        <div class="section-label rl">About the Team</div>
-        <h2 class="rl" style="transition-delay:.08s">Attorneys buy<br><span class="gold">expertise, not promises</span></h2>
-        <p class="rl" style="transition-delay:.16s">
-          Our team carries 40+ years of combined legal marketing experience — from Am Law 200 firms to solo practitioners. We've seen what works, and what costs firms cases.
-        </p>
-        <div class="team-creds rl" style="transition-delay:.24s">
-          <div class="team-cred"><div class="team-cred-line"></div>Former legal marketing director, Morgan &amp; Morgan</div>
-          <div class="team-cred"><div class="team-cred-line"></div>Google Premier Partner certification since 2014</div>
-          <div class="team-cred"><div class="team-cred-line"></div>State bar approved CLE speaker on digital marketing</div>
-          <div class="team-cred"><div class="team-cred-line"></div>Published research in American Lawyer Magazine</div>
-          <div class="team-cred"><div class="team-cred-line"></div>Consulted for 300+ law firms across 40 states</div>
-        </div>
-        <div class="team-stats rl" style="transition-delay:.32s">
-          <div class="team-stat">
-            <div class="num">40+</div>
-            <div class="lbl">Years Combined</div>
-          </div>
-          <div class="team-stat">
-            <div class="num">300+</div>
-            <div class="lbl">Firms Served</div>
-          </div>
-        </div>
-      </div>
-      <div class="rr" style="transition-delay:.12s">
-        <div class="team-photo-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
-            alt="Legal SEO team"
-          />
-          <div class="team-photo-overlay">
-            <div class="team-photo-caption">
-              <span>A team built for one industry.</span> Every strategist on our team has worked exclusively in legal marketing for the majority of their career.
-            </div>
-          </div>
-        </div>
-        <div class="team-cards">
-          <div class="team-card">
-            <div class="team-avatar">JR</div>
-            <div>
-              <div class="team-name">James Rutherford</div>
-              <div class="team-role">Founder &amp; Chief Strategist</div>
-              <div class="team-exp">17 years · Former Morgan &amp; Morgan Digital Director</div>
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar" style="background:linear-gradient(135deg,#5a4020,#9a6e35)">SK</div>
-            <div>
-              <div class="team-name">Sarah Kim</div>
-              <div class="team-role">Head of Legal Content</div>
-              <div class="team-exp">12 years · Former BigLaw marketing counsel</div>
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar" style="background:linear-gradient(135deg,#1e3a5f,#2d5f8a)">MP</div>
-            <div>
-              <div class="team-name">Marcus Pellegrini</div>
-              <div class="team-role">Technical SEO Lead</div>
-              <div class="team-exp">10 years · Ex-Google Search Quality team</div>
-            </div>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar" style="background:linear-gradient(135deg,#2e2010,#5a3a18)">AL</div>
-            <div>
-              <div class="team-name">Aisha Laurent</div>
-              <div class="team-role">Conversion Strategy Director</div>
-              <div class="team-exp">9 years · Legal UX &amp; intake optimization</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA ────────────────────────────────────── -->
-<section id="cta">
-  <div class="cta-glow"></div>
-  <div class="container">
-    <div class="cta-inner">
-      <div class="r"><span class="eyebrow">Free Strategy Session</span></div>
-      <h2 class="r" style="transition-delay:.1s">
-        Let's Identify Your<br><span class="gold">Biggest Growth Opportunity</span>
-      </h2>
-      <p class="r" style="transition-delay:.2s">
-        In 45 minutes, we'll deliver a market analysis, competitor review, and visibility audit — then show you exactly where your firm is losing cases to Google.
-      </p>
-      <form class="cta-form r" style="transition-delay:.3s" onsubmit="return false;">
-        <input class="cta-input" type="text"  placeholder="Your full name" />
-        <input class="cta-input" type="email" placeholder="Firm email address" />
-        <input class="cta-input" type="tel"   placeholder="Phone number" />
-        <select class="cta-input cta-select">
-          <option value="" disabled selected>Primary practice area</option>
-          <option>Personal Injury</option>
-          <option>Criminal Defense</option>
-          <option>Family Law</option>
-          <option>Immigration</option>
-          <option>Employment Law</option>
-          <option>Estate Planning</option>
-          <option>Business Litigation</option>
-          <option>Medical Malpractice</option>
-        </select>
-        <input class="cta-input" type="text" placeholder="Current monthly marketing budget" />
-        <input class="cta-input" type="text" placeholder="Primary target market / city" />
-        <div class="cta-submit-row">
-          <button type="submit" class="cta-submit">Book My Free Strategy Call →</button>
-        </div>
-      </form>
-      <div class="cta-offers r" style="transition-delay:.4s">
-        <div class="cta-offer"><div class="cta-offer-dot"></div>Free Market Analysis</div>
-        <div class="cta-offer"><div class="cta-offer-dot"></div>Competitor Review</div>
-        <div class="cta-offer"><div class="cta-offer-dot"></div>No Obligation</div>
-        <div class="cta-offer"><div class="cta-offer-dot"></div>Results in 45 Minutes</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ─────────────────────────────────── -->
+<!-- ── Footer (minimal — landing page) ──────────────────────── -->
 <footer>
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">PRO</div>
-        <p>The only SEO firm built exclusively for law firms. We turn search traffic into signed cases.</p>
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">
+        <div class="footer-logo-mark">A</div>
+        AltimaCRM
+      </a>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="/contact">Contact</a>
       </div>
-      <div class="footer-col">
-        <h5>Services</h5>
-        <ul>
-          <li><a href="#">Local SEO</a></li>
-          <li><a href="#">Content Authority</a></li>
-          <li><a href="#">Link Acquisition</a></li>
-          <li><a href="#">Conversion Optimization</a></li>
-          <li><a href="#">Reputation Management</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Practice Areas</h5>
-        <ul>
-          <li><a href="#">Personal Injury</a></li>
-          <li><a href="#">Criminal Defense</a></li>
-          <li><a href="#">Family Law</a></li>
-          <li><a href="#">Immigration</a></li>
-          <li><a href="#">Employment Law</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#">Case Studies</a></li>
-          <li><a href="#">Our Process</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Insights</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 PRO Legal SEO. All rights reserved.</span>
-      <div style="display:flex;gap:20px;">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Not a law firm. Marketing services only.</a>
-      </div>
+      <p class="footer-copy">© 2025 AltimaCRM. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  // Nav scroll
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  // Reveal observer
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('on');
-      // Trigger bar fills on case rows
-      if (e.target.classList.contains('case-panel')) {
-        e.target.querySelectorAll('.case-bar-fill').forEach(b => {
-          b.style.width = getComputedStyle(b).getPropertyValue('--fill') || b.style.getPropertyValue('--fill');
-        });
-      }
+  function toggleFaq(btn) {
+    const item   = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(b => {
+      b.classList.remove('open');
+      b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
-
-  document.querySelectorAll('.r,.rl,.rr,.case-panel').forEach(el => io.observe(el));
-
-  // Counter animation
-  function countUp(el) {
-    const target = parseInt(el.dataset.count);
-    const pre    = el.dataset.prefix || '';
-    const suf    = el.dataset.suffix || '';
-    const dur    = 1800;
-    const t0     = performance.now();
-    const tick   = now => {
-      const p = Math.min((now - t0) / dur, 1);
-      const ease = 1 - Math.pow(1 - p, 4);
-      el.textContent = pre + Math.round(ease * target).toLocaleString() + suf;
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
   }
-  const cio = new IntersectionObserver(entries => {
+
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting && !e.target.dataset.done) {
-        e.target.dataset.done = '1';
-        countUp(e.target);
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('revealed'), 60);
+        observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.6 });
-  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Parallax hero orb
+  const nav = document.getElementById('top-nav');
   window.addEventListener('scroll', () => {
-    const wrap = document.querySelector('.hero-img-wrap img');
-    if (wrap) wrap.style.transform = `scale(1) translateY(${window.scrollY * 0.06}px)`;
+    nav.style.boxShadow = window.scrollY > 40 ? '0 4px 20px rgba(4,7,27,.07)' : 'none';
   }, { passive: true });
 </script>
 </body>
