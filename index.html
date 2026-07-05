@@ -3,704 +3,324 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Best Sanity CMS Agencies in Bangalore 2026 · Weframe Tech</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Hybrid dock: Setup-bar ⇄ Island · Weframe Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-/* ===================== TOKENS ===================== */
 :root{
-  --brand-ink:#010404; --brand-slate:#404040; --brand-mist:#A4A4A4; --brand-deep:#003C42; --brand-teal:#00A6B8;
-  --teal-press:#00B9CC; --teal-bright:#2CC5D4; --teal-hi:#7FDDE7; --teal-ink:#012A2E;
-  /* LIGHT */
-  --bg:#F6FAFA; --surface:#FFFFFF; --surface-2:#EDF3F3; --surface-3:#E3ECEC;
-  --text:#010404; --text-2:#3A4446; --text-3:#5E6C6E; --text-faint:#8A9698;
-  --border:#E1E9E9; --border-2:#CCD8D8;
-  --accent:#00A6B8; --accent-press:#00B9CC; --accent-ink:#012A2E;
-  --accent-soft:#DCF4F6; --accent-soft-bd:#B8E4E9; --accent-deep:#003C42;
-  --invert-surface:#04191C; --invert-surface-2:#082A2F; --invert-text:#EAF2F2; --invert-text-2:#A9BABA; --invert-line:#153337;
-  --shadow:0 1px 2px rgba(1,4,4,.05),0 10px 30px -14px rgba(0,60,66,.18);
-  --shadow-lg:0 2px 4px rgba(1,4,4,.05),0 28px 64px -24px rgba(0,60,66,.30);
-  --grain:.30;
-  --serif:'Season Mix','Instrument Serif',Georgia,serif;
-  --sans:'Geist',-apple-system,sans-serif;
-  --mono:'Geist Mono',ui-monospace,monospace;
-  --fs:18px; --measure:640px;
-  --r-sm:8px; --r-md:14px; --r-lg:22px;
-  --safe-b:env(safe-area-inset-bottom,0px);
+  --brand-ink:#010404;--brand-teal:#00A6B8;--teal-press:#00B9CC;--teal-bright:#2CC5D4;--teal-hi:#7FDDE7;--teal-ink:#012A2E;
+  --bg:#F6FAFA;--surface:#FFFFFF;--surface-2:#EDF3F3;--text:#010404;--text-2:#3A4446;--text-3:#5E6C6E;--text-faint:#8A9698;
+  --border:#E1E9E9;--border-2:#CCD8D8;--accent:#00A6B8;--accent-press:#00B9CC;--accent-ink:#012A2E;--accent-soft:#DCF4F6;--accent-soft-bd:#B8E4E9;--accent-deep:#003C42;
+  --invert-surface:#04191C;--invert-line:#153337;
+  --shadow:0 1px 2px rgba(1,4,4,.05),0 10px 30px -14px rgba(0,60,66,.18);--shadow-lg:0 2px 4px rgba(1,4,4,.05),0 28px 64px -24px rgba(0,60,66,.30);
+  --serif:'Season Mix','Instrument Serif',Georgia,serif;--sans:'Geist',sans-serif;--mono:'Geist Mono',monospace;
+  --fs:18px;--measure:640px;--r-md:14px;--r-lg:22px;--safe-b:env(safe-area-inset-bottom,0px);
 }
-[data-theme="dark"]{
-  --bg:#010404; --surface:#081619; --surface-2:#0C1E21; --surface-3:#112A2E;
-  --text:#EDF3F3; --text-2:#BFCCCC; --text-3:#A4A4A4; --text-faint:#7C8A8A;
-  --border:#132A2D; --border-2:#1E3A3E;
-  --accent:#00A6B8; --accent-press:#2CC5D4; --accent-ink:#012A2E;
-  --accent-soft:#062A2F; --accent-soft-bd:#0F3A40; --accent-deep:#00A6B8;
-  --invert-surface:#0C1E21; --invert-surface-2:#112A2E; --invert-text:#EDF3F3; --invert-text-2:#BFCCCC; --invert-line:#1E3A3E;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 34px -16px rgba(0,0,0,.55);
-  --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 30px 72px -28px rgba(0,0,0,.75);
-  --grain:.5;
-}
+[data-theme="dark"]{--bg:#010404;--surface:#081619;--surface-2:#0C1E21;--text:#EDF3F3;--text-2:#BFCCCC;--text-3:#A4A4A4;--text-faint:#7C8A8A;--border:#132A2D;--border-2:#1E3A3E;--accent-soft:#062A2F;--accent-soft-bd:#0F3A40;--accent-deep:#00A6B8;--invert-surface:#0C1E21;--invert-line:#1E3A3E;--shadow-lg:0 2px 6px rgba(0,0,0,.5),0 30px 72px -28px rgba(0,0,0,.75)}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5;transition:background .4s ease;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--accent-deep);color:#fff}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:var(--grain);mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
-[data-theme="dark"] body::before{mix-blend-mode:screen}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden;transition:background .4s}
+svg{display:block}button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px}::selection{background:var(--accent-deep);color:#fff}
 
-.progressbar{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0%;z-index:1001;box-shadow:0 0 12px var(--accent);transition:width .08s linear}
+/* meta note */
+.note{position:sticky;top:0;z-index:200;background:#010404;color:#DCE7E7;font-size:12px;text-align:center;padding:8px 16px;border-bottom:1px solid rgba(0,166,184,.25)}
+.note b{color:var(--teal-hi)}.note .m{font-family:var(--mono);color:#8A9797}
 
-/* ===================== NAVBAR (mobile-first) ===================== */
-.nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:background .4s,border-color .4s}
-.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 16px;height:58px}
-.logo{font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;color:var(--text)}
-.logo .mark{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 210deg,var(--brand-teal),var(--teal-bright),var(--brand-deep),var(--brand-teal));display:grid;place-items:center;color:#012A2E;font-family:var(--sans);font-size:12px;font-weight:700}
-.nav-links{display:none}
-.nav-right{margin-left:auto;display:flex;align-items:center;gap:8px}
-.theme-tg{display:inline-flex;align-items:center;border:1px solid var(--border-2);border-radius:100px;padding:3px;background:var(--surface)}
-.theme-tg button{width:30px;height:30px;border-radius:100px;display:grid;place-items:center;color:var(--text-faint);transition:all .2s}
+/* top reading progress */
+.progtop{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0%;z-index:250;box-shadow:0 0 10px var(--accent);transition:width .08s linear}
+
+/* navbar */
+.nav{position:sticky;top:37px;z-index:150;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:background .4s,border-color .4s}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:0 16px;height:56px}
+.logo{font-family:var(--serif);font-weight:500;font-size:19px;display:flex;align-items:center;gap:8px;min-width:0}
+.logo .mark{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 210deg,var(--brand-teal),var(--teal-bright),var(--accent-deep),var(--brand-teal));display:grid;place-items:center;color:#012A2E;font-family:var(--sans);font-size:12px;font-weight:700}
+.nav-links{display:none}.nav-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.theme-tg{display:inline-flex;border:1px solid var(--border-2);border-radius:100px;padding:3px;background:var(--surface)}
+.theme-tg button{width:30px;height:30px;border-radius:100px;display:grid;place-items:center;color:var(--text-faint)}
 .theme-tg button.on{background:var(--accent-soft);color:var(--accent-deep)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px;border-radius:100px;padding:10px 16px;transition:transform .15s,background .2s,border-color .2s;min-height:44px}
-.btn:active{transform:scale(.97)}
-.btn-accent{background:var(--accent);color:var(--accent-ink);font-weight:700;box-shadow:0 8px 20px -8px rgba(0,166,184,.55)}
-.btn-accent:hover{background:var(--accent-press)}
-.btn-inv{border:1px solid rgba(255,255,255,.25);color:#fff}
-.btn-inv:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.nav-cta{padding:9px 14px;font-size:13.5px;min-height:40px}
-.nav-menu{width:40px;height:40px;border-radius:10px;border:1px solid var(--border-2);display:grid;place-items:center;color:var(--text-2)}
+.nav-book{display:none}
 
-/* ===================== ARTICLE SHELL ===================== */
+/* ============ HYBRID DOCK ============ */
+/* STATE A — SETUP BAR (top; visible only at article top) */
+.setupbar{position:sticky;top:93px;z-index:140;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.setupbar .in{max-width:var(--measure);margin:0 auto;display:flex;align-items:center;gap:6px;padding:8px 20px;position:relative}
+.setupbar .tool{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:100px;font-size:13px;font-weight:600;color:var(--text-2);transition:all .18s;min-height:40px}
+.setupbar .tool:hover{background:var(--surface-2);color:var(--text)}
+.setupbar .tool svg{color:var(--accent-deep)}
+.setupbar .sep{width:1px;height:18px;background:var(--border)}
+.setupbar .lab{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--text-faint);white-space:nowrap;display:flex;align-items:center;gap:8px}
+.setupbar .lab .hint{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.setupbar .bp{position:absolute;left:0;bottom:-1px;height:2px;background:var(--accent);width:0%}
+body.scrolled .setupbar{transform:translateY(-110%);opacity:0;pointer-events:none}
+
+/* STATE B — ISLAND (bottom-center; visible only once scrolled) */
+.island{position:fixed;left:50%;bottom:calc(16px + var(--safe-b));transform:translateX(-50%) translateY(24px) scale(.9);opacity:0;pointer-events:none;z-index:160;background:#0A1517;color:#EAF2F2;border:1px solid rgba(0,166,184,.28);border-radius:26px;box-shadow:0 20px 55px -14px rgba(0,0,0,.6);overflow:hidden;width:min(360px,calc(100vw - 28px));transition:transform .5s cubic-bezier(.2,.85,.25,1),opacity .4s,width .4s cubic-bezier(.2,.8,.2,1)}
+[data-theme="dark"] .island{background:#0C1E21}
+body.scrolled .island{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0) scale(1)}
+.island .main{display:flex;align-items:center;gap:11px;padding:8px 8px 8px 12px}
+.island .ring{width:38px;height:38px;flex:none;position:relative;display:grid;place-items:center}
+.island .ring .p{position:absolute;font-family:var(--mono);font-size:9px;font-weight:600;color:#9FE4EA}
+.island .mid{flex:1;min-width:0;cursor:pointer}
+.island .min{font-size:12.5px;font-weight:600;color:#fff;white-space:nowrap}
+.island .sub{font-size:10px;color:#7C8A8A;display:flex;align-items:center;gap:4px}
+.island .sub svg{transition:transform .3s}
+.island.open .sub svg{transform:rotate(180deg)}
+.island .cta{background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:12.5px;border-radius:100px;padding:9px 15px;white-space:nowrap;flex:none;display:flex;flex-direction:column;align-items:center;line-height:1.05;gap:1px;transition:background .25s}
+.island .cta:hover{background:var(--accent-press)}
+.island .cta.hot{animation:hotpulse 2.2s ease-out 1}
+@keyframes hotpulse{0%{box-shadow:0 0 0 0 rgba(0,166,184,.5)}100%{box-shadow:0 0 0 16px rgba(0,166,184,0)}}
+.island .tier{font-family:var(--mono);font-size:8px;letter-spacing:.05em;text-transform:uppercase;opacity:.82}
+.island .exp{max-height:0;opacity:0;transition:max-height .42s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.island.open .exp{max-height:64px;opacity:1}
+.island .tools{display:flex;gap:6px;padding:2px 8px 9px}
+.island .t{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.06);border-radius:12px;padding:9px 6px;font-size:12px;font-weight:600;color:#DCE7E7;transition:background .18s}
+.island .t:hover{background:rgba(0,166,184,.2)}
+.island .t svg{color:var(--teal-hi)}
+
+/* article */
 .wrap{max-width:var(--measure);margin:0 auto;padding:0 20px;position:relative;z-index:1}
 .hero{padding:34px 0 0}
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-deep);background:var(--accent-soft);border:1px solid var(--accent-soft-bd);padding:6px 13px;border-radius:100px}
-h1.title{font-family:var(--serif);font-weight:500;font-size:clamp(32px,8.5vw,54px);line-height:1.05;letter-spacing:-.02em;margin:18px 0 20px;color:var(--text)}
-h1.title em{font-style:italic;color:var(--accent-deep)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,8.5vw,52px);line-height:1.05;letter-spacing:-.02em;margin:16px 0 18px}
+h1 em{font-style:italic;color:var(--accent-deep)}
 .byline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--brand-deep),#00252A);color:#9FE4EA;display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
-.avatar.lg{width:56px;height:56px;font-size:17px}
-.byline .who{font-weight:600;color:var(--text);font-size:15px;line-height:1.2}
-.byline .who small{display:block;font-weight:400;color:var(--text-3);font-size:12.5px;margin-top:2px}
-.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;color:var(--text-3);font-size:13.5px;margin-top:16px}
-.meta .dot{width:3px;height:3px;border-radius:50%;background:var(--border-2)}
-.meta .mono{font-family:var(--mono);font-size:12px}
-
-/* AI AUDIO */
-.audio{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:7px 16px 7px 7px;box-shadow:var(--shadow);margin-top:22px}
-.audio .au-btn{width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none;transition:background .2s}
-.audio .au-btn:hover{background:var(--accent-press)}
-.audio .au-wave{display:flex;align-items:center;gap:2.5px;height:24px;flex:1;min-width:0;overflow:hidden}
-.audio .au-wave i{width:3px;border-radius:2px;background:var(--border-2);height:30%}
-.audio.playing .au-wave i{background:var(--accent);animation:wv 1s ease-in-out infinite alternate}
+.avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent-deep),#00252A);color:#9FE4EA;display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.byline .who{font-weight:600;font-size:15px;line-height:1.2}.byline .who small{display:block;font-weight:400;color:var(--text-3);font-size:12.5px;margin-top:2px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 14px;color:var(--text-3);font-size:13.5px;margin-top:14px}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:var(--border-2)}.meta .mono{font-family:var(--mono);font-size:12px}
+.audio{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:7px 16px 7px 7px;box-shadow:var(--shadow);margin-top:20px}
+.audio .b{width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.audio .wave{display:flex;align-items:center;gap:2.5px;height:24px;flex:1;min-width:0;overflow:hidden}
+.audio .wave i{width:3px;border-radius:2px;background:var(--border-2);height:30%}
+.audio.playing .wave i{background:var(--accent);animation:wv 1s ease-in-out infinite alternate}
 @keyframes wv{from{transform:scaleY(.4)}to{transform:scaleY(1.4)}}
-.audio .au-lbl{font-size:12px;color:var(--text-3);white-space:nowrap}
-.audio .au-lbl b{display:block;color:var(--text);font-size:13px}
-.audio .au-badge{font-family:var(--mono);font-size:9.5px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-3);padding:3px 7px;border-radius:6px;white-space:nowrap}
-
-/* SHARE (inline row — always present, mobile-safe) */
-.share-row{display:flex;align-items:center;gap:10px;margin-top:18px}
-.share-row .lbl{font-size:12px;color:var(--text-faint);font-weight:600;margin-right:2px}
+.audio .lb{font-size:12px;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}.audio .lb b{display:block;color:var(--text);font-size:13px}
+.audio .bd{font-family:var(--mono);font-size:9.5px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-3);padding:3px 7px;border-radius:6px;white-space:nowrap}
+.share{display:flex;align-items:center;gap:10px;margin-top:16px}.share .l{font-size:12px;color:var(--text-faint);font-weight:600}
 .sh{width:40px;height:40px;border-radius:50%;border:1px solid var(--border-2);display:grid;place-items:center;color:var(--text-2);transition:all .2s;background:var(--surface)}
 .sh:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);transform:translateY(-2px)}
-
-/* COVER IMAGE */
-.cover{margin:26px 0 0;border-radius:var(--r-lg);overflow:hidden;position:relative;aspect-ratio:16/10;box-shadow:var(--shadow-lg);background:
- radial-gradient(100% 150% at 90% 0%,#00505A55,transparent 55%),radial-gradient(110% 160% at 0% 100%,#0A3238,transparent 55%),linear-gradient(200deg,#08222633,#010B0C)}
-.cover .rings{position:absolute;inset:-40%;background:repeating-radial-gradient(circle at 50% 45%,transparent 0 48px,rgba(0,166,184,.06) 48px 49px)}
-.cover .cv-cap{position:absolute;left:0;right:0;bottom:0;padding:20px;color:#fff;background:linear-gradient(transparent,rgba(1,11,12,.82))}
-.cover .cvt{font-family:var(--serif);font-size:clamp(17px,5vw,22px);font-weight:500;line-height:1.28;max-width:30ch}
-.cover .cvk{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--teal-hi);margin-top:8px}
-
-/* ===================== PROSE ===================== */
-.prose{font-size:var(--fs);line-height:1.72;color:var(--text-2);margin-top:30px}
-.prose > p:first-of-type::first-letter{font-family:var(--serif);font-size:3.6em;font-weight:500;float:left;line-height:.8;padding:8px 10px 0 0;color:var(--accent-deep)}
-.prose h2{font-family:var(--serif);color:var(--text);font-weight:500;font-size:calc(var(--fs)*1.55);line-height:1.16;letter-spacing:-.01em;margin:1.9em 0 .55em;scroll-margin-top:78px}
-.prose h3{font-family:var(--serif);color:var(--text);font-weight:500;font-size:calc(var(--fs)*1.2);margin:1.6em 0 .4em;scroll-margin-top:78px}
-.prose p{margin:0 0 1.2em}
-.prose strong{color:var(--text);font-weight:600}
-.prose ul{margin:0 0 1.3em;padding-left:0;list-style:none}
-.prose ul li{position:relative;padding-left:26px;margin-bottom:.55em}
+.cover{margin:24px 0 0;border-radius:var(--r-lg);overflow:hidden;position:relative;aspect-ratio:16/9;box-shadow:var(--shadow-lg);background:radial-gradient(100% 150% at 90% 0%,#00505A55,transparent 55%),radial-gradient(110% 160% at 0% 100%,#0A3238,transparent 55%),linear-gradient(200deg,#08222633,#010B0C)}
+.cover .rings{position:absolute;inset:-40%;background:repeating-radial-gradient(circle at 50% 45%,transparent 0 46px,rgba(0,166,184,.06) 46px 47px)}
+.cover .cap{position:absolute;left:0;right:0;bottom:0;padding:18px;color:#fff;background:linear-gradient(transparent,rgba(1,11,12,.82));font-family:var(--serif);font-size:clamp(16px,4.6vw,20px);line-height:1.3}
+.prose{font-size:var(--fs);line-height:1.72;color:var(--text-2);margin-top:26px}
+.prose>p:first-of-type::first-letter{font-family:var(--serif);font-size:3.4em;font-weight:500;float:left;line-height:.8;padding:8px 10px 0 0;color:var(--accent-deep)}
+.prose h2{font-family:var(--serif);color:var(--text);font-weight:500;font-size:calc(var(--fs)*1.5);line-height:1.16;margin:1.8em 0 .5em;scroll-margin-top:150px}
+.prose p{margin:0 0 1.15em}.prose strong{color:var(--text);font-weight:600}
+.prose ul{margin:0 0 1.3em;padding-left:0;list-style:none}.prose ul li{position:relative;padding-left:26px;margin-bottom:.55em}
 .prose ul li::before{content:"";position:absolute;left:3px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
-.prose a.ln{color:var(--accent-deep);font-weight:600;border-bottom:1.5px solid var(--accent-soft-bd)}
-.prose a.ln:hover{border-color:var(--accent)}
-.prose blockquote{border-left:3px solid var(--accent);padding:2px 0 2px 20px;margin:1.5em 0;font-family:var(--serif);font-size:calc(var(--fs)*1.14);color:var(--text);font-style:italic;line-height:1.4}
-
-/* TL;DR / AI SUMMARY */
-.tldr{border:1px solid var(--border);background:linear-gradient(180deg,var(--surface),var(--surface-2));border-radius:var(--r-lg);padding:22px 22px}
-.tldr .tl-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
-.tldr .tl-spark{width:26px;height:26px;border-radius:8px;background:var(--brand-ink);color:var(--teal-hi);display:grid;place-items:center;flex:none}
-[data-theme="dark"] .tldr .tl-spark{background:var(--accent);color:var(--accent-ink)}
-.tldr .tl-title{font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
-.tldr .tl-chip{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--text-3);border:1px solid var(--border);border-radius:6px;padding:3px 8px;background:var(--surface)}
-.tldr ul{list-style:none}
-.tldr li{position:relative;padding-left:24px;margin-bottom:9px;font-size:15px;line-height:1.5;color:var(--text-2)}
-.tldr li b{color:var(--text)}
-.tldr li::before{content:"→";position:absolute;left:2px;color:var(--accent);font-weight:700}
-
-/* ANSWER CAPSULE (landed conversion) */
 .capsule{border:1px solid var(--accent-soft-bd);background:linear-gradient(135deg,var(--accent-soft),var(--surface));border-radius:var(--r-lg);padding:20px;position:relative;overflow:hidden;margin-top:26px}
 .capsule::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
-.capsule .cap-badge{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-deep);background:var(--surface);border:1px solid var(--accent-soft-bd);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:10px}
-.capsule .cap-txt{font-size:15.5px;line-height:1.55;color:var(--text)}
-.capsule .cap-txt b{color:var(--accent-deep)}
-.capsule .cap-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.capsule .cap-pdf{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--accent-ink);background:var(--accent);border-radius:100px;padding:10px 16px;min-height:44px}
-.capsule .cap-pdf:hover{background:var(--accent-press)}
-.capsule .cap-jump{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--text-2);border:1px solid var(--border-2);border-radius:100px;padding:10px 16px;min-height:44px}
-
-/* SELF-QUALIFIER (skim conversion) */
-.qualify{margin-top:24px;padding:18px;border:1px dashed var(--border-2);border-radius:var(--r-md);background:var(--surface)}
-.qualify .q-lbl{font-size:13px;color:var(--text-3);margin-bottom:12px}
-.qualify .q-lbl b{color:var(--text);font-weight:600}
-.qualify .q-chips{display:flex;flex-wrap:wrap;gap:9px}
-.qualify .q-chip{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border-2);border-radius:100px;padding:11px 15px;min-height:44px;transition:all .18s;flex:1 1 auto;justify-content:center}
-.qualify .q-chip:hover{border-color:var(--accent);color:var(--text)}
-.qualify .q-chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.qualify .q-ack{font-size:13px;color:var(--accent-deep);margin-top:12px;display:none;align-items:center;gap:8px;font-weight:600}
-.qualify .q-ack.show{display:flex;animation:fadeUp .35s both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
-/* LISTICLE (ranked) */
-.listicle{margin:1.5em 0;display:grid;gap:11px}
-.listicle .li{display:flex;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:16px;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}
-.listicle .li:hover{border-color:var(--accent-soft-bd)}
+.capsule .bd2{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-deep);background:var(--surface);border:1px solid var(--accent-soft-bd);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:10px}
+.capsule .tx{font-size:15.5px;line-height:1.55;color:var(--text)}.capsule .tx b{color:var(--accent-deep)}
+.capsule .act{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.capsule .pdf{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--accent-ink);background:var(--accent);border-radius:100px;padding:10px 16px;min-height:44px}
+.capsule .pdf:hover{background:var(--accent-press)}
+.capsule .jump{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--text-2);border:1px solid var(--border-2);border-radius:100px;padding:10px 16px;min-height:44px}
+.tldr{border:1px solid var(--border);background:linear-gradient(180deg,var(--surface),var(--surface-2));border-radius:var(--r-lg);padding:22px;margin-top:24px}
+.tldr .h{display:flex;align-items:center;gap:10px;margin-bottom:12px}.tldr .sp{width:26px;height:26px;border-radius:8px;background:var(--brand-ink);color:var(--teal-hi);display:grid;place-items:center;flex:none}
+[data-theme="dark"] .tldr .sp{background:var(--accent);color:var(--accent-ink)}
+.tldr .t{font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase}.tldr ul{list-style:none}
+.tldr li{position:relative;padding-left:24px;margin-bottom:8px;font-size:15px;color:var(--text-2)}.tldr li b{color:var(--text)}.tldr li::before{content:"→";position:absolute;left:2px;color:var(--accent);font-weight:700}
+.listicle{margin:1.4em 0;display:grid;gap:10px}.listicle .li{display:flex;gap:13px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:15px;box-shadow:var(--shadow)}
 .listicle .li.top{border-color:var(--accent-soft-bd);background:linear-gradient(135deg,var(--accent-soft),var(--surface))}
-.listicle .li .rank{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--accent-ink);background:var(--accent);width:38px;height:38px;border-radius:10px;display:grid;place-items:center;flex:none}
+.listicle .rank{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--accent-ink);background:var(--accent);width:36px;height:36px;border-radius:10px;display:grid;place-items:center;flex:none}
 .listicle .li:not(.top) .rank{color:var(--accent-deep);background:var(--accent-soft);border:1px solid var(--accent-soft-bd)}
-.listicle .li .li-t{font-weight:600;color:var(--text);font-size:15.5px;margin-bottom:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.listicle .li .li-badge{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent);padding:2px 7px;border-radius:5px}
-.listicle .li .li-d{font-size:13.5px;color:var(--text-3);line-height:1.5}
-
-/* METRIC CARDS */
-.metrics{display:grid;grid-template-columns:1fr;gap:12px;margin:1.5em 0}
-.metric{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.listicle .li-t{font-weight:600;font-size:15px;margin-bottom:2px}.listicle .li-d{font-size:13.5px;color:var(--text-3);line-height:1.5}
+.metrics{display:grid;grid-template-columns:1fr;gap:12px;margin:1.4em 0}
+.metric{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:18px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
 .metric::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--accent),var(--teal-bright))}
-.metric .m-val{font-family:var(--serif);font-size:34px;font-weight:500;letter-spacing:-.01em;color:var(--text);line-height:1}
-.metric .m-val span{color:var(--accent-deep)}
-.metric .m-lbl{font-size:13px;color:var(--text-3);margin-top:7px;line-height:1.4}
-.metric .m-src{font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-top:9px}
-
-/* TESTIMONIAL (text + video) */
-.testimonial{background:var(--invert-surface);color:var(--invert-text);border:1px solid var(--invert-line);border-radius:var(--r-lg);padding:26px 22px;margin:1.6em 0;position:relative;overflow:hidden}
-.testimonial::before{content:"“";position:absolute;top:-30px;right:12px;font-family:var(--serif);font-size:150px;color:rgba(0,166,184,.14);line-height:1}
-.testimonial .t-quote{font-family:var(--serif);font-size:calc(var(--fs)*1.14);line-height:1.5;position:relative}
-.testimonial .t-who{display:flex;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap}
-.testimonial .t-who .avatar{background:linear-gradient(135deg,var(--teal-bright),var(--brand-teal));color:#012A2E;width:40px;height:40px;font-size:13px}
-.testimonial .t-name{font-weight:700;font-size:14px;color:#fff}
-.testimonial .t-role{font-size:12.5px;color:var(--invert-text-2)}
-.testimonial .t-play{margin-left:auto;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.24);border-radius:100px;padding:9px 15px;font-size:12.5px;font-weight:600;color:#fff;transition:background .2s;min-height:40px}
-.testimonial .t-play:hover{background:rgba(0,166,184,.2)}
-
-/* TRUSTED BY */
+.metric .v{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--text);line-height:1}.metric .v span{color:var(--accent-deep)}.metric .l{font-size:13px;color:var(--text-3);margin-top:7px}
+.testimonial{background:var(--invert-surface);color:#EAF2F2;border:1px solid var(--invert-line);border-radius:var(--r-lg);padding:24px 22px;margin:1.5em 0;position:relative;overflow:hidden}
+.testimonial::before{content:"“";position:absolute;top:-30px;right:12px;font-family:var(--serif);font-size:150px;color:rgba(0,166,184,.14)}
+.testimonial .q{font-family:var(--serif);font-size:calc(var(--fs)*1.12);line-height:1.5;position:relative}
+.testimonial .w{display:flex;align-items:center;gap:12px;margin-top:18px}.testimonial .w .avatar{background:linear-gradient(135deg,var(--teal-bright),var(--brand-teal));color:#012A2E;width:38px;height:38px;font-size:12px}
+.testimonial .n{font-weight:700;font-size:14px;color:#fff}.testimonial .r{font-size:12px;color:#A9BABA}
 .trusted{margin:1.5em 0;padding:20px;border:1px dashed var(--border-2);border-radius:var(--r-md);background:linear-gradient(180deg,var(--surface),transparent)}
-.trusted .tr-lbl{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
-.trusted .tr-logos{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
-.wordmark{font-family:var(--serif);font-weight:500;font-size:16px;color:var(--text-faint);display:flex;align-items:center;gap:7px;transition:color .25s}
-.wordmark:hover{color:var(--text)}
-.wordmark i{width:7px;height:7px;border-radius:50%;flex:none;background:var(--accent)}
-
-/* YOUTUBE CARD */
-.yt-card{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);margin:1.6em 0;box-shadow:var(--shadow)}
-.yt-thumb{aspect-ratio:16/9;position:relative;background:radial-gradient(120% 160% at 12% 0%,#0A363C,transparent 55%),radial-gradient(120% 160% at 100% 100%,#00505A,transparent 52%),#02100F;display:grid;place-items:center}
-.yt-thumb .yt-play{width:60px;height:60px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#012A2E;box-shadow:0 14px 40px -8px rgba(0,166,184,.7);transition:transform .2s}
-.yt-card:hover .yt-play{transform:scale(1.08)}
-.yt-thumb .yt-dur{position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.75);color:#fff;font-family:var(--mono);font-size:11.5px;padding:3px 8px;border-radius:6px}
-.yt-thumb .yt-ot{position:absolute;left:16px;bottom:14px;right:16px;color:#fff;font-family:var(--serif);font-size:18px;font-weight:500;line-height:1.25;text-shadow:0 2px 18px rgba(0,0,0,.6)}
-.yt-meta{display:flex;align-items:center;gap:12px;padding:14px 16px}
-.yt-meta .yt-ch{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--brand-teal),var(--teal-bright));display:grid;place-items:center;color:#012A2E;font-size:11px;font-weight:800;flex:none}
-.yt-meta .yt-t{font-weight:600;font-size:13.5px;color:var(--text);line-height:1.3}
-.yt-meta .yt-s{font-size:12px;color:var(--text-3);margin-top:2px}
-.yt-meta .yt-open{margin-left:auto;font-size:12.5px;font-weight:600;color:var(--accent-deep);white-space:nowrap;align-self:flex-start}
-
-/* TABLE */
-.tbl-scroll{overflow-x:auto;margin:1.5em 0;-webkit-overflow-scrolling:touch}
-.tbl{width:100%;min-width:440px;border-collapse:separate;border-spacing:0;font-size:calc(var(--fs)*.85);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;background:var(--surface)}
-.tbl th{background:var(--surface-2);text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding:12px 14px;border-bottom:1px solid var(--border)}
-.tbl td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text-2)}
-.tbl tr:last-child td{border-bottom:0}
-.tbl td b{color:var(--text)}
-
-/* PROOF-BREAK MICRO-ASK (inline soft conversion) */
-.micro{display:flex;align-items:center;gap:10px;margin:1.4em 0;padding:14px 16px;border-radius:var(--r-md);border:1px solid var(--border);border-left:3px solid var(--accent);background:var(--surface);font-size:14px;color:var(--text-2)}
-.micro b{color:var(--text)}
-.micro a{margin-left:auto;white-space:nowrap;color:var(--accent-deep);font-weight:700;font-size:13.5px}
-
-/* AUTHOR BOX (end) */
-.authorbox{display:flex;gap:16px;border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;background:var(--surface);box-shadow:var(--shadow);margin-top:2em;flex-direction:column}
-.authorbox .ab-head{display:flex;gap:14px;align-items:center}
-.authorbox .ab-name{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--text)}
-.authorbox .ab-role{font-size:12.5px;color:var(--text-3);margin-top:2px}
-.authorbox p{font-size:14px;color:var(--text-2);line-height:1.6}
-.authorbox .ab-links{display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px;font-weight:600;color:var(--accent-deep)}
-
-/* END ZONE (finish conversion) */
-.endzone{margin:2.4em 0 0;border-radius:var(--r-lg);background:radial-gradient(150% 230% at 0% 0%,#06333A 0%,#020F11 58%);color:#EEF4F4;padding:30px 24px;position:relative;overflow:hidden;border:1px solid var(--invert-line)}
+.trusted .tl{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.trusted .lg{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.wm{font-family:var(--serif);font-weight:500;font-size:16px;color:var(--text-faint);display:flex;align-items:center;gap:7px}.wm:hover{color:var(--text)}.wm i{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.endzone{margin:2.2em 0 0;border-radius:var(--r-lg);background:radial-gradient(150% 230% at 0% 0%,#06333A,#020F11 58%);color:#EEF4F4;padding:30px 24px;position:relative;overflow:hidden;border:1px solid var(--invert-line)}
 .endzone::before{content:"";position:absolute;top:-70px;right:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,184,.3),transparent 65%)}
-.endzone .ez-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-hi);margin-bottom:12px;position:relative}
+.endzone .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-hi);margin-bottom:12px;position:relative}
 .endzone h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,6.5vw,30px);line-height:1.18;color:#fff;position:relative}
-.endzone p{color:#AFC0C0;font-size:14.5px;margin:12px 0 20px;line-height:1.6;position:relative}
-.endzone .ez-row{display:flex;gap:12px;flex-wrap:wrap;position:relative}
-.endzone .ez-row .btn{flex:1 1 auto}
-.endzone .ez-note{font-size:12px;color:#8A9797;margin-top:14px;display:flex;gap:8px;position:relative}
+.endzone p{color:#AFC0C0;font-size:14.5px;margin:12px 0 20px;position:relative}
+.endzone .eb{display:inline-flex;align-items:center;background:var(--accent);color:var(--accent-ink);font-weight:700;border-radius:100px;padding:12px 22px;font-size:14.5px;position:relative}
+.foot{max-width:var(--measure);margin:0 auto;padding:36px 20px calc(150px + var(--safe-b));color:var(--text-faint);font-size:12.5px;text-align:center}
 
-.foot{max-width:var(--measure);margin:0 auto;padding:40px 20px calc(120px + var(--safe-b));color:var(--text-faint);font-size:12.5px;text-align:center}
+/* sheet */
+.scrim{position:fixed;inset:0;background:rgba(1,4,4,.5);backdrop-filter:blur(2px);z-index:700;opacity:0;pointer-events:none;transition:opacity .3s}.scrim.show{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:701;background:var(--surface);border-radius:22px 22px 0 0;border-top:1px solid var(--border);box-shadow:0 -20px 60px -20px rgba(0,0,0,.5);padding:8px 20px calc(24px + var(--safe-b));transform:translateY(110%);transition:transform .38s cubic-bezier(.2,.8,.2,1);max-height:82vh;overflow-y:auto}.sheet.show{transform:translateY(0)}
+.grab{width:40px;height:5px;border-radius:5px;background:var(--border-2);margin:8px auto 6px}
+.rs{padding:16px 2px;border-top:1px solid var(--border)}.rs:first-of-type{border-top:0;padding-top:8px}
+.rl{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:13px}
+.rlisten{display:flex;align-items:center;gap:13px}.rlisten .b{width:48px;height:48px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.rlisten .rt{font-weight:600;font-size:14.5px}.rlisten .rss{font-size:12px;color:var(--text-3)}
+.rlisten .wave{display:flex;align-items:center;gap:2.5px;height:24px;flex:1;min-width:0;overflow:hidden}.rlisten .wave i{width:3px;border-radius:2px;background:var(--border-2);height:30%}.rlisten.playing .wave i{background:var(--accent);animation:wv 1s ease-in-out infinite alternate}
+.aa{display:flex;align-items:center;gap:16px;padding:6px 2px 8px}.aa .s{font-size:14px;color:var(--text-3);font-weight:600}.aa .l{font-size:24px;font-weight:700}
+.aa input{-webkit-appearance:none;appearance:none;flex:1;min-width:0;height:6px;border-radius:6px;background:var(--border-2);outline:none}
+.aa input::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--accent);border:5px solid var(--surface);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.aaprev{font-size:13px;color:var(--text-faint);text-align:center;padding-top:6px}.aaval{font-family:var(--mono);font-size:12px;color:var(--accent-deep);font-weight:600}
+.stoc a{display:flex;gap:12px;align-items:baseline;font-size:15.5px;color:var(--text-2);padding:12px 6px;border-radius:10px}.stoc a .n{font-family:var(--mono);font-size:11px;color:var(--text-faint)}
+.stoc a:hover,.stoc a.active{background:var(--surface-2);color:var(--accent-deep)}.stoc a.active{font-weight:600}
 
-/* ===================== READING COMPANION (persistent, mobile-first) ===================== */
-.companion{position:fixed;left:0;right:0;bottom:0;z-index:600;padding:8px 12px calc(8px + var(--safe-b));background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(18px);border-top:1px solid var(--border);box-shadow:0 -8px 30px -18px rgba(0,60,66,.4);transition:background .4s,border-color .4s}
-.comp-in{max-width:var(--measure);margin:0 auto;display:flex;align-items:center;gap:8px}
-.comp-ring{width:40px;height:40px;flex:none;position:relative;display:grid;place-items:center}
-.comp-ring svg{transform:rotate(-90deg)}
-.comp-ring .pct{position:absolute;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--text-2)}
-.comp-left{display:flex;flex-direction:column;line-height:1.1;min-width:0}
-.comp-left .cl-min{font-size:12px;font-weight:600;color:var(--text);white-space:nowrap}
-.comp-left .cl-lbl{font-size:10.5px;color:var(--text-faint);white-space:nowrap}
-.comp-tools{display:flex;gap:4px;margin-left:2px}
-.comp-tool{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--text-2);border:1px solid transparent;transition:all .18s}
-.comp-tool:hover,.comp-tool.on{background:var(--surface-2);color:var(--text)}
-.comp-cta{margin-left:auto;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:13px;border-radius:100px;padding:10px 15px;min-height:44px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;transition:background .25s}
-.comp-cta:hover{background:var(--accent-press)}
-.comp-cta.warm{animation:none}
-.comp-cta.hot{box-shadow:0 0 0 0 rgba(0,166,184,.5);animation:hotpulse 2.2s ease-out 1}
-@keyframes hotpulse{0%{box-shadow:0 0 0 0 rgba(0,166,184,.5)}100%{box-shadow:0 0 0 16px rgba(0,166,184,0)}}
-.comp-tier{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-right:1px}
-
-/* labels hidden on tools by default (icon-only mobile) */
-.comp-tool .lbl{display:none}
-
-/* ===================== SHEETS (TOC / Aa) ===================== */
-.scrim{position:fixed;inset:0;background:rgba(1,4,4,.5);backdrop-filter:blur(2px);z-index:700;opacity:0;pointer-events:none;transition:opacity .3s}
-.scrim.show{opacity:1;pointer-events:auto}
-.sheet{position:fixed;left:0;right:0;bottom:0;z-index:701;background:var(--surface);border-radius:20px 20px 0 0;border-top:1px solid var(--border);box-shadow:0 -20px 60px -20px rgba(0,0,0,.5);padding:8px 18px calc(24px + var(--safe-b));transform:translateY(110%);transition:transform .38s cubic-bezier(.2,.8,.2,1);max-height:76vh;overflow-y:auto}
-.sheet.show{transform:translateY(0)}
-.sheet .grab{width:38px;height:4px;border-radius:4px;background:var(--border-2);margin:8px auto 14px}
-.sheet .sh-title{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px}
-.sheet-toc a{display:flex;gap:12px;align-items:baseline;font-size:15px;color:var(--text-2);padding:12px 6px;border-radius:10px}
-.sheet-toc a .n{font-family:var(--mono);font-size:11px;color:var(--text-faint)}
-.sheet-toc a:hover,.sheet-toc a.active{background:var(--surface-2);color:var(--accent-deep)}
-.sheet-toc a.active{font-weight:600}
-/* a11y slider (real range) */
-.aa-row{display:flex;align-items:center;gap:14px;padding:14px 4px 6px}
-.aa-row .aa-s{font-size:13px;color:var(--text-3);font-weight:600}
-.aa-row .aa-l{font-size:22px;color:var(--text);font-weight:700}
-.aa-row input[type=range]{-webkit-appearance:none;appearance:none;flex:1;height:6px;border-radius:6px;background:var(--border-2);outline:none}
-.aa-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--accent);border:4px solid var(--surface);box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:grab}
-.aa-row input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--accent);border:4px solid var(--surface);box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:grab}
-.aa-preview{font-size:13px;color:var(--text-faint);text-align:center;padding-top:8px}
-.aa-val{font-family:var(--mono);font-size:12px;color:var(--accent-deep);font-weight:600}
-
-/* ===================== EXIT-MATCHED CAPTURE ===================== */
-.exit-cap{position:fixed;left:0;right:0;bottom:0;z-index:800;background:var(--surface);border-radius:20px 20px 0 0;border-top:1px solid var(--border);box-shadow:0 -22px 60px -20px rgba(0,0,0,.5);padding:18px 18px calc(20px + var(--safe-b));transform:translateY(130%);transition:transform .5s cubic-bezier(.2,.8,.2,1);max-width:560px;margin:0 auto}
-.exit-cap.show{transform:translateY(0)}
-.exit-cap .xc-top{display:flex;align-items:flex-start;gap:12px}
-.exit-cap .xc-ic{width:40px;height:40px;border-radius:11px;background:var(--accent-soft);border:1px solid var(--accent-soft-bd);display:grid;place-items:center;color:var(--accent-deep);flex:none}
-.exit-cap .xc-t{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--text);line-height:1.25}
-.exit-cap .xc-s{font-size:12.5px;color:var(--text-3);margin-top:4px;line-height:1.45}
-.exit-cap .xc-close{margin-left:auto;color:var(--text-faint);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:none}
-.exit-cap .xc-form{display:flex;gap:10px;margin-top:14px}
-.exit-cap .xc-form input{flex:1;min-width:0;border:1px solid var(--border-2);background:var(--bg);border-radius:100px;padding:12px 18px;font-family:inherit;font-size:15px;color:var(--text);outline:none}
-.exit-cap .xc-form input:focus{border-color:var(--accent)}
-.exit-cap .xc-form button{background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;border-radius:100px;padding:12px 18px;white-space:nowrap;min-height:46px}
-.exit-cap .xc-note{font-size:11px;color:var(--text-faint);margin-top:9px;text-align:center}
-.exit-cap.done .xc-top,.exit-cap.done .xc-form,.exit-cap.done .xc-note{display:none}
-.exit-cap .xc-done{display:none;align-items:center;gap:12px;padding:4px}
-.exit-cap.done .xc-done{display:flex;animation:fadeUp .4s both}
-.exit-cap .xc-done .xd-ic{width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
-.exit-cap .xc-done .xd-t{font-weight:600;color:var(--text);font-size:15px}
-.exit-cap .xc-done .xd-s{font-size:12.5px;color:var(--text-3)}
-.exit-demo{position:fixed;right:0;top:44%;transform:translateY(-50%);z-index:590;writing-mode:vertical-rl;background:var(--brand-ink);color:var(--teal-hi);font-size:10px;font-weight:600;letter-spacing:.06em;padding:11px 6px;border-radius:8px 0 0 8px;border:1px solid rgba(0,166,184,.3);border-right:0}
-
-/* ===================== DESKTOP ENHANCEMENTS ===================== */
-@media (min-width:768px){
+@media(min-width:768px){
   :root{--fs:19px}
-  .nav-in{height:64px;padding:0 24px}
-  .nav-links{display:flex;gap:22px;font-size:14.5px;font-weight:500;color:var(--text-2);margin-left:8px}
-  .nav-links a:hover{color:var(--text)}
-  .nav-menu{display:none}
-  .wrap{padding:0 24px}
-  .hero{padding:48px 0 0}
-  .metrics{grid-template-columns:repeat(3,1fr)}
-  .cover{aspect-ratio:16/8}
-  .qualify .q-chip{flex:0 1 auto}
-  .authorbox{flex-direction:row}
-  .comp-tool .lbl{display:inline;font-size:12.5px;font-weight:600;margin-left:6px}
-  .comp-tool{width:auto;padding:0 12px;gap:2px}
-  .comp-left .cl-min{font-size:13px}
-  .comp-cta{font-size:13.5px;padding:11px 18px}
-  .exit-cap{border-radius:var(--r-lg);left:50%;right:auto;bottom:20px;transform:translateX(-50%) translateY(160%);width:min(560px,calc(100vw - 40px))}
-  .exit-cap.show{transform:translateX(-50%) translateY(0)}
+  .nav-links{display:flex;gap:22px;font-size:14.5px;font-weight:500;color:var(--text-2);margin-left:6px}.nav-links a:hover{color:var(--text)}
+  .nav-book{display:inline-flex;align-items:center;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:13.5px;border-radius:100px;padding:9px 16px;min-height:40px}
+  .metrics{grid-template-columns:repeat(3,1fr)}.cover{aspect-ratio:16/8}.hero{padding:46px 0 0}
+  .island{width:400px}.island.open{width:420px}
+  .sheet{max-width:480px;left:50%;right:auto;transform:translateX(-50%) translateY(110%)}.sheet.show{transform:translateX(-50%) translateY(0)}
 }
-@media (min-width:1080px){
-  h1.title{font-size:clamp(44px,4.4vw,56px)}
-  /* fixed desktop share rail (in addition to inline hero share) */
-  .share-rail{position:fixed;left:max(24px,calc(50% - 520px));top:44vh;display:flex;flex-direction:column;gap:10px;z-index:50}
-  .companion{padding:9px 16px}
-  .comp-in{gap:12px}
-}
-@media (max-width:1079px){ .share-rail{display:none} }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(max-width:420px){.audio .bd{display:none}.share .l{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body>
-<div class="progressbar" id="progress"></div>
-<!-- share icons reused -->
-<!-- ================= NAVBAR ================= -->
+<body data-theme="light">
+<div class="progtop" id="progtop"></div>
+<div class="note"><b>Hybrid dock</b> — Setup-bar at the top ⇄ Island once you scroll. <span class="m">Scroll down to watch it morph · tap the island for tools</span></div>
+
 <nav class="nav"><div class="nav-in">
   <a class="logo" href="#"><span class="mark">W</span>weframetech</a>
   <div class="nav-links"><a href="#">AI SEO</a><a href="#">Headless CMS</a><a href="#">Case Studies</a><a href="#">Blog</a></div>
-  <div class="nav-right">
-    <div class="theme-tg" role="group" aria-label="Theme">
-      <button class="tg-light on" onclick="setTheme('light')" aria-label="Light"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-      <button class="tg-dark" onclick="setTheme('dark')" aria-label="Dark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></button>
-    </div>
-    <a class="btn btn-accent nav-cta" href="#">Book 20 free hrs</a>
-    <button class="nav-menu" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-  </div>
+  <div class="nav-right"><div class="theme-tg"><button class="tgl on" onclick="setTheme('light')" aria-label="Light"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button class="tgd" onclick="setTheme('dark')" aria-label="Dark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></button></div><a class="nav-book" href="#">Book 20 free hrs</a></div>
 </div></nav>
 
-<!-- desktop-only fixed share rail -->
-<div class="share-rail">
-  <a class="sh" href="#" aria-label="Share on X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.5 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7 3.9H5.2L17.8 20z"/></svg></a>
-  <a class="sh" href="#" aria-label="Share on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.1h4.56V23H.22V8.1zM8.34 8.1h4.37v2.03h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.24h-4.55v-7.3c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V23H8.34V8.1z"/></svg></a>
-  <a class="sh" href="#" aria-label="Copy link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a>
-</div>
+<!-- STATE A · SETUP BAR (top) -->
+<div class="setupbar" id="setupbar"><div class="in">
+  <button class="tool" onclick="openSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Contents</button>
+  <span class="sep"></span>
+  <button class="tool" onclick="toggleAudio()"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Listen</button>
+  <span class="sep"></span>
+  <button class="tool" onclick="openSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l5-14 5 14M6 15h6"/><path d="M15 20l3-8 3 8"/></svg>Text</button>
+  <span class="lab"><span class="hint">Reading setup</span><span id="setuppct">0% · 6 min</span></span>
+  <div class="bp" id="bp"></div>
+</div></div>
 
 <main class="wrap">
-  <!-- ================= HERO ================= -->
   <header class="hero">
     <span class="tag">Headless CMS · Sanity · Guide</span>
-    <h1 class="title">Best <em>Sanity CMS</em> agencies in Bangalore, 2026</h1>
-    <div class="byline">
-      <span class="avatar">VU</span>
-      <span class="who">Vipul Uthaiah<small>Headless &amp; Sanity CMS · Weframe Tech</small></span>
-    </div>
-    <div class="meta">
-      <span>Thursday, July 2nd, 2026</span><span class="dot"></span>
-      <span>6 min read</span><span class="dot"></span>
-      <span class="mono">Sanity · Next.js</span>
-    </div>
-    <!-- AI AUDIO -->
-    <div class="audio" id="audio">
-      <button class="au-btn" onclick="toggleAudio(this)" aria-label="Play AI audio"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-      <div class="au-lbl"><b>Listen to this article</b>6:12 · AI narrated</div>
-      <div class="au-wave" id="wave" aria-hidden="true"></div>
-      <span class="au-badge">AI AUDIO</span>
-    </div>
-    <!-- SHARE (inline, mobile-safe) -->
-    <div class="share-row">
-      <span class="lbl">Share</span>
-      <a class="sh" href="#" aria-label="Share on X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.5 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7 3.9H5.2L17.8 20z"/></svg></a>
-      <a class="sh" href="#" aria-label="Share on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.1h4.56V23H.22V8.1zM8.34 8.1h4.37v2.03h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.24h-4.55v-7.3c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V23H8.34V8.1z"/></svg></a>
-      <a class="sh" href="#" aria-label="Copy link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a>
+    <h1>Best <em>Sanity CMS</em> agencies in Bangalore, 2026</h1>
+    <div class="byline"><span class="avatar">VU</span><span class="who">Vipul Uthaiah<small>Headless &amp; Sanity CMS · Weframe Tech</small></span></div>
+    <div class="meta"><span>Thursday, July 2nd, 2026</span><span class="dot"></span><span>6 min read</span><span class="dot"></span><span class="mono">Sanity · Next.js</span></div>
+    <div class="audio" id="audio"><button class="b" onclick="toggleAudio()" aria-label="Play"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><div class="lb"><b>Listen to this article</b>6:12 · AI narrated</div><div class="wave" id="wave1"></div><span class="bd">AI AUDIO</span></div>
+    <div class="share"><span class="l">Share</span>
+      <a class="sh" href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.5 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7 3.9H5.2L17.8 20z"/></svg></a>
+      <a class="sh" href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.1h4.56V23H.22V8.1zM8.34 8.1h4.37v2.03h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.24h-4.55v-7.3c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V23H8.34V8.1z"/></svg></a>
+      <a class="sh" href="#" aria-label="Copy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a>
     </div>
   </header>
+  <div class="cover"><div class="rings"></div><div class="cap">The right Sanity partner decides your speed, your content workflow, and your ceiling.</div></div>
 
-  <!-- COVER IMAGE -->
-  <div class="cover"><div class="rings"></div>
-    <div class="cv-cap"><div class="cvt">The right Sanity partner decides your speed, your content workflow, and your ceiling.</div><div class="cvk">COVER · SANITY 2026</div></div>
-  </div>
-
-  <!-- ================= BODY ================= -->
   <article class="prose" id="article">
-
-    <!-- ANSWER CAPSULE (landed conversion) -->
-    <div class="capsule">
-      <span class="cap-badge">Short answer</span>
-      <div class="cap-txt"><b>Weframe Tech</b> is the top-rated Sanity CMS agency in Bangalore — every developer is a certified Sanity developer, it holds a 100% job-success score on Upwork, and it ships Next.js&nbsp;+&nbsp;Sanity builds for $50M-funded brands. The full Top&nbsp;5 and how to choose sit just below.</div>
-      <div class="cap-actions">
-        <button class="cap-pdf" onclick="capPdf(this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>Get the Top&nbsp;5 shortlist (PDF)</span></button>
-        <a class="cap-jump" href="#s2">Jump to the list ↓</a>
-      </div>
+    <div class="capsule"><span class="bd2">Short answer</span>
+      <div class="tx"><b>Weframe Tech</b> is the top-rated Sanity CMS agency in Bangalore — certified Sanity developers, 100% Upwork job success, Next.js&nbsp;+&nbsp;Sanity for $50M-funded brands. The full Top&nbsp;5 sits below.</div>
+      <div class="act"><button class="pdf" onclick="capPdf(this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>Get the Top 5 (PDF)</span></button><a class="jump" href="#s2">Jump to the list ↓</a></div>
     </div>
 
-    <!-- AI SUMMARY / TL;DR -->
-    <div class="tldr" style="margin-top:26px" role="note" aria-label="AI summary">
-      <div class="tl-head"><span class="tl-spark"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.1 6.4L20.5 10l-6.4 2.1L12 18.5 9.9 12.1 3.5 10l6.4-1.6L12 2z"/></svg></span><span class="tl-title">AI Summary · TL;DR</span><span class="tl-chip">author-reviewed</span></div>
-      <ul>
-        <li>The right <b>Sanity CMS agency</b> shapes your site's performance, content workflow and long-term scalability.</li>
-        <li>Bangalore has five standouts — led by <b>Weframe Tech</b>, whose developers are all certified on Sanity.</li>
-        <li>Judge partners on <b>Sanity depth, Next.js strength and real migrations</b> — not the cheapest quote.</li>
-      </ul>
+    <div class="tldr"><div class="h"><span class="sp"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.1 6.4L20.5 10l-6.4 2.1L12 18.5 9.9 12.1 3.5 10l6.4-1.6L12 2z"/></svg></span><span class="t">AI Summary · TL;DR</span></div>
+      <ul><li>The right <b>Sanity agency</b> shapes performance, content workflow and scalability.</li><li>Bangalore's five standouts are led by <b>Weframe Tech</b> — all certified on Sanity.</li><li>Judge on <b>Sanity depth, Next.js and real migrations</b>, not the cheapest quote.</li></ul>
     </div>
 
-    <!-- SELF-QUALIFIER (skim conversion) -->
-    <div class="qualify">
-      <div class="q-lbl"><b>What are you building?</b> Tap one — the page tailors to you.</div>
-      <div class="q-chips">
-        <button class="q-chip" onclick="qualify('lp','landing pages',this)">Landing pages</button>
-        <button class="q-chip" onclick="qualify('ec','headless ecommerce',this)">Headless ecommerce</button>
-        <button class="q-chip" onclick="qualify('mig','a CMS migration',this)">A CMS migration</button>
-      </div>
-      <div class="q-ack" id="qack"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>Tailored for <b><span id="qackt"></span></b> — your shortlist &amp; CTA now match.</span></div>
-    </div>
+    <h2 id="s1">Choosing a Sanity agency</h2>
+    <p>Choosing the right Sanity CMS agency has a real impact on your website's performance, content-management experience and long-term scalability. Whether it's a marketing site, a storefront or a full headless experience, the right partner keeps your content infrastructure flexible and future-proof.</p>
+    <p>As India's technology capital, Bangalore is dense with teams specialising in Sanity paired with modern frontends like Next.js. Weigh proven Sanity experience, strong Next.js work, real headless projects and long-term maintenance.</p>
 
-    <h2 id="s1">Choosing a Sanity CMS agency</h2>
-    <p>Choosing the right Sanity CMS agency has a real impact on your website's performance, your content-management experience and your long-term scalability. Whether you're building a marketing site, an ecommerce storefront, an enterprise platform or a headless digital experience, an experienced partner keeps your content infrastructure flexible, future-proof and easy to manage.</p>
-    <p>As India's technology capital, Bangalore is home to some of the country's leading software companies — many specialising in Sanity paired with modern frontends like <strong>Next.js</strong>. This shortlist was curated on technical expertise, portfolio, client reviews and real delivery experience. When you evaluate any of them, weigh:</p>
-    <ul>
-      <li><strong>Proven Sanity experience</strong> — real Studio customisation and content modelling, not a first project on your budget.</li>
-      <li><strong>Strong Next.js expertise</strong> — the frontend that makes Sanity fast.</li>
-      <li><strong>Successful headless projects</strong> and <strong>transparent communication</strong>.</li>
-      <li><strong>Long-term maintenance</strong> — a partner for iteration, not just launch.</li>
-    </ul>
-
-    <!-- LISTICLE -->
     <h2 id="s2">The top 5, ranked</h2>
-    <p>Five Bangalore agencies with genuine Sanity depth — starting with the one that consistently ranks first:</p>
     <div class="listicle">
-      <div class="li top"><div class="rank">1</div><div><div class="li-t">Weframe Tech <span class="li-badge">Top rated</span></div><div class="li-d">Headless, high-converting builds — CRO-optimised landing pages through composable commerce — trusted by million-dollar brands worldwide. Every developer is a certified Sanity developer; 100% job success on Upwork.</div></div></div>
-      <div class="li"><div class="rank">2</div><div><div class="li-t">ZTABS</div><div class="li-d">Bangalore-based headless CMS and enterprise development in Sanity, Next.js, React and cloud — Studio customisation, content modelling, API integrations and CMS migrations.</div></div></div>
-      <div class="li"><div class="rank">3</div><div><div class="li-t">Magneto IT Solutions</div><div class="li-d">Global ecommerce and digital-commerce shop with a Bangalore presence — headless Sanity implementations, ecommerce integrations, API development and performance optimisation.</div></div></div>
-      <div class="li"><div class="rank">4</div><div><div class="li-t">Fulminous Software</div><div class="li-d">Custom web applications and headless CMS in Sanity, Next.js, React and Node — content modelling, third-party integrations and ongoing maintenance.</div></div></div>
-      <div class="li"><div class="rank">5</div><div><div class="li-t">HashHorizon</div><div class="li-d">Modern web apps and product engineering in Next.js, React and Node — headless CMS implementations, UI/UX design and SEO-friendly builds for SaaS and enterprise.</div></div></div>
+      <div class="li top"><div class="rank">1</div><div><div class="li-t">Weframe Tech</div><div class="li-d">Certified Sanity developers, 100% Upwork job success, high-converting headless builds from landing pages to composable commerce.</div></div></div>
+      <div class="li"><div class="rank">2</div><div><div class="li-t">ZTABS</div><div class="li-d">Headless CMS and enterprise development in Sanity, Next.js and React; Studio customisation and migrations.</div></div></div>
+      <div class="li"><div class="rank">3</div><div><div class="li-t">Magneto IT Solutions</div><div class="li-d">Global ecommerce with headless Sanity implementations and performance optimisation.</div></div></div>
+      <div class="li"><div class="rank">4</div><div><div class="li-t">Fulminous Software</div><div class="li-d">Custom web apps and headless CMS in Sanity, Next.js and Node.</div></div></div>
+      <div class="li"><div class="rank">5</div><div><div class="li-t">HashHorizon</div><div class="li-d">Modern web apps and product engineering with headless CMS and UI/UX.</div></div></div>
     </div>
 
-    <!-- TRUSTED BY -->
-    <div class="trusted">
-      <div class="tr-lbl">Weframe Tech's Sanity builds ship for</div>
-      <div class="tr-logos">
-        <span class="wordmark"><i></i>Certify</span>
-        <span class="wordmark"><i></i>Slingshot Bio</span>
-        <span class="wordmark"><i></i>Unimig</span>
-        <span class="wordmark"><i></i>Skin Laundry</span>
-        <span class="wordmark"><i></i>Abaxx</span>
-      </div>
-    </div>
+    <div class="trusted"><div class="tl">Weframe Tech's Sanity builds ship for</div><div class="lg"><span class="wm"><i></i>Certify</span><span class="wm"><i></i>Slingshot Bio</span><span class="wm"><i></i>Unimig</span><span class="wm"><i></i>Skin Laundry</span><span class="wm"><i></i>Abaxx</span></div></div>
 
-    <h2 id="s3">What Weframe Tech actually builds</h2>
-    <p>The differentiator isn't "we use Sanity" — it's what gets built on it. Weframe Tech treats a site as an <strong>organic growth and inbound-acquisition engine</strong>, not a set of pages. Three tracks:</p>
-    <ul>
-      <li><strong>Landing pages</strong> — every layout, CTA and content block architected around your ICP and buying intent, with CRO embedded from day one and SEO-first foundations that compound.</li>
-      <li><strong>Headless ecommerce</strong> — composable storefronts that scale without legacy limits: higher AOV, lower CAC, real A/B testing, lower total cost of ownership.</li>
-      <li><strong>Large-scale migration</strong> — structured, zero-disruption moves off WordPress, Webflow, Shopify or Magento onto a modern Sanity stack.</li>
-    </ul>
+    <h2 id="s3">What Weframe Tech builds</h2>
+    <p>The differentiator isn't "we use Sanity" — it's what gets built on it: landing pages architected around intent with CRO from day one, composable ecommerce that lifts AOV and lowers CAC, and zero-disruption migrations off WordPress, Webflow or Shopify.</p>
+    <div class="metrics"><div class="metric"><div class="v">$50<span>M</span></div><div class="l">funded healthcare brand (Certify)</div></div><div class="metric"><div class="v">$49<span>M</span></div><div class="l">funded biotech (Slingshot Bio)</div></div><div class="metric"><div class="v">100<span>%</span></div><div class="l">Upwork job success</div></div></div>
+    <div class="testimonial"><div class="q">Our marketing team finally ships pages without waiting on engineering. The Sanity build paid for itself the first quarter.</div><div class="w"><span class="avatar">HG</span><div><div class="n">Head of Growth</div><div class="r">B2B SaaS · migrated off Webflow</div></div></div></div>
 
-    <!-- METRIC CARDS -->
-    <div class="metrics">
-      <div class="metric"><div class="m-val">$50<span>M</span></div><div class="m-lbl">funded healthcare brand (Certify) — Next.js &amp; Sanity</div><div class="m-src">SRC · CLIENT ROSTER</div></div>
-      <div class="metric"><div class="m-val">$49<span>M</span></div><div class="m-lbl">funded biotech (Slingshot Bio) — Next.js &amp; Sanity</div><div class="m-src">SRC · CLIENT ROSTER</div></div>
-      <div class="metric"><div class="m-val">100<span>%</span></div><div class="m-lbl">job-success score on Upwork across engagements</div><div class="m-src">SRC · UPWORK PROFILE</div></div>
-    </div>
+    <h2 id="s4">Cost &amp; how to choose</h2>
+    <p>Sanity development scales with complexity — roughly $3,000–$10,000 for smaller sites, and $20,000 to $150,000+ for enterprise builds. Whoever you shortlist, insist on proven Sanity experience, strong Next.js, real migrations, transparent communication and long-term maintenance.</p>
 
-    <!-- MICRO-ASK after metrics (soft conversion) -->
-    <div class="micro"><span>◆</span><span><b>Want numbers like these on your build?</b></span><a href="#end">Book the free 20 hrs →</a></div>
+    <h2 id="s5">Final thoughts</h2>
+    <p>Bangalore is one of the leading destinations for headless CMS expertise. The right Sanity partner is what makes a build hold up long-term — and for enterprise-grade Sanity and Next.js work, Weframe Tech stands out as one of the best serving the city.</p>
 
-    <!-- TESTIMONIAL (text + video) -->
-    <div class="testimonial">
-      <div class="t-quote">Our marketing team finally ships pages without waiting on engineering. The Sanity build paid for itself the first quarter we could A/B test landing pages ourselves.</div>
-      <div class="t-who"><span class="avatar">HG</span><div><div class="t-name">Head of Growth</div><div class="t-role">B2B SaaS · migrated off Webflow</div></div>
-      <button class="t-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Watch 40s</button></div>
-    </div>
-
-    <h2 id="s4">The full Sanity tech stack</h2>
-    <p>A useful proxy for depth is the surrounding toolchain a team actually runs in production:</p>
-    <!-- TABLE (scrolls on mobile) -->
-    <div class="tbl-scroll"><table class="tbl">
-      <thead><tr><th>Layer</th><th>Tools in play</th></tr></thead>
-      <tbody>
-        <tr><td><b>CMS &amp; content</b></td><td>Sanity, Contentful, Contentstack, Storyblok, Prismic, DatoCMS</td></tr>
-        <tr><td><b>Frontend</b></td><td>Next.js, Nuxt.js, Astro.js, Remix, SvelteKit</td></tr>
-        <tr><td><b>UI &amp; motion</b></td><td>Tailwind, shadcn/ui, Radix, Framer Motion, GSAP</td></tr>
-        <tr><td><b>CRO &amp; A/B</b></td><td>Optimizely, VWO, AB Tasty, Unbounce, Convert</td></tr>
-        <tr><td><b>Analytics</b></td><td>GA4, Mixpanel, Hotjar, FullStory, Clarity</td></tr>
-        <tr><td><b>Hosting</b></td><td>Vercel, Netlify, Cloudflare, AWS Amplify</td></tr>
-      </tbody>
-    </table></div>
-
-    <!-- YOUTUBE CARD -->
-    <div class="yt-card">
-      <div class="yt-thumb"><div class="yt-ot">Sanity + Next.js: the headless build, explained</div>
-        <button class="yt-play" aria-label="Play video"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><span class="yt-dur">10:41</span></div>
-      <div class="yt-meta"><span class="yt-ch">WF</span>
-        <div><div class="yt-t">Why a structured Sanity model lets marketing ship without developers</div><div class="yt-s">Weframe Tech on YouTube · 27K views · 2 weeks ago</div></div>
-        <a class="yt-open" href="#">Watch ↗</a></div>
-    </div>
-
-    <h2 id="s5">Sanity CMS FAQ</h2>
-    <h3>Which is the best Sanity CMS agency in Bangalore?</h3>
-    <p>Weframe Tech is one of the leading options — custom Sanity Studio development, Next.js integration, headless architecture, migrations and ongoing support. Other notable names include <strong>GeekyAnts, 7EDGE, HashHorizon</strong> and <strong>Webomindapps</strong>.</p>
-    <h3>Why should I choose Sanity CMS?</h3>
-    <p>Flexible content modelling, real-time collaboration, structured content, an API-first architecture and an excellent developer experience — with seamless integration into modern frontends like Next.js.</p>
-    <h3>How much does Sanity development cost in Bangalore?</h3>
-    <p>It scales with complexity. Smaller websites typically run <strong>$3,000–$10,000</strong>, while enterprise-grade implementations with custom workflows, integrations and frontend work range from <strong>$20,000 to $150,000+</strong>.</p>
-
-    <h2 id="s6">Final thoughts</h2>
-    <p>Bangalore has become one of the leading destinations for headless CMS expertise. Whether you're launching a new site, modernising your content infrastructure or building a composable platform, the right Sanity partner is what makes it hold up long-term. Each agency here brings real strengths — and for enterprise-grade Sanity and Next.js work, Weframe Tech stands out as one of the best serving the city.</p>
-
-    <!-- share again near the end -->
-    <div class="share-row" style="margin-top:26px"><span class="lbl">Share this</span>
-      <a class="sh" href="#" aria-label="Share on X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.5 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7 3.9H5.2L17.8 20z"/></svg></a>
-      <a class="sh" href="#" aria-label="Share on LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.1h4.56V23H.22V8.1zM8.34 8.1h4.37v2.03h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.24h-4.55v-7.3c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V23H8.34V8.1z"/></svg></a>
-      <a class="sh" href="#" aria-label="Copy link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a>
-    </div>
-
-    <!-- AUTHOR DETAIL AT END -->
-    <div class="authorbox">
-      <div class="ab-head"><span class="avatar lg">VU</span>
-        <div><div class="ab-name">Vipul Uthaiah</div><div class="ab-role">Headless &amp; Sanity CMS · Weframe Tech</div></div>
-      </div>
-      <p>Vipul writes about headless architecture and composable commerce — helping B2B and DTC teams pick the right CMS stack and migrate to it without disruption.</p>
-      <div class="ab-links"><a href="#">More by Vipul →</a><a href="#">LinkedIn</a><a href="#">Book time with Vipul</a></div>
-    </div>
-
-    <!-- END ZONE (finish conversion) -->
-    <div class="endzone" id="end">
-      <div class="ez-kick">You read the whole shortlist — you're picking a partner</div>
-      <h3>Not sure which headless stack is right for you?</h3>
-      <p>We'll help you pick the best Headless CMS &amp; commerce solution — and you get <strong>20 hours of free development &amp; consultation</strong> to prove it on your own project.</p>
-      <div class="ez-row"><a class="btn btn-accent" href="#">Book your free 20 hours</a><a class="btn btn-inv" href="#">Email me the shortlist (PDF)</a></div>
-      <div class="ez-note">✦ Certified Sanity developers · 100% job success on Upwork · no obligation.</div>
-    </div>
+    <div class="endzone" id="end"><div class="k">You reached the end — you're picking a partner</div><h3>Not sure which headless stack is right?</h3><p>We'll help you choose — with 20 hours of free development &amp; consultation to prove it on your project.</p><a class="eb" href="#">Book your free 20 hours</a></div>
   </article>
 </main>
-<div class="foot">© 2026 Weframe Tech · Written by Vipul Uthaiah · Best Sanity CMS Agencies in Bangalore</div>
+<div class="foot">© 2026 Weframe Tech · Hybrid dock prototype — Setup-bar ⇄ Island</div>
 
-<!-- ================= READING COMPANION ================= -->
-<div class="companion" role="toolbar" aria-label="Reading companion">
-  <div class="comp-in">
-    <div class="comp-ring">
-      <svg width="40" height="40"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--border-2)" stroke-width="3"/><circle id="ring" cx="20" cy="20" r="16" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="100.5"/></svg>
-      <span class="pct" id="ringpct">0%</span>
-    </div>
-    <div class="comp-left"><span class="cl-min" id="minleft">6 min</span><span class="cl-lbl">left to read</span></div>
-    <div class="comp-tools">
-      <button class="comp-tool" onclick="openSheet('toc')" aria-label="Table of contents"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="lbl">Contents</span></button>
-      <button class="comp-tool" id="listenTool" onclick="toggleAudio(this)" aria-label="Listen"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span class="lbl">Listen</span></button>
-      <button class="comp-tool" onclick="openSheet('aa')" aria-label="Text size"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l5-14 5 14M6 15h6"/><path d="M15 20l3-8 3 8M16.2 17h3.6"/></svg><span class="lbl">Text size</span></button>
-    </div>
-    <button class="comp-cta" id="compcta" onclick="location.href='#'"><span class="comp-tier" id="compt">Step 1</span><span id="comptxt">Get the Top 5 (PDF)</span></button>
+<!-- STATE B · ISLAND (bottom) -->
+<div class="island" id="island">
+  <div class="main">
+    <div class="ring"><svg width="38" height="38"><circle cx="19" cy="19" r="15" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="3"/><circle id="islring" cx="19" cy="19" r="15" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="94.2" stroke-dashoffset="94.2" transform="rotate(-90 19 19)"/></svg><span class="p" id="islpct">0%</span></div>
+    <div class="mid" onclick="islandToggle()"><div class="min" id="islmin">6 min left</div><div class="sub">Tools <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
+    <button class="cta ctabtn" onclick="location.href='#end'"><span class="tier ct">Step 1</span><span class="cx">Top 5 PDF</span></button>
   </div>
+  <div class="exp"><div class="tools">
+    <button class="t" onclick="openSheet()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Contents</button>
+    <button class="t" onclick="toggleAudio()"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Listen</button>
+    <button class="t" onclick="openSheet()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l5-14 5 14M6 15h6"/></svg>Text</button>
+  </div></div>
 </div>
 
-<!-- SHEETS -->
+<!-- sheet -->
 <div class="scrim" id="scrim" onclick="closeSheet()"></div>
-<div class="sheet" id="sheet-toc" role="dialog" aria-label="Table of contents">
-  <div class="grab"></div><div class="sh-title">On this page</div>
-  <nav class="sheet-toc" id="sheettoc">
+<div class="sheet" id="sheet" role="dialog" aria-label="Reading tools">
+  <div class="grab"></div>
+  <div class="rs"><div class="rl">Listen</div><div class="rlisten" id="rlisten"><button class="b" onclick="toggleAudio()"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><div style="flex:1;min-width:0"><div class="rt">This article, AI-narrated</div><div class="rss">6:12 · natural voice</div></div><div class="wave" id="wave2"></div></div></div>
+  <div class="rs"><div class="rl">Text size</div><div class="aa"><span class="s">A</span><input type="range" min="16" max="24" value="18" step="1" oninput="setFS(this.value)"><span class="l">A</span></div><div class="aaprev">Preview · <span class="aaval" id="aaval">18px</span></div></div>
+  <div class="rs"><div class="rl">On this page</div><nav class="stoc" id="stoc">
     <a href="#s1" onclick="closeSheet()" class="active"><span class="n">01</span>Choosing a Sanity agency</a>
     <a href="#s2" onclick="closeSheet()"><span class="n">02</span>The top 5, ranked</a>
     <a href="#s3" onclick="closeSheet()"><span class="n">03</span>What Weframe Tech builds</a>
-    <a href="#s4" onclick="closeSheet()"><span class="n">04</span>The full tech stack</a>
-    <a href="#s5" onclick="closeSheet()"><span class="n">05</span>Sanity CMS FAQ</a>
-    <a href="#s6" onclick="closeSheet()"><span class="n">06</span>Final thoughts</a>
-  </nav>
+    <a href="#s4" onclick="closeSheet()"><span class="n">04</span>Cost &amp; how to choose</a>
+    <a href="#s5" onclick="closeSheet()"><span class="n">05</span>Final thoughts</a>
+  </nav></div>
 </div>
-<div class="sheet" id="sheet-aa" role="dialog" aria-label="Text size">
-  <div class="grab"></div><div class="sh-title">Reading comfort · text size</div>
-  <div class="aa-row"><span class="aa-s">A</span><input type="range" min="16" max="24" value="18" step="1" aria-label="Text size" oninput="setFS(this.value)"><span class="aa-l">A</span></div>
-  <div class="aa-preview">Preview size · <span class="aa-val" id="aaval">18px</span></div>
-</div>
-
-<!-- EXIT-MATCHED CAPTURE -->
-<div class="exit-cap" id="exitcap" role="dialog" aria-label="Save your place">
-  <div class="xc-top">
-    <div class="xc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16l-8-4-8 4z"/></svg></div>
-    <div style="flex:1;min-width:0"><div class="xc-t" id="xct">Leaving mid-read?</div><div class="xc-s" id="xcs">Get the full Top-5 comparison in your inbox — plus 20 hours of free development if you build on Sanity.</div></div>
-    <button class="xc-close" onclick="hideExit()" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  </div>
-  <div class="xc-form"><input type="email" id="xcemail" placeholder="you@company.com" aria-label="Work email"><button onclick="exitSubmit()">Send it over</button></div>
-  <div class="xc-note">One email · unsubscribe in a click · for $1M+ B2B &amp; SaaS.</div>
-  <div class="xc-done"><div class="xd-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div><div><div class="xd-t">On its way.</div><div class="xd-s">Check your inbox — the comparison and your free-hours details are landing now.</div></div></div>
-</div>
-<button class="exit-demo" onclick="showExit(true)" title="Demo the exit-intent capture">▸ demo exit-intent</button>
 
 <script>
-var READ_MIN=6, persona=null, exitShown=false, curTier=null, idleTimer=null, lastY=0, lastT=0;
-
-/* theme */
-function setTheme(mode){
-  document.body.setAttribute('data-theme',mode);
-  document.querySelectorAll('.tg-light').forEach(b=>b.classList.toggle('on',mode==='light'));
-  document.querySelectorAll('.tg-dark').forEach(b=>b.classList.toggle('on',mode==='dark'));
-}
-/* audio */
-(function(){var w=document.getElementById('wave');for(var i=0;i<26;i++){var b=document.createElement('i');b.style.height=(20+Math.random()*70)+'%';b.style.animationDelay=(Math.random()*.9)+'s';w.appendChild(b);}})();
-function toggleAudio(btn){
-  var a=document.getElementById('audio');var playing=a.classList.toggle('playing');
-  document.querySelectorAll('[onclick*="toggleAudio"]').forEach(function(b){
-    var isTool=b.classList.contains('comp-tool');
-    var ic=playing?'<svg width="'+(isTool?17:15)+'" height="'+(isTool?17:15)+'" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>'
-                  :'<svg width="'+(isTool?17:15)+'" height="'+(isTool?17:15)+'" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
-    b.innerHTML=ic+(isTool?'<span class="lbl">'+(playing?'Pause':'Listen')+'</span>':'');
-  });
-}
-/* a11y text size */
-function setFS(v){document.documentElement.style.setProperty('--fs',v+'px');document.getElementById('aaval').textContent=v+'px';document.querySelectorAll('.aa-row input').forEach(function(i){i.value=v;});}
-/* sheets */
-function openSheet(which){document.getElementById('scrim').classList.add('show');document.getElementById('sheet-'+which).classList.add('show');}
-function closeSheet(){document.getElementById('scrim').classList.remove('show');document.querySelectorAll('.sheet').forEach(function(s){s.classList.remove('show');});}
-
-/* CONVERSION — capsule */
+var READ_MIN=6,curTier=null,audioOn=false,ENTER=210,EXIT=150,scrolledState=false;
+function setTheme(m){document.body.setAttribute('data-theme',m);document.querySelectorAll('.tgl').forEach(function(b){b.classList.toggle('on',m==='light');});document.querySelectorAll('.tgd').forEach(function(b){b.classList.toggle('on',m==='dark');});}
+function fillWave(el){for(var i=0;i<24;i++){var b=document.createElement('i');b.style.height=(20+Math.random()*70)+'%';b.style.animationDelay=(Math.random()*.9)+'s';el.appendChild(b);}}
+fillWave(document.getElementById('wave1'));fillWave(document.getElementById('wave2'));
+function toggleAudio(){audioOn=!audioOn;document.getElementById('audio').classList.toggle('playing',audioOn);document.getElementById('rlisten').classList.toggle('playing',audioOn);
+  document.querySelectorAll('#audio .b, #rlisten .b').forEach(function(b){b.innerHTML=audioOn?'<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>':'<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';});}
+function setFS(v){document.documentElement.style.setProperty('--fs',v+'px');document.getElementById('aaval').textContent=v+'px';document.querySelectorAll('.aa input').forEach(function(i){i.value=v;});}
+function openSheet(){document.getElementById('scrim').classList.add('show');document.getElementById('sheet').classList.add('show');document.getElementById('island').classList.remove('open');}
+function closeSheet(){document.getElementById('scrim').classList.remove('show');document.getElementById('sheet').classList.remove('show');}
 function capPdf(btn){btn.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>Sent — check your inbox</span>';btn.style.pointerEvents='none';}
+function islandToggle(){document.getElementById('island').classList.toggle('open');}
 
-/* CONVERSION — self-qualifier */
-function qualify(key,label,el){
-  persona=label;
-  document.querySelectorAll('.q-chip').forEach(function(c){c.classList.remove('on');});el.classList.add('on');
-  document.getElementById('qackt').textContent=label;document.getElementById('qack').classList.add('show');
-  var cap=document.querySelector('.cap-pdf span');if(cap)cap.textContent='Get the '+label+' shortlist (PDF)';
-  applyTier(curTier||'soft',true);
-}
+var tiers={soft:{t:'Step 1',x:'Top 5 PDF'},warm:{t:'Step 2',x:'Check fit'},hot:{t:'Step 3',x:'20 free hrs'}};
+function applyTier(tier){if(curTier===tier)return;var prev=curTier;curTier=tier;var m=tiers[tier];
+  document.querySelector('.ct').textContent=m.t;document.querySelector('.cx').textContent=m.x;
+  var b=document.querySelector('.ctabtn');b.classList.toggle('hot',tier==='hot');if(tier==='hot'&&prev!=='hot'){b.classList.remove('hot');void b.offsetWidth;b.classList.add('hot');}}
 
-/* CONVERSION — escalating companion CTA */
-var tierMap={
- soft:{txt:'Get the Top 5 (PDF)', t:'Step 1', cls:''},
- warm:{txt:'See if Sanity fits your stack', t:'Step 2', cls:'warm'},
- hot:{txt:'Claim 20 hrs free development', t:'Step 3', cls:'hot'}
-};
-function applyTier(tier,force){
-  if(!force && curTier===tier)return; var prev=curTier; curTier=tier; var m=tierMap[tier];
-  document.getElementById('comptxt').textContent = (persona && tier==='hot') ? ('Claim 20 free hrs for '+persona.split(' ')[0]) : m.txt;
-  document.getElementById('compt').textContent=m.t;
-  var cta=document.getElementById('compcta'); cta.className='comp-cta '+m.cls;
-  if(tier==='hot' && prev!=='hot'){cta.classList.remove('hot');void cta.offsetWidth;cta.classList.add('hot');}
-}
-
-/* progress + tier + min-left + ring */
-var RING=100.5;
-window.addEventListener('scroll',function(){
-  var art=document.getElementById('article');var r=art.getBoundingClientRect();
-  var total=r.height-window.innerHeight; var done=Math.min(Math.max(-r.top,0),Math.max(total,1));
-  var pct=Math.round(done/Math.max(total,1)*100);
-  document.getElementById('progress').style.width=pct+'%';
-  document.getElementById('ring').style.strokeDashoffset=(RING-RING*pct/100).toFixed(1);
-  document.getElementById('ringpct').textContent=pct+'%';
-  var mins=Math.max(0,Math.ceil(READ_MIN*(1-pct/100)));
-  document.getElementById('minleft').textContent = mins===0?'Done':(mins+' min');
+var R=94.2;
+function onScroll(){
+  var y=window.scrollY;
+  /* morph with hysteresis */
+  if(!scrolledState && y>ENTER){scrolledState=true;document.body.classList.add('scrolled');}
+  else if(scrolledState && y<EXIT){scrolledState=false;document.body.classList.remove('scrolled');document.getElementById('island').classList.remove('open');}
+  var art=document.getElementById('article');var r=art.getBoundingClientRect();var total=r.height-window.innerHeight;
+  var done=Math.min(Math.max(-r.top,0),Math.max(total,1));var pct=Math.round(done/Math.max(total,1)*100);
+  document.getElementById('progtop').style.width=pct+'%';
+  document.getElementById('bp').style.width=pct+'%';
+  var mins=Math.max(0,Math.ceil(READ_MIN*(1-pct/100)));var mtxt=mins===0?'Finished ✓':(mins+' min left');
+  document.getElementById('islmin').textContent=mtxt;
+  document.getElementById('setuppct').textContent=pct+'% · '+(mins===0?'done':mins+' min');
+  document.getElementById('islring').style.strokeDashoffset=(R-R*pct/100).toFixed(1);
+  document.getElementById('islpct').textContent=pct+'%';
   applyTier(pct<34?'soft':(pct<67?'warm':'hot'));
-  detectExitMobile();
-},{passive:true});
-
-/* scroll-spy for TOC */
-var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var id=e.target.id;document.querySelectorAll('.sheet-toc a').forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id);});});},{rootMargin:'-20% 0px -70% 0px'});
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;document.querySelectorAll('.stoc a').forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});});},{rootMargin:'-30% 0px -65% 0px'});
 document.querySelectorAll('.prose h2[id]').forEach(function(h){spy.observe(h);});
-
-/* CONVERSION — exit-matched capture */
-function showExit(demo){
-  if(!demo && exitShown)return; exitShown=true;
-  var ec=document.getElementById('exitcap');ec.classList.remove('done');
-  document.getElementById('xcs').textContent=(persona?('You looked at '+persona+' — '):'')+'Get the full Top-5 comparison in your inbox, plus 20 hours of free development if you build on Sanity.';
-  ec.classList.add('show');
-}
-function hideExit(){document.getElementById('exitcap').classList.remove('show');}
-function exitSubmit(){var em=document.getElementById('xcemail');if(!em.value){em.focus();return;}document.getElementById('exitcap').classList.add('done');}
-/* desktop: cursor leaves viewport top */
-document.addEventListener('mouseleave',function(e){if(e.clientY<=0)showExit(false);});
-/* mobile: fast upward scroll after 25% read */
-function detectExitMobile(){
-  var y=window.scrollY, t=Date.now(), dy=y-lastY, dt=t-lastT;
-  if(dt>0){var v=dy/dt; var art=document.getElementById('article');var r=art.getBoundingClientRect();var total=r.height-window.innerHeight;var pct=(-r.top)/Math.max(total,1);
-    if(v<-1.6 && y<600 && pct>0.25) showExit(false);}
-  lastY=y; lastT=t;
-}
-/* idle fallback */
-function armIdle(){clearTimeout(idleTimer);idleTimer=setTimeout(function(){showExit(false);},35000);}
-['scroll','mousemove','keydown','touchstart'].forEach(function(ev){window.addEventListener(ev,armIdle,{passive:true});});
-
-/* init */
-setTheme('light'); applyTier('soft',true); armIdle();
+setTheme('light');applyTier('soft');onScroll();
 </script>
 </body>
 </html>
