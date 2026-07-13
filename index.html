@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redki — Certified refurbished tech & repairs, Kenya</title>
+<title>iPhone 13 128GB · Redki Certified | Redki</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
-/* ============ TOKENS ============ */
+/* ============ TOKENS (shared with landing) ============ */
 :root{
   --red:#A60000;
   --red-deep:#7E0000;
-  --red-soft:#C43B2E;
   --ink:#211414;
   --ink-2:#5C4A47;
   --ink-3:#8C7672;
@@ -33,533 +32,325 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--font-body);
-  background:var(--paper);
-  color:var(--ink);
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--red);color:#fff}
 img,svg{display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
 h1,h2,h3{font-family:var(--font-display);font-weight:600;letter-spacing:-.02em}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--red);
-}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--red);border-radius:2px}
-
-/* ============ REVEAL ANIMATION ============ */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
-/* ============ ANNOUNCEMENT ============ */
-.announce{
-  background:var(--red);color:#fff;
-  font-size:13.5px;font-weight:500;
-  text-align:center;padding:9px 16px;
-  position:relative;z-index:60;
-}
+/* ============ ANNOUNCEMENT + HEADER (shared) ============ */
+.announce{background:var(--red);color:#fff;font-size:13.5px;font-weight:500;text-align:center;padding:9px 16px;position:relative;z-index:60}
 .announce a{text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
-.announce .spark{display:inline-block;margin-right:6px;transform:translateY(1px)}
-
-/* ============ HEADER ============ */
-header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(250,246,243,.92);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-  transition:box-shadow .3s;
-}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,243,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
 header.scrolled{box-shadow:0 6px 24px -12px rgba(60,20,15,.18)}
 .nav-top{display:flex;align-items:center;gap:22px;padding:15px 0}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo-mark{
-  width:36px;height:36px;border-radius:10px;background:var(--red);
-  display:grid;place-items:center;
-  box-shadow:0 4px 12px -3px rgba(166,0,0,.45);
-}
+.logo-mark{width:36px;height:36px;border-radius:10px;background:var(--red);display:grid;place-items:center;box-shadow:0 4px 12px -3px rgba(166,0,0,.45)}
 .logo-word{font-family:var(--font-display);font-weight:600;font-size:23px;letter-spacing:-.03em}
 .logo-word i{color:var(--red)}
-.search{
-  flex:1;max-width:520px;display:flex;align-items:center;gap:10px;
-  background:#fff;border:1.5px solid var(--line-2);border-radius:999px;
-  padding:10px 18px;color:var(--ink-3);font-size:14.5px;
-  transition:border-color .2s, box-shadow .2s;
-}
+.search{flex:1;max-width:520px;display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--line-2);border-radius:999px;padding:10px 18px;color:var(--ink-3);font-size:14.5px;transition:border-color .2s,box-shadow .2s}
 .search:hover{border-color:var(--red);box-shadow:0 0 0 4px rgba(166,0,0,.06)}
 .nav-links{display:flex;align-items:center;gap:24px;margin-left:auto;font-size:14.5px;font-weight:500;color:var(--ink-2)}
-.nav-links a{transition:color .2s}
 .nav-links a:hover{color:var(--red)}
 .nav-icons{display:flex;align-items:center;gap:8px}
-.icon-btn{
-  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
-  transition:background .2s;position:relative;
-}
+.icon-btn{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;transition:background .2s;position:relative}
 .icon-btn:hover{background:var(--blush)}
-.cart-dot{
-  position:absolute;top:6px;right:6px;width:16px;height:16px;border-radius:50%;
-  background:var(--red);color:#fff;font-size:10px;font-weight:600;
-  display:grid;place-items:center;
-}
-.nav-cats{
-  display:flex;gap:26px;padding:0 0 13px;font-size:13.5px;font-weight:500;color:var(--ink-2);
-  overflow-x:auto;scrollbar-width:none;
-}
+.cart-dot{position:absolute;top:6px;right:6px;width:16px;height:16px;border-radius:50%;background:var(--red);color:#fff;font-size:10px;font-weight:600;display:grid;place-items:center}
+.nav-cats{display:flex;gap:26px;padding:0 0 13px;font-size:13.5px;font-weight:500;color:var(--ink-2);overflow-x:auto;scrollbar-width:none}
 .nav-cats::-webkit-scrollbar{display:none}
-.nav-cats a{white-space:nowrap;transition:color .2s;padding:2px 0;border-bottom:2px solid transparent}
+.nav-cats a{white-space:nowrap;transition:color .2s}
 .nav-cats a:hover{color:var(--red)}
 .nav-cats a.hot{color:var(--red);font-weight:600}
-.nav-cats a.hot::after{content:"";display:none}
 
-/* ============ HERO ============ */
-.hero{background:var(--hero);position:relative;overflow:hidden;color:#fff}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background:
-    radial-gradient(900px 480px at 82% 20%, rgba(166,0,0,.5), transparent 65%),
-    radial-gradient(700px 420px at 8% 108%, rgba(166,0,0,.32), transparent 60%);
-  pointer-events:none;
+/* ============ BREADCRUMBS ============ */
+.crumbs{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-3);padding:20px 0 4px;flex-wrap:wrap}
+.crumbs a:hover{color:var(--red)}
+.crumbs span{opacity:.5}
+.crumbs b{font-weight:600;color:var(--ink-2)}
+
+/* ============ PDP LAYOUT ============ */
+.pdp{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:56px;padding:26px 0 80px;align-items:start}
+
+/* gallery */
+.gallery{position:sticky;top:130px}
+.g-main{
+  background:linear-gradient(150deg,#F6E9E4,#EDD5C9);
+  border-radius:24px;height:520px;display:grid;place-items:center;
+  position:relative;overflow:hidden;
 }
-.hero::after{
-  content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
+.g-main .g-slide{grid-area:1/1;opacity:0;transform:scale(.96);transition:opacity .45s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.g-main .g-slide.on{opacity:1;transform:none;pointer-events:auto}
+.g-badge{
+  position:absolute;top:18px;left:18px;display:flex;align-items:center;gap:8px;
+  background:#fff;border-radius:999px;padding:8px 15px;
+  font-size:12.5px;font-weight:600;box-shadow:var(--shadow-card);color:var(--red);z-index:3;
 }
-.hero-in{
-  position:relative;z-index:2;
-  display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;
-  padding-block:64px 72px;
+.g-zoom{
+  position:absolute;bottom:18px;right:18px;display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(4px);border-radius:999px;padding:8px 14px;
+  font-size:12px;font-weight:500;color:var(--ink-2);z-index:3;
 }
-.hero h1{
-  font-size:clamp(40px,4.6vw,62px);line-height:1.04;letter-spacing:-.03em;font-weight:600;
+.g-thumbs{display:flex;gap:12px;margin-top:14px}
+.g-thumb{
+  width:86px;height:86px;border-radius:14px;border:2px solid transparent;
+  background:linear-gradient(150deg,#F6E9E4,#EED8CD);
+  display:grid;place-items:center;transition:border-color .2s,transform .2s;
 }
-.hero h1 .fade{color:rgba(255,255,255,.44)}
-.hero h1 .accent{color:#FF9A8A;font-style:italic}
-.hero-sub{
-  margin-top:20px;font-size:17px;line-height:1.65;color:rgba(255,255,255,.72);max-width:480px;
+.g-thumb:hover{transform:translateY(-3px)}
+.g-thumb.on{border-color:var(--red)}
+.g-note{
+  display:flex;align-items:center;gap:9px;margin-top:16px;
+  font-size:13px;color:var(--ink-2);font-style:italic;
 }
-.hero-sub strong{font-weight:600;color:#fff}
-.hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.g-note svg{flex-shrink:0}
+
+/* buy column */
+.buy h1{font-size:clamp(26px,2.6vw,34px);line-height:1.12}
+.buy-rating{display:flex;align-items:center;gap:9px;margin-top:10px;font-size:13.5px;color:var(--ink-2)}
+.buy-rating .stars{color:var(--red);letter-spacing:2px;font-size:13px}
+.buy-rating a{font-weight:600;color:var(--red);text-decoration:underline;text-underline-offset:3px}
+.spec-line{margin-top:8px;font-size:13.5px;color:var(--ink-3)}
+
+/* price */
+.price-block{margin-top:26px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.price-block .now{font-family:var(--font-display);font-weight:600;font-size:40px;letter-spacing:-.02em}
+.price-block .was{font-size:15px;color:var(--ink-3);text-decoration:line-through}
+.price-block .save{font-size:13px;font-weight:600;color:var(--red)}
+
+/* option groups: quiet, typographic */
+.opt-group{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.opt-label{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:12px}
+.opt-label a{font-size:12.5px;font-weight:600;color:var(--red);text-decoration:underline;text-underline-offset:3px}
+.opt-label .sel{font-weight:500;color:var(--ink-3);font-size:12.5px}
+
+.grade-card,.pill,.offer{
+  background:transparent;border:1.5px solid var(--line);border-radius:12px;
+  padding:12px 15px;width:100%;text-align:left;
+  transition:border-color .2s,background .2s;
+}
+.grade-card:hover,.pill:hover,.offer:hover{border-color:var(--line-2)}
+.grade-card.on,.pill.on,.offer.on{border-color:var(--red);background:#FBF1ED}
+
+.grade-card b,.pill b,.offer b{font-size:13.5px;font-weight:600;display:block}
+.grade-card small,.pill small{font-size:12.5px;font-weight:400;color:var(--ink-3);display:block;margin-top:3px;transition:color .2s}
+.grade-card.on small,.pill.on small{color:var(--red);font-weight:500}
+
+.opt-cap{margin-top:11px;font-size:12.5px;color:var(--ink-3);font-style:italic}
+
+.grade-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.pill-row{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+
+.offer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.offer b{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.offer-price{font-family:var(--font-display);font-weight:600;font-size:15px;white-space:nowrap}
+.offer .best{
+  background:#E7F3EC;color:var(--green);font-size:10.5px;font-weight:600;
+  padding:2.5px 9px;border-radius:99px;letter-spacing:.04em;
+}
+.offer .best.gold{background:#FAF0DF;color:var(--gold)}
+.more-offers{overflow:hidden;max-height:0;transition:max-height .5s cubic-bezier(.2,.7,.2,1)}
+.view-more{
+  width:100%;text-align:center;font-size:12.5px;font-weight:600;color:var(--red);
+  padding:8px;transition:opacity .2s;
+}
+.view-more:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* quiet assurance line */
+.assure{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:12.5px;color:var(--ink-2)}
+.assure span{display:inline-flex;align-items:center;gap:7px}
+.assure svg{color:var(--red);flex-shrink:0}
+.micro{margin-top:13px;font-size:12.5px;color:var(--ink-3)}
+.micro b{font-weight:600;color:var(--ink-2)}
+
+/* CTA */
+.cta-row{display:flex;gap:12px;margin-top:24px}
 .btn{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:15px;font-weight:600;border-radius:999px;padding:15px 28px;
-  transition:transform .2s, box-shadow .2s, background .2s;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-size:15px;font-weight:600;border-radius:999px;padding:16px 28px;
+  transition:transform .2s,box-shadow .2s,background .2s;
 }
 .btn:active{transform:scale(.97)}
-.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 28px -8px rgba(166,0,0,.55)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 28px -8px rgba(166,0,0,.5);flex:1}
 .btn-red:hover{background:#8F0000;transform:translateY(-2px)}
-.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25);backdrop-filter:blur(6px)}
-.btn-ghost:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
-.hero-note{
-  display:flex;align-items:center;gap:9px;margin-top:26px;
-  font-size:13.5px;color:rgba(255,255,255,.55);
-}
-.hero-note b{font-weight:600;color:rgba(255,255,255,.85)}
+.btn-wa{border:1.5px solid var(--ink);padding:16px 20px}
+.btn-wa:hover{background:var(--blush)}
+.stock-line{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;color:var(--ink-2)}
+.stock-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(30,122,77,.15)}
 
-/* hero visual */
-.hero-visual{position:relative;height:460px}
-.hv-phone{
-  position:absolute;right:8%;top:50%;transform:translateY(-50%) rotate(6deg);
-  filter:drop-shadow(0 40px 60px rgba(0,0,0,.5));
-  animation:float 7s ease-in-out infinite;
+/* ============ CERTIFICATION ============ */
+.cert-band{background:var(--hero);color:#fff;padding:80px 0;position:relative;overflow:hidden}
+.cert-band::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 420px at 88% 0%,rgba(166,0,0,.45),transparent 65%),radial-gradient(600px 380px at 4% 110%,rgba(166,0,0,.3),transparent 60%)}
+.cert-in{position:relative;z-index:2}
+.cert-head{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:40px}
+.cert-head h2{font-size:clamp(28px,3vw,42px);line-height:1.1;margin-top:14px}
+.cert-head h2 em{color:#FF9A8A}
+.cert-head p{color:rgba(255,255,255,.68);font-size:15.5px}
+.cert-band .eyebrow{color:#FF9A8A}
+.cert-band .eyebrow::before{background:#FF9A8A}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cert-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);
+  border-radius:18px;padding:24px 22px;transition:background .25s,transform .25s;
 }
-@keyframes float{0%,100%{transform:translateY(-50%) rotate(6deg)}50%{transform:translateY(-54%) rotate(4.5deg)}}
-.hv-chip{
-  position:absolute;display:flex;align-items:center;gap:10px;
-  background:rgba(255,255,255,.97);color:var(--ink);
-  border-radius:14px;padding:11px 16px;font-size:13px;font-weight:600;
-  box-shadow:0 18px 40px -10px rgba(0,0,0,.45);
-  animation:float2 6s ease-in-out infinite;
+.cert-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.cert-card .cc-ic{width:44px;height:44px;border-radius:13px;background:rgba(166,0,0,.35);display:grid;place-items:center;margin-bottom:16px}
+.cert-card b{font-family:var(--font-display);font-weight:600;font-size:17px;display:block}
+.cert-card p{font-size:13px;color:rgba(255,255,255,.62);margin-top:6px;line-height:1.55}
+.cert-doc{
+  margin-top:36px;display:flex;align-items:center;gap:16px;justify-content:space-between;
+  background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.25);border-radius:18px;padding:20px 24px;flex-wrap:wrap;
 }
-.hv-chip small{display:block;font-weight:500;color:var(--ink-3);font-size:11.5px;margin-top:1px}
-.hv-chip .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex-shrink:0}
-@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.chip-1{top:5%;left:6%;animation-delay:.6s}
-.chip-2{bottom:8%;left:0;animation-delay:1.4s}
-.chip-3{top:38%;right:0;animation-delay:2.2s}
-.hero-dots{display:flex;gap:6px;position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3}
-.hero-dots span{width:6px;height:6px;border-radius:99px;background:rgba(255,255,255,.3)}
-.hero-dots span.on{width:20px;background:#fff}
+.cert-doc-l{display:flex;align-items:center;gap:14px}
+.cert-doc-l .ic{width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;flex-shrink:0}
+.cert-doc b{font-weight:600;font-size:14.5px;display:block}
+.cert-doc small{font-size:12.5px;color:rgba(255,255,255,.6)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
 
-/* ============ STATEMENT + TRUST ============ */
-.statement{text-align:center;padding-block:88px 30px}
-.statement h2{font-size:clamp(30px,3.4vw,46px);letter-spacing:-.025em;line-height:1.1}
-.statement h2 em{color:var(--red)}
-.statement p{margin-top:14px;font-size:17px;color:var(--ink-2)}
-.statement p a{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
-.trustbar{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
-  padding:38px 0 0;
-}
-.trust{
-  display:flex;align-items:center;gap:14px;justify-content:center;
-  font-size:14px;font-weight:500;color:var(--ink-2);
-  padding:18px 10px;border-radius:16px;
-  transition:background .25s;
-}
-.trust:hover{background:var(--blush)}
-.trust .t-ic{
-  width:44px;height:44px;border-radius:50%;background:var(--blush);
-  display:grid;place-items:center;flex-shrink:0;color:var(--red);
-}
-.trust b{display:block;font-weight:600;color:var(--ink);font-size:14.5px}
+/* ============ DETAILS ACCORDION ============ */
+.details{max-width:820px;margin:0 auto;padding:80px 28px 30px}
+.details h2{text-align:center;font-size:clamp(24px,2.4vw,32px);margin-bottom:30px}
+.acc-item{border-bottom:1px solid var(--line-2)}
+.acc-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:21px 4px;font-size:16px;font-weight:600;text-align:left;transition:color .2s}
+.acc-q:hover{color:var(--red)}
+.acc-q .fx{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line-2);flex-shrink:0;display:grid;place-items:center;transition:transform .3s,background .3s,border-color .3s;font-weight:400;font-size:17px;color:var(--red)}
+.acc-item.open .fx{transform:rotate(45deg);background:var(--red);border-color:var(--red);color:#fff}
+.acc-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.2,1)}
+.acc-a .acc-inner{padding:0 44px 24px 4px;font-size:14.5px;color:var(--ink-2);line-height:1.65}
+.acc-a b{font-weight:600;color:var(--ink)}
+.spec-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px}
+.spec-table td{padding:9px 12px;border-bottom:1px dashed var(--line)}
+.spec-table td:first-child{color:var(--ink-3);width:42%}
+.spec-table td:last-child{font-weight:600}
 
-/* ============ CATEGORY GRID ============ */
-.section{padding-block:72px 8px}
+/* ============ REVIEWS ============ */
+.reviews-band{background:#fff;border-block:1px solid var(--line);padding:80px 0;margin-top:60px}
+.rev-layout{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:start}
+.rev-summary{
+  background:var(--blush);border-radius:22px;padding:32px 30px;position:sticky;top:130px;
+}
+.rev-summary .big{font-family:var(--font-display);font-weight:600;font-size:56px;letter-spacing:-.03em;line-height:1}
+.rev-summary .stars{color:var(--red);font-size:16px;letter-spacing:3px;margin-top:8px}
+.rev-summary small{color:var(--ink-2);font-size:13px;display:block;margin-top:6px}
+.rbar{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12px;color:var(--ink-2)}
+.rbar .track{flex:1;height:6px;border-radius:99px;background:#fff;overflow:hidden}
+.rbar .fill{height:100%;border-radius:99px;background:var(--red);width:0;transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.rbar span{width:24px}
+.rbar em{width:30px;font-style:normal;text-align:right;font-weight:600}
+.rev-list{display:flex;flex-direction:column;gap:14px}
+.rev-card{border:1px solid var(--line);border-radius:18px;padding:22px 24px;background:var(--card);transition:transform .2s,box-shadow .2s}
+.rev-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-card)}
+.rev-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rev-av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:14px;color:#fff;flex-shrink:0}
+.rev-top b{font-size:14px;font-weight:600;display:block}
+.rev-top .stars{color:var(--red);font-size:11px;letter-spacing:2px}
+.rev-verified{margin-left:auto;display:inline-flex;align-items:center;gap:6px;background:#E7F3EC;color:var(--green);font-size:11px;font-weight:600;border-radius:99px;padding:4px 11px}
+.rev-card p{font-size:14px;color:var(--ink-2);line-height:1.6}
+.rev-card p i{font-style:italic}
+.rev-tag{margin-top:12px;font-size:12px;color:var(--ink-3)}
+
+/* ============ RELATED RAIL ============ */
+.related{padding:76px 0 90px}
 .sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}
-.sec-head h2{font-size:clamp(26px,2.6vw,36px)}
-.sec-head p{color:var(--ink-2);margin-top:6px;font-size:15.5px}
-.sec-link{
-  font-size:14.5px;font-weight:600;color:var(--red);white-space:nowrap;
-  display:inline-flex;align-items:center;gap:6px;
-}
-.sec-link:hover{gap:10px}
-.sec-link{transition:gap .2s}
-.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.cat{
-  background:var(--blush);border-radius:var(--radius);
-  padding:22px 22px 18px;min-height:172px;
-  display:flex;flex-direction:column;justify-content:space-between;
-  position:relative;overflow:hidden;
-  transition:transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s, background .25s;
-}
-.cat:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop);background:var(--blush-2)}
-.cat .cat-art{align-self:center;margin:4px 0 10px;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-.cat:hover .cat-art{transform:scale(1.08) rotate(-2deg)}
-.cat span{font-weight:600;font-size:15.5px;display:flex;align-items:center;justify-content:space-between}
-.cat span::after{content:"→";font-weight:400;color:var(--red);opacity:0;transform:translateX(-6px);transition:.25s}
-.cat:hover span::after{opacity:1;transform:none}
-.cat.dark{background:var(--red);color:#fff}
-.cat.dark:hover{background:var(--red-deep)}
-.cat.dark span::after{color:#fff}
-.cat .deal-tag{
-  position:absolute;top:14px;right:14px;background:rgba(255,255,255,.2);
-  font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  padding:4px 10px;border-radius:99px;
-}
-
-/* ============ DEALS / PRODUCT CARDS ============ */
-.deals-band{background:#fff;border-block:1px solid var(--line);margin-top:72px;padding:72px 0 80px}
-.rail-wrap{position:relative}
-.rail{
-  display:grid;grid-auto-flow:column;grid-auto-columns:262px;gap:16px;
-  overflow-x:auto;padding:4px 4px 22px;scroll-snap-type:x mandatory;
-  scrollbar-width:none;
-}
+.sec-head h2{font-size:clamp(24px,2.4vw,32px)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:262px;gap:16px;overflow-x:auto;padding:4px 4px 22px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .rail::-webkit-scrollbar{display:none}
-.pcard{
-  scroll-snap-align:start;
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:14px;display:flex;flex-direction:column;
-  transition:transform .25s, box-shadow .25s, border-color .25s;
-}
-.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop);border-color:var(--line-2)}
-.p-img{
-  border-radius:12px;height:180px;display:grid;place-items:center;
-  position:relative;overflow:hidden;
-}
-.p-img .drop{
-  position:absolute;top:10px;left:10px;background:var(--red);color:#fff;
-  font-size:11px;font-weight:600;padding:4px 10px;border-radius:99px;letter-spacing:.04em;
-}
-.p-img svg{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
-.pcard:hover .p-img svg{transform:scale(1.07)}
+.pcard{scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop)}
+.p-img{border-radius:12px;height:170px;display:grid;place-items:center;position:relative;overflow:hidden}
 .p-body{padding:14px 4px 4px;display:flex;flex-direction:column;flex:1}
-.p-name{font-weight:600;font-size:15px;line-height:1.35}
+.p-name{font-weight:600;font-size:15px}
 .p-spec{font-size:12.5px;color:var(--ink-3);margin-top:3px}
-.p-grade{
-  display:inline-flex;align-items:center;gap:6px;margin-top:9px;
-  font-size:11.5px;font-weight:600;color:var(--green);
-  background:#E7F3EC;border-radius:99px;padding:3px 10px;width:fit-content;
-}
+.p-grade{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-size:11.5px;font-weight:600;color:var(--green);background:#E7F3EC;border-radius:99px;padding:3px 10px;width:fit-content}
 .p-grade.b{color:var(--gold);background:#FAF0DF}
 .p-price{margin-top:12px;display:flex;align-items:baseline;gap:8px}
-.p-price b{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:-.01em}
+.p-price b{font-family:var(--font-display);font-weight:600;font-size:19px}
 .p-price s{font-size:13px;color:var(--ink-3)}
-.p-save{font-size:12px;color:var(--red);font-weight:600;margin-top:2px}
 .p-btn{
   margin-top:14px;border:1.5px solid var(--ink);border-radius:999px;
-  padding:10px;font-size:13.5px;font-weight:600;text-align:center;
+  padding:10px;font-size:13.5px;font-weight:600;text-align:center;width:100%;
   transition:background .2s,color .2s,border-color .2s;
 }
 .p-btn:hover{background:var(--red);border-color:var(--red);color:#fff}
-.rail-nav{display:flex;gap:8px}
-.rail-btn{
-  width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line-2);
-  display:grid;place-items:center;background:#fff;
-  transition:background .2s,border-color .2s,transform .15s;
-}
-.rail-btn:hover{background:var(--blush);border-color:var(--red)}
-.rail-btn:active{transform:scale(.94)}
-.buybox-note{
-  display:flex;align-items:center;gap:10px;margin-top:8px;
-  font-size:13.5px;color:var(--ink-2);font-style:italic;
-}
-.buybox-note b{color:var(--red);font-style:normal;font-weight:600}
 
-/* ============ BRAND MARQUEE ============ */
-.marquee-band{padding:54px 0;border-bottom:1px solid var(--line);background:#fff;overflow:hidden}
-.marquee-label{text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:26px}
-.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.marquee-track{display:flex;gap:64px;padding-right:64px;flex-shrink:0;animation:scroll 30s linear infinite;align-items:center}
-.marquee:hover .marquee-track{animation-play-state:paused}
-@keyframes scroll{to{transform:translateX(-100%)}}
-.brand{
-  font-family:var(--font-display);font-weight:600;font-size:24px;letter-spacing:-.02em;
-  color:var(--ink-3);white-space:nowrap;transition:color .2s;display:flex;align-items:center;gap:64px;
+/* ============ STICKY BUY BAR ============ */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);box-shadow:0 -10px 32px -14px rgba(60,20,15,.25);
+  transform:translateY(110%);transition:transform .4s cubic-bezier(.2,.7,.2,1);
 }
-.brand:hover{color:var(--ink)}
-.brand::after{content:"✦";font-size:11px;color:var(--line-2)}
+.sticky-bar.show{transform:none}
+.sticky-in{display:flex;align-items:center;gap:18px;padding:13px 0}
+.sticky-in .s-name{font-weight:600;font-size:14.5px}
+.sticky-in .s-sub{font-size:12px;color:var(--ink-3)}
+.sticky-in .s-price{font-family:var(--font-display);font-weight:600;font-size:20px;margin-left:auto}
+.sticky-in .btn{padding:12px 26px;font-size:14px}
 
-/* ============ REPAIR JOURNEY ============ */
-.repair{padding-block:96px}
-.repair-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.repair h2{font-size:clamp(30px,3.2vw,44px);line-height:1.08;margin-top:16px}
-.repair h2 em{color:var(--red)}
-.repair-lede{margin-top:16px;font-size:16.5px;color:var(--ink-2);max-width:460px}
-.steps{margin-top:36px;display:flex;flex-direction:column;gap:0}
-.step{
-  display:flex;gap:18px;padding:18px 16px;border-radius:16px;
-  transition:background .25s;position:relative;
+/* ============ TOAST ============ */
+.toast{
+  position:fixed;bottom:96px;left:50%;transform:translate(-50%,20px);z-index:80;
+  background:var(--ink);color:#fff;border-radius:999px;padding:13px 24px;
+  font-size:14px;font-weight:500;display:flex;align-items:center;gap:10px;
+  opacity:0;pointer-events:none;transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1);
+  box-shadow:var(--shadow-pop);
 }
-.step:hover{background:var(--blush)}
-.step-num{
-  width:40px;height:40px;border-radius:50%;flex-shrink:0;
-  border:1.5px solid var(--line-2);background:#fff;
-  display:grid;place-items:center;
-  font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--red);
-  position:relative;z-index:2;
-}
-.step:not(:last-child) .step-num::after{
-  content:"";position:absolute;top:100%;left:50%;width:1.5px;height:26px;
-  background:var(--line-2);
-}
-.step b{font-weight:600;font-size:15.5px;display:block}
-.step p{font-size:14px;color:var(--ink-2);margin-top:3px;line-height:1.5}
-.step p i{color:var(--red);font-weight:500}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast .tick{width:20px;height:20px;border-radius:50%;background:var(--green);display:grid;place-items:center;flex-shrink:0}
 
-/* whatsapp mock */
-.wa-frame{
-  background:linear-gradient(160deg,var(--blush) 0%, #F1DAD1 100%);
-  border-radius:28px;padding:44px 40px;position:relative;overflow:hidden;
-}
-.wa-frame::before{
-  content:"";position:absolute;width:340px;height:340px;border-radius:50%;
-  background:radial-gradient(circle, rgba(166,0,0,.14), transparent 70%);
-  top:-90px;right:-70px;
-}
-.wa-card{
-  background:#fff;border-radius:22px;box-shadow:var(--shadow-pop);
-  max-width:360px;margin:0 auto;overflow:hidden;position:relative;z-index:2;
-}
-.wa-head{
-  background:var(--red);color:#fff;padding:14px 18px;
-  display:flex;align-items:center;gap:12px;
-}
-.wa-avatar{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;flex-shrink:0}
-.wa-head b{font-size:14.5px;font-weight:600;display:block}
-.wa-head small{font-size:11.5px;opacity:.8}
-.wa-body{padding:18px;display:flex;flex-direction:column;gap:10px;background:#FBF7F4;min-height:280px}
-.msg{
-  max-width:82%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.5;
-  box-shadow:0 1px 2px rgba(60,20,15,.08);
-  opacity:0;transform:translateY(10px);
-}
-.wa-card.play .msg{animation:msgin .5s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes msgin{to{opacity:1;transform:none}}
-.msg.in{background:#fff;border-top-left-radius:4px;align-self:flex-start}
-.msg.out{background:#F9E3DC;border-top-right-radius:4px;align-self:flex-end}
-.wa-card.play .msg:nth-child(1){animation-delay:.2s}
-.wa-card.play .msg:nth-child(2){animation-delay:.9s}
-.wa-card.play .msg:nth-child(3){animation-delay:1.7s}
-.wa-card.play .msg:nth-child(4){animation-delay:2.5s}
-.wa-card.play .msg:nth-child(5){animation-delay:3.3s}
-.msg .doc{
-  display:flex;align-items:center;gap:10px;background:var(--blush);
-  border-radius:10px;padding:9px 12px;margin-top:8px;font-weight:600;font-size:12.5px;
-}
-.msg .doc small{display:block;font-weight:400;color:var(--ink-3);font-size:11px}
-
-/* ============ DUAL ENTRY ============ */
-.dual{padding-block:24px 96px}
-.dual-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
-.dual-card{
-  border-radius:24px;padding:40px 38px;position:relative;overflow:hidden;min-height:300px;
-  display:flex;flex-direction:column;justify-content:flex-end;
-  transition:transform .25s, box-shadow .25s;
-}
-.dual-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop)}
-.dual-card.red{background:var(--hero);color:#fff}
-.dual-card.red::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(500px 300px at 85% 0%, rgba(166,0,0,.55), transparent 70%);
-}
-.dual-card.light{background:#fff;border:1px solid var(--line)}
-.dual-card .dc-ic{
-  width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
-  margin-bottom:auto;position:relative;z-index:2;
-}
-.dual-card.red .dc-ic{background:rgba(255,255,255,.12)}
-.dual-card.light .dc-ic{background:var(--blush);color:var(--red)}
-.dual-card h3{font-size:24px;margin-top:28px;position:relative;z-index:2}
-.dual-card p{font-size:14.5px;margin-top:10px;position:relative;z-index:2;line-height:1.6}
-.dual-card.red p{color:rgba(255,255,255,.7)}
-.dual-card.light p{color:var(--ink-2)}
-.dual-card .dc-link{
-  margin-top:20px;font-size:14px;font-weight:600;display:inline-flex;gap:8px;align-items:center;
-  position:relative;z-index:2;transition:gap .2s;
-}
-.dual-card:hover .dc-link{gap:12px}
-.dual-card.light .dc-link{color:var(--red)}
-
-/* ============ REVIEWS ============ */
-.reviews-band{background:#fff;border-block:1px solid var(--line);padding:80px 0 88px}
-.rev-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
-.rev{
-  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-  background:var(--card);display:flex;flex-direction:column;
-  transition:transform .25s, box-shadow .25s;
-}
-.rev:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop)}
-.rev-top{padding:20px 20px 0;display:flex;align-items:center;gap:12px}
-.rev-av{
-  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
-  font-weight:600;font-size:15px;color:#fff;flex-shrink:0;
-}
-.rev-top b{font-size:14.5px;font-weight:600;display:block}
-.rev-stars{color:var(--red);font-size:12px;letter-spacing:2px}
-.rev p{padding:14px 20px;font-size:14px;color:var(--ink-2);line-height:1.6;flex:1}
-.rev p i{font-style:italic}
-.rev-item{
-  border-top:1px dashed var(--line-2);padding:13px 20px;
-  display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;color:var(--ink-2);
-}
-.rev-item .ri-ic{width:28px;height:28px;border-radius:8px;background:var(--blush);display:grid;place-items:center;color:var(--red);flex-shrink:0}
-.rev-meta{text-align:center;margin-top:34px;font-size:14px;color:var(--ink-2)}
-.rev-meta b{font-weight:600;color:var(--ink)}
-
-/* ============ STATS STRIP ============ */
-.stats{padding-block:88px}
-.stats-in{
-  background:var(--red);border-radius:28px;color:#fff;
-  padding:56px 48px;position:relative;overflow:hidden;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center;
-}
-.stats-in::before{
-  content:"";position:absolute;inset:0;opacity:.35;
-  background:
-    radial-gradient(400px 240px at 12% 0%, rgba(255,255,255,.22), transparent 70%),
-    radial-gradient(420px 260px at 92% 110%, rgba(0,0,0,.4), transparent 70%);
-}
-.stat{position:relative;z-index:2}
-.stat b{font-family:var(--font-display);font-weight:600;font-size:clamp(32px,3.4vw,46px);letter-spacing:-.02em;display:block;line-height:1}
-.stat span{font-size:13.5px;opacity:.82;margin-top:9px;display:block;font-weight:500}
-.stat:not(:first-child){border-left:1px solid rgba(255,255,255,.2)}
-
-/* ============ FAQ ============ */
-.faq{max-width:760px;margin:0 auto;padding:8px 28px 96px}
-.faq h2{text-align:center;font-size:clamp(26px,2.6vw,36px);margin-bottom:34px}
-.faq-item{border-bottom:1px solid var(--line-2)}
-.faq-q{
-  width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;
-  padding:22px 4px;font-size:16.5px;font-weight:600;text-align:left;
-  transition:color .2s;
-}
-.faq-q:hover{color:var(--red)}
-.faq-q .fx{
-  width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line-2);flex-shrink:0;
-  display:grid;place-items:center;transition:transform .3s, background .3s, border-color .3s;
-  font-weight:400;font-size:17px;color:var(--red);
-}
-.faq-item.open .fx{transform:rotate(45deg);background:var(--red);border-color:var(--red);color:#fff}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.2,1)}
-.faq-a p{padding:0 44px 24px 4px;font-size:15px;color:var(--ink-2);line-height:1.65}
-.faq-a p b{font-weight:600;color:var(--ink)}
-
-/* ============ NEWSLETTER + FOOTER ============ */
-.news{background:var(--hero);color:#fff;padding:72px 0;position:relative;overflow:hidden}
-.news::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(700px 380px at 90% 120%, rgba(166,0,0,.45), transparent 65%);
-}
-.news-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-.news h2{font-size:clamp(26px,2.8vw,38px)}
-.news h2 em{color:#FF9A8A}
-.news p{margin-top:10px;color:rgba(255,255,255,.66);font-size:15px;max-width:440px}
-.news-form{display:flex;gap:10px;min-width:400px}
-.news-form input{
-  flex:1;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.22);
-  border-radius:999px;padding:14px 22px;font-family:inherit;font-size:14.5px;color:#fff;outline:none;
-  transition:border-color .2s;
-}
-.news-form input::placeholder{color:rgba(255,255,255,.45)}
-.news-form input:focus{border-color:#FF9A8A}
+/* ============ FOOTER (shared) ============ */
 footer{background:#140908;color:rgba(255,255,255,.65);padding:64px 0 40px;font-size:13.5px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
 .foot-brand .logo-word{color:#fff;font-size:26px}
 .foot-brand p{margin-top:14px;line-height:1.65;max-width:260px}
 .foot-pay{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
-.pay-chip{
-  border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 12px;
-  font-size:11.5px;font-weight:600;color:rgba(255,255,255,.8);
-}
+.pay-chip{border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 12px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.8)}
 .foot-col b{color:#fff;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:16px}
 .foot-col a{display:block;padding:5px 0;transition:color .2s}
 .foot-col a:hover{color:#FF9A8A}
-.foot-base{
-  border-top:1px solid rgba(255,255,255,.12);margin-top:52px;padding-top:26px;
-  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.4);
-}
-.foot-base i{color:rgba(255,255,255,.55)}
+.foot-base{border-top:1px solid rgba(255,255,255,.12);margin-top:52px;padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.4)}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width:1020px){
-  .hero-in{grid-template-columns:1fr;padding-block:56px 96px}
-  .hero-visual{height:380px}
-  .trustbar{grid-template-columns:repeat(2,1fr)}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .repair-grid{grid-template-columns:1fr;gap:44px}
-  .rev-grid{grid-template-columns:repeat(2,1fr)}
-  .stats-in{grid-template-columns:repeat(2,1fr);gap:36px}
-  .stat:nth-child(3){border-left:none}
-  .news-in{grid-template-columns:1fr}
-  .news-form{min-width:0}
+  .pdp{grid-template-columns:1fr;gap:36px}
+  .gallery{position:static}
+  .g-main{height:420px}
+  .cert-head{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-layout{grid-template-columns:1fr}
+  .rev-summary{position:static}
   .foot-grid{grid-template-columns:repeat(2,1fr)}
   .nav-links{display:none}
 }
 @media (max-width:640px){
   .wrap{padding:0 18px}
   .search{display:none}
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .dual-cards{grid-template-columns:1fr}
-  .rev-grid{grid-template-columns:1fr}
-  .trustbar{grid-template-columns:1fr}
-  .hero h1{font-size:38px}
+  .grade-cards{grid-template-columns:1fr}
+  .cta-row{flex-direction:column}
+  .g-main{height:340px}
+  .sticky-in .s-sub,.sticky-in .s-name{display:none}
+  .cert-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <!-- ANNOUNCEMENT -->
-<div class="announce">
-  <span class="spark">✦</span> Redki is live on WhatsApp — browse, buy &amp; book repairs without leaving the chat. <a href="#repair">Say hello&nbsp;→</a>
-</div>
+<div class="announce">✦ Redki is live on WhatsApp: browse, buy &amp; book repairs without leaving the chat. <a href="index.html#repair">Say hello&nbsp;→</a></div>
 
 <!-- HEADER -->
 <header id="header">
   <div class="wrap">
     <div class="nav-top">
-      <a class="logo" href="#">
-        <span class="logo-mark">
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="4.6" stroke="#fff" stroke-width="2.6"/><path d="M12.5 12.5 L20 20 M17 17 L20 14.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
-        </span>
+      <a class="logo" href="index.html">
+        <span class="logo-mark"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="4.6" stroke="#fff" stroke-width="2.6"/><path d="M12.5 12.5 L20 20 M17 17 L20 14.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span>
         <span class="logo-word">red<i>ki</i></span>
       </a>
       <div class="search">
@@ -567,636 +358,576 @@ footer{background:#140908;color:rgba(255,255,255,.65);padding:64px 0 40px;font-s
         Search for iPhone, Tecno, MacBook…
       </div>
       <nav class="nav-links">
-        <a href="#repair">Repair &amp; Care</a>
+        <a href="index.html#repair">Repair &amp; Care</a>
         <a href="#">Sell your device</a>
-        <a href="#faq">Help</a>
+        <a href="index.html#faq">Help</a>
       </nav>
       <div class="nav-icons">
-        <button class="icon-btn" aria-label="Account">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.6 4.5-5 8-5s6.5 1.4 8 5"/></svg>
-        </button>
-        <button class="icon-btn" aria-label="Cart">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h14l-1.5 9.5a2 2 0 0 1-2 1.5H9.3a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="9.5" cy="21.5" r=".5"/><circle cx="16.5" cy="21.5" r=".5"/></svg>
-          <span class="cart-dot">2</span>
-        </button>
+        <button class="icon-btn" aria-label="Account"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.6 4.5-5 8-5s6.5 1.4 8 5"/></svg></button>
+        <button class="icon-btn" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h14l-1.5 9.5a2 2 0 0 1-2 1.5H9.3a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="9.5" cy="21.5" r=".5"/><circle cx="16.5" cy="21.5" r=".5"/></svg><span class="cart-dot" id="cartCount">2</span></button>
       </div>
     </div>
     <nav class="nav-cats">
-      <a href="#deals" class="hot">✦ Great deals</a>
-      <a href="#cats">Smartphones</a>
-      <a href="#cats">Laptops</a>
-      <a href="#cats">Tablets</a>
-      <a href="#cats">Audio</a>
-      <a href="#cats">Accessories</a>
-      <a href="#repair">Repairs</a>
+      <a href="index.html#deals" class="hot">✦ Great deals</a>
+      <a href="#" style="color:var(--ink);font-weight:600">Smartphones</a>
+      <a href="#">Laptops</a>
+      <a href="#">Tablets</a>
+      <a href="#">Audio</a>
+      <a href="#">Accessories</a>
+      <a href="index.html#repair">Repairs</a>
       <a href="#">Redki Certified</a>
-      <a href="#">Tech Journal</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-in">
-    <div>
-      <h1 class="rv">Karibu, good deal,<br><span class="fade">good phone,</span> <span class="accent">certified.</span></h1>
-      <p class="hero-sub rv" style="transition-delay:.1s">
-        Every device on Redki passes a <strong>Piceasoft-verified diagnostic</strong> before it reaches you —
-        graded, warrantied, and delivered across Kenya. Pay with <strong>M-Pesa</strong>. Track it all on WhatsApp.
+<main class="wrap">
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs rv in">
+    <a href="index.html">Home</a><span>/</span><a href="#">Smartphones</a><span>/</span><a href="#">iPhone</a><span>/</span><b>iPhone 13 · 128 GB</b>
+  </nav>
+
+  <div class="pdp">
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery rv in">
+      <div class="g-main" id="gMain">
+        <div class="g-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+          Redki Certified
+        </div>
+        <!-- slide 1 : front -->
+        <div class="g-slide on">
+          <svg width="230" height="430" viewBox="0 0 230 430">
+            <defs>
+              <linearGradient id="s1b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d3d45"/><stop offset="1" stop-color="#17171d"/></linearGradient>
+              <linearGradient id="s1s" x1="0" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#2a2a33"/><stop offset=".5" stop-color="#101016"/><stop offset="1" stop-color="#1c1c24"/></linearGradient>
+            </defs>
+            <rect x="6" y="4" width="218" height="422" rx="36" fill="url(#s1b)"/>
+            <rect x="14" y="12" width="202" height="406" rx="28" fill="url(#s1s)"/>
+            <rect x="86" y="22" width="58" height="17" rx="8.5" fill="#0a0a0e"/>
+            <circle cx="132" cy="30.5" r="4" fill="#1e2a3a"/>
+            <ellipse cx="115" cy="200" rx="70" ry="120" fill="#fff" opacity=".04"/>
+            <text x="115" y="225" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="34" font-weight="600" fill="#fff" opacity=".2">13</text>
+          </svg>
+        </div>
+        <!-- slide 2 : back -->
+        <div class="g-slide">
+          <svg width="230" height="430" viewBox="0 0 230 430">
+            <defs><linearGradient id="s2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a4a54"/><stop offset="1" stop-color="#202028"/></linearGradient></defs>
+            <rect x="6" y="4" width="218" height="422" rx="36" fill="url(#s2b)"/>
+            <rect x="20" y="18" width="76" height="76" rx="22" fill="#33333d"/>
+            <circle cx="44" cy="42" r="15" fill="#15151c"/><circle cx="44" cy="42" r="8" fill="#2c3a4d"/><circle cx="41" cy="39" r="2.6" fill="#5a7a9e"/>
+            <circle cx="72" cy="70" r="15" fill="#15151c"/><circle cx="72" cy="70" r="8" fill="#2c3a4d"/><circle cx="69" cy="67" r="2.6" fill="#5a7a9e"/>
+            <circle cx="72" cy="40" r="4.5" fill="#1c1c24"/>
+            <circle cx="115" cy="250" r="26" fill="#fff" opacity=".08"/>
+            <path d="M108 244a10 10 0 0 1 14 0M104 240c6.5-6 15.5-6 22 0" stroke="#fff" stroke-width="2" opacity=".3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <!-- slide 3 : side -->
+        <div class="g-slide">
+          <svg width="120" height="430" viewBox="0 0 120 430">
+            <defs><linearGradient id="s3b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#55555f"/><stop offset=".5" stop-color="#2b2b33"/><stop offset="1" stop-color="#43434d"/></linearGradient></defs>
+            <rect x="42" y="4" width="36" height="422" rx="17" fill="url(#s3b)"/>
+            <rect x="38" y="90" width="5" height="26" rx="2.5" fill="#1c1c22"/>
+            <rect x="38" y="130" width="5" height="42" rx="2.5" fill="#1c1c22"/>
+            <rect x="38" y="182" width="5" height="42" rx="2.5" fill="#1c1c22"/>
+            <rect x="77" y="140" width="5" height="60" rx="2.5" fill="#1c1c22"/>
+          </svg>
+        </div>
+        <!-- slide 4 : screen on -->
+        <div class="g-slide">
+          <svg width="230" height="430" viewBox="0 0 230 430">
+            <defs><linearGradient id="s4s" x1="0" y1="0" x2="1" y2="1.1"><stop offset="0" stop-color="#FBEFE9"/><stop offset=".55" stop-color="#F3D9CE"/><stop offset="1" stop-color="#E2B4A4"/></linearGradient></defs>
+            <rect x="6" y="4" width="218" height="422" rx="36" fill="#17171d"/>
+            <rect x="14" y="12" width="202" height="406" rx="28" fill="url(#s4s)"/>
+            <rect x="86" y="22" width="58" height="17" rx="8.5" fill="#17171d"/>
+            <rect x="34" y="62" width="88" height="12" rx="6" fill="#A60000" opacity=".85"/>
+            <rect x="34" y="84" width="130" height="8" rx="4" fill="#B98D80" opacity=".55"/>
+            <rect x="34" y="112" width="162" height="88" rx="14" fill="#fff" opacity=".92"/>
+            <circle cx="62" cy="144" r="14" fill="#F6E9E4"/>
+            <path d="M56 144l4.5 4.5 8-8.5" stroke="#A60000" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="86" y="130" width="92" height="9" rx="4.5" fill="#3a2a27" opacity=".8"/>
+            <rect x="86" y="147" width="64" height="7" rx="3.5" fill="#B98D80" opacity=".7"/>
+            <rect x="46" y="172" width="72" height="18" rx="9" fill="#A60000"/>
+            <rect x="34" y="218" width="78" height="78" rx="14" fill="#fff" opacity=".9"/>
+            <rect x="120" y="218" width="78" height="78" rx="14" fill="#fff" opacity=".65"/>
+            <rect x="34" y="314" width="164" height="44" rx="22" fill="#241715"/>
+            <rect x="72" y="331" width="88" height="10" rx="5" fill="#F3D9CE" opacity=".9"/>
+          </svg>
+        </div>
+        <span class="g-zoom">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
+          Hover to zoom
+        </span>
+      </div>
+      <div class="g-thumbs" id="gThumbs">
+        <button class="g-thumb on" aria-label="Front view"><svg width="30" height="56" viewBox="0 0 30 56"><rect x="1" y="1" width="28" height="54" rx="7" fill="#2b2b33"/><rect x="3.5" y="3.5" width="23" height="49" rx="5" fill="#17171d"/><rect x="10" y="5" width="10" height="3" rx="1.5" fill="#000"/></svg></button>
+        <button class="g-thumb" aria-label="Back view"><svg width="30" height="56" viewBox="0 0 30 56"><rect x="1" y="1" width="28" height="54" rx="7" fill="#3a3a44"/><rect x="4" y="4" width="12" height="12" rx="4" fill="#26262e"/><circle cx="8" cy="8" r="2.2" fill="#4a637f"/><circle cx="12" cy="12" r="2.2" fill="#4a637f"/></svg></button>
+        <button class="g-thumb" aria-label="Side view"><svg width="30" height="56" viewBox="0 0 30 56"><rect x="12" y="1" width="6" height="54" rx="3" fill="#3a3a44"/><rect x="10.5" y="12" width="2" height="5" rx="1" fill="#17171d"/><rect x="10.5" y="20" width="2" height="7" rx="1" fill="#17171d"/></svg></button>
+        <button class="g-thumb" aria-label="Screen on"><svg width="30" height="56" viewBox="0 0 30 56"><rect x="1" y="1" width="28" height="54" rx="7" fill="#2b2b33"/><rect x="3.5" y="3.5" width="23" height="49" rx="5" fill="#F3D9CE"/><rect x="7" y="10" width="12" height="3" rx="1.5" fill="#A60000"/><rect x="7" y="17" width="16" height="10" rx="2.5" fill="#fff"/></svg></button>
+      </div>
+      <p class="g-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A60000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M9 6l1.2-2h3.6L15 6"/></svg>
+        Illustrative renders. You'll receive actual photos of your exact device with its diagnostic report.
       </p>
-      <div class="hero-ctas rv" style="transition-delay:.2s">
-        <a class="btn btn-red" href="#deals">
-          Shop certified devices
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn-ghost" href="#repair">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a14 14 0 0 1-6.1-5.4c-.7-1.1-1.1-2.3-.7-3 .2-.5.8-1.4 1.4-1.4h.5c.2 0 .4 0 .6.5l.8 2c0 .2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.1.3.7 1.2 1.6 2 1 1 1.9 1.3 2.2 1.4.3.2.5.1.7-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.4 0 .7Z"/></svg>
-          Book a repair in chat
-        </a>
-      </div>
-      <p class="hero-note rv" style="transition-delay:.3s">
-        <svg style="flex-shrink:0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
-        <span>Backed by the <b>Redki Promise</b> — verified condition, real warranty, no surprises.</span>
-      </p>
-    </div>
-    <div class="hero-visual rv" style="transition-delay:.25s">
-      <!-- phone illustration -->
-      <svg class="hv-phone" width="240" height="440" viewBox="0 0 240 440">
-        <defs>
-          <linearGradient id="ph-body" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#4a3532"/><stop offset="1" stop-color="#241715"/>
-          </linearGradient>
-          <linearGradient id="ph-screen" x1="0" y1="0" x2="1" y2="1.2">
-            <stop offset="0" stop-color="#FBEFE9"/><stop offset=".55" stop-color="#F3D9CE"/><stop offset="1" stop-color="#E4B7A8"/>
-          </linearGradient>
-        </defs>
-        <rect x="10" y="6" width="220" height="428" rx="38" fill="url(#ph-body)"/>
-        <rect x="20" y="16" width="200" height="408" rx="30" fill="url(#ph-screen)"/>
-        <rect x="92" y="26" width="56" height="16" rx="8" fill="#241715"/>
-        <!-- screen ui -->
-        <rect x="40" y="64" width="86" height="12" rx="6" fill="#A60000" opacity=".85"/>
-        <rect x="40" y="84" width="130" height="8" rx="4" fill="#B98D80" opacity=".55"/>
-        <rect x="40" y="112" width="160" height="92" rx="14" fill="#fff" opacity=".92"/>
-        <circle cx="66" cy="144" r="14" fill="#F6E9E4"/>
-        <path d="M60 144l4.5 4.5 8-8.5" stroke="#A60000" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="90" y="130" width="90" height="9" rx="4.5" fill="#3a2a27" opacity=".8"/>
-        <rect x="90" y="147" width="62" height="7" rx="3.5" fill="#B98D80" opacity=".7"/>
-        <rect x="52" y="172" width="70" height="18" rx="9" fill="#A60000"/>
-        <rect x="40" y="222" width="76" height="76" rx="14" fill="#fff" opacity=".9"/>
-        <rect x="124" y="222" width="76" height="76" rx="14" fill="#fff" opacity=".65"/>
-        <rect x="52" y="238" width="44" height="8" rx="4" fill="#3a2a27" opacity=".75"/>
-        <rect x="52" y="254" width="30" height="7" rx="3.5" fill="#A60000" opacity=".8"/>
-        <rect x="136" y="238" width="44" height="8" rx="4" fill="#3a2a27" opacity=".55"/>
-        <rect x="136" y="254" width="30" height="7" rx="3.5" fill="#B98D80" opacity=".7"/>
-        <rect x="40" y="316" width="160" height="42" rx="21" fill="#241715"/>
-        <rect x="76" y="332" width="88" height="10" rx="5" fill="#F3D9CE" opacity=".9"/>
-      </svg>
-      <div class="hv-chip chip-1">
-        <span class="ic" style="background:#F6E9E4">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A60000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
-        </span>
-        <span>Redki Certified<small>54-point diagnostic passed</small></span>
-      </div>
-      <div class="hv-chip chip-2">
-        <span class="ic" style="background:#E7F3EC">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E7A4D" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
-        </span>
-        <span>M-Pesa confirmed<small>KSh 42,500 · Order #RK-1042</small></span>
-      </div>
-      <div class="hv-chip chip-3">
-        <span class="ic" style="background:#FAF0DF">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C98A2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7M2 7h20v5H2zM12 22V7M12 7c-2.5 0-4.5-1.2-4.5-2.8S9.5 2 12 7c2.5-5 4.5-4.4 4.5-2.8S14.5 7 12 7Z"/></svg>
-        </span>
-        <span>Warranty active<small>PDF sent to your email</small></span>
-      </div>
-    </div>
-  </div>
-  <div class="hero-dots"><span class="on"></span><span></span><span></span></div>
-</section>
+    </section>
 
-<!-- STATEMENT + TRUST -->
-<section class="statement wrap">
-  <h2 class="rv">Where Kenya shops <em>certified</em> refurbished tech.</h2>
-  <p class="rv">Everything you love about new, for less. <a href="#">Guaranteed by the Redki Promise.</a></p>
-  <div class="trustbar">
-    <div class="trust rv">
-      <span class="t-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
-      <span><b>Redki-certified condition</b>diagnostic-verified, graded A–C</span>
-    </div>
-    <div class="trust rv" style="transition-delay:.08s">
-      <span class="t-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h4"/></svg></span>
-      <span><b>Pay with M-Pesa</b>instant confirmation, no waiting</span>
-    </div>
-    <div class="trust rv" style="transition-delay:.16s">
-      <span class="t-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h-2v-6l3-6h9v12M9 17h6M14 8h4l3 4v5h-2"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg></span>
-      <span><b>Free delivery in Nairobi</b>pickup &amp; drop-off for repairs</span>
-    </div>
-    <div class="trust rv" style="transition-delay:.24s">
-      <span class="t-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7M2 7h20v5H2zM12 22V7"/></svg></span>
-      <span><b>Warranty, in writing</b>PDF to your inbox + WhatsApp</span>
-    </div>
-  </div>
-</section>
+    <!-- ============ BUY COLUMN ============ -->
+    <section class="buy rv in">
+      <h1>iPhone 13 · Unlocked</h1>
+      <div class="buy-rating">
+        <span class="stars">★★★★★</span>
+        <b>4.8</b> · <a href="#reviews">412 reviews</a>
+      </div>
 
-<!-- CATEGORY GRID -->
-<section class="section wrap" id="cats">
-  <div class="sec-head rv">
-    <div>
-      <span class="eyebrow">Shop by category</span>
-      <h2 style="margin-top:10px">Our most wanted</h2>
-    </div>
-    <a class="sec-link" href="#">See everything <span>→</span></a>
+      <p class="spec-line">A15 Bionic · 6.1″ OLED · Battery ≥ 88% · Unlocked for all carriers</p>
+
+      <div class="price-block">
+        <span class="now" id="priceNow">KSh 52,900</span>
+        <span class="was" id="priceWas">KSh 78,000</span>
+        <span class="save" id="priceSave">Save KSh 25,100</span>
+      </div>
+
+      <!-- condition -->
+      <div class="opt-group">
+        <div class="opt-label">
+          <span>Condition</span>
+          <a href="#" onclick="return false">How we grade →</a>
+        </div>
+        <div class="grade-cards" id="gradeCards">
+          <button class="grade-card on" data-grade="A">
+            <b>Grade A</b><small data-gp>KSh 52,900</small>
+          </button>
+          <button class="grade-card" data-grade="B">
+            <b>Grade B</b><small data-gp>KSh 48,500</small>
+          </button>
+          <button class="grade-card" data-grade="C">
+            <b>Grade C</b><small data-gp>KSh 44,900</small>
+          </button>
+        </div>
+        <p class="opt-cap" id="gradeCap">Like new. Flawless screen, near-perfect body.</p>
+      </div>
+
+      <!-- storage -->
+      <div class="opt-group">
+        <div class="opt-label"><span>Storage</span></div>
+        <div class="pill-row" id="storagePills">
+          <button class="pill on" data-storage="128">
+            <b>128 GB</b><small>Included</small>
+          </button>
+          <button class="pill" data-storage="256">
+            <b>256 GB</b><small>+ KSh 6,000</small>
+          </button>
+        </div>
+      </div>
+
+      <!-- buy-box offers -->
+      <div class="opt-group">
+        <div class="opt-label">
+          <span>Delivery &amp; extras</span>
+          <span class="sel">3 curated picks</span>
+        </div>
+        <div id="offerList">
+          <button class="offer on" data-offer="0">
+            <b>Redki Standard <span class="best">Best overall</span></b>
+            <span class="offer-price" data-op="0">KSh 52,900</span>
+          </button>
+          <button class="offer" data-offer="450">
+            <b>Express <span class="best gold">Fastest</span></b>
+            <span class="offer-price" data-op="450">+ KSh 450</span>
+          </button>
+          <button class="offer" data-offer="1900">
+            <b>Battery Fresh bundle</b>
+            <span class="offer-price" data-op="1900">+ KSh 1,900</span>
+          </button>
+        </div>
+        <div class="more-offers" id="moreOffers">
+          <button class="offer" data-offer="1200">
+            <b>Care+ 24 months</b>
+            <span class="offer-price" data-op="1200">+ KSh 1,200</span>
+          </button>
+          <button class="offer" data-offer="-1500">
+            <b>Trade-in credit</b>
+            <span class="offer-price" data-op="-1500">− KSh 1,500*</span>
+          </button>
+        </div>
+        <p class="opt-cap" id="offerCap">Free delivery · arrives Tue 14 Jul</p>
+        <button class="view-more" id="viewMore">View 2 more options ↓</button>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-row" id="ctaRow">
+        <button class="btn btn-red" id="addBtn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h14l-1.5 9.5a2 2 0 0 1-2 1.5H9.3a2 2 0 0 1-2-1.6L5 3H2"/><circle cx="9.5" cy="21.5" r=".5"/><circle cx="16.5" cy="21.5" r=".5"/></svg>
+          Add to cart · <span id="ctaPrice">KSh 52,900</span>
+        </button>
+        <button class="btn btn-wa" title="Buy on WhatsApp">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="#211414"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a14 14 0 0 1-6.1-5.4c-.7-1.1-1.1-2.3-.7-3 .2-.5.8-1.4 1.4-1.4h.5c.2 0 .4 0 .6.5l.8 2c0 .2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.1.3.7 1.2 1.6 2 1 1 1.9 1.3 2.2 1.4.3.2.5.1.7-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.4 0 .7Z"/></svg>
+        </button>
+      </div>
+      <p class="micro">Pay with <b>M-Pesa</b> · In stock, 3 left · Ships same day</p>
+
+      <div class="assure">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg> 12-mo part warranty</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h-2v-6l3-6h9v12M9 17h6M14 8h4l3 4v5h-2"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg> Free delivery</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg> 30-day returns</span>
+      </div>
+    </section>
   </div>
-  <div class="cat-grid">
-    <a class="cat dark rv" href="#deals">
-      <span class="deal-tag">Up to 40% off</span>
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><path d="M32 8l6.2 14.6L54 24l-12 10.4L45.6 50 32 41.4 18.4 50 22 34.4 10 24l15.8-1.4L32 8Z" fill="#fff" opacity=".95"/></svg>
-      </span>
-      <span>Great deals</span>
-    </a>
-    <a class="cat rv" href="#" style="transition-delay:.05s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="18" y="6" width="28" height="52" rx="7" fill="#A60000"/><rect x="21.5" y="10" width="21" height="44" rx="4" fill="#F6E9E4"/><rect x="27" y="7.5" width="10" height="3" rx="1.5" fill="#F6E9E4" opacity=".7"/><rect x="25" y="18" width="14" height="4" rx="2" fill="#A60000" opacity=".7"/><rect x="25" y="26" width="14" height="14" rx="3" fill="#fff"/><path d="M28.5 33l2.5 2.5 4.5-5" stroke="#A60000" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <span>iPhone</span>
-    </a>
-    <a class="cat rv" href="#" style="transition-delay:.1s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="8" y="14" width="48" height="30" rx="4" fill="#A60000"/><rect x="11.5" y="17.5" width="41" height="23" rx="2" fill="#F6E9E4"/><path d="M4 48h56l-3 5a3 3 0 0 1-2.6 1.5H9.6A3 3 0 0 1 7 53l-3-5Z" fill="#7E0000"/><rect x="16" y="22" width="20" height="4" rx="2" fill="#A60000" opacity=".7"/><rect x="16" y="30" width="30" height="3" rx="1.5" fill="#B98D80" opacity=".8"/></svg>
-      </span>
-      <span>MacBook</span>
-    </a>
-    <a class="cat rv" href="#" style="transition-delay:.15s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="12" y="8" width="40" height="48" rx="6" fill="#A60000"/><rect x="15.5" y="12" width="33" height="40" rx="3" fill="#F6E9E4"/><rect x="21" y="19" width="16" height="4" rx="2" fill="#A60000" opacity=".7"/><rect x="21" y="28" width="22" height="16" rx="3" fill="#fff"/></svg>
-      </span>
-      <span>Tablets</span>
-    </a>
-    <a class="cat rv" href="#" style="transition-delay:.2s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="18" y="6" width="28" height="52" rx="7" fill="#3a2a27"/><rect x="21.5" y="10" width="21" height="44" rx="4" fill="#F6E9E4"/><circle cx="32" cy="8.2" r="1.4" fill="#F6E9E4" opacity=".8"/><rect x="25" y="18" width="14" height="20" rx="3" fill="#A60000" opacity=".85"/><rect x="25" y="42" width="14" height="4" rx="2" fill="#B98D80"/></svg>
-      </span>
-      <span>Android</span>
-    </a>
-    <a class="cat rv" href="#" style="transition-delay:.25s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><path d="M14 34a18 18 0 0 1 36 0" stroke="#A60000" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="8" y="32" width="12" height="18" rx="5" fill="#A60000"/><rect x="44" y="32" width="12" height="18" rx="5" fill="#7E0000"/></svg>
-      </span>
-      <span>Audio</span>
-    </a>
-    <a class="cat rv" href="#" style="transition-delay:.3s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="10" y="18" width="44" height="30" rx="6" fill="#3a2a27"/><rect x="14" y="22" width="36" height="22" rx="3" fill="#F6E9E4"/><rect x="24" y="50" width="16" height="4" rx="2" fill="#7E0000"/><circle cx="32" cy="33" r="7" fill="#A60000"/><path d="M30 30.5v5l4.5-2.5-4.5-2.5Z" fill="#fff"/></svg>
-      </span>
-      <span>Windows laptops</span>
-    </a>
-    <a class="cat rv" href="#repair" style="transition-delay:.35s">
-      <span class="cat-art">
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><path d="M42 10a12 12 0 0 0-11.6 15L14 41.4A5.4 5.4 0 1 0 21.6 49L38 32.6A12 12 0 0 0 53 20.4l-7.2 7.2-6.4-1.9-1.9-6.4L44.7 12A11.6 11.6 0 0 0 42 10Z" fill="#A60000"/><circle cx="18" cy="45.5" r="2.4" fill="#F6E9E4"/></svg>
-      </span>
-      <span>Repair &amp; care</span>
-    </a>
+</main>
+
+<!-- ============ CERTIFICATION BAND ============ -->
+<section class="cert-band">
+  <div class="wrap cert-in">
+    <div class="cert-head">
+      <div>
+        <span class="eyebrow rv">Certification details</span>
+        <h2 class="rv">This exact device passed <em>54 checkpoints.</em></h2>
+      </div>
+      <p class="rv">Not a promise, a measured result. Every Redki device ships with its own lab diagnostic, and the report is yours to keep.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card rv">
+        <span class="cc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF9A8A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="7" width="12" height="13" rx="2"/><path d="M10 7V5a2 2 0 0 1 4 0v2"/><path d="M9 13h6"/></svg></span>
+        <b>Battery ≥ 88%</b>
+        <p>Measured health of the fitted battery, replaced free if it tests below our floor.</p>
+      </div>
+      <div class="cert-card rv" style="transition-delay:.07s">
+        <span class="cc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF9A8A" stroke-width="1.9" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+        <b>Genuine screen</b>
+        <p>Panel authenticity, touch response, true-tone and brightness all verified in the lab.</p>
+      </div>
+      <div class="cert-card rv" style="transition-delay:.14s">
+        <span class="cc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF9A8A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+        <b>54-point diagnostic</b>
+        <p>Cameras, sensors, mics, network, Face ID. Every function tested and logged.</p>
+      </div>
+      <div class="cert-card rv" style="transition-delay:.21s">
+        <span class="cc-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF9A8A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-14"/></svg></span>
+        <b>Data wiped, IMEI clean</b>
+        <p>Certified erasure of previous data and a verified, blacklist-free IMEI.</p>
+      </div>
+    </div>
+    <div class="cert-doc rv">
+      <div class="cert-doc-l">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A60000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></svg></span>
+        <div>
+          <b>See a sample diagnostic report</b>
+          <small>The same PDF you'll receive by email with your order, WhatsApp summary included.</small>
+        </div>
+      </div>
+      <button class="btn btn-ghost">View sample PDF →</button>
+    </div>
   </div>
 </section>
 
-<!-- DEALS -->
-<section class="deals-band" id="deals">
+<!-- ============ DETAILS ACCORDION ============ -->
+<section class="details">
+  <h2 class="rv">The fine print, unfolded.</h2>
+  <div class="acc-item rv open">
+    <button class="acc-q">Technical specifications<span class="fx">+</span></button>
+    <div class="acc-a"><div class="acc-inner">
+      <table class="spec-table">
+        <tr><td>Display</td><td>6.1″ Super Retina XDR OLED</td></tr>
+        <tr><td>Processor</td><td>Apple A15 Bionic</td></tr>
+        <tr><td>Storage</td><td>128 GB / 256 GB</td></tr>
+        <tr><td>Camera</td><td>Dual 12 MP (wide + ultra-wide)</td></tr>
+        <tr><td>SIM</td><td>Physical SIM + eSIM</td></tr>
+        <tr><td>Network</td><td>5G, unlocked for all Kenyan carriers</td></tr>
+        <tr><td>Battery health</td><td>≥ 88% measured (this unit: 91%)</td></tr>
+      </table>
+    </div></div>
+  </div>
+  <div class="acc-item rv">
+    <button class="acc-q">What's in the box<span class="fx">+</span></button>
+    <div class="acc-a"><div class="acc-inner">
+      Your iPhone 13, a <b>new USB-C to Lightning cable</b>, SIM eject tool, and your printed diagnostic summary card. Chargers are available as an add-on at checkout, like-new and tested, from KSh 900.
+    </div></div>
+  </div>
+  <div class="acc-item rv">
+    <button class="acc-q">What Grade A / B / C actually look like<span class="fx">+</span></button>
+    <div class="acc-a"><div class="acc-inner">
+      <b>Grade A:</b> screen flawless, body near-perfect; you'd struggle to tell it from new. <b>Grade B:</b> faint micro-scratches visible at arm's length, screen clean. <b>Grade C:</b> honest visible wear on the body, but every function tests perfect and the same warranty applies. <i>Every grade passes the identical 54-point diagnostic.</i>
+    </div></div>
+  </div>
+  <div class="acc-item rv">
+    <button class="acc-q">Warranty &amp; returns policy<span class="fx">+</span></button>
+    <div class="acc-a"><div class="acc-inner">
+      The warranty covers <b>all parts we replaced or serviced</b> for 12 months, issued in writing as a PDF. 30-day change-of-mind returns with a full M-Pesa refund. If the same covered issue recurs, your record is already linked. Message us on WhatsApp and we'll take it from there.
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews-band" id="reviews">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Fresh drops</span>
-        <h2 style="margin-top:10px">Shop our best deals</h2>
-        <p class="buybox-note">Three curated picks per model — <b>no scrolling through 40 identical listings.</b></p>
-      </div>
-      <div class="rail-nav">
-        <button class="rail-btn" data-rail="-1" aria-label="Previous">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button class="rail-btn" data-rail="1" aria-label="Next">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
+        <span class="eyebrow">Reviews</span>
+        <h2 style="margin-top:10px">What buyers of this model say</h2>
       </div>
     </div>
-    <div class="rail-wrap rv">
-      <div class="rail" id="rail">
-
-        <!-- card 1 -->
-        <article class="pcard">
-          <div class="p-img" style="background:linear-gradient(150deg,#F6E9E4,#EED3C8)">
-            <span class="drop">Price drop</span>
-            <svg width="86" height="150" viewBox="0 0 86 150"><rect x="4" y="2" width="78" height="146" rx="16" fill="#2b1c1a"/><rect x="9" y="7" width="68" height="136" rx="11" fill="#4a3532"/><rect x="13" y="11" width="60" height="128" rx="8" fill="#1a1a1e"/><circle cx="30" cy="28" r="8" fill="#33333a"/><circle cx="50" cy="28" r="8" fill="#33333a"/><circle cx="30" cy="28" r="4" fill="#556"/><circle cx="50" cy="28" r="4" fill="#556"/></svg>
+    <div class="rev-layout">
+      <aside class="rev-summary rv">
+        <div class="big">4.8</div>
+        <div class="stars">★★★★★</div>
+        <small>412 verified reviews · iPhone 13 on Redki</small>
+        <div style="margin-top:20px">
+          <div class="rbar"><span>5★</span><div class="track"><div class="fill" data-w="82%"></div></div><em>82%</em></div>
+          <div class="rbar"><span>4★</span><div class="track"><div class="fill" data-w="12%"></div></div><em>12%</em></div>
+          <div class="rbar"><span>3★</span><div class="track"><div class="fill" data-w="4%"></div></div><em>4%</em></div>
+          <div class="rbar"><span>2★</span><div class="track"><div class="fill" data-w="1%"></div></div><em>1%</em></div>
+          <div class="rbar"><span>1★</span><div class="track"><div class="fill" data-w="1%"></div></div><em>1%</em></div>
+        </div>
+      </aside>
+      <div class="rev-list">
+        <article class="rev-card rv">
+          <div class="rev-top">
+            <span class="rev-av" style="background:#A60000">J</span>
+            <div><b>Joyce K. · Nairobi</b><span class="stars">★★★★★</span></div>
+            <span class="rev-verified">✓ Verified purchase</span>
           </div>
-          <div class="p-body">
-            <div class="p-name">iPhone 13 — Unlocked</div>
-            <div class="p-spec">128 GB · Midnight · Physical SIM + eSIM</div>
-            <span class="p-grade">✦ Grade A · Excellent</span>
-            <div class="p-price"><b>KSh 52,900</b><s>KSh 78,000</s></div>
-            <div class="p-save">Save KSh 25,100 vs. new</div>
-            <button class="p-btn">+ Add to cart</button>
-          </div>
+          <p>Grade A is not an exaggeration. <i>I genuinely checked the box twice to confirm it wasn't new.</i> Battery report said 92% and the diagnostic PDF arrived before the phone did.</p>
+          <div class="rev-tag">Grade A · 128 GB · bought 3 weeks ago</div>
         </article>
-
-        <!-- card 2 -->
-        <article class="pcard">
-          <div class="p-img" style="background:linear-gradient(150deg,#EFE5E9,#DFC9D4)">
-            <span class="drop">Price drop</span>
-            <svg width="86" height="150" viewBox="0 0 86 150"><rect x="4" y="2" width="78" height="146" rx="16" fill="#3d3244"/><rect x="9" y="7" width="68" height="136" rx="11" fill="#5c4a66"/><rect x="13" y="11" width="60" height="128" rx="8" fill="#241d29"/><rect x="20" y="18" width="22" height="22" rx="6" fill="#3a3142"/><circle cx="27" cy="25" r="4.5" fill="#6e5b7a"/><circle cx="36" cy="34" r="4.5" fill="#6e5b7a"/></svg>
+        <article class="rev-card rv" style="transition-delay:.07s">
+          <div class="rev-top">
+            <span class="rev-av" style="background:#C98A2D">D</span>
+            <div><b>Dennis M. · Nakuru</b><span class="stars">★★★★★</span></div>
+            <span class="rev-verified">✓ Verified purchase</span>
           </div>
-          <div class="p-body">
-            <div class="p-name">Samsung Galaxy S22</div>
-            <div class="p-spec">256 GB · Violet · Dual SIM</div>
-            <span class="p-grade">✦ Grade A · Excellent</span>
-            <div class="p-price"><b>KSh 44,500</b><s>KSh 69,900</s></div>
-            <div class="p-save">Save KSh 25,400 vs. new</div>
-            <button class="p-btn">+ Add to cart</button>
-          </div>
+          <p>Ordered on WhatsApp during lunch, paid with M-Pesa, and tracked the whole delivery in the same chat. Two days to Nakuru. The Grade B scratches? <i>You need sunlight and faith to find them.</i></p>
+          <div class="rev-tag">Grade B · 128 GB · bought 1 month ago</div>
         </article>
-
-        <!-- card 3 -->
-        <article class="pcard">
-          <div class="p-img" style="background:linear-gradient(150deg,#EAE6E0,#D8D0C4)">
-            <svg width="150" height="98" viewBox="0 0 150 98"><rect x="14" y="4" width="122" height="78" rx="7" fill="#41403e"/><rect x="19" y="9" width="112" height="68" rx="4" fill="#dcd6cb"/><rect x="26" y="17" width="44" height="7" rx="3.5" fill="#A60000" opacity=".8"/><rect x="26" y="30" width="78" height="5" rx="2.5" fill="#8a8478"/><rect x="26" y="40" width="60" height="5" rx="2.5" fill="#8a8478" opacity=".7"/><path d="M4 84h142l-4 7a4 4 0 0 1-3.4 2H11.4A4 4 0 0 1 8 91l-4-7Z" fill="#2e2d2b"/></svg>
+        <article class="rev-card rv" style="transition-delay:.14s">
+          <div class="rev-top">
+            <span class="rev-av" style="background:#1E7A4D">F</span>
+            <div><b>Faith W. · Mombasa</b><span class="stars">★★★★☆</span></div>
+            <span class="rev-verified">✓ Verified purchase</span>
           </div>
-          <div class="p-body">
-            <div class="p-name">MacBook Air M1 13″</div>
-            <div class="p-spec">8 GB RAM · 256 GB SSD · Space Grey</div>
-            <span class="p-grade b">✦ Grade B · Very good</span>
-            <div class="p-price"><b>KSh 84,000</b><s>KSh 129,000</s></div>
-            <div class="p-save">Save KSh 45,000 vs. new</div>
-            <button class="p-btn">+ Add to cart</button>
-          </div>
+          <p>Took a star off because delivery to Mombasa was four days, not three. The phone itself is spotless and the warranty PDF being tied to the exact parts is <i>exactly the kind of honesty I wish more shops had.</i></p>
+          <div class="rev-tag">Grade A · 256 GB · bought 2 months ago</div>
         </article>
-
-        <!-- card 4 -->
-        <article class="pcard">
-          <div class="p-img" style="background:linear-gradient(150deg,#F1E6DC,#E3CDBB)">
-            <span class="drop">Hot in Nairobi</span>
-            <svg width="86" height="150" viewBox="0 0 86 150"><rect x="4" y="2" width="78" height="146" rx="16" fill="#1c3a5e"/><rect x="9" y="7" width="68" height="136" rx="11" fill="#2c5688"/><rect x="13" y="11" width="60" height="128" rx="8" fill="#152436"/><rect x="20" y="18" width="16" height="34" rx="8" fill="#254666"/><circle cx="28" cy="27" r="4.5" fill="#4d79a8"/><circle cx="28" cy="43" r="4.5" fill="#4d79a8"/></svg>
-          </div>
-          <div class="p-body">
-            <div class="p-name">Tecno Camon 20 Pro</div>
-            <div class="p-spec">256 GB · Serenity Blue · Dual SIM</div>
-            <span class="p-grade">✦ Grade A · Excellent</span>
-            <div class="p-price"><b>KSh 18,900</b><s>KSh 27,500</s></div>
-            <div class="p-save">Save KSh 8,600 vs. new</div>
-            <button class="p-btn">+ Add to cart</button>
-          </div>
-        </article>
-
-        <!-- card 5 -->
-        <article class="pcard">
-          <div class="p-img" style="background:linear-gradient(150deg,#E9E9EF,#D2D3DE)">
-            <svg width="130" height="120" viewBox="0 0 130 120"><path d="M25 62a40 40 0 0 1 80 0" stroke="#3b3b45" stroke-width="10" fill="none" stroke-linecap="round"/><rect x="13" y="58" width="24" height="40" rx="11" fill="#2b2b33"/><rect x="93" y="58" width="24" height="40" rx="11" fill="#2b2b33"/><rect x="17" y="63" width="16" height="30" rx="7" fill="#A60000" opacity=".85"/><rect x="97" y="63" width="16" height="30" rx="7" fill="#A60000" opacity=".85"/></svg>
-          </div>
-          <div class="p-body">
-            <div class="p-name">Sony WH-1000XM4</div>
-            <div class="p-spec">Noise cancelling · Over-ear · Black</div>
-            <span class="p-grade b">✦ Grade B · Very good</span>
-            <div class="p-price"><b>KSh 21,500</b><s>KSh 38,000</s></div>
-            <div class="p-save">Save KSh 16,500 vs. new</div>
-            <button class="p-btn">+ Add to cart</button>
-          </div>
-        </article>
-
-        <!-- card 6 -->
-        <article class="pcard">
-          <div class="p-img" style="background:linear-gradient(150deg,#F6E9E4,#ECD2C5)">
-            <span class="drop">Price drop</span>
-            <svg width="110" height="140" viewBox="0 0 110 140"><rect x="8" y="4" width="94" height="132" rx="12" fill="#8a8d92"/><rect x="13" y="9" width="84" height="122" rx="8" fill="#e8e6e1"/><rect x="22" y="20" width="34" height="6" rx="3" fill="#A60000" opacity=".8"/><rect x="22" y="34" width="66" height="40" rx="6" fill="#fff"/><rect x="22" y="82" width="66" height="5" rx="2.5" fill="#9a938a"/><rect x="22" y="93" width="48" height="5" rx="2.5" fill="#9a938a" opacity=".7"/></svg>
-          </div>
-          <div class="p-body">
-            <div class="p-name">iPad 9th Gen 10.2″</div>
-            <div class="p-spec">64 GB · Wi-Fi · Silver</div>
-            <span class="p-grade">✦ Grade A · Excellent</span>
-            <div class="p-price"><b>KSh 32,000</b><s>KSh 49,000</s></div>
-            <div class="p-save">Save KSh 17,000 vs. new</div>
-            <button class="p-btn">+ Add to cart</button>
-          </div>
-        </article>
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND MARQUEE -->
-<div class="marquee-band">
-  <p class="marquee-label">Top brands, Redki-certified</p>
-  <div class="marquee">
-    <div class="marquee-track">
-      <span class="brand">Apple</span><span class="brand">Samsung</span><span class="brand">Tecno</span><span class="brand">Infinix</span><span class="brand">Xiaomi</span><span class="brand">HP</span><span class="brand">Lenovo</span><span class="brand">Dell</span><span class="brand">Sony</span><span class="brand">OPPO</span>
-    </div>
-    <div class="marquee-track" aria-hidden="true">
-      <span class="brand">Apple</span><span class="brand">Samsung</span><span class="brand">Tecno</span><span class="brand">Infinix</span><span class="brand">Xiaomi</span><span class="brand">HP</span><span class="brand">Lenovo</span><span class="brand">Dell</span><span class="brand">Sony</span><span class="brand">OPPO</span>
-    </div>
-  </div>
-</div>
-
-<!-- REPAIR JOURNEY -->
-<section class="repair wrap" id="repair">
-  <div class="repair-grid">
-    <div>
-      <span class="eyebrow rv">Repair &amp; care</span>
-      <h2 class="rv">Broken screen?<br>Fix it <em>without leaving the chat.</em></h2>
-      <p class="repair-lede rv">
-        Message Redki on WhatsApp, answer three quick questions, and we take it from there —
-        pickup or drop-off, a real diagnostic, and a quote you approve before any work begins.
-      </p>
-      <div class="steps">
-        <div class="step rv">
-          <span class="step-num">1</span>
-          <div><b>Tell us what's wrong — in 3 questions</b>
-          <p>Device, model, and the issue. That's it. <i>Takes about 40 seconds on WhatsApp.</i></p></div>
-        </div>
-        <div class="step rv" style="transition-delay:.08s">
-          <span class="step-num">2</span>
-          <div><b>We run a real diagnostic</b>
-          <p>Certified lab tests tell us exactly what's wrong — measured results, not a technician's guess.</p></div>
-        </div>
-        <div class="step rv" style="transition-delay:.16s">
-          <span class="step-num">3</span>
-          <div><b>You approve the quote first</b>
-          <p>A clear, itemised quote lands in your chat. Nothing happens until you say go.</p></div>
-        </div>
-        <div class="step rv" style="transition-delay:.24s">
-          <span class="step-num">4</span>
-          <div><b>Repaired, re-tested, warrantied</b>
-          <p>Every repair is QA-checked before it comes back, with a <i>warranty PDF emailed to you</i> and a summary in chat.</p></div>
-        </div>
-      </div>
-      <div class="hero-ctas rv" style="margin-top:30px">
-        <a class="btn btn-red" href="#">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a14 14 0 0 1-6.1-5.4c-.7-1.1-1.1-2.3-.7-3 .2-.5.8-1.4 1.4-1.4h.5c.2 0 .4 0 .6.5l.8 2c0 .2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.1.3.7 1.2 1.6 2 1 1 1.9 1.3 2.2 1.4.3.2.5.1.7-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.4 0 .7Z"/></svg>
-          Start on WhatsApp
-        </a>
-        <a class="btn" href="#" style="border:1.5px solid var(--ink);color:var(--ink)">Book on the website</a>
-      </div>
-    </div>
-
-    <div class="wa-frame rv" style="transition-delay:.1s">
-      <div class="wa-card" id="waCard">
-        <div class="wa-head">
-          <span class="wa-avatar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="4.6" stroke="#A60000" stroke-width="2.6"/><path d="M12.5 12.5 L20 20 M17 17 L20 14.5" stroke="#A60000" stroke-width="2.6" stroke-linecap="round"/></svg>
-          </span>
-          <div><b>Redki</b><small>online · replies instantly</small></div>
-          <svg style="margin-left:auto;opacity:.7" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9Z"/></svg>
-        </div>
-        <div class="wa-body">
-          <div class="msg out">Hi Redki 👋 my screen cracked this morning</div>
-          <div class="msg in">Pole sana! Let's sort it. Which device is it?</div>
-          <div class="msg out">iPhone 12, screen works but glass is shattered</div>
-          <div class="msg in">Got it ✅ We can collect it today in Westlands. Diagnostic first, then you approve the quote before we touch anything.</div>
-          <div class="msg in">
-            Your diagnostic report is ready:
-            <span class="doc">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A60000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z"/><path d="M14 2v5h5"/></svg>
-              <span>RK-Diagnostic-1042.pdf<small>Screen assembly · KSh 8,400 · tap to approve</small></span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DUAL ENTRY -->
-<section class="dual wrap">
+<!-- ============ RELATED ============ -->
+<section class="related wrap">
   <div class="sec-head rv">
     <div>
-      <span class="eyebrow">Two front doors</span>
-      <h2 style="margin-top:10px">Start in chat. Finish anywhere.</h2>
-      <p>Whatever you do on WhatsApp shows up on your Redki account automatically — and vice versa.</p>
+      <span class="eyebrow">Keep browsing</span>
+      <h2 style="margin-top:10px">People also considered</h2>
     </div>
   </div>
-  <div class="dual-cards">
-    <a class="dual-card red rv" href="#">
-      <span class="dc-ic">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a14 14 0 0 1-6.1-5.4c-.7-1.1-1.1-2.3-.7-3 .2-.5.8-1.4 1.4-1.4h.5c.2 0 .4 0 .6.5l.8 2c0 .2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.1.3.7 1.2 1.6 2 1 1 1.9 1.3 2.2 1.4.3.2.5.1.7-.1l.7-.9c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.4 0 .7Z"/></svg>
-      </span>
-      <h3>WhatsApp, for speed</h3>
-      <p>Browse, order, book repairs and get every update as a chat message. Your account is created automatically the first time you say hi.</p>
-      <span class="dc-link">Message Redki →</span>
-    </a>
-    <a class="dual-card light rv" href="#" style="transition-delay:.08s">
-      <span class="dc-ic">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.7 2.6 4 6 4 9.5s-1.3 6.9-4 9.5c-2.7-2.6-4-6-4-9.5s1.3-6.9 4-9.5Z"/></svg>
-      </span>
-      <h3>The website, for detail</h3>
-      <p>Full order history, repair tracking, warranty documents, diagnostic reports — everything in one place, whenever you want the fine print.</p>
-      <span class="dc-link">Open my account →</span>
-    </a>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews-band">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow">Word of mouth</span>
-        <h2 style="margin-top:10px">See what people say</h2>
+  <div class="rail rv">
+    <a class="pcard" href="#">
+      <div class="p-img" style="background:linear-gradient(150deg,#EFE5E9,#DFC9D4)">
+        <svg width="76" height="132" viewBox="0 0 86 150"><rect x="4" y="2" width="78" height="146" rx="16" fill="#3d3244"/><rect x="9" y="7" width="68" height="136" rx="11" fill="#5c4a66"/><rect x="13" y="11" width="60" height="128" rx="8" fill="#241d29"/><rect x="20" y="18" width="22" height="22" rx="6" fill="#3a3142"/><circle cx="27" cy="25" r="4.5" fill="#6e5b7a"/><circle cx="36" cy="34" r="4.5" fill="#6e5b7a"/></svg>
       </div>
-      <a class="sec-link" href="#">All reviews <span>→</span></a>
-    </div>
-    <div class="rev-grid">
-      <article class="rev rv">
-        <div class="rev-top">
-          <span class="rev-av" style="background:#A60000">W</span>
-          <div><b>Wanjiku M.</b><span class="rev-stars">★★★★★</span></div>
-        </div>
-        <p>I was nervous ordering a refurbished laptop, but honestly? <i>It looks brand new.</i> The diagnostic report they sent made all the difference.</p>
-        <div class="rev-item">
-          <span class="ri-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8"/></svg></span>
-          MacBook Air M1 · Grade A
-        </div>
-      </article>
-      <article class="rev rv" style="transition-delay:.07s">
-        <div class="rev-top">
-          <span class="rev-av" style="background:#C98A2D">B</span>
-          <div><b>Brian O.</b><span class="rev-stars">★★★★★</span></div>
-        </div>
-        <p>Whole repair happened over WhatsApp. Quote came through, I approved it, phone was back in two days — <i>with a warranty PDF in my email.</i></p>
-        <div class="rev-item">
-          <span class="ri-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4.5 4.5 0 0 0 6 6L14 19a2.8 2.8 0 1 1-4-4l6.7-8.7Z"/></svg></span>
-          Screen repair · iPhone 12
-        </div>
-      </article>
-      <article class="rev rv" style="transition-delay:.14s">
-        <div class="rev-top">
-          <span class="rev-av" style="background:#1E7A4D">A</span>
-          <div><b>Amina H.</b><span class="rev-stars">★★★★★</span></div>
-        </div>
-        <p>Paid with M-Pesa and got the confirmation before I'd even put my phone down. Delivery to Mombasa took three days. Zero stress.</p>
-        <div class="rev-item">
-          <span class="ri-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
-          Galaxy S22 · Grade A
-        </div>
-      </article>
-      <article class="rev rv" style="transition-delay:.21s">
-        <div class="rev-top">
-          <span class="rev-av" style="background:#5C4A47">K</span>
-          <div><b>Kevin N.</b><span class="rev-stars">★★★★★</span></div>
-        </div>
-        <p>The three-option thing is genius. I didn't have to compare twenty sellers — <i>just picked the grade that fit my budget</i> and checked out.</p>
-        <div class="rev-item">
-          <span class="ri-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6l-9-4Z"/></svg></span>
-          Tecno Camon 20 · Grade A
-        </div>
-      </article>
-    </div>
-    <p class="rev-meta rv"><b>4.8 / 5</b> average across <b>2,300+</b> verified orders and repairs</p>
+      <div class="p-body">
+        <div class="p-name">Samsung Galaxy S22</div>
+        <div class="p-spec">256 GB · Violet · Dual SIM</div>
+        <span class="p-grade">✦ Grade A · Excellent</span>
+        <div class="p-price"><b>KSh 44,500</b><s>KSh 69,900</s></div>
+        <button class="p-btn" data-rel="Samsung Galaxy S22">+ Add to cart</button>
+      </div>
+    </a>
+    <a class="pcard" href="#">
+      <div class="p-img" style="background:linear-gradient(150deg,#F6E9E4,#EED3C8)">
+        <svg width="76" height="132" viewBox="0 0 86 150"><rect x="4" y="2" width="78" height="146" rx="16" fill="#2b1c1a"/><rect x="9" y="7" width="68" height="136" rx="11" fill="#4a3532"/><rect x="13" y="11" width="60" height="128" rx="8" fill="#1a1a1e"/><circle cx="30" cy="28" r="8" fill="#33333a"/><circle cx="50" cy="28" r="8" fill="#33333a"/><circle cx="30" cy="28" r="4" fill="#556"/><circle cx="50" cy="28" r="4" fill="#556"/></svg>
+      </div>
+      <div class="p-body">
+        <div class="p-name">iPhone 12 · Unlocked</div>
+        <div class="p-spec">64 GB · Black · Physical SIM + eSIM</div>
+        <span class="p-grade b">✦ Grade B · Very good</span>
+        <div class="p-price"><b>KSh 41,900</b><s>KSh 62,000</s></div>
+        <button class="p-btn" data-rel="iPhone 12 · Unlocked">+ Add to cart</button>
+      </div>
+    </a>
+    <a class="pcard" href="#">
+      <div class="p-img" style="background:linear-gradient(150deg,#F6E9E4,#ECD2C5)">
+        <svg width="96" height="122" viewBox="0 0 110 140"><rect x="8" y="4" width="94" height="132" rx="12" fill="#8a8d92"/><rect x="13" y="9" width="84" height="122" rx="8" fill="#e8e6e1"/><rect x="22" y="20" width="34" height="6" rx="3" fill="#A60000" opacity=".8"/><rect x="22" y="34" width="66" height="40" rx="6" fill="#fff"/><rect x="22" y="82" width="66" height="5" rx="2.5" fill="#9a938a"/></svg>
+      </div>
+      <div class="p-body">
+        <div class="p-name">iPad 9th Gen 10.2″</div>
+        <div class="p-spec">64 GB · Wi-Fi · Silver</div>
+        <span class="p-grade">✦ Grade A · Excellent</span>
+        <div class="p-price"><b>KSh 32,000</b><s>KSh 49,000</s></div>
+        <button class="p-btn" data-rel="iPad 9th Gen 10.2″">+ Add to cart</button>
+      </div>
+    </a>
+    <a class="pcard" href="#">
+      <div class="p-img" style="background:linear-gradient(150deg,#E9E9EF,#D2D3DE)">
+        <svg width="110" height="102" viewBox="0 0 130 120"><path d="M25 62a40 40 0 0 1 80 0" stroke="#3b3b45" stroke-width="10" fill="none" stroke-linecap="round"/><rect x="13" y="58" width="24" height="40" rx="11" fill="#2b2b33"/><rect x="93" y="58" width="24" height="40" rx="11" fill="#2b2b33"/><rect x="17" y="63" width="16" height="30" rx="7" fill="#A60000" opacity=".85"/><rect x="97" y="63" width="16" height="30" rx="7" fill="#A60000" opacity=".85"/></svg>
+      </div>
+      <div class="p-body">
+        <div class="p-name">Sony WH-1000XM4</div>
+        <div class="p-spec">Noise cancelling · Over-ear</div>
+        <span class="p-grade b">✦ Grade B · Very good</span>
+        <div class="p-price"><b>KSh 21,500</b><s>KSh 38,000</s></div>
+        <button class="p-btn" data-rel="Sony WH-1000XM4">+ Add to cart</button>
+      </div>
+    </a>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats wrap">
-  <div class="stats-in rv">
-    <div class="stat"><b data-count="54">0</b><span>checkpoints in every diagnostic</span></div>
-    <div class="stat"><b data-count="2300">0</b><span>orders &amp; repairs completed</span></div>
-    <div class="stat"><b data-count="48">0</b><span>hour average repair turnaround</span></div>
-    <div class="stat"><b data-count="98">0</b><span>% of quotes approved in chat</span></div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <h2 class="rv">The 4 questions people always ask.</h2>
-  <div class="faq-item rv open">
-    <button class="faq-q">What does “Redki Certified” actually mean?<span class="fx">+</span></button>
-    <div class="faq-a"><p>Every device runs through a <b>54-point lab diagnostic</b> before it's listed — battery health, screen, cameras, sensors, the lot. It's then graded <b>A, B, or C</b> based on measured results, not eyeballing. The grade and what it means is right on every product card.</p></div>
-  </div>
-  <div class="faq-item rv">
-    <button class="faq-q">How does the warranty work on refurbished devices?<span class="fx">+</span></button>
-    <div class="faq-a"><p>Simple and honest: the warranty covers <b>every part we replaced or repaired</b> — in writing, as a PDF sent to your email with a summary on WhatsApp. If the same issue comes back within the warranty period, it's already linked to your repair record, so there's no back-and-forth.</p></div>
-  </div>
-  <div class="faq-item rv">
-    <button class="faq-q">Can I really do everything over WhatsApp?<span class="fx">+</span></button>
-    <div class="faq-a"><p>Yes — browsing, buying, booking a repair, approving quotes, and getting delivery updates all happen in chat. For richer views like your full order history, we'll open the page for you and bring you <b>straight back to the conversation.</b> No smartphone? Updates arrive by SMS too.</p></div>
-  </div>
-  <div class="faq-item rv">
-    <button class="faq-q">How do payments work?<span class="fx">+</span></button>
-    <div class="faq-a"><p>Everything goes through <b>M-Pesa, directly to Redki.</b> You get a payment prompt on your phone, and your order or repair is confirmed the second the payment clears. For repairs there's a small intake fee up front, then the balance only after you've approved the quote.</p></div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="news">
-  <div class="wrap news-in">
-    <div>
-      <h2 class="rv">Stay in the loop with <em>hot drops.</em></h2>
-      <p class="rv">Be the first to know about new arrivals, exclusive deals and repair tips that actually matter. No spam, ever.</p>
-    </div>
-    <form class="news-form rv" onsubmit="event.preventDefault();this.querySelector('input').value='Asante! You are in ✦'">
-      <input type="email" placeholder="Your email address" aria-label="Email">
-      <button class="btn btn-red" type="submit">Sign up</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="logo" href="#">
-          <span class="logo-mark">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="4.6" stroke="#fff" stroke-width="2.6"/><path d="M12.5 12.5 L20 20 M17 17 L20 14.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
-          </span>
+        <a class="logo" href="index.html">
+          <span class="logo-mark"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="4.6" stroke="#fff" stroke-width="2.6"/><path d="M12.5 12.5 L20 20 M17 17 L20 14.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span>
           <span class="logo-word">red<i>ki</i></span>
         </a>
-        <p>Certified refurbished tech and honest repairs — bought, booked and tracked from one conversation. Nairobi, Kenya.</p>
-        <div class="foot-pay">
-          <span class="pay-chip">M-PESA</span>
-          <span class="pay-chip">VISA</span>
-          <span class="pay-chip">MASTERCARD</span>
-        </div>
+        <p>Certified refurbished tech and honest repairs, bought, booked and tracked from one conversation. Nairobi, Kenya.</p>
+        <div class="foot-pay"><span class="pay-chip">M-PESA</span><span class="pay-chip">VISA</span><span class="pay-chip">MASTERCARD</span></div>
       </div>
       <div class="foot-col">
         <b>About</b>
-        <a href="#">The Redki Promise</a>
-        <a href="#">How grading works</a>
-        <a href="#">Our diagnostics</a>
-        <a href="#">Careers</a>
+        <a href="#">The Redki Promise</a><a href="#">How grading works</a><a href="#">Our diagnostics</a>
       </div>
       <div class="foot-col">
         <b>Services</b>
-        <a href="#">Repair &amp; care</a>
-        <a href="#">Sell your device</a>
-        <a href="#">Business orders</a>
-        <a href="#">Warranty lookup</a>
+        <a href="index.html#repair">Repair &amp; care</a><a href="#">Sell your device</a><a href="#">Warranty lookup</a>
       </div>
       <div class="foot-col">
         <b>Help</b>
-        <a href="#">WhatsApp support</a>
-        <a href="#">Track my order</a>
-        <a href="#">Delivery &amp; pickup</a>
-        <a href="#">Returns &amp; refunds</a>
-      </div>
-      <div class="foot-col">
-        <b>Law &amp; order</b>
-        <a href="#">Terms of service</a>
-        <a href="#">Privacy policy</a>
-        <a href="#">Warranty terms</a>
-        <a href="#">Cookies</a>
+        <a href="#">WhatsApp support</a><a href="#">Track my order</a><a href="#">Returns &amp; refunds</a>
       </div>
     </div>
     <div class="foot-base">
       <span>© 2026 Redki. All rights reserved.</span>
-      <span>Made with <i>♥</i> in Nairobi · Payments 100% secured</span>
+      <span>Made with <i style="color:rgba(255,255,255,.55)">♥</i> in Nairobi · Payments 100% secured</span>
     </div>
   </div>
 </footer>
 
+<!-- STICKY BUY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="wrap sticky-in">
+    <div>
+      <div class="s-name">iPhone 13 · Unlocked</div>
+      <div class="s-sub" id="stickySub">Grade A · 128 GB · Redki Standard</div>
+    </div>
+    <div class="s-price" id="stickyPrice">KSh 52,900</div>
+    <button class="btn btn-red" onclick="document.getElementById('addBtn').click()">Add to cart</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 10 18 20 6"/></svg></span>
+  <span id="toastText">Added to cart</span>
+</div>
+
 <script>
-// sticky header shadow
-const header=document.getElementById('header');
-addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>8),{passive:true});
+// ---------- state + pricing ----------
+const PRICES={ // [storage][grade]
+  "128":{A:52900,B:48500,C:44900,neu:78000},
+  "256":{A:58900,B:54200,C:50400,neu:86000}
+};
+const GRADE_LABEL={A:"Grade A · Excellent",B:"Grade B · Very good",C:"Grade C · Good"};
+const OFFER_NAME={0:"Redki Standard",450:"Express",1900:"Battery Fresh bundle",1200:"Care+ 24 months","-1500":"Trade-in credit"};
+let state={grade:"A",storage:"128",offer:0};
+const fmt=n=>"KSh "+n.toLocaleString("en-KE");
 
-// scroll reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
-}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+function render(){
+  const p=PRICES[state.storage], base=p[state.grade], total=base+state.offer, neu=p.neu;
+  document.getElementById('priceNow').textContent=fmt(total);
+  document.getElementById('priceWas').textContent=fmt(neu);
+  document.getElementById('priceSave').textContent="Save "+fmt(neu-total)+" vs. new";
+  document.getElementById('ctaPrice').textContent=fmt(total);
+  document.getElementById('stickyPrice').textContent=fmt(total);
+  document.getElementById('chipGrade').textContent=GRADE_LABEL[state.grade];
+  document.getElementById('chipStorage').textContent=state.storage+" GB";
+  document.getElementById('stickySub').textContent="Grade "+state.grade+" · "+state.storage+" GB · "+OFFER_NAME[state.offer];
+  document.querySelectorAll('#gradeCards .grade-card').forEach(c=>{
+    c.querySelector('[data-gp]').textContent=fmt(p[c.dataset.grade]);
+  });
+}
 
-// deals rail
-const rail=document.getElementById('rail');
-document.querySelectorAll('[data-rail]').forEach(b=>b.addEventListener('click',()=>{
-  rail.scrollBy({left:(262+16)*2*+b.dataset.rail,behavior:'smooth'});
+// grade cards
+document.querySelectorAll('#gradeCards .grade-card').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('#gradeCards .grade-card').forEach(x=>x.classList.remove('on'));
+  c.classList.add('on');state.grade=c.dataset.grade;render();
+}));
+// storage pills
+document.querySelectorAll('#storagePills .pill').forEach(pl=>pl.addEventListener('click',()=>{
+  document.querySelectorAll('#storagePills .pill').forEach(x=>x.classList.remove('on'));
+  pl.classList.add('on');state.storage=pl.dataset.storage;render();
+}));
+// offers (incl. hidden ones)
+document.querySelectorAll('.offer').forEach(o=>o.addEventListener('click',()=>{
+  document.querySelectorAll('.offer').forEach(x=>x.classList.remove('on'));
+  o.classList.add('on');state.offer=+o.dataset.offer;render();
+}));
+// view more offers
+const more=document.getElementById('moreOffers'),vm=document.getElementById('viewMore');
+vm.addEventListener('click',()=>{
+  const open=more.style.maxHeight&&more.style.maxHeight!=="0px";
+  more.style.maxHeight=open?"0px":more.scrollHeight+"px";
+  vm.textContent=open?"View 2 more options ↓":"Show fewer options ↑";
+});
+
+// gallery
+const slides=document.querySelectorAll('#gMain .g-slide');
+document.querySelectorAll('#gThumbs .g-thumb').forEach((t,i)=>t.addEventListener('click',()=>{
+  document.querySelectorAll('#gThumbs .g-thumb').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');
+  slides.forEach((s,j)=>s.classList.toggle('on',i===j));
 }));
 
-// whatsapp chat replay when visible
-const wa=document.getElementById('waCard');
-new IntersectionObserver((es,obs)=>{
-  if(es[0].isIntersecting){wa.classList.add('play');obs.disconnect();}
-},{threshold:.4}).observe(wa);
-
-// faq accordion
-document.querySelectorAll('.faq-item').forEach(item=>{
-  const a=item.querySelector('.faq-a');
-  const set=()=>a.style.maxHeight=item.classList.contains('open')?a.scrollHeight+'px':0;
+// accordion
+document.querySelectorAll('.acc-item').forEach(item=>{
+  const a=item.querySelector('.acc-a');
+  const set=()=>a.style.maxHeight=item.classList.contains('open')?a.scrollHeight+"px":0;
   set();
-  item.querySelector('.faq-q').addEventListener('click',()=>{
-    document.querySelectorAll('.faq-item.open').forEach(o=>{if(o!==item){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=0;}});
+  item.querySelector('.acc-q').addEventListener('click',()=>{
+    document.querySelectorAll('.acc-item.open').forEach(o=>{if(o!==item){o.classList.remove('open');o.querySelector('.acc-a').style.maxHeight=0;}});
     item.classList.toggle('open');set();
   });
 });
 
-// count-up stats
-const fmt=n=>n>=1000?(n/1000).toFixed(1).replace('.0','')+'k+':n;
+// sticky header + buy bar
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>8),{passive:true});
+const bar=document.getElementById('stickyBar');
+new IntersectionObserver(es=>{
+  bar.classList.toggle('show',!es[0].isIntersecting&&es[0].boundingClientRect.top<0);
+},{threshold:0}).observe(document.getElementById('ctaRow'));
+
+// add to cart
+let cart=2;
+document.getElementById('addBtn').addEventListener('click',()=>{
+  cart++;document.getElementById('cartCount').textContent=cart;
+  document.getElementById('toastText').textContent=
+    "Added · Grade "+state.grade+" · "+state.storage+" GB · "+fmt(PRICES[state.storage][state.grade]+state.offer);
+  const t=document.getElementById('toast');
+  t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2600);
+});
+
+// related cards add-to-cart (don't follow the card link)
+document.querySelectorAll('.p-btn[data-rel]').forEach(b=>b.addEventListener('click',e=>{
+  e.preventDefault();e.stopPropagation();
+  cart++;document.getElementById('cartCount').textContent=cart;
+  document.getElementById('toastText').textContent="Added · "+b.dataset.rel;
+  const t=document.getElementById('toast');
+  t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2600);
+}));
+
+// reveal + review bars
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 new IntersectionObserver((es,obs)=>{
   if(!es[0].isIntersecting)return;obs.disconnect();
-  document.querySelectorAll('[data-count]').forEach(el=>{
-    const t=+el.dataset.count,start=performance.now();
-    const tick=now=>{
-      const p=Math.min((now-start)/1400,1),e=1-Math.pow(1-p,3);
-      el.textContent=fmt(Math.round(t*e));
-      if(p<1)requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  });
-},{threshold:.4}).observe(document.querySelector('.stats-in'));
+  document.querySelectorAll('.rbar .fill').forEach(f=>f.style.width=f.dataset.w);
+},{threshold:.4}).observe(document.querySelector('.rev-summary'));
+
+render();
 </script>
 </body>
 </html>
