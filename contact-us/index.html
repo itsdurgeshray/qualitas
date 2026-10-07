@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us — Weframetech</title>
+<meta name="description" content="Book a meeting or tell us about your CMS, headless commerce, migration or growth project." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400&display=swap" rel="stylesheet" />
+<!-- Shared site components (tokens, pills, buttons, glass cards, footer) -->
+<link rel="stylesheet" href="../our-culture/styles.css" />
+<link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+<div class="page-bg" aria-hidden="true"><img class="page-bg__glow" src="../our-culture/assets/hero-glow.png" alt="" /></div>
+
+<header class="nav" id="top">
+  <div class="nav__inner container">
+    <a href="#" class="nav__logo"><img src="../our-culture/assets/logo.png" alt="Weframetech" width="162" height="30" /></a>
+    <nav class="nav__links glass-pill" aria-label="Primary">
+      <a href="#">Services</a>
+      <a href="#">Case Studies</a>
+      <a href="#">Blogs</a>
+      <a href="../about-us/index.html">About Us</a>
+      <a href="#" class="is-active" aria-current="page">Contact</a>
+    </nav>
+    <a href="#book" class="btn btn--primary btn--nav" data-open-tab="book">Book a Meeting</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="c-hero">
+  <div class="container c-hero__grid">
+    <div class="c-hero__copy">
+      <span class="pill pill--accent reveal">Contact us</span>
+      <h1 class="h-hero c-hero__title reveal">Let’s build the stack your next stage of growth needs.</h1>
+      <p class="c-hero__lede reveal">Headless CMS, headless commerce, ecommerce builds, platform migrations and the development and growth work around them. Tell us where you are, and we’ll tell you honestly how we’d get you there.</p>
+      <div class="btn-row btn-row--left reveal">
+        <a href="#book" class="btn btn--primary" data-open-tab="book">Book a Meeting</a>
+        <a href="#enquiry" class="btn btn--ghost" data-open-tab="enquiry">Tell Us About Your Project</a>
+      </div>
+      <ul class="trust-mini reveal">
+        <li><span class="avatars"><img src="../our-culture/assets/leader-2.png" alt="" /><img src="../our-culture/assets/leader-1.png" alt="" /><img src="../our-culture/assets/leader-3.png" alt="" /></span>Talk directly to the founders</li>
+        <li><i class="dot"></i>Reply within 1 business day</li>
+        <li><i class="dot"></i>Sanity-certified engineers</li>
+        <li><i class="dot"></i>Clients across 3 continents</li>
+      </ul>
+    </div>
+
+    <div class="paths reveal">
+      <a href="#book" class="card card--glow path" data-open-tab="book">
+        <div class="card__inner">
+          <span class="ico-tile"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+          <div>
+            <p class="path__k">Fastest</p>
+            <h2 class="path__t">Book a 30-min discovery call</h2>
+            <p class="path__d">Pick a time that suits you. Bring your questions, we’ll bring an engineer.</p>
+          </div>
+          <span class="path__go" aria-hidden="true">→</span>
+        </div>
+      </a>
+      <a href="#enquiry" class="card path" data-open-tab="enquiry">
+        <div class="card__inner">
+          <span class="ico-tile"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span>
+          <div>
+            <p class="path__k">Most detail</p>
+            <h2 class="path__t">Send a project brief</h2>
+            <p class="path__d">A guided form for scope, CMS, ecommerce, budget and timeline. About 4 minutes.</p>
+          </div>
+          <span class="path__go" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT LOGOS / TRUST BAR -->
+<section class="logos" aria-label="Companies we have worked with">
+  <p class="logos__label">Trusted by investor-backed and enterprise teams</p>
+  <div class="marquee"><div class="marquee__track" id="marquee"></div></div>
+</section>
+
+<!-- MEETING BOOKING + CUSTOM PROJECT FORM -->
+<section class="section start" id="start">
+  <span class="anchor" id="book"></span><span class="anchor" id="enquiry"></span>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill">Start here</span>
+        <h2 class="h-section">Two ways to start. Pick the one that suits you.</h2>
+      </div>
+    </div>
+
+    <div class="start-tabs glass-pill" role="tablist" aria-label="Contact options">
+      <button role="tab" id="tab-book" aria-controls="panel-book" aria-selected="true" class="start-tab is-active" data-tab="book">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book a meeting
+      </button>
+      <button role="tab" id="tab-enquiry" aria-controls="panel-enquiry" aria-selected="false" class="start-tab" data-tab="enquiry">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z"/><path d="M14 3v5h5M9 13h7"/></svg>Project enquiry
+      </button>
+    </div>
+
+    <!-- Booking -->
+    <div class="glass-frame panel" id="panel-book" role="tabpanel" aria-labelledby="tab-book">
+      <div class="glass-frame__inner booking">
+        <aside class="booking__info">
+          <div class="host">
+            <span class="avatars avatars--lg"><img src="../our-culture/assets/leader-1.png" alt="" /><img src="../our-culture/assets/leader-3.png" alt="" /></span>
+            <div><p class="host__name">Discovery call</p><p class="host__meta">with Bishen or Sambit</p></div>
+          </div>
+          <ul class="facts">
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 minutes</li>
+            <li><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>Google Meet, link sent by email</li>
+            <li><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <label class="tz"><span class="sr-only">Time zone</span><select id="tz"></select></label></li>
+          </ul>
+          <div class="agenda">
+            <p class="agenda__h">What we’ll cover</p>
+            <ol>
+              <li>Where your product and stack are today</li>
+              <li>What you want to change and why</li>
+              <li>An honest view on approach, timeline and budget</li>
+            </ol>
+          </div>
+        </aside>
+
+        <div class="booking__main" id="booking-main">
+          <!-- Step 1: date + time -->
+          <div class="bstep is-active" data-bstep="1">
+            <div class="cal">
+              <div class="cal__head">
+                <p class="cal__month" id="cal-month" aria-live="polite"></p>
+                <div class="cal__nav">
+                  <button type="button" class="icon-btn icon-btn--sm" id="cal-prev" aria-label="Previous month">←</button>
+                  <button type="button" class="icon-btn icon-btn--sm" id="cal-next" aria-label="Next month">→</button>
+                </div>
+              </div>
+              <div class="cal__dow" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+              <div class="cal__grid" id="cal-grid" role="grid" aria-label="Choose a date"></div>
+            </div>
+            <div class="slots">
+              <p class="slots__date" id="slots-date">Choose a date</p>
+              <div class="slots__list" id="slots" role="listbox" aria-label="Available times"><p class="slots__empty">Available times show up here.</p></div>
+              <button type="button" class="btn btn--primary btn--block" id="to-details" disabled>Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2: details -->
+          <form class="bstep" data-bstep="2" id="booking-form" novalidate>
+            <button type="button" class="back-link" data-bback>← Change time</button>
+            <p class="picked" id="picked"></p>
+            <div class="fgrid">
+              <label class="field"><span>Full name *</span><input name="name" required autocomplete="name" /></label>
+              <label class="field"><span>Work email *</span><input name="email" type="email" required autocomplete="email" /></label>
+              <label class="field"><span>Company *</span><input name="company" required autocomplete="organization" /></label>
+              <label class="field"><span>Website</span><input name="website" type="url" placeholder="https://" autocomplete="url" /></label>
+              <label class="field field--full"><span>What would you like to discuss?</span><textarea name="topic" rows="3" placeholder="e.g. Migrating from WordPress to Sanity before Q1"></textarea></label>
+            </div>
+            <button type="submit" class="btn btn--primary">Book Meeting</button>
+          </form>
+
+          <!-- Step 3: confirmed -->
+          <div class="bstep done" data-bstep="3" tabindex="-1">
+            <span class="done__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span>
+            <h3 class="done__t">You’re booked.</h3>
+            <p class="done__d" id="booked-summary"></p>
+            <div class="btn-row">
+              <button type="button" class="btn btn--outline" id="ics">Add to calendar</button>
+              <button type="button" class="btn btn--ghost" data-open-tab="enquiry">Share a project brief too</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enquiry -->
+    <div class="glass-frame panel" id="panel-enquiry" role="tabpanel" aria-labelledby="tab-enquiry" hidden>
+      <div class="glass-frame__inner enquiry">
+        <aside class="stepper">
+          <p class="stepper__h">Project enquiry</p>
+          <ol class="stepper__list" id="stepper"></ol>
+          <p class="stepper__save" id="draft-note">Your answers are saved on this device as you go.</p>
+        </aside>
+        <form class="enquiry__main" id="enquiry-form" novalidate>
+          <div id="enquiry-steps"></div>
+          <div class="enquiry__foot" id="enquiry-foot">
+            <button type="button" class="btn btn--ghost" id="eq-back">Back</button>
+            <p class="enquiry__count" id="eq-count"></p>
+            <button type="button" class="btn btn--primary" id="eq-next">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS / WHAT HAPPENS NEXT -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill">What happens next</span>
+        <h2 class="h-section">From first message to kickoff, in four steps.</h2>
+      </div>
+    </div>
+    <ol class="process">
+      <li class="process__step reveal"><span class="process__n">01</span><h3>Enquiry</h3><p>You book a call or send a brief. A founder reads every one and replies within one business day.</p><span class="process__t">Day 0–1</span></li>
+      <li class="process__step reveal"><span class="process__n">02</span><h3>Discovery call</h3><p>30 minutes on your goals, your current stack and what’s blocking you. No sales script.</p><span class="process__t">Week 1</span></li>
+      <li class="process__step reveal"><span class="process__n">03</span><h3>Scope</h3><p>We map the content model, integrations and risks, then size the work. Migrations start with a free content audit.</p><span class="process__t">Week 1–2</span></li>
+      <li class="process__step reveal"><span class="process__n">04</span><h3>Proposal &amp; kickoff</h3><p>A fixed scope, timeline and price. Once you’re happy, a dedicated team starts.</p><span class="process__t">Week 2–3</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- TRUST & ASSURANCE -->
+<section class="section" id="trust">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="cta-band__inner trust">
+        <div class="trust__stats">
+          <div class="stat"><span class="stat__n">7+</span><span class="stat__l">Years building headless</span></div>
+          <div class="stat"><span class="stat__n">60+</span><span class="stat__l">Projects delivered</span></div>
+          <div class="stat"><span class="stat__n">40+</span><span class="stat__l">Clients, seed to Series C</span></div>
+          <div class="stat"><span class="stat__n">3</span><span class="stat__l">Continents shipped to</span></div>
+        </div>
+        <ul class="badges">
+          <li><span class="ico-tile ico-tile--sm"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>Sanity-certified engineers</li>
+          <li><span class="ico-tile ico-tile--sm"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>NDA before we see your code</li>
+          <li><span class="ico-tile ico-tile--sm"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg></span>Post-launch support SLA</li>
+          <li><span class="ico-tile ico-tile--sm"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></span>You own 100% of the code</li>
+          <li><span class="ico-tile ico-tile--sm"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4Zm4 2v5c0 2 2.5 3 5 3s5-1 5-3V9"/></svg></span>Editor training included</li>
+          <li><span class="ico-tile ico-tile--sm"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>Fixed scope, fixed price</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT SHOWCASE -->
+<section class="section" id="clients">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill">Client showcase</span>
+        <h2 class="h-section">Who we’ve built for, and what.</h2>
+      </div>
+      <a href="#" class="btn btn--outline">View Case Studies</a>
+    </div>
+    <ul class="showcase" id="showcase"></ul>
+  </div>
+</section>
+
+<!-- CASE STUDY PROOF -->
+<section class="section" id="cases">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill">Case studies</span>
+        <h2 class="h-section">Proof, not promises.</h2>
+      </div>
+    </div>
+    <div class="cases">
+      <article class="card case reveal">
+        <div class="card__inner">
+          <div class="case__shot"><img src="assets/case-unimig.jpg" alt="Unimig website on a laptop" loading="lazy" /></div>
+          <div class="case__head"><img src="assets/icon-unimig.svg" alt="" width="32" height="32" /><b>Unimig</b><span class="tag">E-commerce</span></div>
+          <p class="case__d">Rebuilt the product catalogue and buying journey on a headless stack with Next.js.</p>
+          <div class="case__metrics"><div><b>2.4×</b><span>faster pages</span></div><div><b>+38%</b><span>conversion</span></div><div><b>6 wks</b><span>to launch</span></div></div>
+          <a href="#" class="btn btn--outline btn--block">View Case Study</a>
+        </div>
+      </article>
+      <article class="card case reveal">
+        <div class="card__inner">
+          <div class="case__shot"><img src="assets/case-certifyos.jpg" alt="CertifyOS website on a laptop" loading="lazy" /></div>
+          <div class="case__head"><img src="assets/icon-certifyos.png" alt="" width="32" height="32" /><b>CertifyOS</b><span class="tag">Health-Tech</span></div>
+          <p class="case__d">Moved a growing marketing site to a composable CMS so the team ships pages without engineers.</p>
+          <div class="case__metrics"><div><b>95+</b><span>Lighthouse</span></div><div><b>3×</b><span>publishing speed</span></div><div><b>0</b><span>downtime</span></div></div>
+          <a href="#" class="btn btn--outline btn--block">View Case Study</a>
+        </div>
+      </article>
+      <article class="card case reveal">
+        <div class="card__inner">
+          <div class="case__shot"><img src="assets/case-luma.jpg" alt="Luma Travel website on a laptop" loading="lazy" /></div>
+          <div class="case__head"><img src="assets/icon-luma.png" alt="" width="32" height="32" /><b>Luma Travel</b><span class="tag">Travel</span></div>
+          <p class="case__d">Rebuilt the booking funnel on a headless stack paired with an organic content system.</p>
+          <div class="case__metrics"><div><b>+52%</b><span>organic traffic</span></div><div><b>-41%</b><span>bounce rate</span></div><div><b>12</b><span>locales</span></div></div>
+          <a href="#" class="btn btn--outline btn--block">View Case Study</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS + VIDEO TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill">Testimonials</span>
+        <h2 class="h-section">What it’s like to work with us.</h2>
+      </div>
+      <button type="button" class="btn btn--outline" data-video="Client testimonials">Watch Testimonial</button>
+    </div>
+    <div class="testi">
+      <article class="card card--glow vtesti reveal">
+        <div class="card__inner">
+          <div class="vtesti__media">
+            <img src="../our-culture/assets/review-photo.png" alt="Carl-Johan Larsson recording a video testimonial" />
+            <button type="button" class="play-btn" data-video="Carl-Johan Larsson, Velmie" aria-label="Watch Carl-Johan Larsson’s video testimonial"></button>
+            <span class="vtesti__len">1:48</span>
+          </div>
+          <div class="vtesti__body">
+            <p class="vtesti__q">“The team demonstrated great attention to detail, excellent communication, and a commitment to delivering high-quality results on time.”</p>
+            <div class="person">
+              <img class="avatar" src="assets/avatar-carl.png" alt="" />
+              <div><p class="person__name">Carl-Johan Larsson</p><p class="person__meta">Senior Partnership Manager, Velmie</p></div>
+              <button type="button" class="btn btn--primary btn--sm" data-video="Carl-Johan Larsson, Velmie">Watch Video</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card wtesti wtesti--feature reveal">
+        <div class="card__inner">
+          <div class="voice__tags"><span class="tag">Series A</span><span class="tag">Travel</span></div>
+          <p class="vtesti__q">“Bishen and his team shared valuable insights from their vast experience with Directus. They are very capable.”</p>
+          <div class="person">
+            <img class="avatar" src="assets/icon-luma.png" alt="" />
+            <div><p class="person__name">Luma Travel</p><p class="person__meta">Product team</p></div>
+          </div>
+        </div>
+      </article>
+      <!-- PLACEHOLDER quotes below: replace with real, approved client testimonials. -->
+      <article class="card wtesti reveal">
+        <div class="card__inner">
+          <div class="voice__tags"><span class="tag">Health-Tech</span><span class="tag">Headless CMS</span></div>
+          <p class="vtesti__q vtesti__q--sm">“Our marketing team finally publishes on its own. Pages that took a sprint now take an afternoon.”</p>
+          <div class="person">
+            <img class="avatar" src="assets/icon-certifyos.png" alt="" />
+            <div><p class="person__name">CertifyOS</p><p class="person__meta">Marketing lead</p></div>
+          </div>
+        </div>
+      </article>
+      <article class="card wtesti reveal">
+        <div class="card__inner">
+          <div class="voice__tags"><span class="tag">E-commerce</span><span class="tag">Migration</span></div>
+          <p class="vtesti__q vtesti__q--sm">“The migration plan covered every redirect. We switched over without losing a single ranking.”</p>
+          <div class="person">
+            <img class="avatar" src="assets/icon-unimig.svg" alt="" />
+            <div><p class="person__name">Unimig</p><p class="person__meta">Digital team</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM / EXPERTS -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill pill--bold">Who you’ll talk to</span>
+        <h2 class="h-section">The people on your discovery call.</h2>
+      </div>
+      <a href="../our-culture/index.html#team" class="btn btn--outline">Meet the Team</a>
+    </div>
+    <div class="experts">
+      <article class="card card--glow expert reveal">
+        <div class="card__inner">
+          <div class="expert__photo"><img src="../our-culture/assets/leader-1.png" alt="Bishen" /></div>
+          <div class="expert__fade"></div>
+          <div class="expert__info">
+            <h3>Bishen</h3><p class="expert__role">Co-Founder | CEO</p>
+            <p class="expert__bio">Leads discovery and client partnerships. Reviews every content model we ship.</p>
+            <div class="voice__tags"><span class="tag">Strategy</span><span class="tag">Directus</span><span class="tag">Headless</span></div>
+          </div>
+        </div>
+      </article>
+      <article class="card card--glow expert reveal">
+        <div class="card__inner">
+          <div class="expert__photo"><img src="../our-culture/assets/leader-3.png" alt="Sambit" /></div>
+          <div class="expert__fade"></div>
+          <div class="expert__info">
+            <h3>Sambit</h3><p class="expert__role">Co-Founder | CTO</p>
+            <p class="expert__bio">Owns architecture. Joins calls when the question is “can this actually scale?”.</p>
+            <div class="voice__tags"><span class="tag">Architecture</span><span class="tag">Next.js</span><span class="tag">Sanity</span></div>
+          </div>
+        </div>
+      </article>
+      <article class="card card--glow expert reveal">
+        <div class="card__inner">
+          <div class="expert__photo"><img src="../our-culture/assets/leader-2.png" alt="Vipul" /></div>
+          <div class="expert__fade"></div>
+          <div class="expert__info">
+            <h3>Vipul</h3><p class="expert__role">Founder | CSO</p>
+            <p class="expert__bio">Shapes growth strategy: SEO, CRO and how your stack supports both.</p>
+            <div class="voice__tags"><span class="tag">SEO</span><span class="tag">CRO</span><span class="tag">Growth</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE / CAPABILITIES -->
+<section class="section" id="capabilities">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="pill">Expertise</span>
+        <h2 class="h-section">What we’re genuinely good at.</h2>
+      </div>
+      <a href="#" class="btn btn--outline">Explore Services</a>
+    </div>
+    <div class="how" id="capability-grid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container faq">
+    <div class="faq__side">
+      <span class="pill">FAQ</span>
+      <h2 class="h-section">Questions before you reach out?</h2>
+      <label class="faq__search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="sr-only">Search questions</span><input type="search" id="faq-search" placeholder="Search questions" /></label>
+      <div class="faq__cats" id="faq-cats" role="tablist" aria-label="FAQ categories"></div>
+    </div>
+    <div class="faq__list" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section section--last" id="final">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="cta-band__inner final-cta">
+        <div>
+          <span class="pill pill--accent">Ready when you are</span>
+          <h2 class="h-band">Seen enough? Let’s talk about your project.</h2>
+          <p class="body-sm">Book a call for a quick conversation, or send a brief if you’d like us to come prepared.</p>
+        </div>
+        <div class="btn-row btn-row--left">
+          <a href="#book" class="btn btn--primary" data-open-tab="book">Book a Meeting</a>
+          <a href="#enquiry" class="btn btn--ghost" data-open-tab="enquiry">Start Your Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="../our-culture/assets/logo-mark.svg" alt="Weframetech" width="60" height="60" />
+        <p class="footer__pitch"><span>Interested working together ?</span> trying out our platform or contact us.</p>
+      </div>
+      <div class="footer__cols">
+        <div><p class="footer__h">Services</p><a href="#">Headless Ecom</a><a href="#">UI/UX Designing</a><a href="#">CTO as a Service</a><a href="#">Jamstack Development</a><a href="#">MVP &amp; POC Development</a><a href="#">Custom Software Development</a></div>
+        <div><p class="footer__h">About</p><a href="#">Blogs</a><a href="../about-us/index.html">About us</a><a href="../our-culture/index.html">Our Culture</a><a href="#">Case Studies</a></div>
+        <div><p class="footer__h">Help</p><a href="../our-culture/index.html#careers">Careers</a><a href="#start">Contact Us</a><a href="#book" data-open-tab="book">Book a Call</a></div>
+      </div>
+    </div>
+    <p class="footer__word" aria-hidden="true">Weframetech</p>
+    <div class="footer__bottom"><span>@2026 All Right Reserved</span><span>Powered by <em>directus</em></span></div>
+  </div>
+</footer>
+
+<!-- Video modal (shared pattern with the Culture page) -->
+<div class="modal" id="video-modal" hidden>
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__box glass-frame" role="dialog" aria-modal="true" aria-labelledby="video-title">
+    <div class="glass-frame__inner modal__inner">
+      <button class="modal__close" data-close aria-label="Close video">×</button>
+      <div class="modal__ph">
+        <span class="pill pill--accent">Testimonial</span>
+        <p class="h-band" id="video-title">Video testimonial</p>
+        <p class="body-sm">Connect the CMS video field (YouTube / Mux / Vimeo) to play inline.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>About Us — Weframetech</title>
+<meta name="description" content="Who Weframetech is and why we exist — told as an interactive, slide-by-slide story." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter+Tight:wght@400&display=swap" rel="stylesheet" />
+<!-- Shared site components (tokens, pills, buttons, glass cards, footer) -->
+<link rel="stylesheet" href="../our-culture/styles.css" />
+<link rel="stylesheet" href="about.css" />
+<script>
+  // Choose the view before first paint: saved choice, else Linear on phones and Pitch elsewhere.
+  (function () {
+    var m = null;
+    try { m = localStorage.getItem("wft-about-mode"); } catch (e) {}
+    if (m !== "pitch" && m !== "linear") m = window.matchMedia("(max-width: 720px)").matches ? "linear" : "pitch";
+    document.documentElement.classList.add("mode-" + m);
+  })();
+</script>
+</head>
+<body>
+
+<header class="nav about-nav">
+  <div class="nav__inner container">
+    <a href="#" class="nav__logo"><img src="../our-culture/assets/logo.png" alt="Weframetech" width="162" height="30" /></a>
+    <nav class="nav__links glass-pill" aria-label="Primary">
+      <a href="#">Services</a>
+      <a href="#">Case Studies</a>
+      <a href="../our-culture/index.html">Culture</a>
+      <a href="#" class="is-active" aria-current="page">About Us</a>
+      <a href="../contact-us/index.html">Contact</a>
+    </nav>
+    <div class="view-toggle glass-pill" role="group" aria-label="How to view this story">
+      <button type="button" data-mode="pitch"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Story Mode</button>
+      <button type="button" data-mode="linear"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Scroll</button>
+    </div>
+  </div>
+</header>
+
+<main class="deck" id="deck" aria-roledescription="carousel" aria-label="The Weframetech story">
+
+  <!-- 1 · About Us / Our Story intro -->
+  <section class="slide s-intro" id="intro" data-title="About Us" aria-roledescription="slide" aria-label="About Us">
+    <img class="slide__glow" src="../our-culture/assets/hero-glow.png" alt="" />
+    <div class="slide__inner container">
+      <span class="pill pill--accent a-in">About Weframetech</span>
+      <h1 class="h-hero a-in">We frame tech that puts you in the top 1%.</h1>
+      <p class="lede a-in">A small team of builders, engineers and problem solvers focused on performance, clarity and scale.</p>
+      <div class="btn-row a-in">
+        <button type="button" class="btn btn--primary" data-next>Explore Our Story</button>
+        <a href="#team" class="btn btn--ghost">Meet the Team</a>
+      </div>
+      <ol class="chapters a-in" id="chapters" aria-label="Chapters"></ol>
+    </div>
+  </section>
+
+  <!-- 2 · Our Story (two build steps: the problem → the answer) -->
+  <section class="slide s-story" id="story" data-title="Our Story" data-steps="2" data-step="0" aria-roledescription="slide" aria-label="Our Story">
+    <div class="slide__inner container split">
+      <div class="split__copy">
+        <span class="pill a-in">Our story</span>
+        <div class="swap a-in">
+          <div class="swap__item" data-for="0">
+            <h2 class="h-section">We kept meeting great products held back by their stack.</h2>
+            <p class="body">Slow pages, monolithic platforms, broken integrations and years of tech debt. Teams knew what they wanted to build. Their systems wouldn’t let them.</p>
+          </div>
+          <div class="swap__item" data-for="1">
+            <h2 class="h-section">So we started framing a better one.</h2>
+            <p class="body">Weframe Tech was founded to move teams onto open, composable, headless stacks that are fast by default, easy to change and built to scale.</p>
+          </div>
+        </div>
+        <div class="seg a-in" aria-hidden="true"><span data-for="0">The problem</span><span data-for="1">Our answer</span></div>
+      </div>
+      <div class="glass-frame story-card a-in">
+        <div class="glass-frame__inner story-card__inner">
+          <div class="story-card__head">
+            <span class="ico-tile ico-tile--sm"><img src="../our-culture/assets/stars.svg" alt="" width="22" height="22" /></span>
+            <p class="story-card__label"><span data-for="0">What teams told us</span><span data-for="1">What we build instead</span></p>
+          </div>
+          <div class="cloud" id="cloud"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Mission -->
+  <section class="slide s-mission" id="mission" data-title="Mission" aria-roledescription="slide" aria-label="Mission">
+    <img class="slide__glow slide__glow--left" src="../our-culture/assets/hero-glow.png" alt="" />
+    <div class="slide__inner container">
+      <article class="card card--glow statement a-in">
+        <div class="card__inner statement__inner">
+          <div class="statement__top">
+            <span class="pill pill--accent">Our mission</span>
+            <span class="statement__num">01</span>
+          </div>
+          <p class="statement__text">We help organisations build <mark>scalable</mark>, <mark>flexible</mark> and <mark>future-ready</mark> solution ecosystems using open-source composable technologies.</p>
+          <div class="statement__tags">
+            <span class="tag">Open source</span><span class="tag">Composable</span><span class="tag">Headless</span><span class="tag">Built to scale</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4 · Vision -->
+  <section class="slide s-vision" id="vision" data-title="Vision" aria-roledescription="slide" aria-label="Vision">
+    <img class="slide__glow slide__glow--right" src="../our-culture/assets/hero-glow.png" alt="" />
+    <div class="slide__inner container split split--vision">
+      <div class="split__copy">
+        <span class="pill pill--accent a-in">Our vision</span>
+        <p class="statement__text statement__text--left a-in">To become a global leader in open-source composable solutions, shaping the future of how modern tech stacks are <mark>built &amp; connected</mark>.</p>
+      </div>
+      <div class="stack-map a-in" aria-hidden="true">
+        <svg class="stack-map__lines" viewBox="0 0 520 440" preserveAspectRatio="none">
+          <path d="M260 220 L90 70" /><path d="M260 220 L430 70" /><path d="M260 220 L60 230" /><path d="M260 220 L460 230" /><path d="M260 220 L120 380" /><path d="M260 220 L400 380" />
+        </svg>
+        <span class="node node--core" style="--x:50%;--y:50%"><b>Composable core</b><small>APIs · events · edge</small></span>
+        <span class="node" style="--x:17%;--y:16%;--n:0">Headless CMS</span>
+        <span class="node" style="--x:83%;--y:16%;--n:1">Commerce</span>
+        <span class="node" style="--x:11%;--y:52%;--n:2">Search</span>
+        <span class="node" style="--x:89%;--y:52%;--n:3">Frontend</span>
+        <span class="node" style="--x:23%;--y:86%;--n:4">Payments</span>
+        <span class="node" style="--x:77%;--y:86%;--n:5">Analytics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · Our Team -->
+  <section class="slide s-team" id="team" data-title="Our Team" aria-roledescription="slide" aria-label="Our Team">
+    <div class="slide__inner container">
+      <div class="section-head a-in">
+        <div>
+          <span class="pill pill--bold">Our team</span>
+          <h2 class="h-section">The people who frame it all.</h2>
+        </div>
+        <a href="../our-culture/index.html#team" class="btn btn--outline">Meet Our Team</a>
+      </div>
+      <div class="founders">
+        <article class="card card--glow founder a-in">
+          <div class="card__inner">
+            <div class="founder__photo"><img src="../our-culture/assets/leader-2.png" alt="Vipul" /></div>
+            <div class="founder__fade"></div>
+            <div class="founder__info"><h3>Vipul</h3><p>Founder | CSO</p></div>
+          </div>
+        </article>
+        <article class="card card--glow founder a-in">
+          <div class="card__inner">
+            <div class="founder__photo"><img src="../our-culture/assets/leader-1.png" alt="Bishen" /></div>
+            <div class="founder__fade"></div>
+            <div class="founder__info"><h3>Bishen</h3><p>Co-Founder | CEO</p></div>
+          </div>
+        </article>
+        <article class="card card--glow founder a-in">
+          <div class="card__inner">
+            <div class="founder__photo"><img src="../our-culture/assets/leader-3.png" alt="Sambit" /></div>
+            <div class="founder__fade"></div>
+            <div class="founder__info"><h3>Sambit</h3><p>Co-Founder | CTO</p></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · What We Do -->
+  <section class="slide s-do" id="what-we-do" data-title="What We Do" aria-roledescription="slide" aria-label="What We Do">
+    <div class="slide__inner container">
+      <div class="section-head a-in">
+        <div>
+          <span class="pill">What we do</span>
+          <h2 class="h-section">Design, build and run the stack behind your product.</h2>
+        </div>
+        <a href="#" class="btn btn--outline">Explore Services</a>
+      </div>
+      <div class="how services">
+        <a href="#" class="how__item a-in"><span class="ico-tile"><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 9h-13L4 7Zm4 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM8 7l2-3h4l2 3"/></svg></span><h3>Headless Ecom</h3><p>Composable storefronts on Medusa, Shopify and custom APIs.</p></a>
+        <a href="#" class="how__item a-in"><span class="ico-tile"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg></span><h3>UI/UX Designing</h3><p>Product and web design that engineering can actually ship.</p></a>
+        <a href="#" class="how__item a-in"><span class="ico-tile"><svg viewBox="0 0 24 24"><path d="m13 3-8 11h6l-1 7 8-11h-6l1-7Z"/></svg></span><h3>Jamstack Development</h3><p>Fast, secure sites with headless CMS and edge rendering.</p></a>
+        <a href="#" class="how__item a-in"><span class="ico-tile"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg></span><h3>CTO as a Service</h3><p>Architecture, hiring and technical direction when you need it.</p></a>
+        <a href="#" class="how__item a-in"><span class="ico-tile"><svg viewBox="0 0 24 24"><path d="M5 19c5-1 9-5 11-11l3-3-1 4c-2 6-6 9-11 11l-2-1Z M9 15l-3 3"/></svg></span><h3>MVP &amp; POC Development</h3><p>From idea to a working product in weeks, not quarters.</p></a>
+        <a href="#" class="how__item a-in"><span class="ico-tile"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span><h3>Custom Software</h3><p>Integrations, internal tools and platforms built to fit.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · Our Journey / Milestones -->
+  <section class="slide s-journey" id="journey" data-title="Our Journey" aria-roledescription="slide" aria-label="Our Journey">
+    <img class="slide__glow" src="../our-culture/assets/hero-glow.png" alt="" />
+    <div class="slide__inner container">
+      <div class="section-head a-in">
+        <div>
+          <span class="pill">Our journey</span>
+          <h2 class="h-section">How we got here.</h2>
+        </div>
+      </div>
+      <div class="journey glass-frame a-in">
+        <div class="glass-frame__inner journey__inner">
+          <ol class="milestones" id="milestones"></ol>
+          <div class="worldwide">
+            <p class="worldwide__label">Shipping worldwide</p>
+            <div class="clients">
+              <span class="client"><img src="assets/logo-certifyos.png" alt="" /><span><b>CertifyOS</b><small>Glasgow, UK</small></span></span>
+              <span class="client"><span class="client__sl"><img src="assets/logo-skinlaundry.png" alt="" /></span><span><b>Skin Laundry</b><small>California, USA</small></span></span>
+              <span class="client"><img src="assets/logo-catalyser.png" alt="" /><span><b>Catalyser</b><small>Melbourne, Australia</small></span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · Final slide -->
+  <section class="slide s-final" id="contact" data-title="Work With Us" aria-roledescription="slide" aria-label="Work With Us">
+    <img class="slide__glow" src="../our-culture/assets/hero-glow.png" alt="" />
+    <div class="slide__inner container">
+      <div class="cta-band a-in">
+        <div class="cta-band__inner final">
+          <span class="pill pill--accent">Let’s talk</span>
+          <h2 class="h-final">You’ve seen how we frame tech. Let’s frame yours.</h2>
+          <p class="body">Tell us where you want your product to be. We’ll build the stack that gets you there.</p>
+          <div class="btn-row">
+            <a href="#" class="btn btn--primary">Work With Us</a>
+            <a href="#" class="btn btn--ghost">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Story-mode controls -->
+<div class="controls glass-pill" aria-label="Slide controls">
+  <button type="button" class="ctl-btn" id="ctl-prev" aria-label="Previous slide">←</button>
+  <p class="controls__label"><span id="ctl-num">01</span><span class="controls__of">/ <span id="ctl-total">08</span></span><span class="controls__title" id="ctl-title">About Us</span></p>
+  <div class="controls__progress" id="ctl-progress" role="tablist" aria-label="Go to slide"></div>
+  <button type="button" class="ctl-btn" id="ctl-next" aria-label="Next slide">→</button>
+  <button type="button" class="ctl-btn" id="ctl-fs" aria-label="Toggle full screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+</div>
+<p class="key-hint" id="key-hint">Use <kbd>←</kbd> <kbd>→</kbd>, scroll or swipe to move through the story</p>
+<div class="sr-only" aria-live="polite" id="live"></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="../our-culture/assets/logo-mark.svg" alt="Weframetech" width="60" height="60" />
+        <p class="footer__pitch"><span>Interested working together ?</span> trying out our platform or contact us.</p>
+      </div>
+      <div class="footer__cols">
+        <div><p class="footer__h">Services</p><a href="#">Headless Ecom</a><a href="#">UI/UX Designing</a><a href="#">CTO as a Service</a><a href="#">Jamstack Development</a><a href="#">MVP &amp; POC Development</a><a href="#">Custom Software Development</a></div>
+        <div><p class="footer__h">About</p><a href="#">Blogs</a><a href="#">About us</a><a href="../our-culture/index.html">Our Culture</a><a href="#">Case Studies</a></div>
+        <div><p class="footer__h">Help</p><a href="../our-culture/index.html#careers">Careers</a><a href="#">Contact Us</a><a href="#">Book a Call</a></div>
+      </div>
+    </div>
+    <p class="footer__word" aria-hidden="true">Weframetech</p>
+    <div class="footer__bottom"><span>@2026 All Right Reserved</span><span>Powered by <em>directus</em></span></div>
+  </div>
+</footer>
+
+<script src="about.js"></script>
+</body>
+</html>
